@@ -47,6 +47,14 @@ let archiv = [];      // Status "archiv": im Archiv
 const status = (p) => p.status || (p.sichtbar === false ? "offline" : "aktuell");
 
 /* Bildpfad: "/bilder/x.jpg" und "bilder/x.jpg" funktionieren beide */
+/* Projektnummer: eigenes Feld "nummer" gilt fest, sonst automatisch nach Reihenfolge */
+function nummer(p) {
+  const eigene = String(p.nummer || "").trim();
+  if (eigene) return eigene;
+  const i = sichtbare.indexOf(p);
+  return i >= 0 ? String(i + 1).padStart(2, "0") : "";
+}
+
 const pfad = (src) => String(src || "").replace(/^\/+/, "");
 
 function esc(s) {
@@ -83,7 +91,7 @@ function bauBuehne() {
   $("#buehne").innerHTML = sichtbare.map((p, i) => {
     const pos = POSITIONEN[i];
     const w = SCHWEBEN[i % SCHWEBEN.length];
-    const nr = String(i + 1).padStart(2, "0");
+    const nr = nummer(p);
     return `<div class="projekt ${i % 2 ? "rechts" : "links"}"
       style="left:${pos.x}%;top:${pos.y}%;--breite:${w.breite};--dx:${w.dx};--dy:${w.dy};--dr:${w.dr};--dauer:${w.dauer};--start:-${i * 3}s">
       <a href="#${esc(p.id)}">
@@ -200,7 +208,7 @@ function oeffneArchiv() {
 
 function oeffne(p) {
   const imArchiv = status(p) === "archiv";
-  const nr = imArchiv ? "" : String(sichtbare.indexOf(p) + 1).padStart(2, "0");
+  const nr = nummer(p);
 
   const liste = listenHtml(p.listen);
 
@@ -216,8 +224,8 @@ function oeffne(p) {
   zeigeDetail(`
     <div class="detail-text">
       <p class="mono" style="color:var(--grau);margin:0 0 14px">${imArchiv
-        ? `<a href="#archiv">Archiv</a>`
-        : `Projekt ${nr}`}</p>
+        ? `<a href="#archiv">Archiv</a>${nr ? " · " + esc(nr) : ""}`
+        : `Projekt ${esc(nr)}`}</p>
       <h1>${esc(p.titel)}</h1>
       <p class="unter">${esc(p.untertitel || "")}</p>
       ${absaetze(p.text)}

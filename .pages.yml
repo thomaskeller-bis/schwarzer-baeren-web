@@ -19,7 +19,7 @@ content:
         list:
           collapsible:
             collapsed: true
-            summary: "{titel}  ·  {status}"
+            summary: "{nummer} {titel}  ·  {status}"
         fields:
           - name: status
             label: Status
@@ -37,6 +37,9 @@ content:
             label: Titel
             type: string
             required: true
+          - name: nummer
+            label: Nummer (optional, z.B. 01 – leer = automatisch nach Reihenfolge)
+            type: string
           - name: cover
             label: Titelbild auf der Startseite (leer = «Fotos folgen»)
             type: image
