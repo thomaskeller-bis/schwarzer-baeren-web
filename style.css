@@ -76,6 +76,10 @@ img { display: block; max-width: 100%; height: auto; }
 }
 .fuss a { text-decoration: none; border-bottom: 1px solid var(--linie); }
 .fuss a:hover { color: var(--tinte); border-color: var(--tinte); }
+.fuss-rechts { display: flex; gap: 20px; flex-wrap: wrap; }
+.insta { margin-top: 4px; }
+.insta a { text-decoration: none; border-bottom: 1px solid var(--linie); }
+.insta a:hover { border-color: var(--tinte); }
 
 /* ---------- Startseite: schwebende Projekte ---------- */
 

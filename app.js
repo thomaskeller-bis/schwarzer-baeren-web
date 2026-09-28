@@ -214,6 +214,9 @@ function oeffne(p) {
   const nr = nummer(p);
 
   const liste = listenHtml(p.listen);
+  const insta = p.instagram
+    ? `<p class="insta"><a href="${esc(p.instagram)}" target="_blank" rel="noopener">Mehr dazu auf Instagram</a></p>`
+    : "";
 
   const bilder = p.bilder && p.bilder.length
     ? p.bilder
@@ -232,6 +235,7 @@ function oeffne(p) {
       <h1>${esc(p.titel)}</h1>
       <p class="unter">${esc(p.untertitel || "")}</p>
       ${absaetze(p.text)}
+      ${insta}
       ${liste}
     </div>
     <div class="detail-bilder">${bilder}</div>`, p.titel);
@@ -279,6 +283,8 @@ async function start() {
   const mail = $("#mail");
   mail.textContent = KONTAKT.mail;
   mail.href = "mailto:" + KONTAKT.mail;
+  const ig = $("#instagram");
+  if (KONTAKT.instagram) { ig.href = KONTAKT.instagram; ig.hidden = false; }
 
   $("#zurueck").addEventListener("click", () => {
     try { history.pushState("", document.title, location.pathname + location.search); }

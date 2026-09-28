@@ -49,6 +49,9 @@ content:
           - name: text
             label: Text (Leerzeile = neuer Absatz, «## » am Zeilenanfang = Zwischentitel)
             type: text
+          - name: instagram
+            label: Instagram-Beitrag (optional, Link zum Post)
+            type: string
           - name: bilder
             label: Fotos in der Detailansicht
             type: object
@@ -116,6 +119,9 @@ content:
         type: string
       - name: mail
         label: E-Mail
+        type: string
+      - name: instagram
+        label: Instagram-Profil (optional, z.B. https://www.instagram.com/schwarzerbaeren)
         type: string
 
   - name: danke
