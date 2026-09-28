@@ -139,12 +139,12 @@
       "id": "eroeffnung",
       "titel": "Eröffnungsplakat",
       "nummer": "04",
-      "untertitel": "Wir starten klein",
+      "untertitel": "Erster Entwurf, noch in Arbeit",
       "cover": "bilder/eroeffnung/01.jpg",
-      "text": "Bei uns ist noch vieles im Wandel, und vor der Tür ist noch Baustelle. Darum starten wir bewusst reduziert.\n\nZuerst sind wir ab Mittwoch jeweils am Abend da. Am Wochenende versuchen wir, den ganzen Tag offen zu haben, und testen so den Tagesbetrieb.\n\nWenn es in der Strasse ruhiger wird und die Baustelle weg ist, bauen wir den Tagesbetrieb Schritt für Schritt aus, auch unter der Woche.\n\nDas Plakat zeigt deshalb vor allem eines: wann wir offen sind.",
+      "text": "Das ist ein erster Gedanke, noch kein fertiges Plakat. Ein Starttermin steht noch nicht fest, und auch am Motiv arbeiten wir noch.\n\nDie Idee dahinter: Im Vordergrund stehen die Öffnungszeiten. Bei uns ist noch vieles im Wandel, und vor der Tür ist noch Baustelle. Darum starten wir bewusst reduziert.\n\nZuerst sind wir ab Mittwoch jeweils am Abend da. Am Wochenende versuchen wir, den ganzen Tag offen zu haben, und testen so den Tagesbetrieb. Wenn es in der Strasse ruhiger wird und die Baustelle weg ist, bauen wir den Tagesbetrieb Schritt für Schritt aus, auch unter der Woche.\n\nWir zeigen das Plakat trotzdem schon jetzt. Auch das gehört zum Prozess.",
       "listen": [
         {
-          "titel": "Öffnungszeiten zum Start",
+          "titel": "Öffnungszeiten zum Start (Entwurf)",
           "eintraege": [
             {
               "name": "Mittwoch",
@@ -182,7 +182,7 @@
       "bilder": [
         {
           "bild": "bilder/eroeffnung/01.jpg",
-          "text": "Plakat A4, Entwurf"
+          "text": "Plakat A4, erster Entwurf"
         }
       ],
       "status": "aktuell"
