@@ -98,6 +98,16 @@
       ]
     },
     {
+      "titel": "IT & Support",
+      "eintraege": [
+        {
+          "name": "Christopher Mc Kean Scott",
+          "rolle": "Bei Fragen zur Internettechnik immer bereit für eine Auskunft oder eine kurze Mithilfe. Danke, danke, danke.",
+          "link": ""
+        }
+      ]
+    },
+    {
       "titel": "Unser künftiges Kernteam",
       "eintraege": [
         {
@@ -118,7 +128,7 @@
       ]
     },
     {
-      "titel": "Mitarbeiterinnen & Praktikantinnen",
+      "titel": "Danke",
       "eintraege": [
         {
           "name": "Ines",
