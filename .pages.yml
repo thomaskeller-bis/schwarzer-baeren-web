@@ -12,10 +12,7 @@ content:
     type: file
     path: inhalt/projekte.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{titel}"
+    list: true
     fields:
       - name: id
         label: Kurzname (klein, ohne Leerzeichen, z.B. "tapas")
