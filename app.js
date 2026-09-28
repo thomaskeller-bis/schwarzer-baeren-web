@@ -245,11 +245,13 @@ function route() {
 
 async function start() {
   const laden = (datei) => fetch(datei, { cache: "no-cache" }).then((r) => r.json());
-  [PROJEKTE, KONTAKT, DANKE] = await Promise.all([
+  let pj;
+  [pj, KONTAKT, DANKE] = await Promise.all([
     laden("inhalt/projekte.json"),
     laden("inhalt/kontakt.json"),
     laden("inhalt/danke.json").catch(() => ({}))
   ]);
+  PROJEKTE = Array.isArray(pj) ? pj : pj.projekte || [];
   sichtbare = PROJEKTE.filter((p) => status(p) === "aktuell").slice(0, POSITIONEN.length);
   archiv = PROJEKTE.filter((p) => status(p) === "archiv");
   $("#archiv-link").hidden = archiv.length === 0;

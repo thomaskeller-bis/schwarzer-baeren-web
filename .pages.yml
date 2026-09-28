@@ -12,73 +12,86 @@ content:
     type: file
     path: inhalt/projekte.json
     format: json
-    list: true
     fields:
-      - name: id
-        label: Kurzname (klein, ohne Leerzeichen, z.B. "tapas")
-        type: string
-        required: true
-      - name: titel
-        label: Titel
-        type: string
-        required: true
-      - name: untertitel
-        label: Untertitel
-        type: string
-      - name: cover
-        label: Titelbild auf der Startseite (leer = «Fotos folgen»)
-        type: image
-      - name: text
-        label: Text (Leerzeile = neuer Absatz, «## » am Zeilenanfang = Zwischentitel)
-        type: text
-      - name: listen
-        label: Listen (z.B. Team, Partner, Angebot)
+      - name: projekte
+        label: Projekte (Reihenfolge = Reihenfolge auf der Seite)
         type: object
         list:
           collapsible:
             collapsed: true
-            summary: "{titel}"
+            summary: "{titel}  ·  {status}"
         fields:
+          - name: status
+            label: Status
+            type: select
+            default: aktuell
+            options:
+              values:
+                - name: aktuell
+                  label: Aktuell (schwebt auf der Startseite)
+                - name: archiv
+                  label: Archiv (sichtbar im Archiv)
+                - name: offline
+                  label: Offline (Entwurf, nicht sichtbar)
           - name: titel
-            label: Titel der Liste
+            label: Titel
             type: string
-          - name: eintraege
-            label: Einträge
-            type: object
-            list: true
-            fields:
-              - name: name
-                label: Name
-                type: string
-              - name: rolle
-                label: Rolle / Beschreibung
-                type: string
-              - name: link
-                label: Webseite (optional, mit https://)
-                type: string
-      - name: bilder
-        label: Fotos in der Detailansicht
-        type: object
-        list: true
-        fields:
-          - name: bild
-            label: Foto
+            required: true
+          - name: cover
+            label: Titelbild auf der Startseite (leer = «Fotos folgen»)
             type: image
-          - name: text
-            label: Bildlegende (optional)
+          - name: untertitel
+            label: Untertitel
             type: string
-      - name: status
-        label: Status
-        type: select
-        default: aktuell
-        options:
-          values:
-            - name: aktuell
-              label: Aktuell (schwebt auf der Startseite)
-            - name: archiv
-              label: Archiv (sichtbar im Archiv)
-            - name: offline
-              label: Offline (Entwurf, nicht sichtbar)
+          - name: text
+            label: Text (Leerzeile = neuer Absatz, «## » am Zeilenanfang = Zwischentitel)
+            type: text
+          - name: bilder
+            label: Fotos in der Detailansicht
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "Foto {index}  {text}"
+            fields:
+              - name: bild
+                label: Foto
+                type: image
+              - name: text
+                label: Bildlegende (optional)
+                type: string
+          - name: listen
+            label: Listen (z.B. Team, Partner, Angebot)
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{titel}"
+            fields:
+              - name: titel
+                label: Titel der Liste
+                type: string
+              - name: eintraege
+                label: Einträge
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{name}"
+                fields:
+                  - name: name
+                    label: Name
+                    type: string
+                  - name: rolle
+                    label: Rolle / Beschreibung
+                    type: string
+                  - name: link
+                    label: Webseite (optional, mit https://)
+                    type: string
+          - name: id
+            label: Kurzname für die Adresse (klein, ohne Leerzeichen, z.B. "tapas")
+            type: string
+            required: true
 
   - name: kontakt
     label: Kontakt
@@ -128,7 +141,10 @@ content:
           - name: eintraege
             label: Einträge
             type: object
-            list: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name}"
             fields:
               - name: name
                 label: Name
