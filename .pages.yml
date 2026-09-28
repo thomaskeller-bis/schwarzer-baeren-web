@@ -38,7 +38,7 @@ content:
             type: string
             required: true
           - name: nummer
-            label: Nummer (optional, z.B. 01 – leer = automatisch nach Reihenfolge)
+            label: Nummer (fortlaufend, bleibt auch im Archiv – leer = nächste freie Nummer)
             type: string
           - name: cover
             label: Titelbild auf der Startseite (leer = «Fotos folgen»)

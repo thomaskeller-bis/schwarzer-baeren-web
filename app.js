@@ -51,8 +51,11 @@ const status = (p) => p.status || (p.sichtbar === false ? "offline" : "aktuell")
 function nummer(p) {
   const eigene = String(p.nummer || "").trim();
   if (eigene) return eigene;
-  const i = sichtbare.indexOf(p);
-  return i >= 0 ? String(i + 1).padStart(2, "0") : "";
+  // ohne eigene Nummer: fortlaufend nach der höchsten vergebenen Nummer
+  const hoechste = Math.max(0, ...PROJEKTE.map((x) => parseInt(x.nummer, 10) || 0));
+  const ohne = PROJEKTE.filter((x) => !String(x.nummer || "").trim() && status(x) !== "offline");
+  const i = ohne.indexOf(p);
+  return i >= 0 ? String(hoechste + i + 1).padStart(2, "0") : "";
 }
 
 const pfad = (src) => String(src || "").replace(/^\/+/, "");
@@ -195,7 +198,7 @@ function oeffneArchiv() {
   const zeilen = archiv.map((p) => `
     <a class="archiv-zeile" href="#${esc(p.id)}">
       ${p.cover ? `<img src="${esc(pfad(p.cover))}" alt="">` : `<span class="archiv-leer"></span>`}
-      <span class="archiv-titel">${esc(p.titel)}</span>
+      <span class="archiv-titel">${nummer(p) ? `<span class="mono archiv-nr">${esc(nummer(p))}</span>` : ""}${esc(p.titel)}</span>
       <span class="archiv-unter">${esc(p.untertitel || "")}</span>
     </a>`).join("");
   zeigeDetail(`
