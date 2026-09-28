@@ -63,6 +63,26 @@
       ]
     },
     {
+      "titel": "Gastronomiefreunde",
+      "eintraege": [
+        {
+          "name": "Tim und Tobias, Kuni & Gunde",
+          "rolle": "Ratschläge und Tipps aus der Gastronomie",
+          "link": "https://www.kuni-gunde.ch"
+        },
+        {
+          "name": "Lukas, VITO",
+          "rolle": "Ratschläge und Tipps aus der Gastronomie",
+          "link": "https://www.vito.ch"
+        },
+        {
+          "name": "Markthalle Basel",
+          "rolle": "Ratschläge und Tipps aus der Gastronomie",
+          "link": "https://www.markthallebasel.ch"
+        }
+      ]
+    },
+    {
       "titel": "Netzwerk",
       "eintraege": [
         {
@@ -101,7 +121,7 @@
       "titel": "IT & Support",
       "eintraege": [
         {
-          "name": "Christopher Mc Kean Scott",
+          "name": "Christopher McKean Scott",
           "rolle": "Bei Fragen zur Internettechnik immer bereit für eine Auskunft oder eine kurze Mithilfe. Danke, danke, danke.",
           "link": ""
         }
