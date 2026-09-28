@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Schwarzer Bären</title>
+<meta name="description" content="Café, Bistro und Weinbar an der Rheingasse, Basel. Im Entstehen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="kopf">
+  <a class="wortmarke" href="#" data-name>Schwarzer Bären</a>
+  <span class="kopf-rechts">
+    <span class="mono ort" id="untertitel">Café · Bistro · Weinbar · Rheingasse, Basel</span>
+    <span class="kopf-links">
+      <a class="mono archiv-link" id="danke-link" href="#danke" hidden>Danke</a>
+      <a class="mono archiv-link" id="archiv-link" href="#archiv" hidden>Archiv</a>
+    </span>
+  </span>
+</header>
+
+<main>
+  <div class="buehne" id="buehne"></div>
+</main>
+
+<footer class="fuss">
+  <span><span data-name>Schwarzer Bären</span>, <span id="adresse"></span></span>
+  <span id="hinweis"></span>
+  <a id="mail" href="#"></a>
+</footer>
+
+<section class="detail" id="detail" hidden aria-label="Projekt">
+  <div class="kopf">
+    <span class="wortmarke" data-name>Schwarzer Bären</span>
+    <button class="zurueck" id="zurueck" type="button">Zurück zur Übersicht</button>
+  </div>
+  <div class="detail-inhalt" id="detail-inhalt"></div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>

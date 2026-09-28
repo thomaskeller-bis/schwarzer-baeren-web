@@ -1,0 +1,347 @@
+/* =========================================================
+   ZUM SCHWARZEN BÄREN – GESTALTUNG
+   Farben und Schriften oben als Variablen. Hier änderst du
+   den Look an einer Stelle.
+   ========================================================= */
+
+:root {
+  color-scheme: light;
+  --papier: #ffffff;      /* Hintergrund */
+  --tinte: #141414;       /* Schrift */
+  --grau: #7a7872;        /* Nebentext */
+  --linie: #d9d7d2;       /* Linien, Sternbild */
+  --leer: #f3f2ee;        /* Platzhalter-Flächen */
+
+  --schrift: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --rand: clamp(16px, 3vw, 36px);  /* Seitenrand */
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  background: var(--papier);
+  color: var(--tinte);
+}
+
+body {
+  margin: 0;
+  font-family: var(--schrift);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+
+.mono {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ---------- Kopf & Fuss ---------- */
+
+.kopf, .fuss {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-inline: var(--rand);
+}
+
+.kopf {
+  padding-block: 22px 0;
+  position: relative;
+  z-index: 3;
+}
+
+.wortmarke {
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  margin: 0;
+}
+
+.kopf .ort { color: var(--grau); }
+
+.fuss {
+  padding-block: 40px 28px;
+  color: var(--grau);
+}
+.fuss a { text-decoration: none; border-bottom: 1px solid var(--linie); }
+.fuss a:hover { color: var(--tinte); border-color: var(--tinte); }
+
+/* ---------- Startseite: schwebende Projekte ---------- */
+
+.buehne {
+  position: relative;
+  height: clamp(580px, 82vh, 920px);
+  margin-inline: var(--rand);
+}
+
+/* bis die Bilder verteilt sind, unsichtbar, dann sanft einblenden */
+.buehne .projekt { opacity: 0; transition: opacity 0.8s ease; }
+.buehne.bereit .projekt { opacity: 1; }
+
+/* ein Projekt auf der Startseite */
+.projekt {
+  position: absolute;
+  width: var(--breite, 17vw);
+  min-width: 140px;
+  max-width: 280px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.projekt a {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  animation: schweben var(--dauer, 14s) ease-in-out infinite alternate;
+  animation-delay: var(--start, 0s);
+  transition: transform 0.4s ease;
+}
+.projekt a:hover,
+.projekt a:focus-visible {
+  animation-play-state: paused;
+}
+.projekt a:focus-visible { outline: 1px solid var(--tinte); outline-offset: 6px; }
+
+.projekt .bild {
+  transition: transform 0.5s ease;
+}
+.projekt a:hover .bild { transform: scale(1.03); }
+
+.projekt .titel {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+.projekt .titel .mono { color: var(--grau); }
+
+@keyframes schweben {
+  from { transform: translate(0, 0) rotate(0deg); }
+  to   { transform: translate(var(--dx, 12px), var(--dy, -10px)) rotate(var(--dr, 0.6deg)); }
+}
+
+/* ---------- Platzhalter (solange Bilder fehlen) ---------- */
+
+.platzhalter {
+  background: var(--leer);
+  border: 1px dashed #bdbab2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+  color: var(--grau);
+}
+.platzhalter.fotos { aspect-ratio: 3 / 2; }
+.platzhalter.karte {
+  aspect-ratio: 85.6 / 54;   /* echtes Kartenformat */
+  border-radius: 9px;
+  background: var(--papier);
+}
+.platzhalter .gross {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--tinte);
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: var(--schrift);
+}
+
+/* ---------- Detailansicht ---------- */
+
+.detail {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: var(--papier);
+  overflow-y: auto;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.detail .kopf {
+  position: sticky;
+  top: 0;
+  padding-block: calc(18px + env(safe-area-inset-top, 0px)) 14px;
+  background: var(--papier);
+}
+
+.zurueck:focus { outline: none; }
+.zurueck:focus-visible { outline: 1px solid var(--tinte); outline-offset: 5px; }
+.zurueck {
+  font: inherit;
+  font-size: 14px;
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  cursor: pointer;
+  color: var(--tinte);
+  border-bottom: 1px solid var(--tinte);
+}
+
+.detail-inhalt {
+  display: grid;
+  grid-template-columns: minmax(0, 32rem) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 80px);
+  padding: 32px var(--rand) 60px;
+  align-items: start;
+}
+
+.detail-text .zwischentitel {
+  margin: 34px 0 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--tinte);
+  font-weight: 400;
+  color: var(--grau);
+}
+.detail-text h1 {
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+  text-wrap: balance;
+}
+.detail-text .unter { color: var(--grau); margin: 0 0 28px; }
+.detail-text p { margin: 0 0 1em; max-width: 60ch; }
+
+.liste {
+  margin-top: 28px;
+  border-top: 1px solid var(--tinte);
+}
+.liste h2 {
+  margin: 10px 0 6px;
+  font-weight: 400;
+  color: var(--grau);
+}
+.liste dl { margin: 0; }
+.liste .zeile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  gap: 12px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--linie);
+}
+.liste dt { font-weight: 500; }
+.liste dd { margin: 0; color: var(--grau); }
+.liste dt a { text-decoration: none; }
+.liste dt a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.detail-bilder {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vw, 56px);
+}
+.detail-bilder figure { margin: 0; }
+.detail-bilder figure:nth-child(even) { width: 78%; align-self: flex-end; }
+.detail-bilder figcaption {
+  margin-top: 8px;
+  display: flex;
+  gap: 16px;
+  color: var(--grau);
+}
+
+/* ---------- Archiv ---------- */
+
+.kopf-rechts { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.kopf-links { display: flex; gap: 20px; }
+@media (max-width: 720px) { .kopf-rechts { align-items: flex-start; } }
+.archiv-link { text-decoration: none; }
+.archiv-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.detail-text .mono a { color: inherit; }
+
+.archiv { grid-column: 1 / -1; max-width: 60rem; }
+.archiv h1 {
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+}
+.archiv .unter { color: var(--grau); margin: 0 0 28px; }
+.archiv-liste { border-top: 1px solid var(--tinte); }
+.archiv-zeile {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 20px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--linie);
+  text-decoration: none;
+}
+.archiv-zeile img,
+.archiv-leer {
+  width: 72px;
+  height: 54px;
+  object-fit: cover;
+  background: var(--leer);
+  outline: 1px solid var(--linie);
+  outline-offset: -1px;
+}
+.archiv-titel { font-weight: 500; }
+.archiv-unter { color: var(--grau); }
+.archiv-zeile:hover .archiv-titel { text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 720px) {
+  .archiv-zeile { grid-template-columns: 56px minmax(0, 1fr); row-gap: 2px; }
+  .archiv-zeile img, .archiv-leer { width: 56px; height: 42px; grid-row: span 2; }
+  .archiv-unter { grid-column: 2; }
+}
+
+/* ---------- Danke ---------- */
+
+.danke { max-width: 72rem; }
+.danke .unter { max-width: 44rem; }
+.danke-gruppen {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 8px 56px;
+  align-items: start;
+}
+.danke-gruppen .liste { margin-top: 20px; }
+
+/* ---------- Handy ---------- */
+
+@media (max-width: 720px) {
+  .buehne {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    padding-block: 48px 32px;
+  }
+  .projekt {
+    position: static;
+    transform: none;
+    width: 72%;
+    max-width: none;
+  }
+  .projekt.links  { align-self: flex-start; }
+  .projekt.rechts { align-self: flex-end; }
+
+  .detail-inhalt { grid-template-columns: 1fr; }
+  .detail-text { position: static; }
+  .detail-bilder figure:nth-child(even) { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projekt a { animation: none; }
+  .projekt .bild { transition: none; }
+}
+
+/* feine Kante, damit weisse Bilder (z.B. Plakate) nicht im Weiss verschwinden */
+.projekt img.bild,
+.detail-bilder img {
+  outline: 1px solid var(--linie);
+  outline-offset: -1px;
+}

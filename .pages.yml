@@ -1,0 +1,144 @@
+# Pages CMS – Admin-Seite für die Homepage
+# https://pagescms.org
+# Hochgeladene Bilder landen im Ordner "bilder/".
+
+media:
+  input: bilder
+  output: /bilder
+
+content:
+  - name: projekte
+    label: Projekte
+    type: file
+    path: inhalt/projekte.json
+    format: json
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{titel}"
+    fields:
+      - name: id
+        label: Kurzname (klein, ohne Leerzeichen, z.B. "tapas")
+        type: string
+        required: true
+      - name: titel
+        label: Titel
+        type: string
+        required: true
+      - name: untertitel
+        label: Untertitel
+        type: string
+      - name: cover
+        label: Titelbild auf der Startseite (leer = «Fotos folgen»)
+        type: image
+      - name: text
+        label: Text (Leerzeile = neuer Absatz, «## » am Zeilenanfang = Zwischentitel)
+        type: text
+      - name: listen
+        label: Listen (z.B. Team, Partner, Angebot)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titel}"
+        fields:
+          - name: titel
+            label: Titel der Liste
+            type: string
+          - name: eintraege
+            label: Einträge
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: Name
+                type: string
+              - name: rolle
+                label: Rolle / Beschreibung
+                type: string
+              - name: link
+                label: Webseite (optional, mit https://)
+                type: string
+      - name: bilder
+        label: Fotos in der Detailansicht
+        type: object
+        list: true
+        fields:
+          - name: bild
+            label: Foto
+            type: image
+          - name: text
+            label: Bildlegende (optional)
+            type: string
+      - name: status
+        label: Status
+        type: select
+        default: aktuell
+        options:
+          values:
+            - name: aktuell
+              label: Aktuell (schwebt auf der Startseite)
+            - name: archiv
+              label: Archiv (sichtbar im Archiv)
+            - name: offline
+              label: Offline (Entwurf, nicht sichtbar)
+
+  - name: kontakt
+    label: Kontakt
+    type: file
+    path: inhalt/kontakt.json
+    format: json
+    fields:
+      - name: name
+        label: Name
+        type: string
+      - name: untertitel
+        label: Untertitel (oben rechts)
+        type: string
+      - name: hinweis
+        label: Hinweis unten (z.B. Eröffnung, Öffnungszeiten)
+        type: string
+      - name: adresse
+        label: Adresse
+        type: string
+      - name: mail
+        label: E-Mail
+        type: string
+
+  - name: danke
+    label: Danke (Partner & Unterstützer*innen)
+    type: file
+    path: inhalt/danke.json
+    format: json
+    fields:
+      - name: titel
+        label: Titel (auch Name des Links oben rechts)
+        type: string
+      - name: intro
+        label: Einleitung
+        type: text
+      - name: gruppen
+        label: Gruppen
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titel}"
+        fields:
+          - name: titel
+            label: Titel der Gruppe
+            type: string
+          - name: eintraege
+            label: Einträge
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: Name
+                type: string
+              - name: rolle
+                label: Rolle / Dank
+                type: string
+              - name: link
+                label: Webseite (optional, mit https://)
+                type: string

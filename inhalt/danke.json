@@ -1,0 +1,131 @@
+{
+  "titel": "Danke",
+  "intro": "Ohne diese Menschen, Vereine und Firmen wäre das alles viel schwieriger. Sie helfen mit, denken mit und gestalten mit. Danke!",
+  "gruppen": [
+    {
+      "titel": "Haus",
+      "eintraege": [
+        {
+          "name": "Stiftung Edith Maryon und Edith Maryon AG",
+          "rolle": "Vermieterin und Unterstützerin. Danke für euer Vertrauen.",
+          "link": "https://maryon.ch"
+        },
+        {
+          "name": "Salathé Architekten Basel",
+          "rolle": "Architektur, mit Charlotte und Cedric",
+          "link": "https://www.salathearchitekten.ch"
+        }
+      ]
+    },
+    {
+      "titel": "Ausbau & Einrichtung",
+      "eintraege": [
+        {
+          "name": "Bravo Ricky",
+          "rolle": "Innenausbau",
+          "link": "https://www.bravoricky.com"
+        },
+        {
+          "name": "Fathy Stohler",
+          "rolle": "Hausschreiner",
+          "link": ""
+        },
+        {
+          "name": "Mettler Gastroküchen",
+          "rolle": "René, Gastroküche. Immer erreichbar bei Fragen.",
+          "link": "https://mettler-chuchi.ch"
+        },
+        {
+          "name": "Einsiedler Bier",
+          "rolle": "Bierlieferant, Unterstützung bei der Einrichtung",
+          "link": "https://einsiedlerbier.ch"
+        }
+      ]
+    },
+    {
+      "titel": "Nachbarschaft",
+      "eintraege": [
+        {
+          "name": "Lenny",
+          "rolle": "8Bar und Zum Schmale Wurf",
+          "link": ""
+        },
+        {
+          "name": "Krafft Gruppe",
+          "rolle": "Jonas, Direktor Hotel Krafft, und Franz Xaver, Mitinhaber. Mit dem Consum gleich nebenan.",
+          "link": "https://www.krafftgruppe.ch"
+        },
+        {
+          "name": "Adväntsgass",
+          "rolle": "Mit ihr starten wir im Dezember",
+          "link": "https://www.advaentsgass.ch"
+        }
+      ]
+    },
+    {
+      "titel": "Netzwerk",
+      "eintraege": [
+        {
+          "name": "Lebensmittel Netzwerk Basel",
+          "rolle": "Nachhaltige Ernährung",
+          "link": "https://www.lebensmittelnetzwerk.ch"
+        },
+        {
+          "name": "Basel Food Factory",
+          "rolle": "Nachhaltige Ernährung",
+          "link": "https://www.foodfactorybasel.ch"
+        },
+        {
+          "name": "gaw",
+          "rolle": "Unterstützung an der Adväntsgass",
+          "link": "https://www.gaw.ch"
+        }
+      ]
+    },
+    {
+      "titel": "Kommunikation & Grafik",
+      "eintraege": [
+        {
+          "name": "Gregor Brändli",
+          "rolle": "Kommunikation, Inhalte, Auftritt",
+          "link": "https://www.gregorbraendli.com"
+        },
+        {
+          "name": "Elia Bianchi",
+          "rolle": "Grafik und Inhalte",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "titel": "Unser künftiges Kernteam",
+      "eintraege": [
+        {
+          "name": "Deborah Blanke",
+          "rolle": "",
+          "link": ""
+        },
+        {
+          "name": "Lisa Lüdi",
+          "rolle": "",
+          "link": ""
+        },
+        {
+          "name": "Steff",
+          "rolle": "",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "titel": "Mitarbeiterinnen & Praktikantinnen",
+      "eintraege": [
+        {
+          "name": "Ines",
+          "rolle": "Planung",
+          "link": ""
+        }
+      ]
+    }
+  ]
+}
