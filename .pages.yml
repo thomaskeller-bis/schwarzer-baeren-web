@@ -2,6 +2,10 @@
 # https://pagescms.org
 # Hochgeladene Bilder landen im Ordner "bilder/".
 
+settings:
+  commit:
+    identity: user   # zeigt auf GitHub, wer aus dem Team etwas geändert hat
+
 media:
   input: bilder
   output: /bilder
