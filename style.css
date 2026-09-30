@@ -4,6 +4,14 @@
    den Look an einer Stelle.
    ========================================================= */
 
+/* Schriften liegen im Ordner schrift/ (keine Verbindung zu Google nötig) */
+@font-face { font-family: "Hanken Grotesk"; font-weight: 400; font-style: normal; font-display: swap;
+  src: url("schrift/hanken-grotesk-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Hanken Grotesk"; font-weight: 500; font-style: normal; font-display: swap;
+  src: url("schrift/hanken-grotesk-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-weight: 400; font-style: normal; font-display: swap;
+  src: url("schrift/ibm-plex-mono-latin-400-normal.woff2") format("woff2"); }
+
 :root {
   color-scheme: light;
   --papier: #ffffff;      /* Hintergrund */
