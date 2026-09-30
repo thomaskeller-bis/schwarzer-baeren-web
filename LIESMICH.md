@@ -21,9 +21,10 @@ bilder/               Fotos, ein Ordner pro Projekt
 1. **GitHub:** Neues Repository anlegen (z.B. `schwarzer-baeren-web`), diesen Ordner hochladen.
 2. **Vercel:** Mit GitHub anmelden → «Add New Project» → Repository wählen.
    Framework: «Other», kein Build Command, Output Directory leer lassen → Deploy.
-3. **Domain:** In Vercel unter Settings → Domains `schwarzerbären.ch` hinzufügen.
+3. **Domain:** In Vercel unter Settings → Domains `schwarzerbaeren.com` (Hauptdomain, mit www) hinzufügen.
    Vercel zeigt die DNS-Einträge an; diese bei cyon im DNS der Domain eintragen.
-   Die anderen Domains in Vercel ebenfalls hinzufügen und auf die Hauptdomain umleiten.
+   `schwarzerbären.ch` und `zumschwarzenbaeren.ch` in Vercel ebenfalls hinzufügen
+   und auf `schwarzerbaeren.com` umleiten. MX-Einträge (Mail) bei cyon nicht löschen.
 4. **Admin-Seite:** Auf https://app.pagescms.org mit GitHub anmelden, Repository öffnen.
    Die Datei `.pages.yml` ist schon da, Projekte und Kontakt erscheinen direkt.
 5. **Team einladen:** In Pages CMS unter «Collaborators» die Mailadressen eintragen.
