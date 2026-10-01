@@ -67,7 +67,7 @@
       "titel": "Adväntsgass",
       "nummer": "02",
       "untertitel": "26. November bis 23. Dezember 2026, in der Rheingasse",
-      "cover": "bilder/foodture/01.jpg",
+      "cover": "bilder/advaentsgass/01.jpg",
       "text": "Noch bevor wir öffnen, sind wir an der Adväntsgass schon da: vier Wochen lang mit einem Stand in der Rheingasse, wenige Schritte von unserem künftigen Bären entfernt.\n\n## FOODTURE\n\nAm Stand zeigen wir FOODTURE, ein Projekt, das wir mit Partner*innen aus der Region entwickeln. Die Frage dahinter: Wie wird Essen zukunftsfähig?\n\nAuf den Teller kommen Fried & Loaded Waffles. Die Waffeln sind aus Kartoffeln, die nach dem trockenen Sommer nicht mehr regulär verkauft werden können. Dazu Pilzprodukte aus der Stadt, Hummus aus regionalen Kichererbsen, Pastrami und Roast von alten Milchkühen und fermentiertes Gemüse.\n\nEntwickelt wird das nicht in einer einzigen Küche, sondern im Netzwerk: von der Landwirtschaft über Manufakturen bis an unseren Stand.\n\nFür uns ist die Adväntsgass ein erstes Kennenlernen mit der Nachbarschaft. Kommt vorbei!",
       "listen": [
         {
@@ -122,6 +122,10 @@
         }
       ],
       "bilder": [
+        {
+          "bild": "bilder/advaentsgass/01.jpg",
+          "text": "Adväntsgass, Kultur und Kulinarik im Kleinbasel"
+        },
         {
           "bild": "bilder/foodture/01.jpg",
           "text": "Plakat Captain Foodture"
