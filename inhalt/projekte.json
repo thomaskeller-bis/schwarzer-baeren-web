@@ -63,15 +63,25 @@
       "status": "aktuell"
     },
     {
-      "id": "foodture",
-      "titel": "FOODTURE",
+      "id": "advaentsgass",
+      "titel": "Adväntsgass",
       "nummer": "02",
-      "untertitel": "Fried & Loaded Waffles an der Adväntsgass, 26.11.–23.12.2026",
+      "untertitel": "26. November bis 23. Dezember 2026, in der Rheingasse",
       "cover": "bilder/foodture/01.jpg",
-      "text": "Wie wird Food zukunftsfähig? Viele Ansätze für eine kreislauffähige Gastronomie kennen wir schon. FOODTURE holt sie aus der Nische auf den Teller.\n\nAus Kartoffeln, die nach dem trockenen Sommer nicht mehr regulär verkauft werden können, werden Waffeln. Dazu kommen Pilzprodukte aus der Stadt, Hummus aus regionalen Kichererbsen, Pastrami und Roast von alten Milchkühen und fermentiertes Gemüse.\n\nEntwickelt wird das nicht in einer Küche, sondern im Netzwerk: von der Landwirtschaft über Start-ups und Manufakturen bis an unseren Stand an der Adväntsgass in der Rheingasse. Der Stand wird zum Reallabor. Wir testen neue Produkte und eine neue Form der Zusammenarbeit.\n\nAus Reststoffen werden Lebensmittel. Aus Vernetzung wird Verbindung.",
+      "text": "Noch bevor wir öffnen, sind wir an der Adväntsgass schon da: vier Wochen lang mit einem Stand in der Rheingasse, wenige Schritte von unserem künftigen Bären entfernt.\n\n## FOODTURE\n\nAm Stand zeigen wir FOODTURE, ein Projekt, das wir mit Partner*innen aus der Region entwickeln. Die Frage dahinter: Wie wird Essen zukunftsfähig?\n\nAuf den Teller kommen Fried & Loaded Waffles. Die Waffeln sind aus Kartoffeln, die nach dem trockenen Sommer nicht mehr regulär verkauft werden können. Dazu Pilzprodukte aus der Stadt, Hummus aus regionalen Kichererbsen, Pastrami und Roast von alten Milchkühen und fermentiertes Gemüse.\n\nEntwickelt wird das nicht in einer einzigen Küche, sondern im Netzwerk: von der Landwirtschaft über Manufakturen bis an unseren Stand.\n\nFür uns ist die Adväntsgass ein erstes Kennenlernen mit der Nachbarschaft. Kommt vorbei!",
       "listen": [
         {
-          "titel": "Zusammen mit",
+          "titel": "Adväntsgass",
+          "eintraege": [
+            {
+              "name": "Adväntsgass im Glaibasel",
+              "rolle": "Weihnachtsmarkt in der Rheingasse",
+              "link": "https://www.advaentsgass.ch"
+            }
+          ]
+        },
+        {
+          "titel": "FOODTURE, zusammen mit",
           "eintraege": [
             {
               "name": "Basel Food Factory",
