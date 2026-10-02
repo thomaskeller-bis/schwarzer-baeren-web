@@ -51,6 +51,9 @@ const status = (p) => p.status || (p.sichtbar === false ? "offline" : "aktuell")
    Der Link ist nirgends auf der Seite verlinkt. */
 const VORSCHAU = new URLSearchParams(location.search).has("vorschau");
 const entwurf = (p) => status(p) === "offline";
+/* Ansicht: Mit «?ansicht» sieht man die Seite genau so, wie sie öffentlich wird
+   (ohne Entwürfe), auch solange die Bald-Seite eingeschaltet ist. */
+const ANSICHT = new URLSearchParams(location.search).has("ansicht");
 
 /* Bildpfad: "/bilder/x.jpg" und "bilder/x.jpg" funktionieren beide */
 /* Projektnummer: eigenes Feld "nummer" gilt fest, sonst automatisch nach Reihenfolge */
@@ -289,7 +292,8 @@ async function start() {
 
   /* «Bald online»: Solange im Admin unter Kontakt «Bald-Seite» eingeschaltet ist,
      sehen Besucher*innen nur einen kurzen Gruss. Mit ?vorschau sieht man die ganze Seite. */
-  if (KONTAKT.bald && !VORSCHAU) return zeigeBald();
+  if (KONTAKT.bald && !VORSCHAU && !ANSICHT) return zeigeBald();
+  if (ANSICHT && KONTAKT.bald) document.head.insertAdjacentHTML("beforeend", '<meta name="robots" content="noindex">');
   sichtbare = PROJEKTE.filter((p) => status(p) === "aktuell" || (VORSCHAU && entwurf(p))).slice(0, POSITIONEN.length);
   if (VORSCHAU) {
     document.body.classList.add("vorschau");

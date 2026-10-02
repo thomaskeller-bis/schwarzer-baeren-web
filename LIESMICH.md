@@ -45,6 +45,7 @@ bilder/               Fotos, ein Ordner pro Projekt
 
 - Bald-Seite: Im Admin unter Kontakt «Bald-Seite zeigen» einschalten = Besucher*innen sehen nur einen kurzen Gruss.
   Ausschalten, sobald die Seite öffentlich sein soll.
+  Die künftige öffentliche Seite (ohne Entwürfe) sieht man vorher unter `?ansicht`.
 
 ## Lokal anschauen
 
