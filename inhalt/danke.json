@@ -133,31 +133,26 @@
       ]
     },
     {
-      "titel": "Unser künftiges Kernteam",
-      "eintraege": [
-        {
-          "name": "Deborah Blanke",
-          "rolle": "",
-          "link": ""
-        },
-        {
-          "name": "Lisa Lüdi",
-          "rolle": "",
-          "link": ""
-        },
-        {
-          "name": "Steff",
-          "rolle": "",
-          "link": ""
-        }
-      ]
-    },
-    {
       "titel": "Und ausserdem",
       "eintraege": [
         {
           "name": "Ines",
           "rolle": "Planung",
+          "link": ""
+        },
+        {
+          "name": "Deborah Blanke",
+          "rolle": "künftiges Team",
+          "link": ""
+        },
+        {
+          "name": "Lisa Lüdi",
+          "rolle": "künftiges Team",
+          "link": ""
+        },
+        {
+          "name": "Steff",
+          "rolle": "künftiges Team",
           "link": ""
         }
       ]
