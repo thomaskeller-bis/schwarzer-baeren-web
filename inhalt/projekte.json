@@ -1,74 +1,74 @@
 {
   "projekte": [
     {
-      "id": "prozess",
+      "status": "aktuell",
       "titel": "Prozess & Team",
       "nummer": "01",
+      "cover": "/bilder/prozess/01.jpg",
       "untertitel": "Auf Film fotografiert, mit einer Rollei 35 AF",
-      "cover": "bilder/prozess/01.jpg",
       "text": "Wir bauen den Schwarzen Bären nicht fertig. Wir lassen ihn entstehen. Wir starten mit einer Ausgangslage, auf der alles weitere wachsen und sich verändern darf. Und mit Lücken, die den nötigen Raum dafür lassen.\n\n## Was wir vorhaben\n\nEin Ort an der Rheingasse, der einmal den ganzen Tag offen sein soll: morgens Kaffee, über Mittag etwas Kleines, abends Wein und ein paar Teller. Mit Produkten von Leuten, die wir kennen und deren Arbeit wir schätzen.\n\nWir probieren aus, laden andere dazu ein und schauen, was daraus wird: Pop-ups, Gastköch*innen, Musik, Kooperationen. Manches bleibt, manches nicht.\n\n## Auf Film\n\nDiesen Weg halten wir auf analogem Film fest. Die Bilder sind nicht perfekt, und das ist gut so. Sie zeigen, wie es gerade ist.\n\nUnd sie passen zu uns. Denn auch ein Foto auf Film sieht man nicht sofort. Es muss erst entwickelt werden und wird mit der Zeit sichtbar. Wir fotografieren, scannen und laden selbst hoch.\n\nWenn ihr Lust habt, etwas mit uns anzureissen: Schreibt uns.",
+      "bilder": [
+        {
+          "bild": "/bilder/prozess/01.jpg"
+        },
+        {
+          "bild": "/bilder/prozess/02.jpg"
+        },
+        {
+          "bild": "/bilder/prozess/03.jpg"
+        },
+        {
+          "bild": "/bilder/prozess/04.jpg"
+        },
+        {
+          "bild": "/bilder/prozess/05.jpg"
+        },
+        {
+          "bild": "/bilder/prozess/06.jpg"
+        }
+      ],
       "listen": [
         {
           "titel": "Team",
           "eintraege": [
             {
               "name": "Nora Garberson",
-              "rolle": "Gastronomie, Gastgeberin",
-              "link": ""
+              "rolle": "Gastronomie, Gastgeberin"
             },
             {
               "name": "Valentin Ismail",
-              "rolle": "Konzept- und Betriebsentwicklung, Netzwerk",
-              "link": ""
+              "rolle": "Konzept- und Betriebsentwicklung, Netzwerk"
             },
             {
               "name": "Thomas Keller",
-              "rolle": "Raumgestaltung, Szenografie, Aktivierung",
-              "link": ""
+              "rolle": "Raumgestaltung, Szenografie, Aktivierung"
             },
             {
               "name": "Christoph Schön",
-              "rolle": "Konzept- und Betriebsentwicklung, Netzwerk",
-              "link": ""
+              "rolle": "Konzept- und Betriebsentwicklung, Netzwerk"
             }
           ]
         }
       ],
-      "bilder": [
-        {
-          "bild": "bilder/prozess/01.jpg",
-          "text": ""
-        },
-        {
-          "bild": "bilder/prozess/02.jpg",
-          "text": ""
-        },
-        {
-          "bild": "bilder/prozess/03.jpg",
-          "text": ""
-        },
-        {
-          "bild": "bilder/prozess/04.jpg",
-          "text": ""
-        },
-        {
-          "bild": "bilder/prozess/05.jpg",
-          "text": ""
-        },
-        {
-          "bild": "bilder/prozess/06.jpg",
-          "text": ""
-        }
-      ],
-      "status": "aktuell"
+      "id": "prozess"
     },
     {
-      "id": "advaentsgass",
+      "status": "aktuell",
       "titel": "Adväntsgass",
       "nummer": "02",
+      "cover": "/bilder/advaentsgass/01.jpg",
       "untertitel": "26. November bis 23. Dezember 2026, in der Rheingasse",
-      "cover": "bilder/advaentsgass/01.jpg",
-      "text": "Vier Wochen lang sind wir mit einem Stand an der Adväntsgass, direkt vor dem künftigen Bären. Wir experimentieren dort ein erstes Mal mit der Zukunft. FOODTURE ist unser Motto.\n\n## FOODTURE\n\nWie wollen wir als Bären in Zukunft sein? An der Adväntsgass wollen wir es praktisch ausprobieren – auf und neben dem Teller.\n\nAuf dem Teller mit Kartoffeln aus der Region, die diesen trockenen Sommer gelitten haben und mit einem Bein schon aus der Wertschöpfung gefallen sind. Dazu kommen Pilze aus der Stadt, Hummus aus hiesigen Kichererbsen, Fleisch von Baselbieter Milchkühen und Pflanzenbasiertes in allen Formen – gutes Essen aus dem, was hier wächst, entsteht und vorhanden ist.\n\nNeben dem Teller testen wir die Arbeit im Netzwerk: Wir wollen kollaborieren, statt alles selber zu machen, Lieferant:innen und (Co-)Produzent:innen einbeziehen und gemeinsam Wertschöpfung aus Wertschätzung schaffen. Und wir wollen gute Nachbarn sein und unseren Teil zu einer lebendigen Rheingasse beitragen.",
+      "text": "Vier Wochen lang sind wir mit einem Stand an der Adväntsgass, direkt vor dem künftigen Bären. Wir experimentieren dort ein erstes Mal mit der Zukunft. FOODTURE ist unser Motto.\n\n## FOODTURE\n\nWie wollen wir als Bären in Zukunft sein? An der Adväntsgass probieren wir es ganz praktisch aus – auf und neben dem Teller.\n\nAuf dem Teller zum Beispiel mit Kartoffeln aus der Region, die diesen trockenen Sommer gelitten haben und mit einem Bein schon aus der Wertschöpfung gefallen sind. Dazu kommen Pilze aus der Stadt, Hummus aus hiesigen Kichererbsen, Fleisch von Baselbieter Milchkühen und Pflanzenbasiertes in allen Formen – gutes Essen aus dem, was hier wächst, entsteht und vorhanden ist.\n\nNeben dem Teller testen wir die Arbeit im Netzwerk: Wir wollen kollaborieren, statt alles selber zu machen, Lieferant:innen und (Co-)Produzent:innen einbeziehen und gemeinsam Wertschöpfung aus Wertschätzung schaffen. Und wir wollen gute Nachbarn sein und unseren Teil zu einer lebendigen Rheingasse beitragen.\n\nDerzeit arbeiten wir an all dem. Was klappt alles? Was nicht? Was kommt anders (und zweitens: als gedacht)? Schaut vorbei zwischen dem 26. November bis 23. Dezember 2026 in der Rheingasse.",
+      "bilder": [
+        {
+          "bild": "/bilder/advaentsgass/01.jpg",
+          "text": "Adväntsgass, Kultur und Kulinarik im Kleinbasel"
+        },
+        {
+          "bild": "/bilder/advaentsgass/02.jpg",
+          "text": "FOODTURE, Produktion in der Küche der gaw"
+        }
+      ],
       "listen": [
         {
           "titel": "Adväntsgass",
@@ -100,13 +100,11 @@
             },
             {
               "name": "Elias Buess",
-              "rolle": "Rezepturen, Verarbeitung",
-              "link": ""
+              "rolle": "Rezepturen, Verarbeitung"
             },
             {
               "name": "Bär im Schafspelz GmbH",
-              "rolle": "Gastronomie, Stand",
-              "link": ""
+              "rolle": "Gastronomie, Stand"
             },
             {
               "name": "Claudia Link",
@@ -119,128 +117,118 @@
               "link": "https://baselcircular.ch"
             },
             {
-              "name": "... und viele verschiedene Produzent:innen der Region",
-              "rolle": "",
-              "link": ""
+              "name": "... und viele verschiedene Produzent:innen der Region"
             }
           ]
         }
       ],
-      "bilder": [
-        {
-          "bild": "bilder/advaentsgass/01.jpg",
-          "text": "Adväntsgass, Kultur und Kulinarik im Kleinbasel"
-        },
-        {
-          "bild": "bilder/advaentsgass/02.jpg",
-          "text": "FOODTURE, Produktion in der Küche der gaw"
-        }
-      ],
-      "status": "aktuell"
+      "id": "advaentsgass"
     },
     {
-      "id": "clubkarte",
+      "status": "aktuell",
       "titel": "Clubkarte",
       "nummer": "03",
+      "cover": "/bilder/clubkarte/01.jpg",
       "untertitel": "Guthaben laden, beim Bären einlösen",
-      "cover": "bilder/clubkarte/01.jpg",
       "text": "Mit der Clubkarte werdet ihr Teil des Schwarzen Bären, schon bevor er öffnet.\n\nIhr ladet Guthaben auf die Karte und löst es später bei uns ein: Kaffee am Morgen, Wein am Abend, ein Teller aus der Küche. Für uns ist das ein wichtiger Anfang, denn euer Guthaben hilft uns schon jetzt, den Ort aufzubauen.\n\nDie Karte selbst wird von einer Künstlerin oder Grafikerin gestaltet. Wer das ist, zeigen wir bald hier.\n\nInteresse? Schreibt uns.",
-      "listen": [],
       "bilder": [
         {
-          "bild": "bilder/clubkarte/01.jpg",
+          "bild": "/bilder/clubkarte/01.jpg",
           "text": "Der Rohling, noch ungestaltet"
         }
       ],
-      "status": "aktuell"
+      "id": "clubkarte"
     },
     {
-      "id": "eroeffnung",
+      "status": "offline",
       "titel": "Eröffnungsplakat",
       "nummer": "04",
+      "cover": "/bilder/eroeffnung/01.jpg",
       "untertitel": "Erster Entwurf, noch in Arbeit",
-      "cover": "bilder/eroeffnung/01.jpg",
       "text": "Das ist ein erster Gedanke, noch kein fertiges Plakat. Ein Starttermin steht noch nicht fest, und auch am Motiv arbeiten wir noch.\n\nDie Idee dahinter: Bei uns ist noch vieles im Wandel, und vor der Tür ist noch Baustelle. Darum starten wir bewusst reduziert. Im Vordergrund stehen die Öffnungszeiten.\n\nZum Start sind wir von Mittwoch bis Freitag jeweils am Abend da. Am Wochenende planen wir, den ganzen Tag offen zu haben, und testen so den Tagesbetrieb. Sobald die Baustelle weg ist und es in der Strasse ruhiger wird, bauen wir den Tagesbetrieb Schritt für Schritt aus, auch unter der Woche.\n\nWir zeigen das Plakat trotzdem schon jetzt. Auch das gehört zum Prozess.",
+      "bilder": [
+        {
+          "bild": "/bilder/eroeffnung/01.jpg",
+          "text": "Plakat A4, erster Entwurf"
+        }
+      ],
       "listen": [
         {
           "titel": "Öffnungszeiten zum Start (Entwurf)",
           "eintraege": [
             {
               "name": "Mittwoch",
-              "rolle": "17–23",
-              "link": ""
+              "rolle": "17–23"
             },
             {
               "name": "Donnerstag",
-              "rolle": "17–23",
-              "link": ""
+              "rolle": "17–23"
             },
             {
               "name": "Freitag",
-              "rolle": "17–24",
-              "link": ""
+              "rolle": "17–24"
             },
             {
               "name": "Samstag",
-              "rolle": "09–24",
-              "link": ""
+              "rolle": "09–24"
             },
             {
               "name": "Sonntag",
-              "rolle": "09–22",
-              "link": ""
+              "rolle": "09–22"
             },
             {
               "name": "Montag, Dienstag",
-              "rolle": "geschlossen",
-              "link": ""
+              "rolle": "geschlossen"
             }
           ]
         }
       ],
-      "bilder": [
-        {
-          "bild": "bilder/eroeffnung/01.jpg",
-          "text": "Plakat A4, erster Entwurf"
-        }
-      ],
-      "status": "offline"
+      "id": "eroeffnung"
     },
     {
-      "id": "tapas",
+      "status": "aktuell",
       "titel": "Tapas Festival",
       "nummer": "05",
+      "cover": "/bilder/tapas/01.jpg",
       "untertitel": "Samstag, 17. Oktober 2026, im Kleinbasel, zusammen mit dem Jazzcampus",
-      "cover": "bilder/tapas/01.jpg",
       "text": "Am Tapas Festival im Kleinbasel geben wir zum ersten Mal öffentlich etwas von uns zu essen, an einem gemeinsamen Stand mit dem Jazzcampus.\n\nDas Festival findet zum zweiten Mal statt. Initiiert haben es Lenard, unser künftiger Nachbar an der Rheingasse (8Bar und Zum Schmale Wurf), und Felix von Cava Hispania. Elf Betriebe aus dem Quartier machen mit.\n\nFür uns ist es ein erster Versuch: Was kochen wir, wie schmeckt der Bär? Wir bringen vier kleine Happen mit und einen Wermut, den wir selbst ansetzen.",
+      "bilder": [
+        {
+          "bild": "/bilder/tapas/01.jpg",
+          "text": "Plakat Tapas Festival"
+        },
+        {
+          "bild": "/bilder/tapas/03.jpg",
+          "text": "Erste Ansätze in der Küche"
+        },
+        {
+          "bild": "/bilder/tapas/02.jpg",
+          "text": "Plakat Tapas Festival, rot"
+        }
+      ],
       "listen": [
         {
           "titel": "Unser Angebot (Entwurf)",
           "eintraege": [
             {
               "name": "Saibling & Knäckebrot",
-              "rolle": "geräucherter Schweizer Saibling, Knoblauch-Crème-fraîche, eingelegter Kohlrabi, Roggen-Knäckebrot, Fichtenöl",
-              "link": ""
+              "rolle": "geräucherter Schweizer Saibling, Knoblauch-Crème-fraîche, eingelegter Kohlrabi, Roggen-Knäckebrot, Fichtenöl"
             },
             {
               "name": "Rande & Ziege",
-              "rolle": "geröstete Rande, Ziegenfrischkäse, Apfelsaft-Reduktion, geröstete Haselnüsse",
-              "link": ""
+              "rolle": "geröstete Rande, Ziegenfrischkäse, Apfelsaft-Reduktion, geröstete Haselnüsse"
             },
             {
               "name": "Herbstwald",
-              "rolle": "Herbstpilzcrème, eingelegte Eierschwämme, Crostini, Kürbiskernöl, Kürbiskern-Crunch",
-              "link": ""
+              "rolle": "Herbstpilzcrème, eingelegte Eierschwämme, Crostini, Kürbiskernöl, Kürbiskern-Crunch"
             },
             {
               "name": "Birnen-Carpaccio",
-              "rolle": "Herbstbirne, Skyr mit Meerrettich, karamellisierte Baumnüsse, geräuchertes Salz",
-              "link": ""
+              "rolle": "Herbstbirne, Skyr mit Meerrettich, karamellisierte Baumnüsse, geräuchertes Salz"
             },
             {
               "name": "Bären-Wermut",
-              "rolle": "Hausapéro, inspiriert vom Basler Läckerli: Kirsch, Zimt, Nelken, Muskat, Honig, Orangeat, Zitronat, Fichtennadeln",
-              "link": ""
+              "rolle": "Hausapéro, inspiriert vom Basler Läckerli: Kirsch, Zimt, Nelken, Muskat, Honig, Orangeat, Zitronat, Fichtennadeln"
             }
           ]
         },
@@ -270,29 +258,59 @@
           ]
         }
       ],
-      "bilder": [
-        {
-          "bild": "bilder/tapas/01.jpg",
-          "text": "Plakat Tapas Festival"
-        },
-        {
-          "bild": "bilder/tapas/03.jpg",
-          "text": "Erste Ansätze in der Küche"
-        },
-        {
-          "bild": "bilder/tapas/02.jpg",
-          "text": "Plakat Tapas Festival, rot"
-        }
-      ],
-      "status": "aktuell"
+      "id": "tapas"
     },
     {
-      "id": "mieterapero",
+      "status": "archiv",
       "titel": "Mieterapéro",
       "nummer": "06",
+      "cover": "/bilder/mieterapero/05.jpg",
       "untertitel": "8. September 2026, mit der Stiftung Edith Maryon",
-      "cover": "bilder/mieterapero/05.jpg",
       "text": "Unser erster Anlass, noch mitten auf der Baustelle. Die Stiftung Edith Maryon hatte Interessierte für die Mietflächen zu einer Besichtigung ins Haus eingeladen, und wir durften den Apéro machen.\n\nDie Räume waren roh, das Buffet stand auf Dämmplatten, als Licht diente eine Lichterkette. Alles kam mit dem Veloanhänger. Nora hat dafür gesorgt, dass es trotzdem ein kleines Fest wurde: mit Hummus, Focaccia, Tartelettes und kleinen Häppchen.\n\nFür uns war es das erste Mal, dass sich der Ort mit Menschen gefüllt hat. Ein erstes Gefühl dafür, was hier einmal entstehen kann.",
+      "bilder": [
+        {
+          "bild": "/bilder/mieterapero/01.jpg",
+          "text": "Anlieferung mit dem Veloanhänger"
+        },
+        {
+          "bild": "/bilder/mieterapero/02.jpg"
+        },
+        {
+          "bild": "/bilder/mieterapero/03.jpg"
+        },
+        {
+          "bild": "/bilder/mieterapero/04.jpg"
+        },
+        {
+          "bild": "/bilder/mieterapero/05.jpg"
+        },
+        {
+          "bild": "/bilder/mieterapero/06.jpg"
+        },
+        {
+          "bild": "/bilder/mieterapero/07.jpg",
+          "text": "Buffet auf Dämmplatten"
+        },
+        {
+          "bild": "/bilder/mieterapero/08.jpg"
+        },
+        {
+          "bild": "/bilder/mieterapero/09.jpg",
+          "text": "Rundgang durchs Haus"
+        },
+        {
+          "bild": "/bilder/mieterapero/10.jpg"
+        },
+        {
+          "bild": "/bilder/mieterapero/11.jpg"
+        },
+        {
+          "bild": "/bilder/mieterapero/12.jpg"
+        },
+        {
+          "bild": "/bilder/mieterapero/13.jpg"
+        }
+      ],
       "listen": [
         {
           "titel": "Zusammen mit",
@@ -304,83 +322,23 @@
             },
             {
               "name": "Nora Garberson",
-              "rolle": "Küche",
-              "link": ""
+              "rolle": "Küche"
             },
             {
               "name": "Bär im Schafspelz GmbH",
-              "rolle": "Apéro",
-              "link": ""
+              "rolle": "Apéro"
             }
           ]
         }
       ],
-      "bilder": [
-        {
-          "bild": "bilder/mieterapero/01.jpg",
-          "text": "Anlieferung mit dem Veloanhänger"
-        },
-        {
-          "bild": "bilder/mieterapero/02.jpg",
-          "text": ""
-        },
-        {
-          "bild": "bilder/mieterapero/03.jpg",
-          "text": ""
-        },
-        {
-          "bild": "bilder/mieterapero/04.jpg",
-          "text": ""
-        },
-        {
-          "bild": "bilder/mieterapero/05.jpg",
-          "text": ""
-        },
-        {
-          "bild": "bilder/mieterapero/06.jpg",
-          "text": ""
-        },
-        {
-          "bild": "bilder/mieterapero/07.jpg",
-          "text": "Buffet auf Dämmplatten"
-        },
-        {
-          "bild": "bilder/mieterapero/08.jpg",
-          "text": ""
-        },
-        {
-          "bild": "bilder/mieterapero/09.jpg",
-          "text": "Rundgang durchs Haus"
-        },
-        {
-          "bild": "bilder/mieterapero/10.jpg",
-          "text": ""
-        },
-        {
-          "bild": "bilder/mieterapero/11.jpg",
-          "text": ""
-        },
-        {
-          "bild": "bilder/mieterapero/12.jpg",
-          "text": ""
-        },
-        {
-          "bild": "bilder/mieterapero/13.jpg",
-          "text": ""
-        }
-      ],
-      "status": "archiv"
+      "id": "mieterapero"
     },
     {
-      "id": "kueche",
+      "status": "offline",
       "titel": "Küche",
-      "nummer": "",
       "untertitel": "Erste Ideen, Kochexperimente, Gedanken",
-      "cover": "",
       "text": "Hier entsteht unsere Karte. Zuerst zeigen wir Versuche und Gedanken, später das Menu.",
-      "listen": [],
-      "bilder": [],
-      "status": "offline"
+      "id": "kueche"
     }
   ]
 }
