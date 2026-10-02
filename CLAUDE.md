@@ -12,7 +12,7 @@ Inhalte werden auch über Pages CMS (app.pagescms.org) vom Team bearbeitet.
 - `app.js`, `style.css`, `index.html` – Darstellung
 
 ## Projekt-Felder
-`status` (aktuell | archiv | offline), `titel`, `nummer` (fest, bleibt auch im Archiv; leer = nächste freie),
+`status` (aktuell | archiv | offline = Entwurf, nur sichtbar unter `/?vorschau`), `titel`, `nummer` (fest, bleibt auch im Archiv; leer = nächste freie),
 `cover`, `untertitel`, `text` (Leerzeile = Absatz, «## » = Zwischentitel), `instagram`,
 `bilder` [{bild, text}], `listen` [{titel, eintraege: [{name, rolle, link}]}], `id` (Adresse #id).
 

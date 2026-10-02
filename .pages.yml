@@ -36,7 +36,7 @@ content:
                 - name: archiv
                   label: Archiv (sichtbar im Archiv)
                 - name: offline
-                  label: Offline (Entwurf, nicht sichtbar)
+                  label: Entwurf (nicht öffentlich, nur in der Vorschau ?vorschau)
           - name: titel
             label: Titel
             type: string

@@ -46,6 +46,12 @@ let archiv = [];      // Status "archiv": im Archiv
 /* Status eines Projekts: "aktuell", "archiv" oder "offline" */
 const status = (p) => p.status || (p.sichtbar === false ? "offline" : "aktuell");
 
+/* Vorschau: Mit «?vorschau» hinter der Adresse erscheinen auch die Entwürfe
+   (Status «offline») auf der Startseite, markiert mit «Entwurf».
+   Der Link ist nirgends auf der Seite verlinkt. */
+const VORSCHAU = new URLSearchParams(location.search).has("vorschau");
+const entwurf = (p) => status(p) === "offline";
+
 /* Bildpfad: "/bilder/x.jpg" und "bilder/x.jpg" funktionieren beide */
 /* Projektnummer: eigenes Feld "nummer" gilt fest, sonst automatisch nach Reihenfolge */
 function nummer(p) {
@@ -99,7 +105,7 @@ function bauBuehne() {
       style="left:${pos.x}%;top:${pos.y}%;--breite:${w.breite};--dx:${w.dx};--dy:${w.dy};--dr:${w.dr};--dauer:${w.dauer};--start:-${i * 3}s">
       <a href="#${esc(p.id)}">
         ${cover(p)}
-        <span class="titel"><span>${esc(p.titel)}</span><span class="mono">${nr}</span></span>
+        <span class="titel"><span>${esc(p.titel)}</span><span class="mono">${entwurf(p) ? "Entwurf" + (nr ? " · " + nr : "") : nr}</span></span>
       </a>
     </div>`;
   }).join("");
@@ -231,6 +237,7 @@ function oeffne(p) {
     <div class="detail-text">
       <p class="mono" style="color:var(--grau);margin:0 0 14px">${imArchiv
         ? `<a href="#archiv">Archiv</a>${nr ? " · " + esc(nr) : ""}`
+        : entwurf(p) ? `Entwurf, nicht öffentlich${nr ? " · " + esc(nr) : ""}`
         : `Projekt ${esc(nr)}`}</p>
       <h1>${esc(p.titel)}</h1>
       <p class="unter">${esc(p.untertitel || "")}</p>
@@ -267,7 +274,11 @@ async function start() {
     laden("inhalt/danke.json").catch(() => ({}))
   ]);
   PROJEKTE = Array.isArray(pj) ? pj : pj.projekte || [];
-  sichtbare = PROJEKTE.filter((p) => status(p) === "aktuell").slice(0, POSITIONEN.length);
+  sichtbare = PROJEKTE.filter((p) => status(p) === "aktuell" || (VORSCHAU && entwurf(p))).slice(0, POSITIONEN.length);
+  if (VORSCHAU) {
+    document.body.classList.add("vorschau");
+    document.querySelector('meta[name="robots"]') || document.head.insertAdjacentHTML("beforeend", '<meta name="robots" content="noindex">');
+  }
   archiv = PROJEKTE.filter((p) => status(p) === "archiv");
   $("#archiv-link").hidden = archiv.length === 0;
   const dankeLink = $("#danke-link");

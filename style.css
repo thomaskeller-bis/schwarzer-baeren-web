@@ -358,3 +358,17 @@ img { display: block; max-width: 100%; height: auto; }
   outline: 1px solid var(--linie);
   outline-offset: -1px;
 }
+
+/* ---------- Vorschau (?vorschau) ---------- */
+
+body.vorschau::before {
+  content: "Vorschau mit Entwürfen, nicht öffentlich";
+  display: block;
+  padding: 6px var(--rand);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--grau);
+  border-bottom: 1px dashed var(--linie);
+}

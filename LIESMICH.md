@@ -39,7 +39,9 @@ bilder/               Fotos, ein Ordner pro Projekt
 - Kein Titelbild = Platzhalter «Fotos folgen».
 - Status «Aktuell» = schwebt auf der Startseite.
 - Status «Archiv» = verschwindet von der Startseite, bleibt im Archiv sichtbar (Link «Archiv» oben rechts).
-- Status «Offline» = gespeichert, aber nirgends sichtbar (z.B. Entwurf).
+- Status «Entwurf» (intern: offline) = auf der öffentlichen Seite nicht sichtbar.
+- Vorschau mit Entwürfen: `?vorschau` an die Adresse hängen, z.B. https://zumschwarzenbaeren.ch/?vorschau
+  Der Link ist nirgends verlinkt. Wirklich geheim ist er nicht: Wer ihn kennt, sieht die Entwürfe.
 
 ## Lokal anschauen
 
