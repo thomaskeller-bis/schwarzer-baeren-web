@@ -43,6 +43,9 @@ bilder/               Fotos, ein Ordner pro Projekt
 - Vorschau mit Entwürfen: `?vorschau` an die Adresse hängen, z.B. https://www.zumschwarzenbaeren.ch/?vorschau
   Der Link ist nirgends verlinkt. Wirklich geheim ist er nicht: Wer ihn kennt, sieht die Entwürfe.
 
+- Bald-Seite: Im Admin unter Kontakt «Bald-Seite zeigen» einschalten = Besucher*innen sehen nur einen kurzen Gruss.
+  Ausschalten, sobald die Seite öffentlich sein soll.
+
 ## Lokal anschauen
 
 Wegen der JSON-Dateien funktioniert Doppelklick auf `index.html` nicht mehr.

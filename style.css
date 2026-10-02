@@ -372,3 +372,19 @@ body.vorschau::before {
   color: var(--grau);
   border-bottom: 1px dashed var(--linie);
 }
+
+/* ---------- Bald online ---------- */
+
+.bald {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  padding: 40px var(--rand);
+  max-width: 40rem;
+}
+.bald .wortmarke { font-size: 19px; }
+.bald-text p { margin: 0 0 0.8em; font-size: 17px; }
+.bald .mono { color: var(--grau); margin: 0; }

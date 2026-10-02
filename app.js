@@ -265,6 +265,18 @@ function route() {
 
 /* ---------- Start ---------- */
 
+function zeigeBald() {
+  document.title = KONTAKT.name;
+  const zeilen = String(KONTAKT.bald_text || "Wir sind bald online.").trim().split(/\n\s*\n/)
+    .map((t) => `<p>${esc(t).replace(/\n/g, "<br>")}</p>`).join("");
+  document.body.innerHTML = `
+    <main class="bald">
+      <p class="wortmarke">${esc(KONTAKT.name)}</p>
+      <div class="bald-text">${zeilen}</div>
+      <p class="mono">${esc(KONTAKT.adresse || "")}</p>
+    </main>`;
+}
+
 async function start() {
   const laden = (datei) => fetch(datei, { cache: "no-cache" }).then((r) => r.json());
   let pj;
@@ -274,6 +286,10 @@ async function start() {
     laden("inhalt/danke.json").catch(() => ({}))
   ]);
   PROJEKTE = Array.isArray(pj) ? pj : pj.projekte || [];
+
+  /* «Bald online»: Solange im Admin unter Kontakt «Bald-Seite» eingeschaltet ist,
+     sehen Besucher*innen nur einen kurzen Gruss. Mit ?vorschau sieht man die ganze Seite. */
+  if (KONTAKT.bald && !VORSCHAU) return zeigeBald();
   sichtbare = PROJEKTE.filter((p) => status(p) === "aktuell" || (VORSCHAU && entwurf(p))).slice(0, POSITIONEN.length);
   if (VORSCHAU) {
     document.body.classList.add("vorschau");

@@ -109,6 +109,12 @@ content:
     path: inhalt/kontakt.json
     format: json
     fields:
+      - name: bald
+        label: Bald-Seite zeigen (eingeschaltet = Besucher*innen sehen nur den Gruss unten, die ganze Seite nur mit ?vorschau)
+        type: boolean
+      - name: bald_text
+        label: Text der Bald-Seite (Leerzeile = neuer Absatz)
+        type: text
       - name: name
         label: Name
         type: string

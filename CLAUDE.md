@@ -5,7 +5,7 @@ Inhalte werden auch über Pages CMS (app.pagescms.org) vom Team bearbeitet.
 
 ## Wo was liegt
 - `inhalt/projekte.json` – alle Projekte unter dem Schlüssel `projekte` (Liste)
-- `inhalt/kontakt.json` – Name, Untertitel, Hinweis, Adresse, Mail, Instagram
+- `inhalt/kontakt.json` – Name, Untertitel, Hinweis, Adresse, Mail, Instagram, `bald` (true = nur Bald-Seite mit `bald_text`, ganze Seite unter `/?vorschau`)
 - `inhalt/danke.json` – Danke-Seite (Gruppen mit Einträgen)
 - `bilder/<projekt-id>/` – Fotos, ca. 1600 px lange Seite, JPG
 - `.pages.yml` – Felder der Admin-Seite. Bei neuen Feldern in den JSON-Dateien hier ebenfalls ergänzen.
