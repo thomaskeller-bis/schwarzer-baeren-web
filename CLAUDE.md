@@ -24,3 +24,10 @@ Inhalte werden auch über Pages CMS (app.pagescms.org) vom Team bearbeitet.
 - Gestaltung bewusst zurückhaltend: weiss, Hanken Grotesk + IBM Plex Mono (lokal in `schrift/`), keine externen Dienste.
 - Nach Änderungen kurz lokal prüfen (`python3 -m http.server`) und dann committen + pushen.
 - Commit-Nachrichten auf Deutsch, kurz.
+
+## Textredaktion (Ablauf mit Christoph)
+1. Neues Projekt zuerst als Entwurf anlegen (Status offline), Vorschau unter `/?vorschau`.
+2. Texte als Word-Datei (.docx) ausgeben, gegliedert wie im CMS: Titel, Untertitel, Text, Listen («Name – Rolle · Link»), Bildlegenden.
+3. Christoph korrigiert im Korrekturmodus und kommentiert offene Fragen.
+4. Die korrigierte .docx übernehmen: Änderungen einsetzen, offensichtliche Tippfehler korrigieren, Kommentare als offene Punkte auflisten statt raten.
+- Ansprache auf der Seite: Ihr-Form. Danke-Seite: Name = Betrieb (nur ohne Betrieb Personenname), Rolle in Stichworten, Ansprechpersonen am Schluss «mit Vorname».
