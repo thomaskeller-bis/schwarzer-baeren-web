@@ -4,13 +4,11 @@
    den Look an einer Stelle.
    ========================================================= */
 
-/* Schriften liegen im Ordner schrift/ (keine Verbindung zu Google nötig) */
-@font-face { font-family: "Hanken Grotesk"; font-weight: 400; font-style: normal; font-display: swap;
-  src: url("schrift/hanken-grotesk-latin-400-normal.woff2") format("woff2"); }
-@font-face { font-family: "Hanken Grotesk"; font-weight: 500; font-style: normal; font-display: swap;
-  src: url("schrift/hanken-grotesk-latin-500-normal.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Mono"; font-weight: 400; font-style: normal; font-display: swap;
-  src: url("schrift/ibm-plex-mono-latin-400-normal.woff2") format("woff2"); }
+/* Schrift liegt im Ordner schrift/ (keine Verbindung zu Google nötig) */
+@font-face { font-family: "Schibsted Grotesk"; font-weight: 400; font-style: normal; font-display: swap;
+  src: url("schrift/schibsted-grotesk-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Schibsted Grotesk"; font-weight: 500; font-style: normal; font-display: swap;
+  src: url("schrift/schibsted-grotesk-latin-500-normal.woff2") format("woff2"); }
 
 :root {
   color-scheme: light;
@@ -20,8 +18,7 @@
   --linie: #d9d7d2;       /* Linien, Sternbild */
   --leer: #f3f2ee;        /* Platzhalter-Flächen */
 
-  --schrift: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --schrift: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
 
   --rand: clamp(16px, 3vw, 36px);  /* Seitenrand */
 }
@@ -44,11 +41,9 @@ body {
 a { color: inherit; }
 img { display: block; max-width: 100%; height: auto; }
 
+/* kleine Nebenzeilen (Nummern, Legenden, Listentitel) */
 .mono {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: 13px;
 }
 
 /* ---------- Kopf & Fuss ---------- */
@@ -365,10 +360,7 @@ body.vorschau::before {
   content: "Vorschau mit Entwürfen, nicht öffentlich";
   display: block;
   padding: 6px var(--rand);
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: 13px;
   color: var(--grau);
   border-bottom: 1px dashed var(--linie);
 }

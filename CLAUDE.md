@@ -21,7 +21,7 @@ Inhalte werden auch über Pages CMS (app.pagescms.org) vom Team bearbeitet.
 - Immer zuerst `git pull`, weil das Team parallel im CMS speichert.
 - Bestehende Nummern nie ändern.
 - Ton: Deutsch (Schweiz, «ss» statt «ß»), schlicht, bescheiden, prozesshaft. Keine Werbesprache.
-- Gestaltung bewusst zurückhaltend: weiss, Hanken Grotesk + IBM Plex Mono (lokal in `schrift/`), keine externen Dienste.
+- Gestaltung bewusst zurückhaltend: weiss, eine Schrift: Schibsted Grotesk 400/500 (lokal in `schrift/`), keine Mono-Grossbuchstaben, keine externen Dienste.
 - Nach Änderungen kurz lokal prüfen (`python3 -m http.server`) und dann committen + pushen.
 - Commit-Nachrichten auf Deutsch, kurz.
 
