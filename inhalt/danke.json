@@ -1,13 +1,13 @@
 {
   "titel": "Danke",
-  "intro": "Ohne diese Menschen, Vereine und Firmen wäre das alles viel schwieriger. Sie helfen mit, denken mit und gestalten mit. Danke!",
+  "intro": "Ohne diese Menschen, Vereine und Firmen wäre das alles viel schwieriger. Sie helfen, denken und gestalten mit. Danke!",
   "gruppen": [
     {
       "titel": "Haus",
       "eintraege": [
         {
-          "name": "Stiftung Edith Maryon und Edith Maryon AG",
-          "rolle": "Vermieterin und Unterstützerin. Danke für euer Vertrauen.",
+          "name": "Edith Maryon AG",
+          "rolle": "Eigentümerin und Vermieterin",
           "link": "https://maryon.ch"
         },
         {
@@ -32,11 +32,11 @@
         },
         {
           "name": "Mettler Gastroküchen",
-          "rolle": "René, Gastroküche. Immer erreichbar bei Fragen.",
+          "rolle": "Gastroküche, mit René",
           "link": "https://mettler-chuchi.ch"
         },
         {
-          "name": "Einsiedler Bier",
+          "name": "Brauerei Rosengarten",
           "rolle": "Bierlieferant, Unterstützung bei der Einrichtung",
           "link": "https://einsiedlerbier.ch"
         }
@@ -46,18 +46,18 @@
       "titel": "Nachbarschaft",
       "eintraege": [
         {
-          "name": "Lenny",
-          "rolle": "8Bar und Zum Schmale Wurf",
-          "link": ""
+          "name": "8Bar und Zum Schmale Wurf",
+          "rolle": "Nachbarn an der Rheingasse, mit Lenny",
+          "link": "https://8-bar.eu"
         },
         {
           "name": "Krafft Gruppe",
-          "rolle": "Jonas, Direktor Hotel Krafft, und Franz Xaver, Mitinhaber. Mit dem Consum gleich nebenan.",
+          "rolle": "Hotel Krafft und Consum, Nachbarn an der Rheingasse, mit Jonas und Franz Xaver",
           "link": "https://www.krafftgruppe.ch"
         },
         {
           "name": "Adväntsgass",
-          "rolle": "Mit ihr starten wir im Dezember",
+          "rolle": "Weihnachtsmarkt in der Rheingasse, Gastgeberin für unseren Stand",
           "link": "https://www.advaentsgass.ch"
         }
       ]
@@ -66,18 +66,18 @@
       "titel": "Gastronomiefreunde",
       "eintraege": [
         {
-          "name": "Tim und Tobias, Kuni & Gunde",
-          "rolle": "Ratschläge und Tipps aus der Gastronomie",
+          "name": "Kuni & Gunde",
+          "rolle": "Rat und Tipps, mit Tim und Tobias",
           "link": "https://www.kuni-gunde.ch"
         },
         {
-          "name": "Lukas, VITO",
-          "rolle": "Ratschläge und Tipps aus der Gastronomie",
+          "name": "VITO",
+          "rolle": "Rat und Tipps, mit Lukas",
           "link": "https://www.vito.ch"
         },
         {
           "name": "Markthalle Basel",
-          "rolle": "Ratschläge und Tipps aus der Gastronomie",
+          "rolle": "Rat und Tipps",
           "link": "https://www.markthallebasel.ch"
         }
       ]
@@ -87,17 +87,17 @@
       "eintraege": [
         {
           "name": "Lebensmittel Netzwerk Basel",
-          "rolle": "Nachhaltige Ernährung",
+          "rolle": "Netzwerk und Beschaffung",
           "link": "https://www.lebensmittelnetzwerk.ch"
         },
         {
           "name": "Basel Food Factory",
-          "rolle": "Nachhaltige Ernährung",
+          "rolle": "Netzwerk und Produktentwicklung",
           "link": "https://www.foodfactorybasel.ch"
         },
         {
           "name": "gaw",
-          "rolle": "Unterstützung an der Adväntsgass",
+          "rolle": "Produktion und Produktentwicklung",
           "link": "https://www.gaw.ch"
         }
       ]
@@ -117,7 +117,7 @@
         },
         {
           "name": "Rio Basel",
-          "rolle": "Freunde, die immer einen guten Tipp für uns haben",
+          "rolle": "Rat und Tipps",
           "link": "https://riobasel.ch"
         }
       ]
@@ -127,7 +127,7 @@
       "eintraege": [
         {
           "name": "Christopher McKean Scott",
-          "rolle": "Bei Fragen zur Internettechnik immer bereit für eine Auskunft oder eine kurze Mithilfe. Danke, danke, danke.",
+          "rolle": "Webtechnik und Support",
           "link": ""
         }
       ]
@@ -153,7 +153,7 @@
       ]
     },
     {
-      "titel": "Danke",
+      "titel": "Und ausserdem",
       "eintraege": [
         {
           "name": "Ines",
