@@ -33,7 +33,7 @@ Inhalte werden auch über Pages CMS (app.pagescms.org) vom Team bearbeitet.
 - Ansprache auf der Seite: Ihr-Form. Danke-Seite: Name = Betrieb (nur ohne Betrieb Personenname), Rolle in Stichworten, Ansprechpersonen am Schluss «mit Vorname».
 
 ## Instagram-Paket (Seite = Quelle)
-Auf Zuruf pro Projekt ein Paket als ZIP erstellen (nicht ins Repo):
+Auf Zuruf pro Projekt ein Paket erstellen (nicht ins Repo). Ablage: Artifact-Seite «Instagram-Pakete Bären» (claude.ai/artifact/YKexxR6F92vS3BGsQ2fAmn), pro Projekt ein Abschnitt mit Bildern und Text-Kopierknopf:
 1. Titelkachel 1080×1350 PNG: weiss, Schibsted Grotesk, oben Nummer (grau), Mitte Titel gross (500), unten Untertitel (grau) und «Zum Schwarzen Bären».
 2. Danach Video (falls vorhanden, Original) und Fotos aus `bilder/<id>/`, auf 1080×1350 (4:5) zugeschnitten, nummeriert in Reihenfolge.
 3. `text.txt`: «NN · Titel», 2 kurze Absätze aus dem Projekttext (Ihr-Form), Datum, «Mehr dazu: zumschwarzenbaeren.ch», wenige Hashtags.
