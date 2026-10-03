@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#151515">
 <title>Bär im Schafspelz GmbH</title>
 <meta name="description" content="Bär im Schafspelz GmbH, Basel. Betreiberin von Zum Schwarzen Bären an der Rheingasse.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -13,12 +14,13 @@
   @font-face { font-family: "Schibsted Grotesk"; font-weight: 500; font-display: swap;
     src: url("/schrift/schibsted-grotesk-latin-500-normal.woff2") format("woff2"); }
 
+  /* Firma: dunkel, damit sie sich vom hellen Bären abhebt */
   :root {
-    color-scheme: light;
-    --papier: #ffffff;
-    --tinte: #141414;
-    --grau: #7a7872;
-    --linie: #d9d7d2;
+    color-scheme: dark;
+    --papier: #151515;
+    --tinte: #f2f0ea;
+    --grau: #8f8c84;
+    --linie: #3a3936;
     --rand: clamp(16px, 3vw, 36px);
   }
   * { box-sizing: border-box; }
@@ -47,12 +49,10 @@
   }
   header {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 16px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
   }
-  .name { font-size: 19px; font-weight: 500; letter-spacing: -0.01em; margin: 0; }
+  .name { font-size: clamp(34px, 6vw, 72px); font-weight: 500; letter-spacing: -0.03em; line-height: 1; margin: 0; }
 
   main {
     flex: 1;
@@ -60,11 +60,11 @@
     grid-template-columns: minmax(0, 26rem) minmax(0, 1fr);
     gap: clamp(28px, 5vw, 80px);
     align-items: start;
-    padding-block: clamp(48px, 10vh, 120px) 60px;
+    padding-block: clamp(40px, 8vh, 90px) 60px;
   }
   .text p { margin: 0 0 1em; max-width: 52ch; }
 
-  .block { margin-top: 28px; border-top: 1px solid var(--tinte); padding-top: 10px; }
+  .block { margin-top: 28px; border-top: 1px solid var(--linie); padding-top: 10px; }
   .block h2 { margin: 0 0 6px; font-weight: 400; }
   .block p { margin: 0; }
   .zeile {
@@ -84,6 +84,7 @@
     height: auto;
     outline: 1px solid var(--linie);
     outline-offset: -1px;
+    filter: grayscale(1) contrast(1.05);
   }
   figcaption { margin-top: 8px; }
 
