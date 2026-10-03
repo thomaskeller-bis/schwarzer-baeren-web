@@ -31,3 +31,10 @@ Inhalte werden auch über Pages CMS (app.pagescms.org) vom Team bearbeitet.
 3. Christoph korrigiert im Korrekturmodus und kommentiert offene Fragen.
 4. Die korrigierte .docx übernehmen: Änderungen einsetzen, offensichtliche Tippfehler korrigieren, Kommentare als offene Punkte auflisten statt raten.
 - Ansprache auf der Seite: Ihr-Form. Danke-Seite: Name = Betrieb (nur ohne Betrieb Personenname), Rolle in Stichworten, Ansprechpersonen am Schluss «mit Vorname».
+
+## Instagram-Paket (Seite = Quelle)
+Auf Zuruf pro Projekt ein Paket als ZIP erstellen (nicht ins Repo):
+1. Titelkachel 1080×1350 PNG: weiss, Schibsted Grotesk, oben Nummer (grau), Mitte Titel gross (500), unten Untertitel (grau) und «Zum Schwarzen Bären».
+2. Danach Video (falls vorhanden, Original) und Fotos aus `bilder/<id>/`, auf 1080×1350 (4:5) zugeschnitten, nummeriert in Reihenfolge.
+3. `text.txt`: «NN · Titel», 2 kurze Absätze aus dem Projekttext (Ihr-Form), Datum, «Mehr dazu: zumschwarzenbaeren.ch», wenige Hashtags.
+Nach dem Posten den Link zum Beitrag im Feld `instagram` des Projekts eintragen.
