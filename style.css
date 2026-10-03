@@ -39,7 +39,8 @@ body {
 }
 
 a { color: inherit; }
-img { display: block; max-width: 100%; height: auto; }
+img, video { display: block; max-width: 100%; height: auto; }
+video { width: 100%; background: var(--leer); }
 
 /* kleine Nebenzeilen (Nummern, Legenden, Listentitel) */
 .mono {
@@ -349,7 +350,9 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* feine Kante, damit weisse Bilder (z.B. Plakate) nicht im Weiss verschwinden */
 .projekt img.bild,
-.detail-bilder img {
+.projekt video.bild,
+.detail-bilder img,
+.detail-bilder video {
   outline: 1px solid var(--linie);
   outline-offset: -1px;
 }

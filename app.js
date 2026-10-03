@@ -92,7 +92,15 @@ function absaetze(text) {
 }
 
 /* Cover: echtes Bild oder Platzhalter */
+/* Video statt Titelbild: läuft stumm in Schleife. Das Titelbild dient als Vorschaubild. */
+const RUHIG = matchMedia("(prefers-reduced-motion: reduce)").matches;
+function videoHtml(src, poster, klasse) {
+  return `<video class="${klasse}" src="${esc(pfad(src))}"${poster ? ` poster="${esc(pfad(poster))}"` : ""}
+    width="720" height="900" muted loop playsinline preload="metadata"${RUHIG ? " controls" : " autoplay"}></video>`;
+}
+
 function cover(p) {
+  if (p.video) return videoHtml(p.video, p.cover, "bild");
   if (!p.cover) {
     return `<div class="bild platzhalter fotos">
       <span class="mono">Film läuft</span>
@@ -256,14 +264,15 @@ function oeffne(p) {
     ? `<p class="insta"><a href="${esc(p.instagram)}" target="_blank" rel="noopener">Mehr dazu auf Instagram</a></p>`
     : "";
 
-  const bilder = p.bilder && p.bilder.length
+  const film = p.video ? `<figure>${videoHtml(p.video, p.cover, "")}</figure>` : "";
+  const bilder = film + (p.bilder && p.bilder.length
     ? p.bilder
         .map((b, i) => `<figure>
           <img src="${esc(pfad(b.bild))}" alt="${esc(b.text || p.titel + " " + (i + 1))}" loading="lazy">
           <figcaption class="mono"><span>${nr ? nr + "–" : ""}${String(i + 1).padStart(2, "0")}</span>${b.text ? `<span>${esc(b.text)}</span>` : ""}</figcaption>
         </figure>`)
         .join("")
-    : `<figure>${cover({ ...p, cover: "" })}</figure>`;
+    : (film ? "" : `<figure>${cover({ ...p, cover: "" })}</figure>`));
 
   zeigeDetail(`
     <div class="detail-text">

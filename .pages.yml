@@ -47,6 +47,11 @@ content:
           - name: cover
             label: Titelbild auf der Startseite (leer = «Fotos folgen»)
             type: image
+          - name: video
+            label: Video statt Titelbild (optional, MP4, kurz und ohne Ton – läuft auf der Startseite in Schleife)
+            type: file
+            options:
+              extensions: [mp4]
           - name: untertitel
             label: Untertitel
             type: string
