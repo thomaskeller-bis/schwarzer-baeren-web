@@ -26,6 +26,11 @@ const POSITIONEN = [
   { x: 50, y: 50 }
 ];
 
+/* Test: ?schweben=2 = doppelt so weit und doppelt so schnell (zum Ausprobieren) */
+const SCHWEBEN_FAKTOR = parseFloat(new URLSearchParams(location.search).get("schweben")) || 1;
+const weiter = (v) => parseFloat(v) * SCHWEBEN_FAKTOR + (v.endsWith("deg") ? "deg" : "px");
+const schneller = (v) => (parseFloat(v) / SCHWEBEN_FAKTOR).toFixed(1) + "s";
+
 /* leichte Unterschiede, damit nicht alles gleich schwebt */
 const SCHWEBEN = [
   { breite: "19vw", dx: "14px", dy: "-9px",  dr: "0.5deg",  dauer: "13s" },
@@ -105,7 +110,7 @@ function bauBuehne() {
     const w = SCHWEBEN[i % SCHWEBEN.length];
     const nr = nummer(p);
     return `<div class="projekt ${i % 2 ? "rechts" : "links"}"
-      style="left:${pos.x}%;top:${pos.y}%;--breite:${w.breite};--dx:${w.dx};--dy:${w.dy};--dr:${w.dr};--dauer:${w.dauer};--start:-${i * 3}s">
+      style="left:${pos.x}%;top:${pos.y}%;--breite:${w.breite};--dx:${weiter(w.dx)};--dy:${weiter(w.dy)};--dr:${weiter(w.dr)};--dauer:${schneller(w.dauer)};--start:-${i * 3}s">
       <a href="#${esc(p.id)}">
         ${cover(p)}
         <span class="titel"><span>${esc(p.titel)}</span><span class="mono">${entwurf(p) ? "Entwurf" + (nr ? " · " + nr : "") : nr}</span></span>
