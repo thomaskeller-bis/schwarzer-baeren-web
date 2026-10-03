@@ -385,3 +385,20 @@ body.vorschau::before {
 .impressum { max-width: 40rem; }
 .impressum .liste p { margin: 10px 0; }
 .impressum a { color: inherit; }
+
+/* ---------- Startseite passt genau in den Bildschirm (ab Tablet) ---------- */
+@media (min-width: 721px) {
+  html { overscroll-behavior: none; }
+  body:not(.vorschau) {
+    min-height: 100vh;
+    min-height: 100svh;
+    height: 100vh;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  body:not(.vorschau) > main { flex: 1; display: flex; min-height: 0; }
+  body:not(.vorschau) .buehne { flex: 1; height: auto; min-height: 0; margin-block: 28px 32px; }
+  body:not(.vorschau) .fuss { padding-block: 16px 24px; }
+}
