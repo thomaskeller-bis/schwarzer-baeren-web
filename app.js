@@ -8,7 +8,7 @@
 /* ZUFALL = true: Bei jedem Aufruf liegen die Projekte an einem neuen Ort.
    ZUFALL = false: Es gelten die festen POSITIONEN unten. */
 const ZUFALL = true;
-const ABSTAND = 28; // Mindestabstand zwischen zwei Projekten in Pixel
+const ABSTAND = 48; // Mindestabstand zwischen zwei Projekten in Pixel
 
 /* Feste Positionen (werden gebraucht, wenn ZUFALL = false ist
    oder wenn der Zufall keinen freien Platz findet).
@@ -26,8 +26,8 @@ const POSITIONEN = [
   { x: 50, y: 50 }
 ];
 
-/* Test: ?schweben=2 = doppelt so weit und doppelt so schnell (zum Ausprobieren) */
-const SCHWEBEN_FAKTOR = parseFloat(new URLSearchParams(location.search).get("schweben")) || 1;
+/* Schweben: 2 = doppelt so weit und schnell wie die Grundwerte unten. Zum Ausprobieren ?schweben=1.5 usw. an die Adresse hängen */
+const SCHWEBEN_FAKTOR = parseFloat(new URLSearchParams(location.search).get("schweben")) || 2;
 const weiter = (v) => parseFloat(v) * SCHWEBEN_FAKTOR + (v.endsWith("deg") ? "deg" : "px");
 const schneller = (v) => (parseFloat(v) / SCHWEBEN_FAKTOR).toFixed(1) + "s";
 

@@ -63,5 +63,5 @@ Oder in VS Code die Erweiterung «Live Server» nutzen.
 
 ```js
 const ZUFALL = true;   // false = feste Positionen
-const ABSTAND = 28;    // Mindestabstand zwischen Projekten in Pixel
+const ABSTAND = 48;    // Mindestabstand zwischen Projekten in Pixel
 ```
