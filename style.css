@@ -380,3 +380,8 @@ body.vorschau::before {
 .bald .wortmarke { font-size: 19px; }
 .bald-text p { margin: 0 0 0.8em; font-size: 17px; }
 .bald .mono { color: var(--grau); margin: 0; }
+
+/* ---------- Impressum ---------- */
+.impressum { max-width: 40rem; }
+.impressum .liste p { margin: 10px 0; }
+.impressum a { color: inherit; }

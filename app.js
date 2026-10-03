@@ -192,6 +192,29 @@ function oeffneDanke() {
     </div>`, DANKE.titel || "Danke");
 }
 
+/* Impressum & Datenschutz (Angaben aus dem Handelsregister Basel-Stadt) */
+function oeffneImpressum() {
+  zeigeDetail(`
+    <div class="archiv impressum">
+      <h1>Impressum &amp; Datenschutz</h1>
+      <div class="liste"><h2 class="mono">Betrieb</h2>
+        <p>Zum Schwarzen Bären wird betrieben von der</p>
+        <p><a href="/firma/">Bär im Schafspelz GmbH</a><br>
+        Sperrstrasse 91, 4057 Basel<br>
+        <a href="mailto:info@baerimschafspelz.ch">info@baerimschafspelz.ch</a><br>
+        UID: CHE-390.420.636</p>
+        <p>Geschäftsführung: Christoph Schön (Vorsitz), Nora Garberson, Valentin Ismail, Thomas Keller</p>
+      </div>
+      <div class="liste"><h2 class="mono">Datenschutz</h2>
+        <p>Verantwortlich ist die Bär im Schafspelz GmbH, Adresse oben.</p>
+        <p>Wir sammeln über diese Seite keine Daten über euch. Es gibt keine Cookies, kein Tracking und keine eingebundenen Dienste von Dritten. Die Schriften liegen auf unserem eigenen Server.</p>
+        <p>Die Seite wird bei Vercel Inc. gehostet. Beim Aufruf speichert Vercel technisch notwendige Angaben wie IP-Adresse und Zeitpunkt, um die Seite auszuliefern und vor Missbrauch zu schützen.</p>
+        <p>Wenn ihr uns eine Mail schreibt, verwenden wir eure Angaben nur, um zu antworten. Unsere Mails laufen über Google Workspace.</p>
+        <p>Fragen dazu: <a href="mailto:info@baerimschafspelz.ch">info@baerimschafspelz.ch</a></p>
+      </div>
+    </div>`, "Impressum & Datenschutz");
+}
+
 function zeigeDetail(html, titel) {
   $("#detail-inhalt").innerHTML = html;
   const detail = $("#detail");
@@ -261,6 +284,7 @@ function schliesse() {
 function route() {
   const id = decodeURIComponent(location.hash.slice(1));
   if (id === "archiv" && archiv.length) return oeffneArchiv();
+  if (id === "impressum") return oeffneImpressum();
   if (id === "danke" && DANKE.gruppen && DANKE.gruppen.length) return oeffneDanke();
   const p = [...sichtbare, ...archiv].find((x) => x.id === id);
   p ? oeffne(p) : schliesse();
