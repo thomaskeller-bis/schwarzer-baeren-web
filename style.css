@@ -252,7 +252,10 @@ video { width: 100%; background: var(--leer); }
   gap: clamp(28px, 4vw, 56px);
 }
 .detail-bilder figure { margin: 0; }
-.detail-bilder figure:nth-child(even) { width: 78%; align-self: flex-end; }
+/* alle Bilder rechtsbündig, Hochformat nicht höher als der Bildschirm */
+.detail-bilder { align-items: flex-end; }
+.detail-bilder figure { max-width: 100%; }
+.detail-bilder img, .detail-bilder video { width: auto; max-width: 100%; max-height: 85vh; max-height: 85svh; margin-left: auto; }
 .detail-bilder figcaption {
   margin-top: 8px;
   display: flex;
@@ -340,7 +343,6 @@ video { width: 100%; background: var(--leer); }
 
   .detail-inhalt { grid-template-columns: 1fr; }
   .detail-text { position: static; }
-  .detail-bilder figure:nth-child(even) { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
