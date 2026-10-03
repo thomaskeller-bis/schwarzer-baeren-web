@@ -56,6 +56,8 @@ const status = (p) => p.status || (p.sichtbar === false ? "offline" : "aktuell")
    Der Link ist nirgends auf der Seite verlinkt. */
 const VORSCHAU = new URLSearchParams(location.search).has("vorschau");
 const entwurf = (p) => status(p) === "offline";
+/* Test: ?raster = kariertes Entwurfsblatt statt Weiss */
+if (new URLSearchParams(location.search).has("raster")) document.documentElement.classList.add("raster");
 /* Ansicht: Mit «?ansicht» sieht man die Seite genau so, wie sie öffentlich wird
    (ohne Entwürfe), auch solange die Bald-Seite eingeschaltet ist. */
 const ANSICHT = new URLSearchParams(location.search).has("ansicht");
