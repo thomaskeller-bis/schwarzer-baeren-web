@@ -2,42 +2,6 @@
   "projekte": [
     {
       "status": "aktuell",
-      "titel": "Sockel",
-      "nummer": "07",
-      "id": "sockel",
-      "cover": "bilder/sockel/01.jpg",
-      "untertitel": "Aussenbespielung mit Kuni & Gunde, Basel",
-      "text": "Vor Kuni & Gunde steht seit Kurzem ein Betonsockel. Die Stadt hat ihn hingestellt, und er bleibt wohl drei Jahre.\n\nWir fragen uns: Was kann so ein Klotz sein? Ein Stehtisch, eine Ablage, eine kleine Bühne, ein Treffpunkt vor der Tür. Zusammen mit Kuni & Gunde probieren wir aus, wie man ihn bespielen kann.\n\n## Erste Versuche\n\nDrei Becher drauf, und schon bleiben Leute stehen. Mehr braucht es manchmal nicht. Was daraus wird, zeigen wir hier.",
-      "instagram": "",
-      "bilder": [
-        {
-          "bild": "bilder/sockel/01.jpg",
-          "text": "Der Sockel, wie er dasteht"
-        },
-        {
-          "bild": "bilder/sockel/02.jpg",
-          "text": "Erster Versuch: Stehtisch"
-        },
-        {
-          "bild": "bilder/sockel/03.jpg",
-          "text": ""
-        }
-      ],
-      "listen": [
-        {
-          "titel": "Zusammen mit",
-          "eintraege": [
-            {
-              "name": "Kuni & Gunde",
-              "rolle": "Gastgeber:innen vor Ort",
-              "link": "https://www.kuni-gunde.ch"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "status": "aktuell",
       "titel": "Prozess & Team",
       "nummer": "01",
       "cover": "/bilder/prozess/01.jpg",
