@@ -412,20 +412,3 @@ body.vorschau::before {
 .projekt video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
 .projekt video::-webkit-media-controls { display: none !important; }
 
-/* ---------- Test: kariertes Entwurfsblatt (?raster) ---------- */
-html.raster {
-  --karo: #e3e6ea;
-  --karo-gross: #d3d7dd;
-}
-html.raster body,
-html.raster .detail,
-html.raster .detail .kopf {
-  background-color: #fbfbf9;
-  background-image:
-    linear-gradient(var(--karo-gross) 1px, transparent 1px),
-    linear-gradient(90deg, var(--karo-gross) 1px, transparent 1px),
-    linear-gradient(var(--karo) 1px, transparent 1px),
-    linear-gradient(90deg, var(--karo) 1px, transparent 1px);
-  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-  background-attachment: fixed;
-}
