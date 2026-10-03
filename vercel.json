@@ -1,6 +1,6 @@
 {
-  "rewrites": [
-    { "source": "/", "has": [{ "type": "host", "value": "baerimschafspelz.ch" }], "destination": "/firma/index.html" },
-    { "source": "/", "has": [{ "type": "host", "value": "www.baerimschafspelz.ch" }], "destination": "/firma/index.html" }
+  "redirects": [
+    { "source": "/", "has": [{ "type": "host", "value": "baerimschafspelz.ch" }], "destination": "https://www.baerimschafspelz.ch/firma/", "permanent": false },
+    { "source": "/", "has": [{ "type": "host", "value": "www.baerimschafspelz.ch" }], "destination": "/firma/", "permanent": false }
   ]
 }
