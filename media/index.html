@@ -31,6 +31,9 @@
   textarea { width:100%; max-width:60ch; min-height:15em; font:inherit; font-size:15px; padding:14px; border:1px solid var(--linie); background:var(--leer); color:var(--tinte); margin-top:18px; display:block; }
   button { font:inherit; font-size:14px; background:none; color:var(--tinte); border:0; border-bottom:1px solid var(--tinte); padding:4px 0; margin-top:8px; cursor:pointer; }
   button:focus-visible { outline:1px solid var(--tinte); outline-offset:5px; }
+  .umschalter { margin:0 0 12px; }
+  .umschalter button { margin:0; font-size:13px; color:var(--grau); border-bottom-color:transparent; }
+  .umschalter button[aria-pressed="true"] { color:var(--tinte); border-bottom-color:var(--tinte); }
   .instalink { display:block; margin-top:10px; }
 </style>
 </head>
@@ -41,7 +44,7 @@
 </header>
 
 <h1>Instagram-Pakete</h1>
-<p class="klein" style="max-width:60ch">Diese Seite baut sich aus den Projekten der Homepage. Titelkachel, Bilder im Format 4:5 und ein Textvorschlag. Sie ist nirgends verlinkt.</p>
+<p class="klein" style="max-width:60ch">Diese Seite baut sich aus den Projekten der Homepage. Titelkachel, Bilder im Format 4:5 und ein Textvorschlag. Fotos sind standardmässig ganz, auf weissem Grund, wie auf der Seite. Pro Projekt lässt sich auf «füllend» umschalten. Sie ist nirgends verlinkt.</p>
 <ol class="anleitung">
   <li>Auf dem iPhone jedes Bild lange drücken → «In Fotos sichern». Video: lange drücken oder öffnen → Teilen → «Video sichern».</li>
   <li>Instagram → + → Beitrag → Bilder in der Reihenfolge wählen, Format 4:5.</li>
@@ -61,13 +64,19 @@ function bildLaden(src) {
   return new Promise((ok, fehler) => { const i = new Image(); i.onload = () => ok(i); i.onerror = fehler; i.src = src; });
 }
 
-/* Foto auf 4:5 zuschneiden (Mitte) */
-async function zuschnitt(src) {
+/* Foto ins Format 4:5 bringen.
+   "ganz": ganzes Bild auf weissem Grund (wie auf der Seite), "fuellen": Mitte zuschneiden */
+async function format45(src, art) {
   const img = await bildLaden(src);
   const c = document.createElement("canvas"); c.width = W; c.height = H;
-  const s = Math.max(W / img.width, H / img.height);
-  const w = img.width * s, h = img.height * s;
-  c.getContext("2d").drawImage(img, (W - w) / 2, (H - h) / 2, w, h);
+  const x = c.getContext("2d"); x.fillStyle = "#fff"; x.fillRect(0, 0, W, H);
+  if (art === "fuellen") {
+    const s = Math.max(W / img.width, H / img.height);
+    x.drawImage(img, (W - img.width * s) / 2, (H - img.height * s) / 2, img.width * s, img.height * s);
+  } else {
+    const rand = 70, s = Math.min((W - 2 * rand) / img.width, (H - 2 * rand) / img.height);
+    x.drawImage(img, (W - img.width * s) / 2, (H - img.height * s) / 2, img.width * s, img.height * s);
+  }
   return c.toDataURL("image/jpeg", 0.92);
 }
 
@@ -121,17 +130,25 @@ async function start() {
     const fotos = (p.bilder || []).map((b) => b.bild).filter(Boolean);
     if (!fotos.length && p.cover) fotos.push(p.cover);
     for (const f of fotos) {
-      try { teile.push(`<figure><img src="${await zuschnitt(pfad(f))}" alt=""><figcaption>${n++}</figcaption></figure>`); } catch (e) {}
+      try { teile.push(`<figure><img data-src="${esc(pfad(f))}" src="${await format45(pfad(f), "ganz")}" alt=""><figcaption>${n++}</figcaption></figure>`); } catch (e) {}
     }
     const tid = "text-" + p.id;
     sec.innerHTML = `<h2><span class="nr">${esc(p.nummer || "")}</span>${esc(p.titel)}${p.status === "offline" ? ' <span class="klein">Entwurf</span>' : ""}</h2>
+      <p class="umschalter klein">Fotos: <button type="button" data-art="ganz" aria-pressed="true">ganz, mit weissem Rand</button> · <button type="button" data-art="fuellen" aria-pressed="false">füllend zugeschnitten</button></p>
       <div class="reihe">${teile.join("")}</div>
       <textarea id="${tid}" aria-label="Text für ${esc(p.titel)}">${esc(textVorschlag(p))}</textarea>
       <button type="button" data-ziel="${tid}">Text kopieren</button>
       ${p.instagram ? `<a class="instalink" href="${esc(p.instagram)}" target="_blank" rel="noopener">Schon gepostet: Beitrag ansehen</a>` : ""}`;
     ziel.appendChild(sec);
   }
-  ziel.addEventListener("click", (e) => {
+  ziel.addEventListener("click", async (e) => {
+    const u = e.target.closest("button[data-art]");
+    if (u) {
+      const sec = u.closest("section");
+      sec.querySelectorAll("button[data-art]").forEach((k) => k.setAttribute("aria-pressed", k === u));
+      for (const img of sec.querySelectorAll("img[data-src]")) img.src = await format45(img.dataset.src, u.dataset.art);
+      return;
+    }
     const b = e.target.closest("button[data-ziel]"); if (!b) return;
     const t = document.getElementById(b.dataset.ziel);
     const fertig = () => { b.textContent = "Kopiert"; setTimeout(() => (b.textContent = "Text kopieren"), 2000); };
