@@ -52,6 +52,11 @@ content:
             type: file
             options:
               extensions: [mp4]
+          - name: video_instagram
+            label: Video für Instagram (optional, Originalqualität – nur für die Seite /media)
+            type: file
+            options:
+              extensions: [mp4]
           - name: untertitel
             label: Untertitel
             type: string

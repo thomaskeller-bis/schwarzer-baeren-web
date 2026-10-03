@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Media · Zum Schwarzen Bären</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+  @font-face { font-family: "Schibsted Grotesk"; font-weight: 400; font-display: block;
+    src: url("/schrift/schibsted-grotesk-latin-400-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Schibsted Grotesk"; font-weight: 500; font-display: block;
+    src: url("/schrift/schibsted-grotesk-latin-500-normal.woff2") format("woff2"); }
+  :root { --papier:#fff; --tinte:#141414; --grau:#7a7872; --linie:#d9d7d2; --leer:#f3f2ee;
+    --schrift:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif; --rand:clamp(16px,3vw,36px); }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--papier); color:var(--tinte); font-family:var(--schrift); font-size:15px; line-height:1.5; padding:22px var(--rand) 60px; }
+  a { color: inherit; }
+  .kopf { display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap; }
+  .wortmarke { font-size:19px; font-weight:500; text-decoration:none; }
+  .klein { font-size:13px; color:var(--grau); }
+  h1 { font-size:clamp(30px,4vw,46px); font-weight:500; letter-spacing:-.02em; margin:40px 0 10px; }
+  ol.anleitung { max-width:60ch; padding-left:1.2em; margin:0 0 20px; display:flex; flex-direction:column; gap:4px; }
+  section { border-top:1px solid var(--tinte); margin-top:44px; padding-top:10px; }
+  h2 { font-weight:500; font-size:22px; margin:0 0 16px; display:flex; gap:12px; align-items:baseline; }
+  h2 .nr { color:var(--grau); font-weight:400; }
+  .reihe { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; }
+  figure { margin:0; display:flex; flex-direction:column; gap:6px; min-width:0; }
+  figure img, figure video { width:100%; aspect-ratio:4/5; object-fit:cover; display:block; background:var(--leer); outline:1px solid var(--linie); outline-offset:-1px; }
+  figcaption { font-size:13px; color:var(--grau); }
+  textarea { width:100%; max-width:60ch; min-height:15em; font:inherit; font-size:15px; padding:14px; border:1px solid var(--linie); background:var(--leer); color:var(--tinte); margin-top:18px; display:block; }
+  button { font:inherit; font-size:14px; background:none; color:var(--tinte); border:0; border-bottom:1px solid var(--tinte); padding:4px 0; margin-top:8px; cursor:pointer; }
+  button:focus-visible { outline:1px solid var(--tinte); outline-offset:5px; }
+  .instalink { display:block; margin-top:10px; }
+</style>
+</head>
+<body>
+<header class="kopf">
+  <a class="wortmarke" href="/">Zum Schwarzen Bären</a>
+  <span class="klein">Media, intern</span>
+</header>
+
+<h1>Instagram-Pakete</h1>
+<p class="klein" style="max-width:60ch">Diese Seite baut sich aus den Projekten der Homepage. Titelkachel, Bilder im Format 4:5 und ein Textvorschlag. Sie ist nirgends verlinkt.</p>
+<ol class="anleitung">
+  <li>Auf dem iPhone jedes Bild lange drücken → «In Fotos sichern». Video: lange drücken oder öffnen → Teilen → «Video sichern».</li>
+  <li>Instagram → + → Beitrag → Bilder in der Reihenfolge wählen, Format 4:5.</li>
+  <li>Text anpassen, kopieren, einfügen, teilen.</li>
+  <li>Link zum Beitrag im Admin beim Projekt unter «Instagram-Beitrag» eintragen.</li>
+</ol>
+
+<div id="pakete"><p class="klein">Pakete werden erstellt …</p></div>
+
+<script>
+const VORSCHAU = new URLSearchParams(location.search).has("vorschau");
+const pfad = (s) => "/" + String(s || "").replace(/^\/+/, "");
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
+const W = 1080, H = 1350;
+
+function bildLaden(src) {
+  return new Promise((ok, fehler) => { const i = new Image(); i.onload = () => ok(i); i.onerror = fehler; i.src = src; });
+}
+
+/* Foto auf 4:5 zuschneiden (Mitte) */
+async function zuschnitt(src) {
+  const img = await bildLaden(src);
+  const c = document.createElement("canvas"); c.width = W; c.height = H;
+  const s = Math.max(W / img.width, H / img.height);
+  const w = img.width * s, h = img.height * s;
+  c.getContext("2d").drawImage(img, (W - w) / 2, (H - h) / 2, w, h);
+  return c.toDataURL("image/jpeg", 0.92);
+}
+
+function umbrechen(ctx, text, maxB) {
+  const woerter = text.split(/\s+/), zeilen = []; let z = "";
+  for (const w of woerter) { const t = z ? z + " " + w : w; if (ctx.measureText(t).width > maxB && z) { zeilen.push(z); z = w; } else z = t; }
+  if (z) zeilen.push(z); return zeilen;
+}
+
+/* Titelkachel: weiss, Nummer, Titel gross, Untertitel */
+function titelkachel(p) {
+  const c = document.createElement("canvas"); c.width = W; c.height = H;
+  const x = c.getContext("2d"), r = 90, maxB = W - 2 * r;
+  x.fillStyle = "#fff"; x.fillRect(0, 0, W, H);
+  x.fillStyle = "#7a7872"; x.font = '400 40px "Schibsted Grotesk"'; x.textBaseline = "top";
+  x.fillText(p.nummer || "", r, r);
+  let gr = 150; x.font = `500 ${gr}px "Schibsted Grotesk"`;
+  let zeilen = umbrechen(x, p.titel, maxB);
+  while ((zeilen.length > 3 || zeilen.some((z) => x.measureText(z).width > maxB)) && gr > 70) {
+    gr -= 6; x.font = `500 ${gr}px "Schibsted Grotesk"`; zeilen = umbrechen(x, p.titel, maxB);
+  }
+  x.fillStyle = "#141414"; const zh = gr * 0.98, y0 = H / 2 - (zeilen.length * zh) / 2;
+  zeilen.forEach((z, i) => x.fillText(z, r - gr * 0.04, y0 + i * zh));
+  x.font = '400 40px "Schibsted Grotesk"'; x.fillStyle = "#7a7872";
+  const unter = umbrechen(x, p.untertitel || "", 820);
+  const yu = H - r - 34 - 40 - unter.length * 52;
+  unter.forEach((z, i) => x.fillText(z, r, yu + i * 52));
+  x.fillStyle = "#141414"; x.font = '500 34px "Schibsted Grotesk"'; x.fillText("Zum Schwarzen Bären", r, H - r - 34);
+  return c.toDataURL("image/png");
+}
+
+function textVorschlag(p) {
+  const abs = String(p.text || "").split(/\n\s*\n/).map((a) => a.trim()).filter((a) => a && !a.startsWith("##"));
+  return [`${p.nummer} · ${p.titel}`, abs.slice(0, 2).join("\n\n"), p.untertitel || "",
+    `Mehr dazu: zumschwarzenbaeren.ch`, "#zumschwarzenbaeren #basel #rheingasse"].filter(Boolean).join("\n\n");
+}
+
+async function start() {
+  await document.fonts.load('500 150px "Schibsted Grotesk"'); await document.fonts.load('400 40px "Schibsted Grotesk"');
+  const d = await fetch("/inhalt/projekte.json", { cache: "no-cache" }).then((r) => r.json());
+  const projekte = (Array.isArray(d) ? d : d.projekte || []).filter((p) => p.status !== "offline" || VORSCHAU);
+  const ziel = document.getElementById("pakete"); ziel.innerHTML = "";
+  for (const p of projekte) {
+    const sec = document.createElement("section"); sec.id = p.id;
+    let teile = [`<figure><img src="${titelkachel(p)}" alt="Titelkachel ${esc(p.titel)}"><figcaption>1 · Titel</figcaption></figure>`];
+    let n = 2;
+    if (p.video) {
+      const v = p.video_instagram || p.video;
+      teile.push(`<figure><video src="${esc(pfad(v))}" muted loop playsinline autoplay controls></video><figcaption>${n++} · Video · <a href="${esc(pfad(v))}" target="_blank">öffnen</a></figcaption></figure>`);
+    }
+    const fotos = (p.bilder || []).map((b) => b.bild).filter(Boolean);
+    if (!fotos.length && p.cover) fotos.push(p.cover);
+    for (const f of fotos) {
+      try { teile.push(`<figure><img src="${await zuschnitt(pfad(f))}" alt=""><figcaption>${n++}</figcaption></figure>`); } catch (e) {}
+    }
+    const tid = "text-" + p.id;
+    sec.innerHTML = `<h2><span class="nr">${esc(p.nummer || "")}</span>${esc(p.titel)}${p.status === "offline" ? ' <span class="klein">Entwurf</span>' : ""}</h2>
+      <div class="reihe">${teile.join("")}</div>
+      <textarea id="${tid}" aria-label="Text für ${esc(p.titel)}">${esc(textVorschlag(p))}</textarea>
+      <button type="button" data-ziel="${tid}">Text kopieren</button>
+      ${p.instagram ? `<a class="instalink" href="${esc(p.instagram)}" target="_blank" rel="noopener">Schon gepostet: Beitrag ansehen</a>` : ""}`;
+    ziel.appendChild(sec);
+  }
+  ziel.addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-ziel]"); if (!b) return;
+    const t = document.getElementById(b.dataset.ziel);
+    const fertig = () => { b.textContent = "Kopiert"; setTimeout(() => (b.textContent = "Text kopieren"), 2000); };
+    const markieren = () => { t.focus(); t.select(); b.textContent = "Markiert, jetzt kopieren"; };
+    try { navigator.clipboard.writeText(t.value).then(fertig, markieren); } catch (_) { markieren(); }
+  });
+}
+start();
+</script>
+</body>
+</html>

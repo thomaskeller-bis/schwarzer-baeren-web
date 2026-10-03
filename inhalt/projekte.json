@@ -255,7 +255,8 @@
         }
       ],
       "id": "tapas",
-      "video": "bilder/tapas/video.mp4"
+      "video": "bilder/tapas/video.mp4",
+      "video_instagram": "bilder/tapas/video-instagram.mp4"
     },
     {
       "status": "archiv",
