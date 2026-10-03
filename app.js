@@ -99,6 +99,20 @@ function videoHtml(src, poster, klasse) {
     width="720" height="900" muted loop playsinline preload="metadata"${RUHIG ? " controls" : " autoplay"}></video>`;
 }
 
+/* Safari startet Videos, die per JavaScript eingefügt werden, oft nicht von selbst.
+   Darum: stumm schalten und aktiv starten, sonst beim ersten Tippen/Scrollen nochmals versuchen. */
+function starteVideos(root = document) {
+  if (RUHIG) return;
+  const videos = [...root.querySelectorAll("video[autoplay]")];
+  const los = () => videos.forEach((v) => {
+    v.muted = true; v.defaultMuted = true; v.playsInline = true;
+    const p = v.play(); if (p && p.catch) p.catch(() => {});
+  });
+  los();
+  ["pointerdown", "touchstart", "scroll", "keydown"].forEach((e) =>
+    window.addEventListener(e, los, { once: true, passive: true }));
+}
+
 function cover(p) {
   if (p.video) return videoHtml(p.video, p.cover, "bild");
   if (!p.cover) {
@@ -231,6 +245,7 @@ function oeffneImpressum() {
 
 function zeigeDetail(html, titel) {
   $("#detail-inhalt").innerHTML = html;
+  starteVideos($("#detail-inhalt"));
   const detail = $("#detail");
   if (detail.hidden) letzterFokus = document.activeElement;
   detail.hidden = false;
@@ -345,6 +360,7 @@ async function start() {
   if (DANKE.titel) dankeLink.textContent = DANKE.titel;
 
   bauBuehne();
+  starteVideos($("#buehne"));
   verteileWennBereit();
   document.querySelectorAll("[data-name]").forEach((el) => (el.textContent = KONTAKT.name));
   $("#adresse").textContent = KONTAKT.adresse;

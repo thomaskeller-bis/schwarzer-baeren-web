@@ -405,3 +405,7 @@ body.vorschau::before {
   body:not(.vorschau) .buehne { flex: 1; height: auto; min-height: 0; margin-block: 28px 32px; }
   body:not(.vorschau) .fuss { padding-block: 16px 24px; }
 }
+
+/* Safari: kein grosser Play-Knopf über dem Video auf der Startseite */
+.projekt video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
+.projekt video::-webkit-media-controls { display: none !important; }
