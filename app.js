@@ -204,11 +204,12 @@ function oeffneImpressum() {
       <h1>Impressum &amp; Datenschutz</h1>
       <div class="liste"><h2 class="mono">Betrieb</h2>
         <p>Zum Schwarzen Bären wird betrieben von der</p>
-        <p><a href="/firma/">Bär im Schafspelz GmbH</a><br>
+        <p><a href="https://www.baerimschafspelz.ch" target="_blank" rel="noopener">Bär im Schafspelz GmbH</a><br>
         Sperrstrasse 91, 4057 Basel<br>
         <a href="mailto:info@baerimschafspelz.ch">info@baerimschafspelz.ch</a><br>
         UID: CHE-390.420.636</p>
         <p>Geschäftsführung: Christoph Schön (Vorsitz), Nora Garberson, Valentin Ismail, Thomas Keller</p>
+        <p>Mehr über uns: <a href="https://www.baerimschafspelz.ch" target="_blank" rel="noopener">baerimschafspelz.ch</a></p>
       </div>
       <div class="liste"><h2 class="mono">Datenschutz</h2>
         <p>Verantwortlich ist die Bär im Schafspelz GmbH, Adresse oben.</p>
