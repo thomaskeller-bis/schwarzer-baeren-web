@@ -187,7 +187,7 @@
       "nummer": "05",
       "cover": "bilder/tapas/02.jpg",
       "untertitel": "Samstag, 17. Oktober 2026, im Kleinbasel, zusammen mit dem Jazzcampus",
-      "text": "Am Tapas Festival im Kleinbasel geben wir zum ersten Mal öffentlich etwas von uns zu essen, an einem gemeinsamen Stand mit dem Jazzcampus.\n\nDas Festival findet zum zweiten Mal statt. Initiiert haben es Lenard, unser künftiger Nachbar an der Rheingasse (8Bar und Zum Schmale Wurf), und Felix von Cava Hispania. Elf Betriebe aus dem Quartier machen mit.\n\nFür uns ist es ein erster Versuch: Was kochen wir, wie schmeckt der Bär? Wir bringen vier kleine Happen mit und einen Wermut, den wir selbst ansetzen.",
+      "text": "Am Tapas Festival im Kleinbasel geben wir zum ersten Mal öffentlich etwas von uns zu essen, an einem gemeinsamen Stand mit dem Jazzcampus.\n\nDas Festival findet zum zweiten Mal statt. Initiiert haben es Lenard, unser künftiger Nachbar an der Rheingasse (8Bar und Zum Schmale Wurf), und Felix von Cava Hispania. Elf Betriebe aus dem Quartier machen mit.\n\nFür uns ist es ein erster Versuch: Was kochen wir, wie schmeckt der Bär? Wir bringen ein paar kleine Happen mit und einen Wermut, den wir selbst ansetzen.",
       "bilder": [
         {
           "bild": "/bilder/tapas/03.jpg",
@@ -200,27 +200,27 @@
       ],
       "listen": [
         {
-          "titel": "Unser Angebot (Entwurf)",
+          "titel": "Aus unserem Menü am Samstag (Auswahl)",
           "eintraege": [
             {
               "name": "Saibling & Knäckebrot",
-              "rolle": "geräucherter Schweizer Saibling, Knoblauch-Crème-fraîche, eingelegter Kohlrabi, Roggen-Knäckebrot, Fichtenöl"
-            },
-            {
-              "name": "Rande & Ziege",
-              "rolle": "geröstete Rande, Ziegenfrischkäse, Apfelsaft-Reduktion, geröstete Haselnüsse"
+              "rolle": "geräucherter Schweizer Saibling, Knoblauch-Crème-fraîche, eingelegter Kohlrabi, Roggen-Knäckebrot, Fichtenöl",
+              "link": ""
             },
             {
               "name": "Herbstwald",
-              "rolle": "Herbstpilzcrème, eingelegte Eierschwämme, Crostini, Kürbiskernöl, Kürbiskern-Crunch"
+              "rolle": "Herbstpilzcrème, eingelegte Eierschwämme, Crostini, Kürbiskernöl, Kürbiskern-Crunch",
+              "link": ""
             },
             {
-              "name": "Birnen-Carpaccio",
-              "rolle": "Herbstbirne, Skyr mit Meerrettich, karamellisierte Baumnüsse, geräuchertes Salz"
+              "name": "Rande & Ziege",
+              "rolle": "geröstete Rande, Ziegenfrischkäse, Apfelsaft-Reduktion, geröstete Haselnüsse",
+              "link": ""
             },
             {
               "name": "Bären-Wermut",
-              "rolle": "Hausapéro, inspiriert vom Basler Läckerli: Kirsch, Zimt, Nelken, Muskat, Honig, Orangeat, Zitronat, Fichtennadeln"
+              "rolle": "hausgemacht, inspiriert vom Basler Läckerli: Kirsch, Zimt, Nelken, Muskat, Honig, Orangeat, Zitronat, Fichtennadeln",
+              "link": ""
             }
           ]
         },
