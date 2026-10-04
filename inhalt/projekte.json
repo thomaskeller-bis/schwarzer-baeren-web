@@ -199,7 +199,11 @@
         },
         {
           "bild": "bilder/tapas/04.jpg",
-          "text": "Flyer mit Angebot am Freitag und Plan der Betriebe"
+          "text": "Flyer Freitag: Angebot vom Jazz Campus und Plan der Betriebe"
+        },
+        {
+          "bild": "bilder/tapas/05.jpg",
+          "text": "Flyer Samstag: unser Angebot"
         }
       ],
       "listen": [
