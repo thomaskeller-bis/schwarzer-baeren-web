@@ -17,8 +17,13 @@
         },
         {
           "name": "Salathé Architekten Basel",
-          "rolle": "Architektur, mit Charlotte und Cedric",
+          "rolle": "Architektur, mit Charlotte",
           "link": "https://www.salathearchitekten.ch"
+        },
+        {
+          "name": "Glaser Baupartner AG",
+          "rolle": "Bauleitung, mit Cedric",
+          "link": "https://glaserbaupartner.ch"
         }
       ]
     },
