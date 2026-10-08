@@ -48,6 +48,23 @@
               "rolle": "Konzept- und Betriebsentwicklung, Netzwerk"
             }
           ]
+        },
+        {
+          "titel": "Zukünftige Mitarbeiter:innen",
+          "eintraege": [
+            {
+              "name": "Deborah Blanke",
+              "rolle": ""
+            },
+            {
+              "name": "Lisa Lüdi",
+              "rolle": ""
+            },
+            {
+              "name": "Steff",
+              "rolle": ""
+            }
+          ]
         }
       ],
       "id": "prozess"
