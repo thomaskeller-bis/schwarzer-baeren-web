@@ -240,12 +240,92 @@ function oeffneImpressum() {
       </div>
       <div class="liste"><h2 class="mono">Datenschutz</h2>
         <p>Verantwortlich ist die Bär im Schafspelz GmbH, Adresse oben.</p>
-        <p>Wir sammeln über diese Seite keine Daten über euch. Es gibt keine Cookies, kein Tracking und keine eingebundenen Dienste von Dritten. Die Schriften liegen auf unserem eigenen Server.</p>
+        <p>Wir sammeln über diese Seite keine Daten über euch, ausser ihr meldet euch für den Newsletter an. Es gibt keine Cookies und kein Tracking. Die Schriften liegen auf unserem eigenen Server.</p>
+        ${KONTAKT.newsletter ? `<p>Newsletter: Wenn ihr euch anmeldet, speichern wir Vorname, Name und E-Mail-Adresse bei ${esc(newsletterAnbieter())}, nur um euch den Newsletter zu schicken. Die Anmeldung bestätigt ihr per Mail. Abmelden könnt ihr euch jederzeit über den Link in jedem Newsletter, dann löschen wir eure Angaben.</p>` : ""}
         <p>Die Seite wird bei Vercel Inc. gehostet. Beim Aufruf speichert Vercel technisch notwendige Angaben wie IP-Adresse und Zeitpunkt, um die Seite auszuliefern und vor Missbrauch zu schützen.</p>
         <p>Wenn ihr uns eine Mail schreibt, verwenden wir eure Angaben nur, um zu antworten. Unsere Mails laufen über Google Workspace.</p>
         <p>Fragen dazu: <a href="mailto:info@baerimschafspelz.ch">info@baerimschafspelz.ch</a></p>
       </div>
     </div>`, "Impressum & Datenschutz");
+}
+
+/* ---------- Newsletter ----------
+   Im Admin unter Kontakt die Formular-Adresse des Anbieters eintragen (Mailchimp oder MailerLite).
+   Leer = kein Newsletter-Link (ausser in der Vorschau). Die Anmeldung bestätigen die Leute per Mail (Double-Opt-in beim Anbieter). */
+function newsletterAnbieter() {
+  const u = String(KONTAKT.newsletter || "");
+  if (/list-manage\.com/.test(u)) return "Mailchimp";
+  if (/mailerlite\.com/.test(u)) return "MailerLite";
+  return u ? "unserem Newsletter-Anbieter" : "";
+}
+
+function oeffneNewsletter() {
+  const bereit = !!KONTAKT.newsletter;
+  zeigeDetail(`
+    <div class="archiv impressum newsletter">
+      <h1>Newsletter</h1>
+      <p class="unter">Wir schreiben euch, wenn etwas Neues entsteht: Projekte, Anlässe, die Eröffnung. Nicht oft, nur wenn es etwas zu erzählen gibt.</p>
+      <form class="nl-formular" id="nl-formular" novalidate>
+        <label>Vorname<input name="vorname" autocomplete="given-name" required></label>
+        <label>Name<input name="name" autocomplete="family-name"></label>
+        <label>E-Mail<input name="mail" type="email" autocomplete="email" required></label>
+        <input class="nl-falle" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit"${bereit ? "" : " disabled"}>Anmelden</button>
+        <p class="nl-meldung" id="nl-meldung" role="status">${bereit ? "" : "Noch nicht verbunden: Im Admin unter Kontakt die Formular-Adresse eintragen."}</p>
+      </form>
+      <p class="nl-klein">Ihr bekommt zuerst ein Mail zum Bestätigen. Abmelden könnt ihr euch jederzeit über den Link in jedem Newsletter. Mehr dazu unter <a href="#impressum">Datenschutz</a>.</p>
+    </div>`, "Newsletter");
+  if (bereit) $("#nl-formular").addEventListener("submit", sendeNewsletter);
+}
+
+function sendeNewsletter(e) {
+  e.preventDefault();
+  const f = e.target, meldung = $("#nl-meldung"), knopf = f.querySelector("button");
+  const d = Object.fromEntries(new FormData(f));
+  if (d.website) return; // Spam-Falle
+  if (!d.vorname.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.mail.trim())) {
+    meldung.textContent = "Bitte Vorname und eine gültige E-Mail-Adresse angeben.";
+    return;
+  }
+  knopf.disabled = true;
+  meldung.textContent = "Wird gesendet …";
+  const fertig = () => {
+    f.reset();
+    meldung.textContent = "Danke! Bitte bestätigt eure Anmeldung im Mail, das wir euch eben geschickt haben.";
+    knopf.disabled = false;
+  };
+  const fehler = (text) => {
+    meldung.textContent = text || "Das hat leider nicht geklappt. Versucht es später nochmals oder schreibt uns.";
+    knopf.disabled = false;
+  };
+  const url = String(KONTAKT.newsletter);
+
+  if (newsletterAnbieter() === "Mailchimp") {
+    /* Mailchimp: Antwort per JSONP, damit man auf der Seite bleibt */
+    const cb = "nl" + Date.now();
+    const q = new URLSearchParams({ EMAIL: d.mail.trim(), FNAME: d.vorname.trim(), LNAME: (d.name || "").trim() });
+    const s = document.createElement("script");
+    window[cb] = (r) => {
+      delete window[cb]; s.remove();
+      if (r && r.result === "success") return fertig();
+      const msg = String((r && r.msg) || "");
+      if (/already subscribed|bereits/i.test(msg)) return fehler("Diese Adresse ist schon angemeldet.");
+      fehler();
+    };
+    s.src = url.replace("/post?", "/post-json?") + "&" + q + "&c=" + cb;
+    s.onerror = () => fehler();
+    document.body.appendChild(s);
+    return;
+  }
+
+  /* MailerLite und andere: Formular direkt an den Anbieter schicken */
+  const fd = new FormData();
+  fd.append("fields[email]", d.mail.trim());
+  fd.append("fields[name]", d.vorname.trim());
+  fd.append("fields[last_name]", (d.name || "").trim());
+  fd.append("ml-submit", "1");
+  fd.append("anticsrf", "true");
+  fetch(url, { method: "POST", body: fd, mode: "no-cors" }).then(fertig, () => fehler());
 }
 
 function zeigeDetail(html, titel) {
@@ -320,6 +400,7 @@ function route() {
   const id = decodeURIComponent(location.hash.slice(1));
   if (id === "archiv" && archiv.length) return oeffneArchiv();
   if (id === "impressum") return oeffneImpressum();
+  if (id === "newsletter" && (KONTAKT.newsletter || VORSCHAU || ANSICHT)) return oeffneNewsletter();
   if (id === "danke" && DANKE.gruppen && DANKE.gruppen.length) return oeffneDanke();
   const p = [...sichtbare, ...archiv].find((x) => x.id === id);
   p ? oeffne(p) : schliesse();
@@ -376,6 +457,7 @@ async function start() {
   mail.href = "mailto:" + KONTAKT.mail;
   const ig = $("#instagram");
   if (KONTAKT.instagram) { ig.href = KONTAKT.instagram; ig.hidden = false; }
+  $("#newsletter-link").hidden = !(KONTAKT.newsletter || VORSCHAU || ANSICHT);
 
   $("#zurueck").addEventListener("click", () => {
     try { history.pushState("", document.title, location.pathname + location.search); }

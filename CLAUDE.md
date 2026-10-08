@@ -7,6 +7,7 @@ Inhalte werden auch über Pages CMS (app.pagescms.org) vom Team bearbeitet.
 - `inhalt/projekte.json` – alle Projekte unter dem Schlüssel `projekte` (Liste)
 - `inhalt/kontakt.json` – Name, Untertitel, Hinweis, Adresse, Mail, Instagram, `bald` (true = nur Bald-Seite mit `bald_text`, ganze Seite unter `/?vorschau` mit Entwürfen, `/?ansicht` ohne Entwürfe)
 - `inhalt/danke.json` – Danke-Seite (Gruppen mit Einträgen)
+- Newsletter: `newsletter` in `kontakt.json` = Formular-Adresse von Mailchimp oder MailerLite. Seite `#newsletter` (Vorname, Name, Mail, Double-Opt-in beim Anbieter), Link im Fuss erst sichtbar, wenn eingetragen (in `?vorschau`/`?ansicht` immer). Datenschutz-Absatz erscheint automatisch.
 - `bilder/<projekt-id>/` – Fotos, ca. 1600 px lange Seite, JPG
 - `.pages.yml` – Felder der Admin-Seite. Bei neuen Feldern in den JSON-Dateien hier ebenfalls ergänzen.
 - `app.js`, `style.css`, `index.html` – Darstellung
