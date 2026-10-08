@@ -223,6 +223,7 @@ video { width: 100%; background: var(--leer); }
 }
 .detail-text .unter { color: var(--grau); margin: 0 0 28px; }
 .detail-text p { margin: 0 0 1em; max-width: 60ch; }
+.detail-text p a { text-decoration: none; border-bottom: 1px solid currentColor; }
 
 .liste {
   margin-top: 28px;

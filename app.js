@@ -78,6 +78,11 @@ function esc(s) {
   return String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 }
 
+/* Links im Text: [Text](https://…) */
+function links(s) {
+  return s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+}
+
 function absaetze(text) {
   return (text || "")
     .trim()
@@ -86,7 +91,7 @@ function absaetze(text) {
       a = a.trim();
       return a.startsWith("## ")
         ? `<h2 class="zwischentitel mono">${esc(a.slice(3))}</h2>`
-        : `<p>${esc(a)}</p>`;
+        : `<p>${links(esc(a))}</p>`;
     })
     .join("");
 }

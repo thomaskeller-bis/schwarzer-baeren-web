@@ -61,7 +61,7 @@ content:
             label: Untertitel
             type: string
           - name: text
-            label: Text (Leerzeile = neuer Absatz, «## » am Zeilenanfang = Zwischentitel)
+            label: Text (Leerzeile = neuer Absatz, «## » am Zeilenanfang = Zwischentitel, [Text](https://…) = Link)
             type: text
           - name: instagram
             label: Instagram-Beitrag (optional, Link zum Post)

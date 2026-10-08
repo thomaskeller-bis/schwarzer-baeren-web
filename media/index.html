@@ -109,7 +109,8 @@ function titelkachel(p) {
 }
 
 function textVorschlag(p) {
-  const abs = String(p.text || "").split(/\n\s*\n/).map((a) => a.trim()).filter((a) => a && !a.startsWith("##"));
+  const abs = String(p.text || "").split(/\n\s*\n/).map((a) => a.trim()).filter((a) => a && !a.startsWith("##"))
+    .map((a) => a.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, "$1"));
   return [`${p.nummer} · ${p.titel}`, abs.slice(0, 2).join("\n\n"), p.untertitel || "",
     `Mehr dazu: zumschwarzenbaeren.ch`, "#zumschwarzenbaeren #basel #rheingasse"].filter(Boolean).join("\n\n");
 }
