@@ -4,7 +4,7 @@
   "hinweis": "Wir öffnen 2027. Öffnungszeiten folgen. Bis bald!",
   "adresse": "Rheingasse 17, 4058 Basel",
   "mail": "info@zumschwarzenbaeren.ch",
-  "bald": true,
+  "bald": false,
   "bald_text": "Wir sind bald online und freuen uns auf das Projekt Zum Schwarzen Bären.\n\nNora, Christoph, Valentin und Thomas",
   "newsletter": "https://assets.mailerlite.com/jsonp/2696151/forms/200771477174224347/subscribe",
   "newsletter_uebertitel": "Newsletter",
