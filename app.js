@@ -241,7 +241,7 @@ function oeffneImpressum() {
       <div class="liste"><h2 class="mono">Datenschutz</h2>
         <p>Verantwortlich ist die Bär im Schafspelz GmbH, Adresse oben.</p>
         <p>Wir sammeln über diese Seite keine Daten über euch, ausser ihr meldet euch für den Newsletter an. Es gibt keine Cookies und kein Tracking. Die Schriften liegen auf unserem eigenen Server.</p>
-        ${KONTAKT.newsletter ? `<p>Newsletter: Wenn ihr euch anmeldet, speichern wir Vorname, Name und E-Mail-Adresse bei ${esc(newsletterAnbieter())}, nur um euch den Newsletter zu schicken. Die Anmeldung bestätigt ihr per Mail. Abmelden könnt ihr euch jederzeit über den Link in jedem Newsletter, dann löschen wir eure Angaben.</p>` : ""}
+        ${KONTAKT.newsletter ? `<p>Newsletter: Wenn ihr euch anmeldet, speichern wir Vorname, Name und E-Mail-Adresse bei ${esc(newsletterAnbieter())}, nur um euch den Newsletter zu schicken.${newsletterAnbieter() === "MailerLite" ? " MailerLite speichert die Daten in der EU." : ""} Abmelden könnt ihr euch jederzeit über den Link in jedem Newsletter, dann löschen wir eure Angaben.</p>` : ""}
         <p>Die Seite wird bei Vercel Inc. gehostet. Beim Aufruf speichert Vercel technisch notwendige Angaben wie IP-Adresse und Zeitpunkt, um die Seite auszuliefern und vor Missbrauch zu schützen.</p>
         <p>Wenn ihr uns eine Mail schreibt, verwenden wir eure Angaben nur, um zu antworten. Unsere Mails laufen über Google Workspace.</p>
         <p>Fragen dazu: <a href="mailto:info@baerimschafspelz.ch">info@baerimschafspelz.ch</a></p>
@@ -251,7 +251,7 @@ function oeffneImpressum() {
 
 /* ---------- Newsletter ----------
    Im Admin unter Kontakt die Formular-Adresse des Anbieters eintragen (Mailchimp oder MailerLite).
-   Leer = kein Newsletter-Link (ausser in der Vorschau). Die Anmeldung bestätigen die Leute per Mail (Double-Opt-in beim Anbieter). */
+   Leer = kein Newsletter-Link (ausser in der Vorschau). Ein Willkommensmail verschickt der Anbieter (Automation). */
 function newsletterAnbieter() {
   const u = String(KONTAKT.newsletter || "");
   if (/list-manage\.com/.test(u)) return "Mailchimp";
@@ -273,7 +273,7 @@ function oeffneNewsletter() {
         <button type="submit"${bereit ? "" : " disabled"}>Anmelden</button>
         <p class="nl-meldung" id="nl-meldung" role="status">${bereit ? "" : "Noch nicht verbunden: Im Admin unter Kontakt die Formular-Adresse eintragen."}</p>
       </form>
-      <p class="nl-klein">Ihr bekommt zuerst ein Mail zum Bestätigen. Abmelden könnt ihr euch jederzeit über den Link in jedem Newsletter. Mehr dazu unter <a href="#impressum">Datenschutz</a>.</p>
+      <p class="nl-klein">Abmelden könnt ihr euch jederzeit über den Link in jedem Newsletter. Mehr dazu unter <a href="#impressum">Datenschutz</a>.</p>
     </div>`, "Newsletter");
   if (bereit) $("#nl-formular").addEventListener("submit", sendeNewsletter);
 }
@@ -291,7 +291,7 @@ function sendeNewsletter(e) {
   meldung.textContent = "Wird gesendet …";
   const fertig = () => {
     f.reset();
-    meldung.textContent = "Danke! Bitte bestätigt eure Anmeldung im Mail, das wir euch eben geschickt haben.";
+    meldung.textContent = "Danke, ihr seid angemeldet! Gleich kommt ein kurzes Willkommensmail.";
     knopf.disabled = false;
   };
   const fehler = (text) => {
