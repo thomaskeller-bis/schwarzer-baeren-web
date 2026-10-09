@@ -25,11 +25,11 @@
 
 :root.nacht {
   color-scheme: dark;
-  --papier: #121110;      /* Nacht: fast schwarz, leicht warm */
-  --tinte: #ebe8e1;
-  --grau: #8e8a82;
-  --linie: #34322e;
-  --leer: #1c1b19;
+  --papier: #000000;      /* Nacht: schwarz-weiss */
+  --tinte: #ffffff;
+  --grau: #8c8c8c;
+  --linie: #333333;
+  --leer: #141414;
 }
 
 * { box-sizing: border-box; }
@@ -472,9 +472,21 @@ body.vorschau::before {
 
 
 /* ---------- Nacht (vorerst nur in der Vorschau, siehe index.html) ---------- */
-.nacht .platzhalter { border-color: #4a4843; }
+.nacht .platzhalter { border-color: #4d4d4d; }
 .nacht .platzhalter.brief { border: 0; }
-/* Fotos nachts eine Spur gedämpft, damit sie nicht blenden */
-.nacht .projekt .bild,
-.nacht .detail-bilder img,
-.nacht .detail-bilder video { filter: brightness(0.9); }
+/* nachts alles schwarz-weiss, auch Fotos und Videos */
+.nacht img,
+.nacht video { filter: grayscale(1) brightness(0.92); }
+
+/* Schalter Nacht / Tag: sieht aus wie die Links daneben */
+.schalter {
+  font: inherit;
+  font-size: 13px;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.schalter:hover { text-decoration: underline; text-underline-offset: 3px; }
+.schalter:focus-visible { outline: 1px solid var(--tinte); outline-offset: 4px; }
