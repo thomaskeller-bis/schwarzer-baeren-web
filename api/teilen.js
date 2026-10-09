@@ -4,6 +4,7 @@
    und Titelbild des Projekts als Vorschau und leitet Menschen gleich auf /#<id> weiter.
    Liest immer die aktuelle inhalt/projekte.json, Änderungen im CMS gelten also sofort. */
 
+const SEITEN = ["archiv", "impressum", "newsletter", "danke"];
 const ORDNER = ["api", "firma", "media", "entwurf", "inhalt", "bilder", "schrift"];
 
 const esc = (s) => String(s == null ? "" : s)
@@ -27,9 +28,15 @@ module.exports = async (req, res) => {
     projekt = liste.find((p) => p.id === id && ["aktuell", "archiv"].includes(String(p.status || "aktuell")));
   } catch (e) { /* weiter ohne Projekt */ }
 
-  if (!projekt) { res.writeHead(302, { Location: "/" }); return res.end(); }
+  const q = req.query || {};
+  const such = "vorschau" in q ? "?vorschau" : "ansicht" in q ? "?ansicht" : "";
+  const ziel = "/" + such + "#" + encodeURIComponent(id);
+  /* Seiten wie Impressum, Entwürfe in der Vorschau oder unbekannte Adressen: einfach weiterleiten */
+  if (!projekt) {
+    const weiter = SEITEN.includes(id) || such === "?vorschau" ? ziel : "/" + such;
+    res.writeHead(302, { Location: weiter }); return res.end();
+  }
 
-  const ziel = "/#" + encodeURIComponent(id);
   const bild = projekt.cover
     ? basis + "/" + String(projekt.cover).replace(/^\/+/, "").split("/").map(encodeURIComponent).join("/")
     : basis + "/vorschau.jpg";

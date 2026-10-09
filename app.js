@@ -404,14 +404,37 @@ function schliesse() {
   if (letzterFokus) letzterFokus.focus({ preventScroll: true });
 }
 
+/* Projekte haben eine eigene Adresse ohne # (z.B. /tapas), damit beim Teilen in WhatsApp & Co.
+   das Bild des Projekts erscheint (siehe api/teilen.js). Intern läuft alles weiter über #. */
+function aktuelleId() {
+  const h = decodeURIComponent(location.hash.slice(1));
+  if (h) return h;
+  const pfad = location.pathname.replace(/^\/+|\/+$/g, "");
+  return pfad && !pfad.includes("/") && !pfad.includes(".") ? decodeURIComponent(pfad) : "";
+}
+
+function adresse(ziel) {
+  const url = ziel.startsWith("/") ? ziel + location.search : "/" + location.search + ziel;
+  if (url === location.pathname + location.search + location.hash) return;
+  try { history.replaceState(history.state, "", url); } catch (e) {}
+}
+
 function route() {
-  const id = decodeURIComponent(location.hash.slice(1));
-  if (id === "archiv" && archiv.length) return oeffneArchiv();
-  if (id === "impressum") return oeffneImpressum();
-  if (id === "newsletter" && (KONTAKT.newsletter || VORSCHAU || ANSICHT)) return oeffneNewsletter();
-  if (id === "danke" && DANKE.gruppen && DANKE.gruppen.length) return oeffneDanke();
+  const id = aktuelleId();
+  if (id === "archiv" && archiv.length) { oeffneArchiv(); return adresse("#archiv"); }
+  if (id === "impressum") { oeffneImpressum(); return adresse("#impressum"); }
+  if (id === "newsletter" && (KONTAKT.newsletter || VORSCHAU || ANSICHT)) { oeffneNewsletter(); return adresse("#newsletter"); }
+  if (id === "danke" && DANKE.gruppen && DANKE.gruppen.length) { oeffneDanke(); return adresse("#danke"); }
   const p = [...sichtbare, ...archiv].find((x) => x.id === id);
-  p ? oeffne(p) : schliesse();
+  if (p) { oeffne(p); return adresse("/" + encodeURIComponent(p.id)); }
+  schliesse();
+  adresse("");
+}
+
+function zurStartseite() {
+  try { history.pushState("", KONTAKT.name, "/" + location.search); }
+  catch (e) { location.hash = ""; }
+  route();
 }
 
 /* ---------- Start ---------- */
@@ -467,11 +490,10 @@ async function start() {
   if (KONTAKT.instagram) { ig.href = KONTAKT.instagram; ig.hidden = false; }
   $("#newsletter-link").hidden = !(KONTAKT.newsletter || VORSCHAU || ANSICHT);
 
-  $("#zurueck").addEventListener("click", () => {
-    try { history.pushState("", document.title, location.pathname + location.search); }
-    catch (e) { location.hash = ""; }
-    route();
-  });
+  $("#zurueck").addEventListener("click", zurStartseite);
+  const marke = document.querySelector(".wortmarke");
+  marke.href = "/" + location.search;
+  marke.addEventListener("click", (e) => { e.preventDefault(); zurStartseite(); });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !$("#detail").hidden) $("#zurueck").click();
   });
