@@ -139,11 +139,8 @@ function newsletterKachel() {
   if (!(K.newsletter_kachel || VORSCHAU || ANSICHT)) return null;
   const bild = K.newsletter_bild
     ? `<img class="bild" src="${esc(pfad(K.newsletter_bild))}" alt="${esc(K.newsletter_titel || "Newsletter")}">`
-    : `<div class="bild platzhalter brief">
-        <span class="mono">${esc(K.newsletter_uebertitel || "Newsletter")}</span>
-        <span class="gross">${esc(K.newsletter_titel || "Post vom Bären")}</span>
-      </div>`;
-  return { id: "newsletter", bild, titel: K.newsletter_uebertitel || "Newsletter", rechts: "Anmelden" };
+    : `<div class="bild platzhalter brief"><span class="gross">${esc(K.newsletter_uebertitel || "Newsletter")}</span></div>`;
+  return { id: "newsletter", bild, titel: K.newsletter_bild ? K.newsletter_uebertitel || "Newsletter" : "", rechts: "", klasse: K.newsletter_bild ? "" : "punkt" };
 }
 
 function bauBuehne() {
@@ -156,11 +153,11 @@ function bauBuehne() {
   $("#buehne").innerHTML = kacheln.map((k, i) => {
     const pos = POSITIONEN[i % POSITIONEN.length];
     const w = SCHWEBEN[i % SCHWEBEN.length];
-    return `<div class="projekt ${i % 2 ? "rechts" : "links"}"
+    return `<div class="projekt ${i % 2 ? "rechts" : "links"} ${k.klasse || ""}"
       style="left:${pos.x}%;top:${pos.y}%;--breite:${w.breite};--dx:${weiter(w.dx)};--dy:${weiter(w.dy)};--dr:${weiter(w.dr)};--dauer:${schneller(w.dauer)};--start:-${i * 3}s">
       <a href="#${esc(k.id)}">
         ${k.bild}
-        <span class="titel"><span>${esc(k.titel)}</span><span class="mono">${esc(k.rechts)}</span></span>
+        ${k.titel ? `<span class="titel"><span>${esc(k.titel)}</span><span class="mono">${esc(k.rechts)}</span></span>` : ""}
       </a>
     </div>`;
   }).join("");

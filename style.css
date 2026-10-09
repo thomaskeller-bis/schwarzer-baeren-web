@@ -164,18 +164,18 @@ video { width: 100%; background: var(--leer); }
 }
 /* Newsletter-Kachel: schwarzer Kreis */
 .platzhalter.brief {
-  aspect-ratio: 1;           /* rund, hebt sich von den Projekten ab */
+  aspect-ratio: 1;           /* schwarzer Punkt, hebt sich von den Projekten ab */
   border-radius: 50%;
   background: var(--tinte);
   border: 0;
-  padding: 18%;
-  color: #a9a7a1;
+  padding: 0;
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 6px;
 }
-.platzhalter.brief .gross { font-size: clamp(18px, 1.6vw, 24px); letter-spacing: -0.01em; color: #fff; }
+.platzhalter.brief .gross { font-size: 15px; color: #fff; }
+.projekt.punkt { width: 8vw; min-width: 104px; max-width: 132px; }
+@media (max-width: 720px) { .projekt.punkt { width: 120px; min-width: 0; } }
 .platzhalter .gross {
   font-size: 15px;
   font-weight: 500;
