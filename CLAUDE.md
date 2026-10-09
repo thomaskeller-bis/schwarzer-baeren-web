@@ -11,6 +11,7 @@ Inhalte werden auch über Pages CMS (app.pagescms.org) vom Team bearbeitet.
 - `bilder/<projekt-id>/` – Fotos, ca. 1600 px lange Seite, JPG
 - `.pages.yml` – Felder der Admin-Seite. Bei neuen Feldern in den JSON-Dateien hier ebenfalls ergänzen.
 - `app.js`, `style.css`, `index.html` – Darstellung
+- Teil-Links: `zumschwarzenbaeren.ch/<projekt-id>` (z.B. /tapas) zeigt in WhatsApp & Co. Titel, Untertitel und Titelbild des Projekts und leitet auf `/#<id>` weiter. Gemacht von `api/teilen.js` (Vercel-Funktion, liest projekte.json live) und der Weiterleitung in `vercel.json`. Entwürfe → Startseite.
 - `firma/index.html` – einfache Firmenseite Bär im Schafspelz GmbH (Inhalt direkt im HTML). `vercel.json` leitet baerimschafspelz.ch auf /firma/ weiter.
 
 ## Projekt-Felder
