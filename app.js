@@ -153,11 +153,12 @@ function bauBuehne() {
   $("#buehne").innerHTML = kacheln.map((k, i) => {
     const pos = POSITIONEN[i % POSITIONEN.length];
     const w = SCHWEBEN[i % SCHWEBEN.length];
-    /* der Newsletter-Punkt saust doppelt so schnell herum (doppelte Strecke in gleicher Zeit) */
+    /* der Newsletter-Punkt saust viermal so schnell herum (doppelte Strecke in halber Zeit) */
     const f = k.klasse === "punkt" ? 2 : 1;
     const strecke = (v) => parseFloat(weiter(v)) * f + (v.endsWith("deg") ? "deg" : "px");
+    const zeit = (v) => (parseFloat(schneller(v)) / f).toFixed(1) + "s";
     return `<div class="projekt ${i % 2 ? "rechts" : "links"} ${k.klasse || ""}"
-      style="left:${pos.x}%;top:${pos.y}%;--breite:${w.breite};--dx:${strecke(w.dx)};--dy:${strecke(w.dy)};--dr:${weiter(w.dr)};--dauer:${schneller(w.dauer)};--start:-${i * 3}s">
+      style="left:${pos.x}%;top:${pos.y}%;--breite:${w.breite};--dx:${strecke(w.dx)};--dy:${strecke(w.dy)};--dr:${weiter(w.dr)};--dauer:${zeit(w.dauer)};--start:-${i * 3}s">
       <a href="#${esc(k.id)}">
         ${k.bild}
         ${k.titel ? `<span class="titel"><span>${esc(k.titel)}</span><span class="mono">${esc(k.rechts)}</span></span>` : ""}
