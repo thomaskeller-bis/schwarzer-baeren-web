@@ -6,6 +6,7 @@ Inhalte werden auch über Pages CMS (app.pagescms.org) vom Team bearbeitet.
 ## Wo was liegt
 - `inhalt/projekte.json` – alle Projekte unter dem Schlüssel `projekte` (Liste)
 - `inhalt/kontakt.json` – Name, Untertitel, Hinweis, Adresse, Mail, Instagram, `bald` (true = nur Bald-Seite mit `bald_text`, ganze Seite unter `/?vorschau` mit Entwürfen, `/?ansicht` ohne Entwürfe)
+- Instagram: `instagram` in `kontakt.json` = Profil-Link im Fuss, öffentlich nur mit `instagram_zeigen: true` (sonst nur in `?vorschau`/`?ansicht`). Pro Projekt: Feld `instagram` = Link zum Beitrag («Mehr dazu auf Instagram»).
 - `inhalt/danke.json` – Danke-Seite (Gruppen mit Einträgen)
 - Newsletter: `newsletter` in `kontakt.json` = Formular-Adresse von Mailchimp oder MailerLite. Seite `#newsletter` (Vorname, Name, Mail; MailerLite Gratis-Version ohne Double-Opt-in, dafür Willkommensmail per Automation), Link im Fuss erst sichtbar, wenn eingetragen (in `?vorschau`/`?ansicht` immer). Datenschutz-Absatz erscheint automatisch. Übertitel, Titel, Untertitel, Text und Bild der Seite: Felder `newsletter_*` in `kontakt.json`; die Seite ist gleich aufgebaut wie ein Projekt.
 - `bilder/<projekt-id>/` – Fotos, ca. 1600 px lange Seite, JPG

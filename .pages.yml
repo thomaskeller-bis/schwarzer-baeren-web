@@ -143,6 +143,9 @@ content:
       - name: instagram
         label: Instagram-Profil (optional, z.B. https://www.instagram.com/schwarzerbaeren)
         type: string
+      - name: instagram_zeigen
+        label: Instagram-Link im Fuss öffentlich zeigen (aus = nur in der Vorschau ?vorschau sichtbar)
+        type: boolean
       - name: newsletter
         label: Newsletter-Formular-Adresse von Mailchimp (…list-manage.com/subscribe/post?u=…&id=…) oder MailerLite (…/jsonp/…/forms/…/subscribe). Leer = kein Newsletter-Link.
         type: string

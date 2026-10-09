@@ -487,7 +487,8 @@ async function start() {
   mail.textContent = KONTAKT.mail;
   mail.href = "mailto:" + KONTAKT.mail;
   const ig = $("#instagram");
-  if (KONTAKT.instagram) { ig.href = KONTAKT.instagram; ig.hidden = false; }
+  /* Instagram-Link im Fuss: öffentlich erst, wenn im Admin «Instagram-Link öffentlich zeigen» an ist */
+  if (KONTAKT.instagram && (KONTAKT.instagram_zeigen || VORSCHAU || ANSICHT)) { ig.href = KONTAKT.instagram; ig.hidden = false; }
   $("#newsletter-link").hidden = !(KONTAKT.newsletter || VORSCHAU || ANSICHT);
 
   $("#zurueck").addEventListener("click", zurStartseite);
