@@ -23,6 +23,15 @@
   --rand: clamp(16px, 3vw, 36px);  /* Seitenrand */
 }
 
+:root.nacht {
+  color-scheme: dark;
+  --papier: #121110;      /* Nacht: fast schwarz, leicht warm */
+  --tinte: #ebe8e1;
+  --grau: #8e8a82;
+  --linie: #34322e;
+  --leer: #1c1b19;
+}
+
 * { box-sizing: border-box; }
 
 html, body {
@@ -173,7 +182,7 @@ video { width: 100%; background: var(--leer); }
   align-items: center;
   text-align: center;
 }
-.platzhalter.brief .gross { font-size: 15px; color: #fff; }
+.platzhalter.brief .gross { font-size: 15px; color: var(--papier); }
 .projekt.punkt { width: 8vw; min-width: 104px; max-width: 132px; }
 @media (max-width: 720px), (max-height: 560px) { .projekt.punkt { width: 120px; min-width: 0; } }
 .platzhalter .gross {
@@ -461,3 +470,11 @@ body.vorschau::before {
 .projekt video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
 .projekt video::-webkit-media-controls { display: none !important; }
 
+
+/* ---------- Nacht (vorerst nur in der Vorschau, siehe index.html) ---------- */
+.nacht .platzhalter { border-color: #4a4843; }
+.nacht .platzhalter.brief { border: 0; }
+/* Fotos nachts eine Spur gedämpft, damit sie nicht blenden */
+.nacht .projekt .bild,
+.nacht .detail-bilder img,
+.nacht .detail-bilder video { filter: brightness(0.9); }

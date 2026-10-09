@@ -19,6 +19,33 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="schrift/schibsted-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
+<script>
+/* Nacht-Version, vorerst nur in der Vorschau (?vorschau):
+   wird dunkel, sobald es in Basel dunkel ist (Sonne 6° unter dem Horizont, bürgerliche Dämmerung).
+   Zum Testen: ?vorschau&nacht = immer dunkel, ?vorschau&tag = immer hell. */
+(function () {
+  var q = new URLSearchParams(location.search);
+  if (!q.has("vorschau")) return;
+  function dunkel() {
+    if (q.has("nacht")) return true;
+    if (q.has("tag")) return false;
+    var r = Math.PI / 180, lat = 47.56, lng = 7.59;          /* Basel */
+    var jd = Date.now() / 86400000 + 2440587.5;
+    var n = Math.floor(jd - 2451545 + 0.5);            /* nächster Sonnenmittag */
+    var j = n - lng / 360;
+    var m = (357.5291 + 0.98560028 * j) % 360;
+    var c = 1.9148 * Math.sin(m * r) + 0.02 * Math.sin(2 * m * r) + 0.0003 * Math.sin(3 * m * r);
+    var l = (m + c + 180 + 102.9372) % 360;
+    var mittag = 2451545 + j + 0.0053 * Math.sin(m * r) - 0.0069 * Math.sin(2 * l * r);
+    var dekl = Math.asin(Math.sin(l * r) * Math.sin(23.4397 * r));
+    var w = Math.acos((Math.sin(-6 * r) - Math.sin(lat * r) * Math.sin(dekl)) / (Math.cos(lat * r) * Math.cos(dekl))) / r;
+    return jd < mittag - w / 360 || jd > mittag + w / 360;
+  }
+  function setze() { document.documentElement.classList.toggle("nacht", dunkel()); }
+  setze();
+  setInterval(setze, 5 * 60 * 1000);
+})();
+</script>
 </head>
 <body>
 
