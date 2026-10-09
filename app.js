@@ -166,7 +166,7 @@ function bauBuehne() {
 /* Zufällig verteilen, ohne dass sich Projekte überlappen */
 function platziere() {
   const buehne = $("#buehne");
-  if (!ZUFALL || matchMedia("(max-width: 720px)").matches) return;
+  if (!ZUFALL || matchMedia("(max-width: 720px), (max-height: 560px)").matches) return;
 
   const B = buehne.getBoundingClientRect();
   const items = [...buehne.querySelectorAll(".projekt")];

@@ -175,7 +175,7 @@ video { width: 100%; background: var(--leer); }
 }
 .platzhalter.brief .gross { font-size: 15px; color: #fff; }
 .projekt.punkt { width: 8vw; min-width: 104px; max-width: 132px; }
-@media (max-width: 720px) { .projekt.punkt { width: 120px; min-width: 0; } }
+@media (max-width: 720px), (max-height: 560px) { .projekt.punkt { width: 120px; min-width: 0; } }
 .platzhalter .gross {
   font-size: 15px;
   font-weight: 500;
@@ -341,9 +341,9 @@ video { width: 100%; background: var(--leer); }
 }
 .danke-gruppen .liste { margin-top: 20px; }
 
-/* ---------- Handy ---------- */
+/* ---------- Handy (hoch und quer) ---------- */
 
-@media (max-width: 720px) {
+@media (max-width: 720px), (max-height: 560px) {
   .buehne {
     height: auto;
     display: flex;
@@ -362,6 +362,13 @@ video { width: 100%; background: var(--leer); }
 
   .detail-inhalt { grid-template-columns: 1fr; }
   .detail-text { position: static; }
+}
+
+/* Handy quer: Projekte kleiner, damit sie nicht den ganzen Bildschirm füllen */
+@media (max-height: 560px) and (min-width: 721px) {
+  .projekt { width: 34%; }
+  .projekt + .projekt { margin-top: -18vw; }   /* links und rechts ineinander verschränkt */
+  .buehne { padding-block: 32px 24px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -433,8 +440,8 @@ body.vorschau::before {
 .nl-klein a { color: inherit; }
 @media (max-width: 720px) { .nl-formular .zeile { grid-template-columns: 6rem minmax(0, 1fr); } }
 
-/* ---------- Startseite passt genau in den Bildschirm (ab Tablet) ---------- */
-@media (min-width: 721px) {
+/* ---------- Startseite passt genau in den Bildschirm (ab Tablet, nicht bei Handy quer) ---------- */
+@media (min-width: 721px) and (min-height: 561px) {
   html { overscroll-behavior: none; }
   body:not(.vorschau) {
     min-height: 100vh;
