@@ -164,6 +164,9 @@ content:
       - name: newsletter_bild
         label: Newsletter-Seite – Bild rechts (optional)
         type: image
+      - name: newsletter_kachel
+        label: Newsletter als Kachel auf der Startseite zeigen (aus = nur in der Vorschau ?vorschau). Mit Bild oben = Bild, sonst Postkarte mit Titel.
+        type: boolean
 
   - name: danke
     label: Danke (Partner & Unterstützer*innen)

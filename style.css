@@ -162,6 +162,14 @@ video { width: 100%; background: var(--leer); }
   border-radius: 9px;
   background: var(--papier);
 }
+/* Newsletter-Kachel: wie eine Postkarte */
+.platzhalter.brief {
+  aspect-ratio: 148 / 105;   /* Postkarte A6 quer */
+  background: #fff;
+  border: 1px solid var(--linie);
+  padding: 14px;
+}
+.platzhalter.brief .gross { font-size: clamp(18px, 1.6vw, 24px); letter-spacing: -0.01em; }
 .platzhalter .gross {
   font-size: 15px;
   font-weight: 500;

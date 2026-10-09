@@ -131,16 +131,36 @@ function cover(p) {
 
 /* ---------- Startseite ---------- */
 
+/* Newsletter als Kachel zwischen den Projekten: öffentlich nur, wenn im Admin
+   «Newsletter als Kachel auf der Startseite» an ist (in ?vorschau/?ansicht immer) */
+function newsletterKachel() {
+  const K = KONTAKT;
+  if (!(K.newsletter || VORSCHAU || ANSICHT)) return null;
+  if (!(K.newsletter_kachel || VORSCHAU || ANSICHT)) return null;
+  const bild = K.newsletter_bild
+    ? `<img class="bild" src="${esc(pfad(K.newsletter_bild))}" alt="${esc(K.newsletter_titel || "Newsletter")}">`
+    : `<div class="bild platzhalter brief">
+        <span class="mono">${esc(K.newsletter_uebertitel || "Newsletter")}</span>
+        <span class="gross">${esc(K.newsletter_titel || "Post vom Bären")}</span>
+      </div>`;
+  return { id: "newsletter", bild, titel: K.newsletter_uebertitel || "Newsletter", rechts: "Anmelden" };
+}
+
 function bauBuehne() {
-  $("#buehne").innerHTML = sichtbare.map((p, i) => {
-    const pos = POSITIONEN[i];
-    const w = SCHWEBEN[i % SCHWEBEN.length];
+  const kacheln = sichtbare.map((p) => {
     const nr = nummer(p);
+    return { id: p.id, bild: cover(p), titel: p.titel, rechts: entwurf(p) ? "Entwurf" + (nr ? " · " + nr : "") : nr };
+  });
+  const nl = newsletterKachel();
+  if (nl) kacheln.push(nl);
+  $("#buehne").innerHTML = kacheln.map((k, i) => {
+    const pos = POSITIONEN[i % POSITIONEN.length];
+    const w = SCHWEBEN[i % SCHWEBEN.length];
     return `<div class="projekt ${i % 2 ? "rechts" : "links"}"
       style="left:${pos.x}%;top:${pos.y}%;--breite:${w.breite};--dx:${weiter(w.dx)};--dy:${weiter(w.dy)};--dr:${weiter(w.dr)};--dauer:${schneller(w.dauer)};--start:-${i * 3}s">
-      <a href="#${esc(p.id)}">
-        ${cover(p)}
-        <span class="titel"><span>${esc(p.titel)}</span><span class="mono">${entwurf(p) ? "Entwurf" + (nr ? " · " + nr : "") : nr}</span></span>
+      <a href="#${esc(k.id)}">
+        ${k.bild}
+        <span class="titel"><span>${esc(k.titel)}</span><span class="mono">${esc(k.rechts)}</span></span>
       </a>
     </div>`;
   }).join("");
