@@ -261,20 +261,28 @@ function newsletterAnbieter() {
 
 function oeffneNewsletter() {
   const bereit = !!KONTAKT.newsletter;
+  const K = KONTAKT;
+  const bild = K.newsletter_bild
+    ? `<div class="detail-bilder"><figure><img src="${esc(pfad(K.newsletter_bild))}" alt=""></figure></div>` : "";
   zeigeDetail(`
-    <div class="archiv impressum newsletter">
-      <h1>Newsletter</h1>
-      <p class="unter">Wir schreiben euch, wenn etwas Neues entsteht: Projekte, Anlässe, die Eröffnung. Nicht oft, nur wenn es etwas zu erzählen gibt.</p>
-      <form class="nl-formular" id="nl-formular" novalidate>
-        <label>Vorname<input name="vorname" autocomplete="given-name" required></label>
-        <label>Name<input name="name" autocomplete="family-name"></label>
-        <label>E-Mail<input name="mail" type="email" autocomplete="email" required></label>
-        <input class="nl-falle" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button type="submit"${bereit ? "" : " disabled"}>Anmelden</button>
-        <p class="nl-meldung" id="nl-meldung" role="status">${bereit ? "" : "Noch nicht verbunden: Im Admin unter Kontakt die Formular-Adresse eintragen."}</p>
-      </form>
-      <p class="nl-klein">Abmelden könnt ihr euch jederzeit über den Link in jedem Newsletter. Mehr dazu unter <a href="#impressum">Datenschutz</a>.</p>
-    </div>`, "Newsletter");
+    <div class="detail-text newsletter">
+      <p class="mono" style="color:var(--grau);margin:0 0 14px">${esc(K.newsletter_uebertitel || "Newsletter")}</p>
+      <h1>${esc(K.newsletter_titel || "Post vom Bären")}</h1>
+      <p class="unter">${esc(K.newsletter_untertitel || "Nicht oft, nur wenn es etwas zu erzählen gibt")}</p>
+      ${absaetze(K.newsletter_text || "Wir schreiben euch, wenn etwas Neues entsteht: Projekte, Anlässe, die Eröffnung.")}
+      <div class="liste">
+        <h2 class="mono">Anmeldung</h2>
+        <form class="nl-formular" id="nl-formular" novalidate>
+          <label class="zeile"><span>Vorname</span><input name="vorname" autocomplete="given-name" required></label>
+          <label class="zeile"><span>Name</span><input name="name" autocomplete="family-name"></label>
+          <label class="zeile"><span>E-Mail</span><input name="mail" type="email" autocomplete="email" required></label>
+          <input class="nl-falle" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit"${bereit ? "" : " disabled"}>Anmelden</button>
+          <p class="nl-meldung" id="nl-meldung" role="status">${bereit ? "" : "Noch nicht verbunden: Im Admin unter Kontakt die Formular-Adresse eintragen."}</p>
+        </form>
+      </div>
+      <p class="mono nl-klein">Abmelden könnt ihr euch jederzeit über den Link in jedem Newsletter. Mehr dazu unter <a href="#impressum">Datenschutz</a>.</p>
+    </div>${bild}`, "Newsletter");
   if (bereit) $("#nl-formular").addEventListener("submit", sendeNewsletter);
 }
 

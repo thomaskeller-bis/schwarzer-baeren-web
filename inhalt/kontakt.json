@@ -6,5 +6,10 @@
   "mail": "info@zumschwarzenbaeren.ch",
   "bald": true,
   "bald_text": "Wir sind bald online und freuen uns auf das Projekt Zum Schwarzen Bären.\n\nNora, Christoph, Valentin und Thomas",
-  "newsletter": "https://assets.mailerlite.com/jsonp/2696151/forms/200771477174224347/subscribe"
+  "newsletter": "https://assets.mailerlite.com/jsonp/2696151/forms/200771477174224347/subscribe",
+  "newsletter_uebertitel": "Newsletter",
+  "newsletter_titel": "Post vom Bären",
+  "newsletter_untertitel": "Nicht oft, nur wenn es etwas zu erzählen gibt",
+  "newsletter_text": "Wir schreiben euch, wenn etwas Neues entsteht: Projekte, Anlässe, die Eröffnung.",
+  "newsletter_bild": ""
 }

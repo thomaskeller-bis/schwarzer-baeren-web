@@ -146,6 +146,21 @@ content:
       - name: newsletter
         label: Newsletter-Formular-Adresse von Mailchimp (…list-manage.com/subscribe/post?u=…&id=…) oder MailerLite (…/jsonp/…/forms/…/subscribe). Leer = kein Newsletter-Link.
         type: string
+      - name: newsletter_uebertitel
+        label: Newsletter-Seite – Übertitel (klein, grau)
+        type: string
+      - name: newsletter_titel
+        label: Newsletter-Seite – Titel
+        type: string
+      - name: newsletter_untertitel
+        label: Newsletter-Seite – Untertitel
+        type: string
+      - name: newsletter_text
+        label: Newsletter-Seite – Text (Leerzeile = neuer Absatz)
+        type: text
+      - name: newsletter_bild
+        label: Newsletter-Seite – Bild rechts (optional)
+        type: image
 
   - name: danke
     label: Danke (Partner & Unterstützer*innen)
