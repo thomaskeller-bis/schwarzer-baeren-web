@@ -162,13 +162,18 @@ video { width: 100%; background: var(--leer); }
   border-radius: 9px;
   background: var(--papier);
 }
-/* Newsletter-Kachel: wie eine Postkarte */
+/* Newsletter-Kachel: schwarzer Kreis */
 .platzhalter.brief {
-  aspect-ratio: 148 / 105;   /* Postkarte A6 quer */
+  aspect-ratio: 1;           /* rund, hebt sich von den Projekten ab */
+  border-radius: 50%;
   background: var(--tinte);
   border: 0;
-  padding: 14px;
+  padding: 18%;
   color: #a9a7a1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
 }
 .platzhalter.brief .gross { font-size: clamp(18px, 1.6vw, 24px); letter-spacing: -0.01em; color: #fff; }
 .platzhalter .gross {
