@@ -269,7 +269,7 @@ function oeffneNewsletter() {
       <p class="mono" style="color:var(--grau);margin:0 0 14px">${esc(K.newsletter_uebertitel || "Newsletter")}</p>
       <h1>${esc(K.newsletter_titel || "Post vom Bären")}</h1>
       <p class="unter">${esc(K.newsletter_untertitel || "Nicht oft, nur wenn es etwas zu erzählen gibt")}</p>
-      ${absaetze(K.newsletter_text || "Wir schreiben euch, wenn etwas Neues entsteht: Projekte, Anlässe, die Eröffnung.")}
+      ${absaetze(K.newsletter_text || "Wir schreiben dir, wenn etwas Neues entsteht: Projekte, Anlässe, die Eröffnung.")}
       <div class="liste">
         <h2 class="mono">Anmeldung</h2>
         <form class="nl-formular" id="nl-formular" novalidate>
@@ -281,7 +281,7 @@ function oeffneNewsletter() {
           <p class="nl-meldung" id="nl-meldung" role="status">${bereit ? "" : "Noch nicht verbunden: Im Admin unter Kontakt die Formular-Adresse eintragen."}</p>
         </form>
       </div>
-      <p class="mono nl-klein">Abmelden könnt ihr euch jederzeit über den Link in jedem Newsletter. Mehr dazu unter <a href="#impressum">Datenschutz</a>.</p>
+      <p class="mono nl-klein">Abmelden kannst du dich jederzeit über den Link in jedem Newsletter. Mehr dazu unter <a href="#impressum">Datenschutz</a>.</p>
     </div>${bild}`, "Newsletter");
   if (bereit) $("#nl-formular").addEventListener("submit", sendeNewsletter);
 }
@@ -299,11 +299,11 @@ function sendeNewsletter(e) {
   meldung.textContent = "Wird gesendet …";
   const fertig = () => {
     f.reset();
-    meldung.textContent = "Danke, ihr seid angemeldet! Gleich kommt ein kurzes Willkommensmail.";
+    meldung.textContent = `Danke, du bist angemeldet mit ${d.mail.trim()}. Gleich kommt ein kurzes Willkommensmail. Falls nicht: Schau im Spam nach oder prüf die Adresse und melde dich nochmals an.`;
     knopf.disabled = false;
   };
   const fehler = (text) => {
-    meldung.textContent = text || "Das hat leider nicht geklappt. Versucht es später nochmals oder schreibt uns.";
+    meldung.textContent = text || "Das hat leider nicht geklappt. Versuch es später nochmals oder schreib uns.";
     knopf.disabled = false;
   };
   const url = String(KONTAKT.newsletter);
