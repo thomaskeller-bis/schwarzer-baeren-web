@@ -73,10 +73,14 @@
       "status": "aktuell",
       "titel": "Adväntsgass",
       "nummer": "02",
-      "cover": "bilder/advaentsgass/platzhalter.jpg",
+      "cover": "/bilder/advaentsgass/01.jpg",
       "untertitel": "26. November bis 23. Dezember 2026, in der Rheingasse",
       "text": "Vier Wochen lang sind wir mit einem Stand an der Adväntsgass, direkt vor dem künftigen Bären. Wir experimentieren dort ein erstes Mal mit der Zukunft. FOODTURE ist unser Motto.\n\n## FOODTURE\n\nWie wollen wir als Bären in Zukunft sein? An der Adväntsgass probieren wir es ganz praktisch aus – auf und neben dem Teller.\n\nAuf dem Teller zum Beispiel mit Kartoffeln aus der Region, die diesen trockenen Sommer gelitten haben und mit einem Bein schon aus der Wertschöpfung gefallen sind. Dazu kommen Pilze aus der Stadt, Hummus aus hiesigen Kichererbsen, Fleisch von Baselbieter Milchkühen und Pflanzenbasiertes in allen Formen – gutes Essen aus dem, was hier wächst, entsteht und vorhanden ist.\n\nNeben dem Teller testen wir die Arbeit im Netzwerk: Wir wollen kollaborieren, statt alles selber zu machen, Lieferant:innen und (Co-)Produzent:innen einbeziehen und gemeinsam Wertschöpfung aus Wertschätzung schaffen. Und wir wollen gute Nachbarn sein und unseren Teil zu einer lebendigen Rheingasse beitragen.\n\nDerzeit arbeiten wir an all dem. Was klappt alles? Was nicht? Was kommt anders (und zweitens: als gedacht)? Schaut vorbei zwischen dem 26. November bis 23. Dezember 2026 in der Rheingasse.",
       "bilder": [
+        {
+          "bild": "/bilder/advaentsgass/01.jpg",
+          "text": "Die Adväntsgass in der Rheingasse, rechts das Schild vom Bären"
+        },
         {
           "bild": "/bilder/advaentsgass/02.jpg",
           "text": "FOODTURE, Produktion in der Küche der gaw"
