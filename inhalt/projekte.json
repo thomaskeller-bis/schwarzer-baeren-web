@@ -71,6 +71,91 @@
     },
     {
       "status": "aktuell",
+      "titel": "Tapas Festival",
+      "nummer": "05",
+      "cover": "bilder/tapas/02.jpg",
+      "untertitel": "16. und 17. Oktober 2026, jeweils ab 17 Uhr, im Club des Jazzcampus",
+      "text": "Eine Kooperation zwischen dem Schwarzen Bären und dem Jazzcampus. Am Tapas Festival im Kleinbasel sind wir an beiden Abenden im [Club des Jazzcampus](https://maps.app.goo.gl/4MxkC2avgXFSh7VJ8). Am Freitag stehen wir an der Bar, am Samstag geben wir zum ersten Mal öffentlich etwas von uns zu essen.\n\nDas Festival findet zum zweiten Mal statt. Initiiert haben es Lenard, unser künftiger Nachbar an der Rheingasse (8Bar und Zum Schmale Wurf), und Felix von Cava Hispania. Elf Betriebe aus dem Quartier machen mit.\n\nFür uns ist es ein erster Versuch: Was kochen wir, wie schmeckt der Bär? Wir bringen ein paar kleine Happen mit und einen Wermut, den wir selbst ansetzen.",
+      "bilder": [
+        {
+          "bild": "/bilder/tapas/03.jpg",
+          "text": "Erste Ansätze in der Küche"
+        },
+        {
+          "bild": "/bilder/tapas/02.jpg",
+          "text": "Plakat Tapas Festival, rot"
+        },
+        {
+          "bild": "bilder/tapas/04.jpg",
+          "text": "Flyer Freitag: Angebot vom Jazz Campus und Plan der Betriebe"
+        },
+        {
+          "bild": "bilder/tapas/05.jpg",
+          "text": "Flyer Samstag: unser Angebot"
+        },
+        {
+          "bild": "bilder/tapas/06.jpg",
+          "text": "Plan mit allen Betrieben, wir sind bei der Nummer 6 im Jazz Campus"
+        }
+      ],
+      "listen": [
+        {
+          "titel": "Aus unserem Menü am Samstag (Auswahl)",
+          "eintraege": [
+            {
+              "name": "Saibling & Knäckebrot",
+              "rolle": "geräucherter Schweizer Saibling, Knoblauch-Crème-fraîche, eingelegter Kohlrabi, Roggen-Knäckebrot, Fichtenöl",
+              "link": ""
+            },
+            {
+              "name": "Herbstwald",
+              "rolle": "Herbstpilzcrème, eingelegte Eierschwämme, Crostini, Kürbiskernöl, Kürbiskern-Crunch",
+              "link": ""
+            },
+            {
+              "name": "Rande & Ziege",
+              "rolle": "geröstete Rande, Ziegenfrischkäse, Apfelsaft-Reduktion, geröstete Haselnüsse",
+              "link": ""
+            },
+            {
+              "name": "Bären-Wermut",
+              "rolle": "hausgemacht, inspiriert vom Basler Läckerli: Kirsch, Zimt, Nelken, Muskat, Honig, Orangeat, Zitronat, Fichtennadeln",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "titel": "Mit dabei",
+          "eintraege": [
+            {
+              "name": "Jazzcampus",
+              "rolle": "Kooperation, wir sind bei ihnen im Club zu Gast",
+              "link": "https://www.jazzcampus.com"
+            },
+            {
+              "name": "8Bar",
+              "rolle": "Initiative",
+              "link": "https://8-bar.eu"
+            },
+            {
+              "name": "Zum Schmale Wurf",
+              "rolle": "Initiative",
+              "link": "https://schmalewurf.ch"
+            },
+            {
+              "name": "Cava Hispania",
+              "rolle": "Initiative",
+              "link": "https://cavahispania.ch"
+            }
+          ]
+        }
+      ],
+      "id": "tapas",
+      "video": "bilder/tapas/video.mp4",
+      "video_instagram": "bilder/tapas/video-instagram.mp4"
+    },
+    {
+      "status": "aktuell",
       "titel": "Adväntsgass",
       "nummer": "02",
       "cover": "/bilder/advaentsgass/01.jpg",
@@ -205,91 +290,6 @@
         }
       ],
       "id": "eroeffnung"
-    },
-    {
-      "status": "aktuell",
-      "titel": "Tapas Festival",
-      "nummer": "05",
-      "cover": "bilder/tapas/02.jpg",
-      "untertitel": "16. und 17. Oktober 2026, jeweils ab 17 Uhr, im Club des Jazzcampus",
-      "text": "Eine Kooperation zwischen dem Schwarzen Bären und dem Jazzcampus. Am Tapas Festival im Kleinbasel sind wir an beiden Abenden im [Club des Jazzcampus](https://maps.app.goo.gl/4MxkC2avgXFSh7VJ8). Am Freitag stehen wir an der Bar, am Samstag geben wir zum ersten Mal öffentlich etwas von uns zu essen.\n\nDas Festival findet zum zweiten Mal statt. Initiiert haben es Lenard, unser künftiger Nachbar an der Rheingasse (8Bar und Zum Schmale Wurf), und Felix von Cava Hispania. Elf Betriebe aus dem Quartier machen mit.\n\nFür uns ist es ein erster Versuch: Was kochen wir, wie schmeckt der Bär? Wir bringen ein paar kleine Happen mit und einen Wermut, den wir selbst ansetzen.",
-      "bilder": [
-        {
-          "bild": "/bilder/tapas/03.jpg",
-          "text": "Erste Ansätze in der Küche"
-        },
-        {
-          "bild": "/bilder/tapas/02.jpg",
-          "text": "Plakat Tapas Festival, rot"
-        },
-        {
-          "bild": "bilder/tapas/04.jpg",
-          "text": "Flyer Freitag: Angebot vom Jazz Campus und Plan der Betriebe"
-        },
-        {
-          "bild": "bilder/tapas/05.jpg",
-          "text": "Flyer Samstag: unser Angebot"
-        },
-        {
-          "bild": "bilder/tapas/06.jpg",
-          "text": "Plan mit allen Betrieben, wir sind bei der Nummer 6 im Jazz Campus"
-        }
-      ],
-      "listen": [
-        {
-          "titel": "Aus unserem Menü am Samstag (Auswahl)",
-          "eintraege": [
-            {
-              "name": "Saibling & Knäckebrot",
-              "rolle": "geräucherter Schweizer Saibling, Knoblauch-Crème-fraîche, eingelegter Kohlrabi, Roggen-Knäckebrot, Fichtenöl",
-              "link": ""
-            },
-            {
-              "name": "Herbstwald",
-              "rolle": "Herbstpilzcrème, eingelegte Eierschwämme, Crostini, Kürbiskernöl, Kürbiskern-Crunch",
-              "link": ""
-            },
-            {
-              "name": "Rande & Ziege",
-              "rolle": "geröstete Rande, Ziegenfrischkäse, Apfelsaft-Reduktion, geröstete Haselnüsse",
-              "link": ""
-            },
-            {
-              "name": "Bären-Wermut",
-              "rolle": "hausgemacht, inspiriert vom Basler Läckerli: Kirsch, Zimt, Nelken, Muskat, Honig, Orangeat, Zitronat, Fichtennadeln",
-              "link": ""
-            }
-          ]
-        },
-        {
-          "titel": "Mit dabei",
-          "eintraege": [
-            {
-              "name": "Jazzcampus",
-              "rolle": "Kooperation, wir sind bei ihnen im Club zu Gast",
-              "link": "https://www.jazzcampus.com"
-            },
-            {
-              "name": "8Bar",
-              "rolle": "Initiative",
-              "link": "https://8-bar.eu"
-            },
-            {
-              "name": "Zum Schmale Wurf",
-              "rolle": "Initiative",
-              "link": "https://schmalewurf.ch"
-            },
-            {
-              "name": "Cava Hispania",
-              "rolle": "Initiative",
-              "link": "https://cavahispania.ch"
-            }
-          ]
-        }
-      ],
-      "id": "tapas",
-      "video": "bilder/tapas/video.mp4",
-      "video_instagram": "bilder/tapas/video-instagram.mp4"
     },
     {
       "status": "archiv",
