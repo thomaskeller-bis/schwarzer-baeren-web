@@ -20,13 +20,12 @@
 <link rel="preload" href="schrift/schibsted-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 <script>
-/* Nacht-Version, vorerst nur in der Vorschau (?vorschau): schwarz-weiss.
+/* Nacht-Version: schwarz-weiss, öffentlich.
    Von selbst dunkel, sobald es in Basel dunkel ist (Sonne 6° unter dem Horizont, bürgerliche Dämmerung).
    Mit dem Schalter «Nacht / Tag» oben rechts kann man umschalten; gilt bis der Browser-Tab zu ist.
-   Zum Testen: ?vorschau&nacht = immer dunkel, ?vorschau&tag = immer hell. */
+   Zum Testen: ?nacht = immer dunkel, ?tag = immer hell. */
 (function () {
   var q = new URLSearchParams(location.search);
-  if (!q.has("vorschau")) return;
   function draussenDunkel() {
     var r = Math.PI / 180, lat = 47.56, lng = 7.59;          /* Basel */
     var jd = Date.now() / 86400000 + 2440587.5;

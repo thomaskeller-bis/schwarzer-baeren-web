@@ -471,7 +471,7 @@ body.vorschau::before {
 .projekt video::-webkit-media-controls { display: none !important; }
 
 
-/* ---------- Nacht (vorerst nur in der Vorschau, siehe index.html) ---------- */
+/* ---------- Nacht (Schalter und Automatik, siehe index.html) ---------- */
 .nacht .platzhalter { border-color: #4d4d4d; }
 .nacht .platzhalter.brief { border: 0; }
 /* nachts alles schwarz-weiss, auch Fotos und Videos */
