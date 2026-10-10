@@ -184,7 +184,11 @@ video { width: 100%; background: var(--leer); }
 }
 .platzhalter.brief .gross { font-size: 15px; color: var(--papier); }
 .projekt.punkt { width: 8vw; min-width: 104px; max-width: 132px; }
-@media (max-width: 720px), (max-height: 560px) { .projekt.punkt { width: 120px; min-width: 0; } }
+@media (max-width: 720px), (max-height: 560px) {
+  .projekt.punkt { width: 120px; min-width: 0; }
+  /* Handy: Newsletter-Punkt zuoberst rechts statt am Schluss */
+  .buehne .projekt.punkt { order: -1; align-self: flex-end; margin: 0 56px -24px 0; }  /* rechts Platz, weil der Punkt weit herumsaust */
+}
 .platzhalter .gross {
   font-size: 15px;
   font-weight: 500;
