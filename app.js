@@ -413,6 +413,29 @@ function oeffneArchiv() {
     </div>`, "Archiv");
 }
 
+/* Musik von Spotify im Projekt (Felder spotify, spotify_titel, spotify_zeigen).
+   Der Spotify-Player lädt erst nach einem Klick, vorher gibt es keine Verbindung zu Spotify
+   (kein Tracking, solange niemand klickt). Öffentlich nur mit spotify_zeigen, sonst nur in ?vorschau/?ansicht. */
+function spotifyEmbed(url) {
+  const m = String(url || "").match(/open\.spotify\.com\/(?:intl-[a-z]+\/)?(artist|album|track|playlist|episode|show)\/([A-Za-z0-9]+)/);
+  if (!m) return "";
+  const dunkel = document.documentElement.classList.contains("nacht");
+  return `https://open.spotify.com/embed/${m[1]}/${m[2]}?utm_source=generator${dunkel ? "&theme=0" : ""}`;
+}
+function musikHtml(p) {
+  if (!p.spotify || !(p.spotify_zeigen || VORSCHAU || ANSICHT) || !spotifyEmbed(p.spotify)) return "";
+  return `<div class="musik" data-spotify="${esc(p.spotify)}">
+      <button class="musik-knopf" type="button"><span class="musik-punkt" aria-hidden="true"></span><span>${esc(p.spotify_titel || "Musik anhören")}</span></button>
+      <p class="musik-hinweis mono">Beim Klick lädt der Player von Spotify. Spotify kann dabei Cookies setzen.</p>
+    </div>`;
+}
+function starteMusik(knopf) {
+  const box = knopf.closest(".musik");
+  const src = spotifyEmbed(box.dataset.spotify);
+  box.innerHTML = `<iframe class="musik-player" src="${esc(src)}" height="152" loading="lazy" title="Spotify"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
+}
+
 function oeffne(p) {
   const imArchiv = status(p) === "archiv";
   const nr = nummer(p);
@@ -441,6 +464,7 @@ function oeffne(p) {
       <h1>${esc(p.titel)}</h1>
       <p class="unter">${esc(p.untertitel || "")}</p>
       ${absaetze(p.text)}
+      ${musikHtml(p)}
       ${insta}
       ${liste}
     </div>
@@ -559,6 +583,10 @@ async function start() {
   $("#newsletter-link").hidden = !(KONTAKT.newsletter || VORSCHAU || ANSICHT);
 
   $("#zurueck").addEventListener("click", zurStartseite);
+  $("#detail-inhalt").addEventListener("click", (e) => {
+    const knopf = e.target.closest(".musik-knopf");
+    if (knopf) starteMusik(knopf);
+  });
   zeigeLaufschrift();
   /* Klick auf «Zum Schwarzen Bären» (oben und im Projekt) = zurück zur Startseite */
   document.querySelectorAll("a.wortmarke").forEach((marke) => {

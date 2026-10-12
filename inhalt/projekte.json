@@ -257,7 +257,10 @@
       ],
       "id": "tapas",
       "video": "bilder/tapas/video.mp4",
-      "video_instagram": "bilder/tapas/video-instagram.mp4"
+      "video_instagram": "bilder/tapas/video-instagram.mp4",
+      "spotify": "https://open.spotify.com/artist/5jezKQEEhLLjAZGnDnSe5Z",
+      "spotify_titel": "NK36 anhören",
+      "spotify_zeigen": false
     },
     {
       "status": "aktuell",

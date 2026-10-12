@@ -21,6 +21,7 @@ Inhalte werden auch über Pages CMS (app.pagescms.org) vom Team bearbeitet.
 ## Projekt-Felder
 `status` (aktuell | archiv | offline = Entwurf, nur sichtbar unter `/?vorschau`), `titel`, `nummer` (fest, bleibt auch im Archiv; leer = nächste freie),
 `cover`, `video` (optional MP4, ersetzt das Titelbild, läuft stumm in Schleife; cover = Vorschaubild; vorher mit ffmpeg auf ca. 720 px verkleinern), `untertitel`, `text` (Leerzeile = Absatz, «## » = Zwischentitel, `[Text](https://…)` = Link), `instagram`,
+`spotify` (Link, Player lädt erst nach Klick auf den Play-Knopf), `spotify_titel` (Text beim Knopf), `spotify_zeigen` (öffentlich, sonst nur `?vorschau`; vor dem Freischalten Satz zu Spotify im Datenschutz ergänzen),
 `bilder` [{bild, text}], `listen` [{titel, eintraege: [{name, rolle, link}]}], `id` (Adresse #id).
 
 ## Arbeitsweise

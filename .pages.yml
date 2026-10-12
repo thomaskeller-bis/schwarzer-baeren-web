@@ -66,6 +66,15 @@ content:
           - name: instagram
             label: Instagram-Beitrag (optional, Link zum Post)
             type: string
+          - name: spotify
+            label: Spotify (optional, Link zu Künstler*in, Album, Song oder Playlist) – Player lädt erst nach Klick
+            type: string
+          - name: spotify_titel
+            label: Spotify – Text beim Play-Knopf (z.B. «NK36 anhören»)
+            type: string
+          - name: spotify_zeigen
+            label: Spotify-Player öffentlich zeigen (aus = nur in der Vorschau ?vorschau)
+            type: boolean
           - name: bilder
             label: Fotos in der Detailansicht
             type: object
