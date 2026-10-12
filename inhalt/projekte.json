@@ -107,7 +107,7 @@
       "nummer": "05",
       "cover": "bilder/tapas/02.jpg",
       "untertitel": "16. und 17. Oktober 2026, jeweils ab 17 Uhr, im Club des Jazzcampus",
-      "text": "Eine Kooperation zwischen dem Schwarzen Bären und dem Jazzcampus. Am Tapas Festival im Kleinbasel sind wir an beiden Abenden im [Club des Jazzcampus](https://maps.app.goo.gl/4MxkC2avgXFSh7VJ8). Am Freitag stehen wir an der Bar, am Samstag geben wir zum ersten Mal öffentlich etwas von uns zu essen.\n\nDas Festival findet zum zweiten Mal statt. Initiiert haben es Lenard, unser künftiger Nachbar an der Rheingasse (8Bar und Zum Schmale Wurf), und Felix von Cava Hispania. Elf Betriebe aus dem Quartier machen mit.\n\nFür uns ist es ein erster Versuch: Was kochen wir, wie schmeckt der Bär? Wir bringen ein paar kleine Happen mit und einen Wermut, den wir selbst ansetzen.",
+      "text": "Eine Kooperation zwischen dem Schwarzen Bären und dem Jazzcampus. Am Tapas Festival im Kleinbasel sind wir an beiden Abenden im [Club des Jazzcampus](https://maps.app.goo.gl/4MxkC2avgXFSh7VJ8).\n\nAm Freitag gibt es Tapas vom Jazzcampus, mit Grossmutters Unterstützung. Ein Teil von unserem Team steht schon an der Bar. Am Samstag kochen wir: Dann kommen die Tapas vom Team des Schwarzen Bären, und wir geben zum ersten Mal öffentlich etwas von uns zu essen.\n\nDas Festival findet zum zweiten Mal statt. Initiiert haben es Lenard, unser künftiger Nachbar an der Rheingasse (8Bar und Zum Schmale Wurf), und Felix von Cava Hispania. Elf Betriebe aus dem Quartier machen mit.\n\nFür uns ist es ein erster Versuch: Was kochen wir, wie schmeckt der Bär? Wir bringen ein paar kleine Happen mit und einen Wermut, den wir selbst ansetzen.",
       "bilder": [
         {
           "bild": "/bilder/tapas/03.jpg",
@@ -118,40 +118,112 @@
           "text": "Plakat Tapas Festival, rot"
         },
         {
-          "bild": "bilder/tapas/04.jpg",
-          "text": "Flyer Freitag: Angebot vom Jazz Campus und Plan der Betriebe"
-        },
-        {
-          "bild": "bilder/tapas/05.jpg",
-          "text": "Flyer Samstag: unser Angebot"
-        },
-        {
           "bild": "bilder/tapas/06.jpg",
           "text": "Plan mit allen Betrieben, wir sind bei der Nummer 6 im Jazz Campus"
         }
       ],
       "listen": [
         {
-          "titel": "Aus unserem Menü am Samstag (Auswahl)",
+          "titel": "Freitag, 16. Oktober: Tapas vom Jazzcampus",
           "eintraege": [
             {
-              "name": "Saibling & Knäckebrot",
-              "rolle": "geräucherter Schweizer Saibling, Knoblauch-Crème-fraîche, eingelegter Kohlrabi, Roggen-Knäckebrot, Fichtenöl",
+              "name": "Tabla mediterránea",
+              "rolle": "Sardinen, marinierte Oliven, Radicchio & Sauerteigbrot · 7.–",
               "link": ""
             },
             {
-              "name": "Herbstwald",
-              "rolle": "Herbstpilzcrème, eingelegte Eierschwämme, Crostini, Kürbiskernöl, Kürbiskern-Crunch",
+              "name": "Ensalada de patatas de la abuela",
+              "rolle": "Grossmutters vegetarischer Kartoffelsalat · 5.–",
               "link": ""
             },
             {
-              "name": "Rande & Ziege",
-              "rolle": "geröstete Rande, Ziegenfrischkäse, Apfelsaft-Reduktion, geröstete Haselnüsse",
+              "name": "Perrito nórdico",
+              "rolle": "Wienerli (CH), Brioche-Bun, Remoulade, Gurken, Zwiebeln, Röstzwiebeln & Senf · 8.–",
               "link": ""
             },
             {
-              "name": "Bären-Wermut",
-              "rolle": "hausgemacht, inspiriert vom Basler Läckerli: Kirsch, Zimt, Nelken, Muskat, Honig, Orangeat, Zitronat, Fichtennadeln",
+              "name": "Perrito vegetariano",
+              "rolle": "Vegi-Würstli, Brioche-Bun, Remoulade, Gurken, Zwiebeln, Röstzwiebeln & Senf · 8.–",
+              "link": ""
+            },
+            {
+              "name": "3er Tapas Flight",
+              "rolle": "Tabla mediterránea, Ensalada de patatas & Perrito (nórdico oder vegetariano) · 18.–",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "titel": "Samstag, 17. Oktober: Tapas vom Schwarzen Bären",
+          "eintraege": [
+            {
+              "name": "Trucha ártica y pan crujiente de centeno",
+              "rolle": "CH-Saibling, Knoblauch-Crème-fraîche, Kohlrabi, Roggen-Knäckebrot & Fichtenöl · 9.–",
+              "link": ""
+            },
+            {
+              "name": "Remolacha y queso de cabra",
+              "rolle": "Rande, Ziegenfrischkäse, Apfelsaft-Reduktion, geröstete Haselnüsse · 7.–",
+              "link": ""
+            },
+            {
+              "name": "Bosque otoñal",
+              "rolle": "Herbstpilzcrème, eingelegte Eierschwämme, Crostini, Kürbiskernöl, Kürbiskern-Crunch · 7.–",
+              "link": ""
+            },
+            {
+              "name": "Carpaccio de pera",
+              "rolle": "Herbstbirne, Skyr mit Meerrettich, karamellisierte Baumnüsse, geräuchertes Salz · 5.–",
+              "link": ""
+            },
+            {
+              "name": "4er Tapas Flight",
+              "rolle": "alle vier Tapas · 26.–",
+              "link": ""
+            },
+            {
+              "name": "4er Tapas Flight mit Wermut",
+              "rolle": "alle vier Tapas und ein Bären-Wermut · 34.–",
+              "link": ""
+            },
+            {
+              "name": "Vermut casero del Oso",
+              "rolle": "hausgemachter Bären-Wermut, inspiriert vom Basler Läckerli · 9.50",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "titel": "An beiden Abenden: Wein",
+          "eintraege": [
+            {
+              "name": "L’Alzinar Brut Reserva",
+              "rolle": "Cava · 6.50",
+              "link": ""
+            },
+            {
+              "name": "Puput Pét Nat Rosé",
+              "rolle": "Cava · 8.–",
+              "link": ""
+            },
+            {
+              "name": "SPA Blanc des Noirs 2025",
+              "rolle": "Weiss, Pinot Noir · 8.–",
+              "link": ""
+            },
+            {
+              "name": "Tschäpperli 2024",
+              "rolle": "Weiss, Riesling-Sylvaner · 5.50",
+              "link": ""
+            },
+            {
+              "name": "Tschäpperli 2024",
+              "rolle": "Rot, Pinot Noir · 6.50",
+              "link": ""
+            },
+            {
+              "name": "Viña Zorzal",
+              "rolle": "Rot, Garnacha · 6.–",
               "link": ""
             }
           ]
