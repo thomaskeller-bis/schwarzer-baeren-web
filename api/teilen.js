@@ -39,7 +39,7 @@ module.exports = async (req, res) => {
 
   const bild = projekt.cover
     ? basis + "/" + String(projekt.cover).replace(/^\/+/, "").split("/").map(encodeURIComponent).join("/")
-    : basis + "/vorschau.jpg";
+    : basis + "/vorschau-team.jpg";
   const titel = projekt.titel + " – " + name;
   const text = projekt.untertitel || "Essen und Trinken an der Rheingasse, Basel.";
 
