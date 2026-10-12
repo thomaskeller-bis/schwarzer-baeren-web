@@ -131,6 +131,12 @@ content:
       - name: untertitel
         label: Untertitel (oben rechts)
         type: string
+      - name: laufschrift
+        label: Laufschrift unter dem Namen (grau, läuft immer wieder durch; leer = keine)
+        type: string
+      - name: laufschrift_zeigen
+        label: Laufschrift öffentlich zeigen (aus = nur in der Vorschau ?vorschau)
+        type: boolean
       - name: hinweis
         label: Hinweis unten (z.B. Eröffnung, Öffnungszeiten)
         type: string

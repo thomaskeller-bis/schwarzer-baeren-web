@@ -83,6 +83,23 @@ video { width: 100%; background: var(--leer); }
 
 .kopf .ort { color: var(--grau); }
 
+/* Laufschrift unter dem Namen */
+.kopf-marke { display: inline-flex; flex-direction: column; gap: 4px; min-width: 0; }
+.laufschrift {
+  display: block;
+  contain: inline-size;      /* so breit wie der Name, nicht breiter */
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--grau);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+.laufschrift[hidden] { display: none; }
+.laufschrift-band { display: inline-flex; animation: laufen 22s linear infinite; }
+.laufschrift-band span::after { content: "·"; padding-inline: 0.6em; }
+@keyframes laufen { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .laufschrift-band { animation: none; } }
+
 .fuss {
   padding-block: 40px 28px;
   color: var(--grau);

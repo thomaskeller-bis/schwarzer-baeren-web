@@ -452,6 +452,17 @@ function route() {
   adresse("");
 }
 
+/* Laufschrift unter dem Namen (z.B. «In Entstehung · Work in Progress»):
+   öffentlich nur, wenn im Admin «Laufschrift zeigen» an ist (in ?vorschau/?ansicht immer) */
+function zeigeLaufschrift() {
+  const text = String(KONTAKT.laufschrift || "").trim();
+  const el = $("#laufschrift");
+  if (!el || !text || !(KONTAKT.laufschrift_zeigen || VORSCHAU || ANSICHT)) return;
+  const stueck = `<span>${esc(text)}</span>`.repeat(4);
+  el.innerHTML = `<span class="laufschrift-band">${stueck}${stueck}</span>`;
+  el.hidden = false;
+}
+
 function zurStartseite() {
   try { history.pushState("", KONTAKT.name, "/" + location.search); }
   catch (e) { location.hash = ""; }
@@ -513,6 +524,7 @@ async function start() {
   $("#newsletter-link").hidden = !(KONTAKT.newsletter || VORSCHAU || ANSICHT);
 
   $("#zurueck").addEventListener("click", zurStartseite);
+  zeigeLaufschrift();
   const marke = document.querySelector(".wortmarke");
   marke.href = "/" + location.search;
   marke.addEventListener("click", (e) => { e.preventDefault(); zurStartseite(); });
