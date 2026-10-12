@@ -35,7 +35,7 @@
       "nummer": "01",
       "cover": "/bilder/team/01.jpg",
       "untertitel": "Fotografiert von Gregor Brändli",
-      "text": "Hinter dem Schwarzen Bären stehen wir zu viert: Nora, Christoph, Valentin und Thomas. Wir bringen Verschiedenes mit, aus der Gastronomie, der Betriebsentwicklung und der Raumgestaltung, und entwickeln das Konzept gemeinsam.\n\nBald sind wir mehr. Wer schon zugesagt hat, steht unten.\n\nDanke an Gregor Brändli für die Fotos.",
+      "text": "Hinter dem Schwarzen Bären stehen wir zu viert: Nora, Thomas, Valentin und Christoph. Wir bringen Verschiedenes mit aus Gastronomie, Betriebsentwicklung und Raumgestaltung. Wir entwickeln das Konzept gemeinsam und bringen unsere Netzwerke ein.\n\nDeborah, Lisa und Stefan werden unser Team ergänzen.\n\nDanke an Gregor Brändli für die Fotos.",
       "bilder": [
         {
           "bild": "/bilder/team/01.jpg"
@@ -59,12 +59,12 @@
               "rolle": "Konzeptentwicklung, Gastronomie, Gastgeberin"
             },
             {
-              "name": "Valentin Ismail",
-              "rolle": "Konzept- und Betriebsentwicklung, Netzwerk"
-            },
-            {
               "name": "Thomas Keller",
               "rolle": "Konzeptentwicklung, Raumgestaltung, Aktivierung"
+            },
+            {
+              "name": "Valentin Ismail",
+              "rolle": "Konzept- und Betriebsentwicklung, Netzwerk"
             },
             {
               "name": "Christoph Schön",
@@ -73,7 +73,7 @@
           ]
         },
         {
-          "titel": "Zukünftige Mitarbeiter:innen",
+          "titel": "Unser künftiges Team",
           "eintraege": [
             {
               "name": "Deborah Blanke",
