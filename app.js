@@ -46,6 +46,7 @@ const $ = (sel) => document.querySelector(sel);
 let PROJEKTE = [];
 let KONTAKT = {};
 let DANKE = {};
+let PROGRAMM = {};
 let sichtbare = [];   // Status "aktuell": schweben auf der Startseite
 let archiv = [];      // Status "archiv": im Archiv
 /* Status eines Projekts: "aktuell", "archiv" oder "offline" */
@@ -234,6 +235,34 @@ function listenHtml(listen) {
           .join("")}</dl>
       </div>`)
     .join("");
+}
+
+/* Programm: was als Nächstes ansteht (inhalt/programm.json).
+   Termine mit «bis»-Datum verschwinden am Tag danach von selbst.
+   Öffentlich erst, wenn im Admin «Programm öffentlich zeigen» an ist (in ?vorschau/?ansicht immer). */
+function programmTermine() {
+  const heute = new Date().toISOString().slice(0, 10);
+  return (PROGRAMM.termine || []).filter((t) => t.titel && (!t.bis || String(t.bis).slice(0, 10) >= heute));
+}
+const programmSichtbar = () => programmTermine().length > 0 && (PROGRAMM.zeigen || VORSCHAU || ANSICHT);
+
+function oeffneProgramm() {
+  const zeilen = programmTermine().map((t) => {
+    const p = t.projekt && [...sichtbare, ...archiv].find((x) => x.id === t.projekt);
+    const inhalt = `
+      <span class="programm-wann">${esc(t.wann || "")}</span>
+      <span class="archiv-titel">${esc(t.titel)}</span>
+      <span class="archiv-unter">${esc(t.info || "")}</span>`;
+    return p
+      ? `<a class="programm-zeile" href="#${esc(p.id)}">${inhalt}</a>`
+      : `<div class="programm-zeile">${inhalt}</div>`;
+  }).join("");
+  zeigeDetail(`
+    <div class="archiv programm">
+      <h1>${esc(PROGRAMM.titel || "Programm")}</h1>
+      <p class="unter">${esc(PROGRAMM.intro || "")}</p>
+      <div class="archiv-liste">${zeilen}</div>
+    </div>`, PROGRAMM.titel || "Programm");
 }
 
 function oeffneDanke() {
@@ -445,6 +474,7 @@ function route() {
   if (id === "archiv" && archiv.length) { oeffneArchiv(); return adresse("#archiv"); }
   if (id === "impressum") { oeffneImpressum(); return adresse("#impressum"); }
   if (id === "newsletter" && (KONTAKT.newsletter || VORSCHAU || ANSICHT)) { oeffneNewsletter(); return adresse("#newsletter"); }
+  if (id === "programm" && programmSichtbar()) { oeffneProgramm(); return adresse("#programm"); }
   if (id === "danke" && DANKE.gruppen && DANKE.gruppen.length) { oeffneDanke(); return adresse("#danke"); }
   const p = [...sichtbare, ...archiv].find((x) => x.id === id);
   if (p) { oeffne(p); return adresse("/" + encodeURIComponent(p.id)); }
@@ -487,10 +517,11 @@ function zeigeBald() {
 async function start() {
   const laden = (datei) => fetch(datei, { cache: "no-cache" }).then((r) => r.json());
   let pj;
-  [pj, KONTAKT, DANKE] = await Promise.all([
+  [pj, KONTAKT, DANKE, PROGRAMM] = await Promise.all([
     laden("inhalt/projekte.json"),
     laden("inhalt/kontakt.json"),
-    laden("inhalt/danke.json").catch(() => ({}))
+    laden("inhalt/danke.json").catch(() => ({})),
+    laden("inhalt/programm.json").catch(() => ({}))
   ]);
   PROJEKTE = Array.isArray(pj) ? pj : pj.projekte || [];
 
@@ -505,6 +536,9 @@ async function start() {
   }
   archiv = PROJEKTE.filter((p) => status(p) === "archiv");
   $("#archiv-link").hidden = archiv.length === 0;
+  const programmLink = $("#programm-link");
+  programmLink.hidden = !programmSichtbar();
+  if (PROGRAMM.titel) programmLink.textContent = PROGRAMM.titel;
   const dankeLink = $("#danke-link");
   dankeLink.hidden = !(DANKE.gruppen && DANKE.gruppen.length);
   if (DANKE.titel) dankeLink.textContent = DANKE.titel;

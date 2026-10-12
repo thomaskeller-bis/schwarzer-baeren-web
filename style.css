@@ -359,6 +359,23 @@ video { width: 100%; background: var(--leer); }
   .archiv-unter { grid-column: 2; }
 }
 
+/* ---------- Programm (gleich wie das Archiv, ohne Bild, mit Datum vorne) ---------- */
+.programm-zeile {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 20px;
+  align-items: baseline;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--linie);
+  text-decoration: none;
+}
+.programm-wann { color: var(--grau); }
+a.programm-zeile:hover .archiv-titel { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 720px) {
+  .programm-zeile { grid-template-columns: 1fr; row-gap: 2px; }
+  .programm-zeile .archiv-unter { grid-column: auto; }
+}
+
 /* ---------- Danke ---------- */
 
 .danke { max-width: 72rem; }
