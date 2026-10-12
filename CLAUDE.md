@@ -15,7 +15,7 @@ Inhalte werden auch über Pages CMS (app.pagescms.org) vom Team bearbeitet.
 - `.pages.yml` – Felder der Admin-Seite. Bei neuen Feldern in den JSON-Dateien hier ebenfalls ergänzen.
 - `app.js`, `style.css`, `index.html` – Darstellung
 - Teil-Links: `zumschwarzenbaeren.ch/<projekt-id>` (z.B. /tapas) zeigt in WhatsApp & Co. Titel, Untertitel und Titelbild des Projekts und leitet auf `/#<id>` weiter. Die Seite selbst zeigt beim offenen Projekt ebenfalls `/<id>` in der Adresszeile (app.js `route()`/`adresse()`), so kann man direkt aus dem Browser kopieren. Gemacht von `api/teilen.js` (Vercel-Funktion, liest projekte.json live) und der Weiterleitung in `vercel.json`. Entwürfe → Startseite.
-- Nacht-Version (öffentlich): schwarz-weiss, auch Fotos. Standard ist immer Tag; nur über den Schalter «Nacht / Tag» oben rechts (gilt bis der Tab zu ist), `?nacht` / `?tag` zum Testen. Code: Skript im `<head>` von `index.html`, Farben `:root.nacht` in `style.css`.
+- Nacht-Version (öffentlich): schwarz-weiss, auch Fotos. Standard ist immer Tag; nur über den Schalter oben rechts (halb gefüllter Kreis, Text «Nacht/Tag» nur als aria-label) (gilt bis der Tab zu ist), `?nacht` / `?tag` zum Testen. Code: Skript im `<head>` von `index.html`, Farben `:root.nacht` in `style.css`.
 - `firma/index.html` – einfache Firmenseite Bär im Schafspelz GmbH (Inhalt direkt im HTML). `vercel.json` leitet baerimschafspelz.ch auf /firma/ weiter.
 
 ## Projekt-Felder
