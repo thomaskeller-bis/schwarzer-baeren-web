@@ -529,30 +529,30 @@ body.vorschau::before {
 .schalter:hover { text-decoration: underline; text-underline-offset: 3px; }
 .schalter:focus-visible { outline: 1px solid var(--tinte); outline-offset: 4px; }
 
-/* ---------- Handy-Kopf aufgeräumt (Variante A, vorerst nur in der Vorschau) ----------
+/* ---------- Handy-Kopf aufgeräumt (Variante A) ----------
    Mehr Luft zwischen Name und Untertitel, Links durch eine feine Linie abgesetzt,
    Nacht-Schalter als Symbol ganz rechts. */
 @media (max-width: 720px) {
-  body.vorschau .kopf { row-gap: 22px; }
-  body.vorschau .kopf-rechts { width: 100%; gap: 14px; }
-  body.vorschau .kopf-links {
+  .kopf { row-gap: 22px; }
+  .kopf-rechts { width: 100%; gap: 14px; }
+  .kopf-links {
     width: 100%;
     gap: 24px;
     padding-top: 12px;
     border-top: 1px solid var(--linie);
   }
-  body.vorschau .schalter { margin-left: auto; padding-left: 12px; }
+  .schalter { margin-left: auto; padding-left: 12px; }
 }
 
-/* Nacht-Schalter als Symbol (halb schwarz, halb weiss), Handy und Desktop – vorerst nur in der Vorschau */
-body.vorschau .schalter { font-size: 0; line-height: 1; padding: 2px 0; align-self: center; }
-body.vorschau .schalter::after {
+/* Nacht-Schalter als Symbol (halb schwarz, halb weiss), Handy und Desktop */
+.schalter { font-size: 0; line-height: 1; padding: 2px 0; align-self: center; }
+.schalter::after {
   content: "";
   display: inline-block;
-  width: 15px; height: 15px;
+  width: 12px; height: 12px;
   border: 1px solid currentColor;
   border-radius: 50%;
   background: linear-gradient(90deg, currentColor 50%, transparent 50%);
 }
-.nacht body.vorschau .schalter::after { background: linear-gradient(90deg, transparent 50%, currentColor 50%); }
-body.vorschau .schalter:hover { text-decoration: none; }
+.nacht .schalter::after { background: linear-gradient(90deg, transparent 50%, currentColor 50%); }
+.schalter:hover { text-decoration: none; }
