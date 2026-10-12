@@ -1,7 +1,7 @@
 {
   "titel": "Programm",
   "intro": "Was als Nächstes ansteht.",
-  "zeigen": false,
+  "zeigen": true,
   "termine": [
     {
       "wann": "16. und 17. Oktober 2026",
@@ -16,13 +16,6 @@
       "titel": "Adväntsgass",
       "info": "In der Rheingasse",
       "projekt": "advaentsgass"
-    },
-    {
-      "wann": "Anfang 2027",
-      "bis": "",
-      "titel": "Testessen",
-      "info": "Datum folgt",
-      "projekt": ""
     },
     {
       "wann": "2027",
