@@ -456,11 +456,12 @@ function route() {
    öffentlich nur, wenn im Admin «Laufschrift zeigen» an ist (in ?vorschau/?ansicht immer) */
 function zeigeLaufschrift() {
   const text = String(KONTAKT.laufschrift || "").trim();
-  const el = $("#laufschrift");
-  if (!el || !text || !(KONTAKT.laufschrift_zeigen || VORSCHAU || ANSICHT)) return;
+  if (!text || !(KONTAKT.laufschrift_zeigen || VORSCHAU || ANSICHT)) return;
   const stueck = `<span>${esc(text)}</span>`.repeat(4);
-  el.innerHTML = `<span class="laufschrift-band">${stueck}${stueck}</span>`;
-  el.hidden = false;
+  document.querySelectorAll(".laufschrift").forEach((el) => {   /* Startseite und Projekte */
+    el.innerHTML = `<span class="laufschrift-band">${stueck}${stueck}</span>`;
+    el.hidden = false;
+  });
 }
 
 function zurStartseite() {
@@ -525,9 +526,11 @@ async function start() {
 
   $("#zurueck").addEventListener("click", zurStartseite);
   zeigeLaufschrift();
-  const marke = document.querySelector(".wortmarke");
-  marke.href = "/" + location.search;
-  marke.addEventListener("click", (e) => { e.preventDefault(); zurStartseite(); });
+  /* Klick auf «Zum Schwarzen Bären» (oben und im Projekt) = zurück zur Startseite */
+  document.querySelectorAll("a.wortmarke").forEach((marke) => {
+    marke.href = "/" + location.search;
+    marke.addEventListener("click", (e) => { e.preventDefault(); zurStartseite(); });
+  });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !$("#detail").hidden) $("#zurueck").click();
   });
