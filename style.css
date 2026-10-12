@@ -528,3 +528,28 @@ body.vorschau::before {
 }
 .schalter:hover { text-decoration: underline; text-underline-offset: 3px; }
 .schalter:focus-visible { outline: 1px solid var(--tinte); outline-offset: 4px; }
+
+/* ---------- Handy-Kopf aufgeräumt (Variante A, vorerst nur in der Vorschau) ----------
+   Mehr Luft zwischen Name und Untertitel, Links durch eine feine Linie abgesetzt,
+   Nacht-Schalter als Symbol ganz rechts. */
+@media (max-width: 720px) {
+  body.vorschau .kopf { row-gap: 22px; }
+  body.vorschau .kopf-rechts { width: 100%; gap: 14px; }
+  body.vorschau .kopf-links {
+    width: 100%;
+    gap: 24px;
+    padding-top: 12px;
+    border-top: 1px solid var(--linie);
+  }
+  body.vorschau .schalter { margin-left: auto; font-size: 0; line-height: 1; padding: 2px 0 2px 12px; }
+  body.vorschau .schalter::after {
+    content: "";
+    display: inline-block;
+    width: 15px; height: 15px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    background: linear-gradient(90deg, currentColor 50%, transparent 50%);   /* halb schwarz, halb weiss */
+  }
+  .nacht body.vorschau .schalter::after { background: linear-gradient(90deg, transparent 50%, currentColor 50%); }
+  body.vorschau .schalter:hover { text-decoration: none; }
+}
