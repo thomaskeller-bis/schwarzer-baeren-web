@@ -72,8 +72,14 @@ content:
           - name: spotify_titel
             label: Spotify – Text beim Play-Knopf (z.B. «NK36 anhören»)
             type: string
-          - name: spotify_zeigen
-            label: Spotify-Player öffentlich zeigen (aus = nur in der Vorschau ?vorschau)
+          - name: youtube
+            label: YouTube (optional, Link zum Video) – Player lädt erst nach Klick
+            type: string
+          - name: youtube_titel
+            label: YouTube – Text beim Play-Knopf (z.B. «Live in Basel ansehen»)
+            type: string
+          - name: musik_zeigen
+            label: Spotify- und YouTube-Player öffentlich zeigen (aus = nur in der Vorschau ?vorschau)
             type: boolean
           - name: bilder
             label: Fotos in der Detailansicht

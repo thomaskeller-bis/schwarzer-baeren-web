@@ -107,7 +107,7 @@
       "nummer": "05",
       "cover": "bilder/tapas/02.jpg",
       "untertitel": "16. und 17. Oktober 2026, jeweils ab 17 Uhr, im Club des Jazzcampus",
-      "text": "Eine Kooperation zwischen dem Schwarzen Bären und dem Jazzcampus. Am Tapas Festival im Kleinbasel sind wir an beiden Abenden im [Club des Jazzcampus](https://maps.app.goo.gl/4MxkC2avgXFSh7VJ8).\n\nAm Freitag gibt es Tapas vom Jazzcampus, mit Grossmutters Unterstützung. Ein Teil von unserem Team steht schon an der Bar. Am Samstag kochen wir: Dann kommen die Tapas vom Team des Schwarzen Bären, und wir geben zum ersten Mal öffentlich etwas von uns zu essen. Dazu spielt [NK36](https://open.spotify.com/artist/5jezKQEEhLLjAZGnDnSe5Z).\n\nDas Festival findet zum zweiten Mal statt. Initiiert haben es Lenard, unser künftiger Nachbar an der Rheingasse (8Bar und Zum Schmale Wurf), und Felix von Cava Hispania. Elf Betriebe aus dem Quartier machen mit.\n\nFür uns ist es ein erster Versuch: Was kochen wir, wie schmeckt der Bär? Wir bringen ein paar kleine Happen mit und einen Wermut, den wir selbst ansetzen.",
+      "text": "Eine Kooperation zwischen dem Schwarzen Bären und dem Jazzcampus. Am Tapas Festival im Kleinbasel sind wir an beiden Abenden im [Club des Jazzcampus](https://maps.app.goo.gl/4MxkC2avgXFSh7VJ8).\n\nAm Freitag gibt es Tapas vom Jazzcampus, mit Grossmutters Unterstützung. Ein Teil von unserem Team steht schon an der Bar. Am Samstag kochen wir: Dann kommen die Tapas vom Team des Schwarzen Bären, und wir geben zum ersten Mal öffentlich etwas von uns zu essen. Dazu spielt [NK36](https://open.spotify.com/artist/5jezKQEEhLLjAZGnDnSe5Z).\n\nDas Festival findet zum zweiten Mal statt. Initiiert haben es Lenard, unser künftiger Nachbar an der Rheingasse (8Bar und Zum Schmale Wurf), und Felix von Cava Hispania. Elf Betriebe aus dem Quartier machen mit.\n\nFür uns ist es ein erster Versuch: Was kochen wir, wie schmeckt der Bär? Wir bringen ein paar kleine Happen mit und einen Wermut, den wir selbst ansetzen.\n\n## Musik am Samstag\n\nNK36 erzählt Geschichten mit Jazz, Poesie und Bildern. Hinter dem Projekt steht der Komponist, Produzent und Multiinstrumentalist Nikolas Katrantzis. Seine Musik bewegt sich zwischen zeitgenössischem Jazz, Hip-Hop und Spoken Word, gespielt von einem Kollektiv junger Musiker*innen aus der Schweizer Jazzszene.\n\nDiesen Herbst erscheint das neue Album «The Wind and the Sea», eine Fabel über Flucht in die Illusion und den Mut, sich dem echten Leben zu stellen. Am Jazzcampus hat NK36 schon zweimal gespielt.",
       "bilder": [
         {
           "bild": "/bilder/tapas/03.jpg",
@@ -116,6 +116,14 @@
         {
           "bild": "bilder/tapas/06.jpg",
           "text": "Plan mit allen Betrieben, wir sind bei der Nummer 6 im Jazz Campus"
+        },
+        {
+          "bild": "/bilder/tapas/nk36-album.jpg",
+          "text": "NK36, Albumcover «The Wind and the Sea»"
+        },
+        {
+          "bild": "/bilder/tapas/nk36-live.jpg",
+          "text": "NK36 live"
         }
       ],
       "listen": [
@@ -234,8 +242,8 @@
             },
             {
               "name": "NK36",
-              "rolle": "Musik am Samstag, auf Spotify",
-              "link": "https://open.spotify.com/artist/5jezKQEEhLLjAZGnDnSe5Z"
+              "rolle": "Musik am Samstag",
+              "link": "https://nk-36.com/"
             },
             {
               "name": "8Bar",
@@ -260,7 +268,9 @@
       "video_instagram": "bilder/tapas/video-instagram.mp4",
       "spotify": "https://open.spotify.com/artist/5jezKQEEhLLjAZGnDnSe5Z",
       "spotify_titel": "NK36 anhören",
-      "spotify_zeigen": false
+      "youtube": "https://www.youtube.com/watch?v=8jluTf01FuM",
+      "youtube_titel": "«But not Forgotten», live in Basel ansehen",
+      "musik_zeigen": false
     },
     {
       "status": "aktuell",
