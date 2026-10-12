@@ -541,15 +541,18 @@ body.vorschau::before {
     padding-top: 12px;
     border-top: 1px solid var(--linie);
   }
-  body.vorschau .schalter { margin-left: auto; font-size: 0; line-height: 1; padding: 2px 0 2px 12px; }
-  body.vorschau .schalter::after {
-    content: "";
-    display: inline-block;
-    width: 15px; height: 15px;
-    border: 1px solid currentColor;
-    border-radius: 50%;
-    background: linear-gradient(90deg, currentColor 50%, transparent 50%);   /* halb schwarz, halb weiss */
-  }
-  .nacht body.vorschau .schalter::after { background: linear-gradient(90deg, transparent 50%, currentColor 50%); }
-  body.vorschau .schalter:hover { text-decoration: none; }
+  body.vorschau .schalter { margin-left: auto; padding-left: 12px; }
 }
+
+/* Nacht-Schalter als Symbol (halb schwarz, halb weiss), Handy und Desktop – vorerst nur in der Vorschau */
+body.vorschau .schalter { font-size: 0; line-height: 1; padding: 2px 0; align-self: center; }
+body.vorschau .schalter::after {
+  content: "";
+  display: inline-block;
+  width: 15px; height: 15px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: linear-gradient(90deg, currentColor 50%, transparent 50%);
+}
+.nacht body.vorschau .schalter::after { background: linear-gradient(90deg, transparent 50%, currentColor 50%); }
+body.vorschau .schalter:hover { text-decoration: none; }
