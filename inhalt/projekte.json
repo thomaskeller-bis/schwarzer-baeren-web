@@ -233,61 +233,6 @@
           ]
         },
         {
-          "titel": "Alle Betriebe am Festival",
-          "eintraege": [
-            {
-              "name": "Zum Schmale Wurf & 8Bar",
-              "rolle": "Rheingasse 10 & 8",
-              "link": "https://schmalewurf.ch"
-            },
-            {
-              "name": "Bruno Lorenzo – gelato lab",
-              "rolle": "Rheingasse 13",
-              "link": ""
-            },
-            {
-              "name": "Consum",
-              "rolle": "Rheingasse 19",
-              "link": ""
-            },
-            {
-              "name": "Schall und Rauch",
-              "rolle": "Rheingasse 27",
-              "link": ""
-            },
-            {
-              "name": "Tinto Apéro Bar",
-              "rolle": "Schafgässlein 8",
-              "link": ""
-            },
-            {
-              "name": "Jazzcampus",
-              "rolle": "Utengasse 15, hier sind wir",
-              "link": "https://maps.app.goo.gl/4MxkC2avgXFSh7VJ8"
-            },
-            {
-              "name": "Blaupause Bar",
-              "rolle": "Utengasse 28",
-              "link": ""
-            },
-            {
-              "name": "Uncle Tom’s",
-              "rolle": "Rheingasse 69",
-              "link": ""
-            },
-            {
-              "name": "Restaurant Torstübli",
-              "rolle": "Riehentorstrasse 27",
-              "link": ""
-            },
-            {
-              "name": "Damatti Bar",
-              "rolle": "Kirchgasse 1",
-              "link": ""
-            }
-          ]
-        },
-        {
           "titel": "Mit dabei",
           "eintraege": [
             {
