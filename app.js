@@ -291,6 +291,7 @@ function oeffneImpressum() {
       <div class="liste"><h2 class="mono">Datenschutz</h2>
         <p>Verantwortlich ist die Bär im Schafspelz GmbH, Adresse oben.</p>
         <p>Wir sammeln über diese Seite keine Daten über euch, ausser ihr meldet euch für den Newsletter an. Es gibt keine Cookies und kein Tracking. Die Schriften liegen auf unserem eigenen Server.</p>
+        <p>Musik und Filme: Auf einigen Projektseiten gibt es Musik von Spotify und Filme von YouTube. Diese Player laden erst, wenn ihr auf den Play-Knopf klickt. Erst dann werden Daten (zum Beispiel eure IP-Adresse) an Spotify oder YouTube (Google) übertragen, und diese können Cookies setzen. Es gelten die Datenschutzbestimmungen von <a href="https://www.spotify.com/ch-de/legal/privacy-policy/" target="_blank" rel="noopener">Spotify</a> und <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener">Google</a>.</p>
         ${KONTAKT.newsletter ? `<p>Newsletter: Wenn ihr euch anmeldet, speichern wir Vorname, Name und E-Mail-Adresse bei ${esc(newsletterAnbieter())}, nur um euch den Newsletter zu schicken.${newsletterAnbieter() === "MailerLite" ? " MailerLite speichert die Daten in der EU." : ""} Abmelden könnt ihr euch jederzeit über den Link in jedem Newsletter, dann löschen wir eure Angaben.</p>` : ""}
         <p>Die Seite wird bei Vercel Inc. gehostet. Beim Aufruf speichert Vercel technisch notwendige Angaben wie IP-Adresse und Zeitpunkt, um die Seite auszuliefern und vor Missbrauch zu schützen.</p>
         <p>Wenn ihr uns eine Mail schreibt, verwenden wir eure Angaben nur, um zu antworten. Unsere Mails laufen über Google Workspace.</p>
@@ -413,9 +414,9 @@ function oeffneArchiv() {
     </div>`, "Archiv");
 }
 
-/* Musik und Film im Projekt: Spotify (spotify, spotify_titel) und YouTube (youtube, youtube_titel).
-   Die Player laden erst nach einem Klick, vorher gibt es keine Verbindung zu Spotify oder YouTube
-   (kein Tracking, solange niemand klickt). Öffentlich nur mit musik_zeigen, sonst nur in ?vorschau/?ansicht. */
+/* Musik und Filme im Projekt (Feld «medien»: Liste mit titel + link zu Spotify oder YouTube).
+   Die Player laden erst nach einem Klick auf den Play-Knopf, vorher gibt es keine Verbindung
+   zu Spotify oder YouTube (kein Tracking, solange niemand klickt). Siehe auch Datenschutz. */
 function spotifyEmbed(url) {
   const m = String(url || "").match(/open\.spotify\.com\/(?:intl-[a-z]+\/)?(artist|album|track|playlist|episode|show)\/([A-Za-z0-9]+)/);
   if (!m) return "";
@@ -427,13 +428,15 @@ function youtubeEmbed(url) {
   return m ? `https://www.youtube-nocookie.com/embed/${m[1]}?autoplay=1&rel=0` : "";
 }
 function musikHtml(p) {
-  if (!(p.musik_zeigen || p.spotify_zeigen || VORSCHAU || ANSICHT)) return "";
-  const knopf = (art, url, titel, dienst) => `<div class="musik" data-art="${art}" data-url="${esc(url)}">
-      <button class="musik-knopf" type="button"><span class="musik-punkt" aria-hidden="true"></span><span>${esc(titel)}</span></button>
-      <p class="musik-hinweis mono">Beim Klick lädt der Player von ${dienst}. ${dienst} kann dabei Cookies setzen.</p>
+  return (p.medien || []).map((m) => {
+    const art = spotifyEmbed(m.link) ? "spotify" : youtubeEmbed(m.link) ? "youtube" : "";
+    if (!art) return "";
+    const dienst = art === "spotify" ? "Spotify" : "YouTube";
+    return `<div class="musik" data-art="${art}" data-url="${esc(m.link)}">
+      <button class="musik-knopf" type="button"><span class="musik-punkt" aria-hidden="true"></span><span>${esc(m.titel || (art === "spotify" ? "Musik anhören" : "Film ansehen"))}</span></button>
+      <p class="musik-hinweis mono">Beim Klick lädt der Player von ${dienst}.</p>
     </div>`;
-  return (spotifyEmbed(p.spotify) ? knopf("spotify", p.spotify, p.spotify_titel || "Musik anhören", "Spotify") : "")
-    + (youtubeEmbed(p.youtube) ? knopf("youtube", p.youtube, p.youtube_titel || "Film ansehen", "YouTube") : "");
+  }).join("");
 }
 function starteMusik(knopf) {
   const box = knopf.closest(".musik");

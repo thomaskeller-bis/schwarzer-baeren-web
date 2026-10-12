@@ -271,11 +271,20 @@
       "id": "tapas",
       "video": "bilder/tapas/video.mp4",
       "video_instagram": "bilder/tapas/video-instagram.mp4",
-      "spotify": "https://open.spotify.com/artist/5jezKQEEhLLjAZGnDnSe5Z",
-      "spotify_titel": "NK36 anhören",
-      "youtube": "https://www.youtube.com/watch?v=8jluTf01FuM",
-      "youtube_titel": "«But not Forgotten», live in Basel ansehen",
-      "musik_zeigen": false
+      "medien": [
+        {
+          "titel": "Julia Kasimova Quartet, «Little Mary’s Waltz» ansehen",
+          "link": "https://www.youtube.com/watch?v=rDIpSyfUoFo"
+        },
+        {
+          "titel": "NK36 anhören",
+          "link": "https://open.spotify.com/artist/5jezKQEEhLLjAZGnDnSe5Z"
+        },
+        {
+          "titel": "NK36, «But not Forgotten» live in Basel ansehen",
+          "link": "https://www.youtube.com/watch?v=8jluTf01FuM"
+        }
+      ]
     },
     {
       "status": "aktuell",

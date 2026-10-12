@@ -66,21 +66,20 @@ content:
           - name: instagram
             label: Instagram-Beitrag (optional, Link zum Post)
             type: string
-          - name: spotify
-            label: Spotify (optional, Link zu Künstler*in, Album, Song oder Playlist) – Player lädt erst nach Klick
-            type: string
-          - name: spotify_titel
-            label: Spotify – Text beim Play-Knopf (z.B. «NK36 anhören»)
-            type: string
-          - name: youtube
-            label: YouTube (optional, Link zum Video) – Player lädt erst nach Klick
-            type: string
-          - name: youtube_titel
-            label: YouTube – Text beim Play-Knopf (z.B. «Live in Basel ansehen»)
-            type: string
-          - name: musik_zeigen
-            label: Spotify- und YouTube-Player öffentlich zeigen (aus = nur in der Vorschau ?vorschau)
-            type: boolean
+          - name: medien
+            label: Musik & Filme (Spotify- oder YouTube-Links, Player lädt erst nach Klick)
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{titel}"
+            fields:
+              - name: titel
+                label: Text beim Play-Knopf (z.B. «NK36 anhören»)
+                type: string
+              - name: link
+                label: Link zu Spotify (Künstler*in, Album, Song, Playlist) oder YouTube (Video)
+                type: string
           - name: bilder
             label: Fotos in der Detailansicht
             type: object
