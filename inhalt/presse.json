@@ -1,0 +1,14 @@
+{
+  "titel": "Presse",
+  "intro": "Was andere über uns und die Rheingasse 17 schreiben.",
+  "zeigen": false,
+  "berichte": [
+    {
+      "datum": "2026-10-15",
+      "medium": "Bajour",
+      "titel": "Wohnprojekt an der Rheingasse 17: Ein urbanes Utopia – aber für wen?",
+      "text": "Über das neue Wohnprojekt der Stiftung Edith Maryon, mit uns im Erdgeschoss",
+      "link": "https://bajour.ch/a/wohnprojekt-an-der-rheingasse-17-ein-urbanes-utopia-aber-fuer-wen"
+    }
+  ]
+}

@@ -47,6 +47,7 @@ let PROJEKTE = [];
 let KONTAKT = {};
 let DANKE = {};
 let PROGRAMM = {};
+let PRESSE = {};
 let sichtbare = [];   // Status "aktuell": schweben auf der Startseite
 let archiv = [];      // Status "archiv": im Archiv
 /* Status eines Projekts: "aktuell", "archiv" oder "offline" */
@@ -263,6 +264,30 @@ function oeffneProgramm() {
       <p class="unter">${esc(PROGRAMM.intro || "")}</p>
       <div class="archiv-liste">${zeilen}</div>
     </div>`, PROGRAMM.titel || "Programm");
+}
+
+/* Presse: Medienberichte (inhalt/presse.json), neueste zuerst, Links öffnen den Artikel.
+   Öffentlich erst mit «zeigen» (in ?vorschau/?ansicht immer). */
+const presseBerichte = () => (PRESSE.berichte || []).filter((b) => b.titel && b.link)
+  .sort((a, b) => String(b.datum || "").localeCompare(String(a.datum || "")));
+const presseSichtbar = () => presseBerichte().length > 0 && (PRESSE.zeigen || VORSCHAU || ANSICHT);
+function datumKurz(iso) {
+  const m = String(iso || "").match(/^(\d{4})-(\d{2})-(\d{2})/);
+  return m ? `${+m[3]}.${+m[2]}.${m[1]}` : String(iso || "");
+}
+function oeffnePresse() {
+  const zeilen = presseBerichte().map((b) => `
+    <a class="programm-zeile" href="${esc(b.link)}" target="_blank" rel="noopener">
+      <span class="programm-wann">${esc(datumKurz(b.datum))} · ${esc(b.medium || "")}</span>
+      <span class="archiv-titel">${esc(b.titel)}</span>
+      <span class="archiv-unter">${esc(b.text || "")}</span>
+    </a>`).join("");
+  zeigeDetail(`
+    <div class="archiv programm">
+      <h1>${esc(PRESSE.titel || "Presse")}</h1>
+      <p class="unter">${esc(PRESSE.intro || "")}</p>
+      <div class="archiv-liste">${zeilen}</div>
+    </div>`, PRESSE.titel || "Presse");
 }
 
 function oeffneDanke() {
@@ -510,6 +535,7 @@ function route() {
   if (id === "impressum") { oeffneImpressum(); return adresse("#impressum"); }
   if (id === "newsletter" && (KONTAKT.newsletter || VORSCHAU || ANSICHT)) { oeffneNewsletter(); return adresse("#newsletter"); }
   if (id === "programm" && programmSichtbar()) { oeffneProgramm(); return adresse("#programm"); }
+  if (id === "presse" && presseSichtbar()) { oeffnePresse(); return adresse("#presse"); }
   if (id === "danke" && DANKE.gruppen && DANKE.gruppen.length) { oeffneDanke(); return adresse("#danke"); }
   const p = [...sichtbare, ...archiv].find((x) => x.id === id);
   if (p) { oeffne(p); return adresse("/" + encodeURIComponent(p.id)); }
@@ -552,11 +578,12 @@ function zeigeBald() {
 async function start() {
   const laden = (datei) => fetch(datei, { cache: "no-cache" }).then((r) => r.json());
   let pj;
-  [pj, KONTAKT, DANKE, PROGRAMM] = await Promise.all([
+  [pj, KONTAKT, DANKE, PROGRAMM, PRESSE] = await Promise.all([
     laden("inhalt/projekte.json"),
     laden("inhalt/kontakt.json"),
     laden("inhalt/danke.json").catch(() => ({})),
-    laden("inhalt/programm.json").catch(() => ({}))
+    laden("inhalt/programm.json").catch(() => ({})),
+    laden("inhalt/presse.json").catch(() => ({}))
   ]);
   PROJEKTE = Array.isArray(pj) ? pj : pj.projekte || [];
 
@@ -574,6 +601,8 @@ async function start() {
   const programmLink = $("#programm-link");
   programmLink.hidden = !programmSichtbar();
   if (PROGRAMM.titel) programmLink.textContent = PROGRAMM.titel;
+  $("#presse-link").hidden = !presseSichtbar();
+  if (PRESSE.titel) $("#presse-link").textContent = PRESSE.titel;
   const dankeLink = $("#danke-link");
   dankeLink.hidden = !(DANKE.gruppen && DANKE.gruppen.length);
   if (DANKE.titel) dankeLink.textContent = DANKE.titel;

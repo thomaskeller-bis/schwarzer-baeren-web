@@ -227,6 +227,45 @@ content:
             label: Verknüpftes Projekt (ID, z.B. tapas; leer = kein Link)
             type: string
 
+  - name: presse
+    label: Presse (Medienberichte)
+    type: file
+    path: inhalt/presse.json
+    format: json
+    fields:
+      - name: titel
+        label: Titel (auch Name des Links oben rechts)
+        type: string
+      - name: intro
+        label: Einleitung
+        type: string
+      - name: zeigen
+        label: Presse-Seite öffentlich zeigen (aus = nur in der Vorschau ?vorschau)
+        type: boolean
+      - name: berichte
+        label: Berichte (werden automatisch nach Datum sortiert, neueste zuerst)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{datum} · {medium} · {titel}"
+        fields:
+          - name: datum
+            label: Datum
+            type: date
+          - name: medium
+            label: Medium (z.B. Bajour, bz, SRF)
+            type: string
+          - name: titel
+            label: Titel des Artikels
+            type: string
+          - name: text
+            label: Kurz worum es geht (optional)
+            type: string
+          - name: link
+            label: Link zum Artikel (mit https://)
+            type: string
+
   - name: danke
     label: Danke (Partner & Unterstützer*innen)
     type: file
