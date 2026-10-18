@@ -82,7 +82,9 @@ function esc(s) {
 
 /* Links im Text: [Text](https://…) */
 function links(s) {
-  return s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  return s
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+    .replace(/\[([^\]]+)\]\((#[a-z0-9-]+)\)/g, '<a href="$2">$1</a>');   /* Link auf ein anderes Projekt, z.B. (#tapas) */
 }
 
 function absaetze(text) {
@@ -231,7 +233,9 @@ function listenHtml(listen) {
         <h2 class="mono">${esc(l.titel)}</h2>
         <dl>${(l.eintraege || [])
           .map((e) => `<div class="zeile"><dt>${e.link
-            ? `<a href="${esc(e.link)}" target="_blank" rel="noopener">${esc(e.name)}</a>`
+            ? String(e.link).startsWith("#")
+              ? `<a href="${esc(e.link)}">${esc(e.name)}</a>`
+              : `<a href="${esc(e.link)}" target="_blank" rel="noopener">${esc(e.name)}</a>`
             : esc(e.name)}</dt><dd>${esc(e.rolle || "")}</dd></div>`)
           .join("")}</dl>
       </div>`)

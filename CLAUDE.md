@@ -21,7 +21,7 @@ Inhalte werden auch über Pages CMS (app.pagescms.org) vom Team bearbeitet.
 
 ## Projekt-Felder
 `status` (aktuell | archiv | offline = Entwurf, nur sichtbar unter `/?vorschau`), `titel`, `nummer` (fest, bleibt auch im Archiv; leer = nächste freie),
-`cover`, `video` (optional MP4, ersetzt das Titelbild, läuft stumm in Schleife; cover = Vorschaubild; vorher mit ffmpeg auf ca. 720 px verkleinern), `untertitel`, `text` (Leerzeile = Absatz, «## » = Zwischentitel, `[Text](https://…)` = Link), `instagram`,
+`cover`, `video` (optional MP4, ersetzt das Titelbild, läuft stumm in Schleife; cover = Vorschaubild; vorher mit ffmpeg auf ca. 720 px verkleinern), `untertitel`, `text` (Leerzeile = Absatz, «## » = Zwischentitel, `[Text](https://…)` = Link, `[Text](#projekt-id)` = Link auf ein anderes Projekt), `instagram`,
 `medien` [{titel, link}] (Spotify- oder YouTube-Links, Player laden erst nach Klick auf den Play-Knopf; Hinweis steht im Datenschutz),
 `bilder` [{bild, text}], `listen` [{titel, eintraege: [{name, rolle, link}]}], `id` (Adresse #id).
 
