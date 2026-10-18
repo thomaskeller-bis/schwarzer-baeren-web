@@ -103,6 +103,81 @@
     },
     {
       "status": "aktuell",
+      "titel": "Erste gastronomische Einsätze",
+      "nummer": "08",
+      "cover": "/bilder/tapas/rueckblick-03.jpg",
+      "untertitel": "Was wir vor der Eröffnung schon gekocht und ausgeschenkt haben",
+      "text": "Noch bevor der Schwarze Bär öffnet, sind wir ab und zu schon unterwegs: mit einem Apéro, an einem Festival, bald mit einem Stand. So lernen wir als Team kochen, ausschenken und Gäste empfangen, und die Nachbarschaft lernt uns kennen.\n\n## Mieterapéro, 8. September 2026\n\nUnser erster Anlass, noch mitten auf der Baustelle an der Rheingasse 17. Die Stiftung Edith Maryon lud Interessierte für die Mietflächen ein, und wir machten den Apéro: Hummus, Focaccia, Tartelettes und kleine Häppchen, alles mit dem Veloanhänger gebracht. [Mehr zum Mieterapéro](#mieterapero)\n\n## Tapas Festival, 16. und 17. Oktober 2026\n\nZusammen mit dem Jazzcampus waren wir zwei Abende im Club des Jazzcampus. Am Samstag kam das Essen zum ersten Mal von uns: Saibling auf Roggen-Knäckebrot, Rande mit Ziegenfrischkäse, Herbstpilzcrème mit Eierschwämmen, Birnen-Carpaccio und unser Bären-Wermut. [Mehr zum Tapas Festival](#tapas)\n\n## Als Nächstes\n\nVom 26. November bis 23. Dezember stehen wir als FOODTURE BÄREN an der Adväntsgass. [Mehr zur Adväntsgass](#advaentsgass)",
+      "bilder": [
+        {
+          "bild": "/bilder/tapas/rueckblick-03.jpg",
+          "text": "Tapas Festival: Trucha ártica y pan crujiente de centeno"
+        },
+        {
+          "bild": "/bilder/tapas/rueckblick-02.jpg",
+          "text": "Tapas Festival: Remolacha y queso de cabra"
+        },
+        {
+          "bild": "/bilder/tapas/rueckblick-05.jpg",
+          "text": "Tapas Festival: Bosque otoñal"
+        },
+        {
+          "bild": "/bilder/tapas/rueckblick-04.jpg",
+          "text": "Tapas Festival: Carpaccio de pera"
+        },
+        {
+          "bild": "/bilder/mieterapero/05.jpg",
+          "text": "Mieterapéro: Hummus, Tartelettes und kleine Häppchen"
+        },
+        {
+          "bild": "/bilder/mieterapero/04.jpg",
+          "text": "Mieterapéro: Anrichten auf der Baustelle"
+        },
+        {
+          "bild": "/bilder/mieterapero/03.jpg",
+          "text": "Mieterapéro: Vorbereitung"
+        }
+      ],
+      "listen": [
+        {
+          "titel": "Bisher",
+          "eintraege": [
+            {
+              "name": "Mieterapéro",
+              "rolle": "8. September 2026, mit der Stiftung Edith Maryon",
+              "link": "#mieterapero"
+            },
+            {
+              "name": "Tapas Festival",
+              "rolle": "16. und 17. Oktober 2026, mit dem Jazzcampus",
+              "link": "#tapas"
+            }
+          ]
+        },
+        {
+          "titel": "Als Nächstes",
+          "eintraege": [
+            {
+              "name": "Adväntsgass",
+              "rolle": "26. November bis 23. Dezember 2026, als FOODTURE BÄREN",
+              "link": "#advaentsgass"
+            }
+          ]
+        },
+        {
+          "titel": "Fotos",
+          "eintraege": [
+            {
+              "name": "Emilie",
+              "rolle": "Tapas Festival"
+            }
+          ]
+        }
+      ],
+      "id": "gastronomie"
+    },
+    {
+      "status": "archiv",
       "titel": "Tapas Festival",
       "nummer": "05",
       "cover": "bilder/tapas/02.jpg",
@@ -205,81 +280,6 @@
           "link": "https://www.youtube.com/watch?v=8jluTf01FuM"
         }
       ]
-    },
-    {
-      "status": "offline",
-      "titel": "Erste gastronomische Einsätze",
-      "nummer": "",
-      "cover": "/bilder/tapas/rueckblick-03.jpg",
-      "untertitel": "Was wir vor der Eröffnung schon gekocht und ausgeschenkt haben",
-      "text": "Noch bevor der Schwarze Bär öffnet, sind wir ab und zu schon unterwegs: mit einem Apéro, an einem Festival, bald mit einem Stand. So lernen wir als Team kochen, ausschenken und Gäste empfangen, und die Nachbarschaft lernt uns kennen.\n\n## Mieterapéro, 8. September 2026\n\nUnser erster Anlass, noch mitten auf der Baustelle an der Rheingasse 17. Die Stiftung Edith Maryon lud Interessierte für die Mietflächen ein, und wir machten den Apéro: Hummus, Focaccia, Tartelettes und kleine Häppchen, alles mit dem Veloanhänger gebracht. [Mehr zum Mieterapéro](#mieterapero)\n\n## Tapas Festival, 16. und 17. Oktober 2026\n\nZusammen mit dem Jazzcampus waren wir zwei Abende im Club des Jazzcampus. Am Samstag kam das Essen zum ersten Mal von uns: Saibling auf Roggen-Knäckebrot, Rande mit Ziegenfrischkäse, Herbstpilzcrème mit Eierschwämmen, Birnen-Carpaccio und unser Bären-Wermut. [Mehr zum Tapas Festival](#tapas)\n\n## Als Nächstes\n\nVom 26. November bis 23. Dezember stehen wir als FOODTURE BÄREN an der Adväntsgass. [Mehr zur Adväntsgass](#advaentsgass)",
-      "bilder": [
-        {
-          "bild": "/bilder/tapas/rueckblick-03.jpg",
-          "text": "Tapas Festival: Trucha ártica y pan crujiente de centeno"
-        },
-        {
-          "bild": "/bilder/tapas/rueckblick-02.jpg",
-          "text": "Tapas Festival: Remolacha y queso de cabra"
-        },
-        {
-          "bild": "/bilder/tapas/rueckblick-05.jpg",
-          "text": "Tapas Festival: Bosque otoñal"
-        },
-        {
-          "bild": "/bilder/tapas/rueckblick-04.jpg",
-          "text": "Tapas Festival: Carpaccio de pera"
-        },
-        {
-          "bild": "/bilder/mieterapero/05.jpg",
-          "text": "Mieterapéro: Hummus, Tartelettes und kleine Häppchen"
-        },
-        {
-          "bild": "/bilder/mieterapero/04.jpg",
-          "text": "Mieterapéro: Anrichten auf der Baustelle"
-        },
-        {
-          "bild": "/bilder/mieterapero/03.jpg",
-          "text": "Mieterapéro: Vorbereitung"
-        }
-      ],
-      "listen": [
-        {
-          "titel": "Bisher",
-          "eintraege": [
-            {
-              "name": "Mieterapéro",
-              "rolle": "8. September 2026, mit der Stiftung Edith Maryon",
-              "link": "#mieterapero"
-            },
-            {
-              "name": "Tapas Festival",
-              "rolle": "16. und 17. Oktober 2026, mit dem Jazzcampus",
-              "link": "#tapas"
-            }
-          ]
-        },
-        {
-          "titel": "Als Nächstes",
-          "eintraege": [
-            {
-              "name": "Adväntsgass",
-              "rolle": "26. November bis 23. Dezember 2026, als FOODTURE BÄREN",
-              "link": "#advaentsgass"
-            }
-          ]
-        },
-        {
-          "titel": "Fotos",
-          "eintraege": [
-            {
-              "name": "Emilie",
-              "rolle": "Tapas Festival"
-            }
-          ]
-        }
-      ],
-      "id": "gastronomie"
     },
     {
       "status": "aktuell",
