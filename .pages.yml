@@ -60,8 +60,14 @@ content:
           - name: untertitel
             label: Untertitel
             type: string
+          - name: untertitel_en
+            label: ↳ English (leer = deutscher Text)
+            type: string
           - name: text
             label: Text (Leerzeile = neuer Absatz, «## » am Zeilenanfang = Zwischentitel, [Text](https://…) = Link)
+            type: text
+          - name: text_en
+            label: ↳ English (leer = deutscher Text)
             type: text
           - name: instagram
             label: Instagram-Beitrag (optional, Link zum Post)
@@ -76,6 +82,9 @@ content:
             fields:
               - name: titel
                 label: Text beim Play-Knopf (z.B. «NK36 anhören»)
+                type: string
+              - name: titel_en
+                label: ↳ English (leer = deutscher Text)
                 type: string
               - name: link
                 label: Link zu Spotify (Künstler*in, Album, Song, Playlist) oder YouTube (Video)
@@ -94,6 +103,9 @@ content:
               - name: text
                 label: Bildlegende (optional)
                 type: string
+              - name: text_en
+                label: ↳ English (leer = deutscher Text)
+                type: string
           - name: listen
             label: Listen (z.B. Team, Partner, Angebot)
             type: object
@@ -104,6 +116,9 @@ content:
             fields:
               - name: titel
                 label: Titel der Liste
+                type: string
+              - name: titel_en
+                label: ↳ English (leer = deutscher Text)
                 type: string
               - name: eintraege
                 label: Einträge
@@ -118,6 +133,9 @@ content:
                     type: string
                   - name: rolle
                     label: Rolle / Beschreibung
+                    type: string
+                  - name: rolle_en
+                    label: ↳ English (leer = deutscher Text)
                     type: string
                   - name: link
                     label: Webseite (optional, mit https://)
@@ -139,20 +157,32 @@ content:
       - name: bald_text
         label: Text der Bald-Seite (Leerzeile = neuer Absatz)
         type: text
+      - name: bald_text_en
+        label: ↳ English (leer = deutscher Text)
+        type: text
       - name: name
         label: Name
         type: string
       - name: untertitel
         label: Untertitel (oben rechts)
         type: string
+      - name: untertitel_en
+        label: ↳ English (leer = deutscher Text)
+        type: string
       - name: laufschrift
         label: Laufschrift unter dem Namen (grau, läuft immer wieder durch; leer = keine)
+        type: string
+      - name: laufschrift_en
+        label: ↳ English (leer = deutscher Text)
         type: string
       - name: laufschrift_zeigen
         label: Laufschrift öffentlich zeigen (aus = nur in der Vorschau ?vorschau)
         type: boolean
       - name: hinweis
         label: Hinweis unten (z.B. Eröffnung, Öffnungszeiten)
+        type: string
+      - name: hinweis_en
+        label: ↳ English (leer = deutscher Text)
         type: string
       - name: adresse
         label: Adresse
@@ -172,18 +202,33 @@ content:
       - name: newsletter_uebertitel
         label: Newsletter-Seite – Übertitel (klein, grau)
         type: string
+      - name: newsletter_uebertitel_en
+        label: ↳ English (leer = deutscher Text)
+        type: string
       - name: newsletter_titel
         label: Newsletter-Seite – Titel
+        type: string
+      - name: newsletter_titel_en
+        label: ↳ English (leer = deutscher Text)
         type: string
       - name: newsletter_untertitel
         label: Newsletter-Seite – Untertitel
         type: string
+      - name: newsletter_untertitel_en
+        label: ↳ English (leer = deutscher Text)
+        type: string
       - name: newsletter_text
         label: Newsletter-Seite – Text (Leerzeile = neuer Absatz)
+        type: text
+      - name: newsletter_text_en
+        label: ↳ English (leer = deutscher Text)
         type: text
       - name: newsletter_bild
         label: Newsletter-Seite – Bild rechts (optional)
         type: image
+      - name: englisch_zeigen
+        label: Englische Version öffentlich zeigen (Schalter EN/DE oben rechts; aus = nur in der Vorschau ?vorschau). Die englischen Texte stehen jeweils im Feld «↳ English» unter dem deutschen.
+        type: boolean
       - name: newsletter_kachel
         label: Newsletter als Kachel auf der Startseite zeigen (aus = nur in der Vorschau ?vorschau). Mit Bild oben = Bild, sonst Postkarte mit Titel.
         type: boolean
@@ -197,8 +242,14 @@ content:
       - name: titel
         label: Titel (auch Name des Links oben rechts)
         type: string
+      - name: titel_en
+        label: ↳ English (leer = deutscher Text)
+        type: string
       - name: intro
         label: Einleitung
+        type: string
+      - name: intro_en
+        label: ↳ English (leer = deutscher Text)
         type: string
       - name: zeigen
         label: Programm öffentlich zeigen (aus = nur in der Vorschau ?vorschau)
@@ -214,14 +265,23 @@ content:
           - name: wann
             label: Wann (frei geschrieben, z.B. «16. und 17. Oktober 2026» oder «Anfang 2027»)
             type: string
+          - name: wann_en
+            label: ↳ English (leer = deutscher Text)
+            type: string
           - name: bis
             label: Letzter Tag (danach verschwindet der Termin von selbst; leer = bleibt stehen)
             type: date
           - name: titel
             label: Titel
             type: string
+          - name: titel_en
+            label: ↳ English (leer = deutscher Text)
+            type: string
           - name: info
             label: Kurze Info (Ort, Zeit)
+            type: string
+          - name: info_en
+            label: ↳ English (leer = deutscher Text)
             type: string
           - name: projekt
             label: Verknüpftes Projekt (ID, z.B. tapas; leer = kein Link)
@@ -236,8 +296,14 @@ content:
       - name: titel
         label: Titel (auch Name des Links oben rechts)
         type: string
+      - name: titel_en
+        label: ↳ English (leer = deutscher Text)
+        type: string
       - name: intro
         label: Einleitung
+        type: string
+      - name: intro_en
+        label: ↳ English (leer = deutscher Text)
         type: string
       - name: zeigen
         label: Presse-Seite öffentlich zeigen (aus = nur in der Vorschau ?vorschau)
@@ -259,8 +325,14 @@ content:
           - name: titel
             label: Titel des Artikels
             type: string
+          - name: titel_en
+            label: ↳ English (leer = deutscher Text)
+            type: string
           - name: text
             label: Kurz worum es geht (optional)
+            type: string
+          - name: text_en
+            label: ↳ English (leer = deutscher Text)
             type: string
           - name: link
             label: Link zum Artikel (mit https://)
@@ -275,8 +347,14 @@ content:
       - name: titel
         label: Titel (auch Name des Links oben rechts)
         type: string
+      - name: titel_en
+        label: ↳ English (leer = deutscher Text)
+        type: string
       - name: intro
         label: Einleitung
+        type: text
+      - name: intro_en
+        label: ↳ English (leer = deutscher Text)
         type: text
       - name: gruppen
         label: Gruppen
@@ -288,6 +366,9 @@ content:
         fields:
           - name: titel
             label: Titel der Gruppe
+            type: string
+          - name: titel_en
+            label: ↳ English (leer = deutscher Text)
             type: string
           - name: eintraege
             label: Einträge
@@ -302,6 +383,9 @@ content:
                 type: string
               - name: rolle
                 label: Rolle / Dank
+                type: string
+              - name: rolle_en
+                label: ↳ English (leer = deutscher Text)
                 type: string
               - name: link
                 label: Webseite (optional, mit https://)

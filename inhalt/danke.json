@@ -8,19 +8,23 @@
         {
           "name": "Stiftung Edith Maryon und Edith Maryon AG",
           "rolle": "Eigentümerin und Vermieterin",
-          "link": "https://maryon.ch"
+          "link": "https://maryon.ch",
+          "rolle_en": "Owner and landlord"
         },
         {
           "name": "Salathé Architekten Basel",
           "rolle": "Architektur, mit Charlotte",
-          "link": "https://www.salathearchitekten.ch"
+          "link": "https://www.salathearchitekten.ch",
+          "rolle_en": "Architecture, with Charlotte"
         },
         {
           "name": "Glaser Baupartner AG",
           "rolle": "Bauleitung, mit Cedric",
-          "link": "https://glaserbaupartner.ch"
+          "link": "https://glaserbaupartner.ch",
+          "rolle_en": "Site management, with Cedric"
         }
-      ]
+      ],
+      "titel_en": "Building"
     },
     {
       "titel": "Ausbau & Einrichtung",
@@ -28,24 +32,29 @@
         {
           "name": "Bravo Ricky",
           "rolle": "Innenausbau",
-          "link": "https://www.bravoricky.com"
+          "link": "https://www.bravoricky.com",
+          "rolle_en": "Interior fit-out"
         },
         {
           "name": "Fathy Stohler",
           "rolle": "Hausschreiner",
-          "link": ""
+          "link": "",
+          "rolle_en": "Our carpenter"
         },
         {
           "name": "Mettler Gastroküchen",
           "rolle": "Gastroküche, mit René",
-          "link": "https://mettler-chuchi.ch"
+          "link": "https://mettler-chuchi.ch",
+          "rolle_en": "Professional kitchen, with René"
         },
         {
           "name": "Brauerei Rosengarten",
           "rolle": "Bierlieferant, Unterstützung bei der Einrichtung",
-          "link": "https://einsiedlerbier.ch"
+          "link": "https://einsiedlerbier.ch",
+          "rolle_en": "Beer supplier, support with the furnishing"
         }
-      ]
+      ],
+      "titel_en": "Fit-out & furnishing"
     },
     {
       "titel": "Nachbarschaft",
@@ -53,24 +62,29 @@
         {
           "name": "8Bar und Zum Schmale Wurf",
           "rolle": "Nachbarn an der Rheingasse, mit Lenny",
-          "link": "https://8-bar.eu"
+          "link": "https://8-bar.eu",
+          "rolle_en": "Neighbours on the Rheingasse, with Lenny"
         },
         {
           "name": "Krafft Gruppe",
           "rolle": "Hotel Krafft und Consum, Nachbarn an der Rheingasse, mit Jonas und Franz Xaver",
-          "link": "https://www.krafftgruppe.ch"
+          "link": "https://www.krafftgruppe.ch",
+          "rolle_en": "Hotel Krafft and Consum, neighbours on the Rheingasse, with Jonas and Franz Xaver"
         },
         {
           "name": "Jazz Campus",
           "rolle": "Zusammenarbeit am Tapas Festival, mit Kim",
-          "link": "https://www.jazzcampus.com"
+          "link": "https://www.jazzcampus.com",
+          "rolle_en": "Partner at the Tapas Festival, with Kim"
         },
         {
           "name": "Adväntsgass",
           "rolle": "Weihnachtsmarkt in der Rheingasse, Gastgeberin für unseren Stand",
-          "link": "https://www.advaentsgass.ch"
+          "link": "https://www.advaentsgass.ch",
+          "rolle_en": "Christmas market in the Rheingasse, host for our stall"
         }
-      ]
+      ],
+      "titel_en": "Neighbourhood"
     },
     {
       "titel": "Gastronomiefreunde",
@@ -78,19 +92,23 @@
         {
           "name": "Kuni & Gunde",
           "rolle": "Rat und Tipps, mit Tim und Tobias",
-          "link": "https://www.kuni-gunde.ch"
+          "link": "https://www.kuni-gunde.ch",
+          "rolle_en": "Advice and tips, with Tim and Tobias"
         },
         {
           "name": "VITO",
           "rolle": "Rat und Tipps, mit Lukas",
-          "link": "https://www.vito.ch"
+          "link": "https://www.vito.ch",
+          "rolle_en": "Advice and tips, with Lukas"
         },
         {
           "name": "Markthalle Basel",
           "rolle": "Rat und Tipps",
-          "link": "https://www.markthallebasel.ch"
+          "link": "https://www.markthallebasel.ch",
+          "rolle_en": "Advice and tips"
         }
-      ]
+      ],
+      "titel_en": "Friends in hospitality"
     },
     {
       "titel": "Netzwerk",
@@ -98,24 +116,29 @@
         {
           "name": "Lebensmittel Netzwerk Basel",
           "rolle": "Netzwerk und Beschaffung",
-          "link": "https://www.lebensmittelnetzwerk.ch"
+          "link": "https://www.lebensmittelnetzwerk.ch",
+          "rolle_en": "Network and sourcing"
         },
         {
           "name": "Basel Food Factory",
           "rolle": "FOODTURE, Projektlead, Netzwerk und Produktentwicklung",
-          "link": "https://foodfactorybasel.ch"
+          "link": "https://foodfactorybasel.ch",
+          "rolle_en": "FOODTURE, project lead, network and product development"
         },
         {
           "name": "gaw",
           "rolle": "Produktion und Produktentwicklung",
-          "link": "https://www.gaw.ch"
+          "link": "https://www.gaw.ch",
+          "rolle_en": "Production and product development"
         },
         {
           "name": "Elias Buess",
           "rolle": "FOODTURE, Rezepturen, Beratung und Begleitung",
-          "link": ""
+          "link": "",
+          "rolle_en": "FOODTURE, recipes, advice and support"
         }
-      ]
+      ],
+      "titel_en": "Network"
     },
     {
       "titel": "Kommunikation & Grafik",
@@ -123,19 +146,23 @@
         {
           "name": "Gregor Brändli",
           "rolle": "Kommunikation, Inhalte, Auftritt",
-          "link": "https://www.gregorbraendli.com"
+          "link": "https://www.gregorbraendli.com",
+          "rolle_en": "Communication, content, identity"
         },
         {
           "name": "Elia Bianchi",
           "rolle": "Grafik und Inhalte",
-          "link": ""
+          "link": "",
+          "rolle_en": "Graphics and content"
         },
         {
           "name": "Rio Basel",
           "rolle": "Rat und Tipps",
-          "link": "https://riobasel.ch"
+          "link": "https://riobasel.ch",
+          "rolle_en": "Advice and tips"
         }
-      ]
+      ],
+      "titel_en": "Communication & graphics"
     },
     {
       "titel": "IT & Support",
@@ -143,9 +170,11 @@
         {
           "name": "Christopher McKean Scott",
           "rolle": "Webtechnik und Support",
-          "link": ""
+          "link": "",
+          "rolle_en": "Web technology and support"
         }
-      ]
+      ],
+      "titel_en": "IT & support"
     },
     {
       "titel": "Und ausserdem",
@@ -153,9 +182,13 @@
         {
           "name": "Ines",
           "rolle": "Planung",
-          "link": ""
+          "link": "",
+          "rolle_en": "Planning"
         }
-      ]
+      ],
+      "titel_en": "And also"
     }
-  ]
+  ],
+  "titel_en": "Thanks",
+  "intro_en": "Without these people, associations and companies, all of this would be much harder. They help, think and shape along with us. Thank you!"
 }

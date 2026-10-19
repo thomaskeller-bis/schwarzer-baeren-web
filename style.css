@@ -557,6 +557,15 @@ body.vorschau::before {
 .nacht .schalter::after { background: linear-gradient(90deg, transparent 50%, currentColor 50%); }
 .schalter:hover { text-decoration: none; }
 
+/* Sprach-Schalter EN / DE, direkt vor dem Nacht-Symbol */
+.sprache { font: inherit; font-size: 13px; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+.sprache:hover { text-decoration: underline; text-underline-offset: 3px; }
+.sprache:focus-visible { outline: 1px solid var(--tinte); outline-offset: 4px; }
+@media (max-width: 720px) {
+  .sprache { margin-left: auto; }
+  .sprache:not([hidden]) + .schalter { margin-left: 0; padding-left: 0; }
+}
+
 /* ---------- Musik (Spotify, lädt erst nach Klick) ---------- */
 .musik { margin: 26px 0 8px; }
 .musik + .musik { margin-top: 18px; }

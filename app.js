@@ -62,6 +62,70 @@ const entwurf = (p) => status(p) === "offline";
    (ohne Entwürfe), auch solange die Bald-Seite eingeschaltet ist. */
 const ANSICHT = new URLSearchParams(location.search).has("ansicht");
 
+/* ---------- Sprache Deutsch / Englisch ----------
+   Jedes Textfeld kann eine englische Fassung im Feld «…_en» haben (z.B. titel_en).
+   Fehlt sie, erscheint der deutsche Text. Der Schalter «EN / DE» oben rechts merkt sich die Wahl.
+   Öffentlich erst, wenn im Admin unter Kontakt «Englisch zeigen» an ist (in ?vorschau/?ansicht immer).
+   Zum Testen: ?lang=en oder ?lang=de */
+function gewaehlteSprache() {
+  const q = new URLSearchParams(location.search).get("lang");
+  if (q === "en" || q === "de") return q;
+  try { return localStorage.getItem("sprache") === "en" ? "en" : "de"; } catch (e) { return "de"; }
+}
+let EN = false;
+/* ersetzt überall feld durch feld_en, wenn es eine englische Fassung gibt */
+function aufEnglisch(o) {
+  if (Array.isArray(o)) { o.forEach(aufEnglisch); return o; }
+  if (o && typeof o === "object") {
+    Object.keys(o).forEach((k) => {
+      if (k.endsWith("_en")) {
+        const v = o[k];
+        if (v !== "" && v != null) o[k.slice(0, -3)] = v;
+      } else aufEnglisch(o[k]);
+    });
+  }
+  return o;
+}
+/* feste Texte der Seite: [Deutsch, Englisch] */
+const TEXTE = {
+  film: ["Film läuft", "Film is rolling"],
+  fotos: ["Fotos folgen", "Photos to follow"],
+  entwurf: ["Entwurf", "Draft"],
+  entwurfLang: ["Entwurf, nicht öffentlich", "Draft, not public"],
+  projekt: ["Projekt", "Project"],
+  archiv: ["Archiv", "Archive"],
+  archivUnter: ["Was wir schon gemacht haben.", "What we have done so far."],
+  instagram: ["Mehr dazu auf Instagram", "More on Instagram"],
+  musik: ["Musik anhören", "Listen to the music"],
+  filmAnsehen: ["Film ansehen", "Watch the film"],
+  player: ["Beim Klick lädt der Player von", "Clicking loads the player from"],
+  programm: ["Programm", "Programme"],
+  presse: ["Presse", "Press"],
+  danke: ["Danke", "Thanks"],
+  zurueck: ["Zurück zur Übersicht", "Back to overview"],
+  impressum: ["Impressum", "Imprint"],
+  nlTitel: ["Post vom Bären", "Post from the Bear"],
+  nlUnter: ["Nicht oft, nur wenn es etwas zu erzählen gibt", "Not often, only when there is something to tell"],
+  nlText: ["Wir schreiben dir, wenn etwas Neues entsteht: Projekte, Anlässe, die Eröffnung.", "We write to you when something new is happening: projects, events, the opening."],
+  anmeldung: ["Anmeldung", "Sign up"],
+  vorname: ["Vorname", "First name"],
+  name: ["Name", "Last name"],
+  mail: ["E-Mail", "Email"],
+  anmelden: ["Anmelden", "Subscribe"],
+  nichtVerbunden: ["Noch nicht verbunden: Im Admin unter Kontakt die Formular-Adresse eintragen.", "Not connected yet: enter the form address in the admin under Kontakt."],
+  abmelden: ["Abmelden kannst du dich jederzeit über den Link in jedem Newsletter. Mehr dazu unter", "You can unsubscribe at any time via the link in every newsletter. More under"],
+  datenschutz: ["Datenschutz", "Privacy"],
+  pruefen: ["Bitte Vorname und eine gültige E-Mail-Adresse angeben.", "Please enter your first name and a valid email address."],
+  sendet: ["Wird gesendet …", "Sending …"],
+  fehler: ["Das hat leider nicht geklappt. Versuch es später nochmals oder schreib uns.", "Sorry, that didn't work. Please try again later or write to us."],
+  schonDa: ["Diese Adresse ist schon angemeldet.", "This address is already subscribed."],
+  anbieter: ["unserem Newsletter-Anbieter", "our newsletter provider"],
+  bald: ["Wir sind bald online.", "We will be online soon."],
+  zurTag: ["Zur Tag-Version", "Switch to day version"],
+  zurNacht: ["Zur Nacht-Version", "Switch to night version"]
+};
+const tx = (k) => TEXTE[k][EN ? 1 : 0];
+
 /* Bildpfad: "/bilder/x.jpg" und "bilder/x.jpg" funktionieren beide */
 /* Projektnummer: eigenes Feld "nummer" gilt fest, sonst automatisch nach Reihenfolge */
 function nummer(p) {
@@ -126,8 +190,8 @@ function cover(p) {
   if (p.video) return videoHtml(p.video, p.cover, "bild");
   if (!p.cover) {
     return `<div class="bild platzhalter fotos">
-      <span class="mono">Film läuft</span>
-      <span class="mono gross">Fotos folgen</span>
+      <span class="mono">${tx("film")}</span>
+      <span class="mono gross">${tx("fotos")}</span>
     </div>`;
   }
   return `<img class="bild" src="${esc(pfad(p.cover))}" alt="${esc(p.titel)}">`;
@@ -150,7 +214,7 @@ function newsletterKachel() {
 function bauBuehne() {
   const kacheln = sichtbare.map((p) => {
     const nr = nummer(p);
-    return { id: p.id, bild: cover(p), titel: p.titel, rechts: entwurf(p) ? "Entwurf" + (nr ? " · " + nr : "") : nr };
+    return { id: p.id, bild: cover(p), titel: p.titel, rechts: entwurf(p) ? tx("entwurf") + (nr ? " · " + nr : "") : nr };
   });
   const nl = newsletterKachel();
   if (nl) kacheln.push(nl);
@@ -264,10 +328,10 @@ function oeffneProgramm() {
   }).join("");
   zeigeDetail(`
     <div class="archiv programm">
-      <h1>${esc(PROGRAMM.titel || "Programm")}</h1>
+      <h1>${esc(PROGRAMM.titel || tx("programm"))}</h1>
       <p class="unter">${esc(PROGRAMM.intro || "")}</p>
       <div class="archiv-liste">${zeilen}</div>
-    </div>`, PROGRAMM.titel || "Programm");
+    </div>`, PROGRAMM.titel || tx("programm"));
 }
 
 /* Presse: Medienberichte (inhalt/presse.json), neueste zuerst, Links öffnen den Artikel.
@@ -277,7 +341,8 @@ const presseBerichte = () => (PRESSE.berichte || []).filter((b) => b.titel && b.
 const presseSichtbar = () => presseBerichte().length > 0 && (PRESSE.zeigen || VORSCHAU || ANSICHT);
 function datumKurz(iso) {
   const m = String(iso || "").match(/^(\d{4})-(\d{2})-(\d{2})/);
-  return m ? `${+m[3]}.${+m[2]}.${m[1]}` : String(iso || "");
+  if (!m) return String(iso || "");
+  return EN ? `${+m[3]} ${["January","February","March","April","May","June","July","August","September","October","November","December"][+m[2] - 1]} ${m[1]}` : `${+m[3]}.${+m[2]}.${m[1]}`;
 }
 function oeffnePresse() {
   const zeilen = presseBerichte().map((b) => `
@@ -288,23 +353,24 @@ function oeffnePresse() {
     </a>`).join("");
   zeigeDetail(`
     <div class="archiv programm">
-      <h1>${esc(PRESSE.titel || "Presse")}</h1>
+      <h1>${esc(PRESSE.titel || tx("presse"))}</h1>
       <p class="unter">${esc(PRESSE.intro || "")}</p>
       <div class="archiv-liste">${zeilen}</div>
-    </div>`, PRESSE.titel || "Presse");
+    </div>`, PRESSE.titel || tx("presse"));
 }
 
 function oeffneDanke() {
   zeigeDetail(`
     <div class="archiv danke">
-      <h1>${esc(DANKE.titel || "Danke")}</h1>
+      <h1>${esc(DANKE.titel || tx("danke"))}</h1>
       <p class="unter">${esc(DANKE.intro || "")}</p>
       <div class="danke-gruppen">${listenHtml(DANKE.gruppen)}</div>
-    </div>`, DANKE.titel || "Danke");
+    </div>`, DANKE.titel || tx("danke"));
 }
 
 /* Impressum & Datenschutz (Angaben aus dem Handelsregister Basel-Stadt) */
 function oeffneImpressum() {
+  if (EN) return oeffneImpressumEn();
   zeigeDetail(`
     <div class="archiv impressum">
       <h1>Impressum &amp; Datenschutz</h1>
@@ -329,6 +395,31 @@ function oeffneImpressum() {
     </div>`, "Impressum & Datenschutz");
 }
 
+function oeffneImpressumEn() {
+  zeigeDetail(`
+    <div class="archiv impressum">
+      <h1>Imprint &amp; privacy</h1>
+      <div class="liste"><h2 class="mono">Operator</h2>
+        <p>Zum Schwarzen Bären is run by</p>
+        <p><a href="https://www.baerimschafspelz.ch" target="_blank" rel="noopener">Bär im Schafspelz GmbH</a><br>
+        Sperrstrasse 91, 4057 Basel, Switzerland<br>
+        <a href="mailto:info@baerimschafspelz.ch">info@baerimschafspelz.ch</a><br>
+        UID: CHE-390.420.636</p>
+        <p>Management: Christoph Schön (chair), Nora Garberson, Valentin Ismail, Thomas Keller</p>
+        <p>More about us: <a href="https://www.baerimschafspelz.ch" target="_blank" rel="noopener">baerimschafspelz.ch</a></p>
+      </div>
+      <div class="liste"><h2 class="mono">Privacy</h2>
+        <p>The controller is Bär im Schafspelz GmbH, address above.</p>
+        <p>We do not collect any data about you through this site unless you sign up for the newsletter. There are no cookies and no tracking. The fonts are hosted on our own server.</p>
+        <p>Music and films: some project pages include music from Spotify and films from YouTube. These players only load when you click the play button. Only then is data (for example your IP address) sent to Spotify or YouTube (Google), and they may set cookies. The privacy policies of <a href="https://www.spotify.com/ch-en/legal/privacy-policy/" target="_blank" rel="noopener">Spotify</a> and <a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener">Google</a> apply.</p>
+        ${KONTAKT.newsletter ? `<p>Newsletter: when you sign up, we store your first name, last name and email address with ${esc(newsletterAnbieter())}, solely to send you the newsletter.${newsletterAnbieter() === "MailerLite" ? " MailerLite stores the data in the EU." : ""} You can unsubscribe at any time via the link in every newsletter; we then delete your details.</p>` : ""}
+        <p>The site is hosted by Vercel Inc. When you visit, Vercel stores technically necessary information such as IP address and time in order to deliver the site and protect it from abuse.</p>
+        <p>If you send us an email, we only use your details to reply. Our email runs on Google Workspace.</p>
+        <p>Questions: <a href="mailto:info@baerimschafspelz.ch">info@baerimschafspelz.ch</a></p>
+      </div>
+    </div>`, "Imprint & privacy");
+}
+
 /* ---------- Newsletter ----------
    Im Admin unter Kontakt die Formular-Adresse des Anbieters eintragen (Mailchimp oder MailerLite).
    Leer = kein Newsletter-Link (ausser in der Vorschau). Ein Willkommensmail verschickt der Anbieter (Automation). */
@@ -336,7 +427,7 @@ function newsletterAnbieter() {
   const u = String(KONTAKT.newsletter || "");
   if (/list-manage\.com/.test(u)) return "Mailchimp";
   if (/mailerlite\.com/.test(u)) return "MailerLite";
-  return u ? "unserem Newsletter-Anbieter" : "";
+  return u ? tx("anbieter") : "";
 }
 
 function oeffneNewsletter() {
@@ -347,21 +438,21 @@ function oeffneNewsletter() {
   zeigeDetail(`
     <div class="detail-text newsletter">
       <p class="mono" style="color:var(--grau);margin:0 0 14px">${esc(K.newsletter_uebertitel || "Newsletter")}</p>
-      <h1>${esc(K.newsletter_titel || "Post vom Bären")}</h1>
-      <p class="unter">${esc(K.newsletter_untertitel || "Nicht oft, nur wenn es etwas zu erzählen gibt")}</p>
-      ${absaetze(K.newsletter_text || "Wir schreiben dir, wenn etwas Neues entsteht: Projekte, Anlässe, die Eröffnung.")}
+      <h1>${esc(K.newsletter_titel || tx("nlTitel"))}</h1>
+      <p class="unter">${esc(K.newsletter_untertitel || tx("nlUnter"))}</p>
+      ${absaetze(K.newsletter_text || tx("nlText"))}
       <div class="liste">
-        <h2 class="mono">Anmeldung</h2>
+        <h2 class="mono">${tx("anmeldung")}</h2>
         <form class="nl-formular" id="nl-formular" novalidate>
-          <label class="zeile"><span>Vorname</span><input name="vorname" autocomplete="given-name" required></label>
-          <label class="zeile"><span>Name</span><input name="name" autocomplete="family-name"></label>
-          <label class="zeile"><span>E-Mail</span><input name="mail" type="email" autocomplete="email" required></label>
+          <label class="zeile"><span>${tx("vorname")}</span><input name="vorname" autocomplete="given-name" required></label>
+          <label class="zeile"><span>${tx("name")}</span><input name="name" autocomplete="family-name"></label>
+          <label class="zeile"><span>${tx("mail")}</span><input name="mail" type="email" autocomplete="email" required></label>
           <input class="nl-falle" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button type="submit"${bereit ? "" : " disabled"}>Anmelden</button>
-          <p class="nl-meldung" id="nl-meldung" role="status">${bereit ? "" : "Noch nicht verbunden: Im Admin unter Kontakt die Formular-Adresse eintragen."}</p>
+          <button type="submit"${bereit ? "" : " disabled"}>${tx("anmelden")}</button>
+          <p class="nl-meldung" id="nl-meldung" role="status">${bereit ? "" : tx("nichtVerbunden")}</p>
         </form>
       </div>
-      <p class="mono nl-klein">Abmelden kannst du dich jederzeit über den Link in jedem Newsletter. Mehr dazu unter <a href="#impressum">Datenschutz</a>.</p>
+      <p class="mono nl-klein">${tx("abmelden")} <a href="#impressum">${tx("datenschutz")}</a>.</p>
     </div>${bild}`, "Newsletter");
   if (bereit) $("#nl-formular").addEventListener("submit", sendeNewsletter);
 }
@@ -372,18 +463,20 @@ function sendeNewsletter(e) {
   const d = Object.fromEntries(new FormData(f));
   if (d.website) return; // Spam-Falle
   if (!d.vorname.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.mail.trim())) {
-    meldung.textContent = "Bitte Vorname und eine gültige E-Mail-Adresse angeben.";
+    meldung.textContent = tx("pruefen");
     return;
   }
   knopf.disabled = true;
-  meldung.textContent = "Wird gesendet …";
+  meldung.textContent = tx("sendet");
   const fertig = () => {
     f.reset();
-    meldung.textContent = `Danke, du bist angemeldet mit ${d.mail.trim()}. Gleich kommt ein kurzes Willkommensmail. Falls nicht: Schau im Spam nach oder prüf die Adresse und melde dich nochmals an.`;
+    meldung.textContent = EN
+      ? `Thank you, you are subscribed with ${d.mail.trim()}. A short welcome email is on its way. If it doesn't arrive, check your spam folder or check the address and sign up again.`
+      : `Danke, du bist angemeldet mit ${d.mail.trim()}. Gleich kommt ein kurzes Willkommensmail. Falls nicht: Schau im Spam nach oder prüf die Adresse und melde dich nochmals an.`;
     knopf.disabled = false;
   };
   const fehler = (text) => {
-    meldung.textContent = text || "Das hat leider nicht geklappt. Versuch es später nochmals oder schreib uns.";
+    meldung.textContent = text || tx("fehler");
     knopf.disabled = false;
   };
   const url = String(KONTAKT.newsletter);
@@ -397,7 +490,7 @@ function sendeNewsletter(e) {
       delete window[cb]; s.remove();
       if (r && r.result === "success") return fertig();
       const msg = String((r && r.msg) || "");
-      if (/already subscribed|bereits/i.test(msg)) return fehler("Diese Adresse ist schon angemeldet.");
+      if (/already subscribed|bereits/i.test(msg)) return fehler(tx("schonDa"));
       fehler();
     };
     s.src = url.replace("/post?", "/post-json?") + "&" + q + "&c=" + cb;
@@ -437,10 +530,10 @@ function oeffneArchiv() {
     </a>`).join("");
   zeigeDetail(`
     <div class="archiv">
-      <h1>Archiv</h1>
-      <p class="unter">Was wir schon gemacht haben.</p>
+      <h1>${tx("archiv")}</h1>
+      <p class="unter">${tx("archivUnter")}</p>
       <div class="archiv-liste">${zeilen}</div>
-    </div>`, "Archiv");
+    </div>`, tx("archiv"));
 }
 
 /* Musik und Filme im Projekt (Feld «medien»: Liste mit titel + link zu Spotify oder YouTube).
@@ -462,8 +555,8 @@ function musikHtml(p) {
     if (!art) return "";
     const dienst = art === "spotify" ? "Spotify" : "YouTube";
     return `<div class="musik" data-art="${art}" data-url="${esc(m.link)}">
-      <button class="musik-knopf" type="button"><span class="musik-punkt" aria-hidden="true"></span><span>${esc(m.titel || (art === "spotify" ? "Musik anhören" : "Film ansehen"))}</span></button>
-      <p class="musik-hinweis mono">Beim Klick lädt der Player von ${dienst}.</p>
+      <button class="musik-knopf" type="button"><span class="musik-punkt" aria-hidden="true"></span><span>${esc(m.titel || (art === "spotify" ? tx("musik") : tx("filmAnsehen")))}</span></button>
+      <p class="musik-hinweis mono">${tx("player")} ${dienst}.</p>
     </div>`;
   }).join("");
 }
@@ -482,7 +575,7 @@ function oeffne(p) {
 
   const liste = listenHtml(p.listen);
   const insta = p.instagram
-    ? `<p class="insta"><a href="${esc(p.instagram)}" target="_blank" rel="noopener">Mehr dazu auf Instagram</a></p>`
+    ? `<p class="insta"><a href="${esc(p.instagram)}" target="_blank" rel="noopener">${tx("instagram")}</a></p>`
     : "";
 
   const film = p.video ? `<figure>${videoHtml(p.video, p.cover, "")}</figure>` : "";
@@ -498,9 +591,9 @@ function oeffne(p) {
   zeigeDetail(`
     <div class="detail-text">
       <p class="mono" style="color:var(--grau);margin:0 0 14px">${imArchiv
-        ? `<a href="#archiv">Archiv</a>${nr ? " · " + esc(nr) : ""}`
-        : entwurf(p) ? `Entwurf, nicht öffentlich${nr ? " · " + esc(nr) : ""}`
-        : `Projekt ${esc(nr)}`}</p>
+        ? `<a href="#archiv">${tx("archiv")}</a>${nr ? " · " + esc(nr) : ""}`
+        : entwurf(p) ? `${tx("entwurfLang")}${nr ? " · " + esc(nr) : ""}`
+        : `${tx("projekt")} ${esc(nr)}`}</p>
       <h1>${esc(p.titel)}</h1>
       <p class="unter">${esc(p.untertitel || "")}</p>
       ${absaetze(p.text)}
@@ -567,9 +660,41 @@ function zurStartseite() {
 
 /* ---------- Start ---------- */
 
+/* Schalter EN / DE neben dem Nacht-Symbol, und die festen Texte in index.html */
+function zeigeSprachSchalter(erlaubt) {
+  const knopf = $("#sprache-schalter");
+  if (erlaubt) {
+    knopf.hidden = false;
+    knopf.textContent = EN ? "DE" : "EN";
+    knopf.lang = EN ? "de" : "en";
+    knopf.setAttribute("aria-label", EN ? "Auf Deutsch lesen" : "Read in English");
+    knopf.addEventListener("click", () => {
+      const q = new URLSearchParams(location.search);
+      q.delete("lang");
+      try { localStorage.setItem("sprache", EN ? "de" : "en"); }
+      catch (e) { if (!EN) q.set("lang", "en"); }   /* ohne Speicher: Sprache in der Adresse mitgeben */
+      const rest = q.toString().replace(/=(&|$)/g, "$1");
+      location.href = location.pathname + (rest ? "?" + rest : "") + location.hash;
+    });
+  }
+  if (!EN) return;
+  $("#zurueck").textContent = tx("zurueck");
+  $("#impressum-link").textContent = tx("impressum");
+  $("#archiv-link").textContent = tx("archiv");
+  $("#programm-link").textContent = tx("programm");
+  $("#danke-link").textContent = tx("danke");
+  $("#presse-link").textContent = tx("presse");
+  $("#detail").setAttribute("aria-label", tx("projekt"));
+  const nacht = $("#nacht-schalter");
+  const nachtLabel = () => nacht.setAttribute("aria-label",
+    document.documentElement.classList.contains("nacht") ? tx("zurTag") : tx("zurNacht"));
+  nachtLabel();
+  nacht.addEventListener("click", () => setTimeout(nachtLabel));
+}
+
 function zeigeBald() {
   document.title = KONTAKT.name;
-  const zeilen = String(KONTAKT.bald_text || "Wir sind bald online.").trim().split(/\n\s*\n/)
+  const zeilen = String(KONTAKT.bald_text || tx("bald")).trim().split(/\n\s*\n/)
     .map((t) => `<p>${esc(t).replace(/\n/g, "<br>")}</p>`).join("");
   document.body.innerHTML = `
     <main class="bald">
@@ -591,6 +716,12 @@ async function start() {
   ]);
   PROJEKTE = Array.isArray(pj) ? pj : pj.projekte || [];
 
+  /* Englisch: nur wenn gewählt und freigegeben */
+  const englischErlaubt = !!(KONTAKT.englisch_zeigen || VORSCHAU || ANSICHT);
+  EN = englischErlaubt && gewaehlteSprache() === "en";
+  if (EN) [PROJEKTE, KONTAKT, DANKE, PROGRAMM, PRESSE].forEach(aufEnglisch);
+  document.documentElement.lang = EN ? "en" : "de-CH";
+
   /* «Bald online»: Solange im Admin unter Kontakt «Bald-Seite» eingeschaltet ist,
      sehen Besucher*innen nur einen kurzen Gruss. Mit ?vorschau sieht man die ganze Seite. */
   if (KONTAKT.bald && !VORSCHAU && !ANSICHT) return zeigeBald();
@@ -610,6 +741,8 @@ async function start() {
   const dankeLink = $("#danke-link");
   dankeLink.hidden = !(DANKE.gruppen && DANKE.gruppen.length);
   if (DANKE.titel) dankeLink.textContent = DANKE.titel;
+
+  zeigeSprachSchalter(englischErlaubt);
 
   bauBuehne();
   starteVideos($("#buehne"));

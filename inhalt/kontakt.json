@@ -16,5 +16,13 @@
   "newsletter_untertitel": "Nicht oft, nur wenn es etwas zu erzählen gibt",
   "newsletter_text": "Wir schreiben dir, wenn etwas Neues entsteht: Projekte, Anlässe, die Eröffnung.",
   "newsletter_bild": "",
-  "newsletter_kachel": true
+  "newsletter_kachel": true,
+  "untertitel_en": "Eat · Drink · Rheingasse, Basel",
+  "laufschrift_en": "Work in Progress · In Entstehung",
+  "hinweis_en": "We open in 2027. Until then, this site grows along with the Bear.",
+  "bald_text_en": "We will be online soon and look forward to the Zum Schwarzen Bären project.\n\nNora, Christoph, Valentin and Thomas",
+  "newsletter_uebertitel_en": "Newsletter",
+  "newsletter_titel_en": "Post from the Bear",
+  "newsletter_untertitel_en": "Not often, only when there is something to tell",
+  "newsletter_text_en": "We write to you when something new is happening: projects, events, the opening."
 }

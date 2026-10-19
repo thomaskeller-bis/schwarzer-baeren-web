@@ -27,7 +27,10 @@
           "bild": "/bilder/prozess/06.jpg"
         }
       ],
-      "id": "prozess"
+      "id": "prozess",
+      "titel_en": "Process",
+      "untertitel_en": "Shot on film with a Rollei 35 AF",
+      "text_en": "We are not building the Schwarzer Bär to completion. We are letting it grow. We start from a basis on which everything else may grow and change. And with gaps that leave the space it needs.\n\n## What we have in mind\n\nA place on the Rheingasse that will one day be open all day: coffee in the morning, something small at lunchtime, wine and a few plates in the evening. With products from people we know and whose work we value.\n\nWe try things out, invite others to join and see what comes of it: pop-ups, guest chefs, music, collaborations. Some things stay, some don't.\n\n## On film\n\nWe capture this journey on analogue film. The pictures are not perfect, and that is a good thing. They show how things are right now.\n\nAnd they suit us. Because a photo on film isn't visible straight away either. It first has to be developed and becomes visible over time.\n\nIf you'd like to start something with us: write to us."
     },
     {
       "status": "aktuell",
@@ -56,21 +59,26 @@
           "eintraege": [
             {
               "name": "Nora Garberson",
-              "rolle": "Konzeptentwicklung, Gastronomie, Gastgeberin"
+              "rolle": "Konzeptentwicklung, Gastronomie, Gastgeberin",
+              "rolle_en": "Concept development, hospitality, host"
             },
             {
               "name": "Thomas Keller",
-              "rolle": "Konzeptentwicklung, Raumgestaltung, Aktivierung"
+              "rolle": "Konzeptentwicklung, Raumgestaltung, Aktivierung",
+              "rolle_en": "Concept development, spatial design, activation"
             },
             {
               "name": "Valentin Ismail",
-              "rolle": "Konzept- und Betriebsentwicklung, Netzwerk"
+              "rolle": "Konzept- und Betriebsentwicklung, Netzwerk",
+              "rolle_en": "Concept and business development, network"
             },
             {
               "name": "Christoph Schön",
-              "rolle": "Konzept- und Betriebsentwicklung, Netzwerk"
+              "rolle": "Konzept- und Betriebsentwicklung, Netzwerk",
+              "rolle_en": "Concept and business development, network"
             }
-          ]
+          ],
+          "titel_en": "Team"
         },
         {
           "titel": "Unser künftiges Team",
@@ -87,19 +95,25 @@
               "name": "Stefan Hasler",
               "rolle": ""
             }
-          ]
+          ],
+          "titel_en": "Our future team"
         },
         {
           "titel": "Fotos",
           "eintraege": [
             {
               "name": "Gregor Brändli",
-              "rolle": "Fotografie"
+              "rolle": "Fotografie",
+              "rolle_en": "Photography"
             }
-          ]
+          ],
+          "titel_en": "Photos"
         }
       ],
-      "id": "team"
+      "id": "team",
+      "titel_en": "Team",
+      "untertitel_en": "Photographed by Gregor Brändli",
+      "text_en": "There are four of us behind the Schwarzer Bär: Nora, Thomas, Valentin and Christoph. We bring different things with us from hospitality, business development and spatial design. We develop the concept together and bring in our networks.\n\nDeborah, Lisa and Stefan will join our team.\n\nThanks to Gregor Brändli for the photos."
     },
     {
       "status": "aktuell",
@@ -111,31 +125,38 @@
       "bilder": [
         {
           "bild": "/bilder/tapas/rueckblick-03.jpg",
-          "text": "Tapas Festival: Trucha ártica y pan crujiente de centeno"
+          "text": "Tapas Festival: Trucha ártica y pan crujiente de centeno",
+          "text_en": "Tapas Festival: Trucha ártica y pan crujiente de centeno"
         },
         {
           "bild": "/bilder/tapas/rueckblick-02.jpg",
-          "text": "Tapas Festival: Remolacha y queso de cabra"
+          "text": "Tapas Festival: Remolacha y queso de cabra",
+          "text_en": "Tapas Festival: Remolacha y queso de cabra"
         },
         {
           "bild": "/bilder/tapas/rueckblick-05.jpg",
-          "text": "Tapas Festival: Bosque otoñal"
+          "text": "Tapas Festival: Bosque otoñal",
+          "text_en": "Tapas Festival: Bosque otoñal"
         },
         {
           "bild": "/bilder/tapas/rueckblick-04.jpg",
-          "text": "Tapas Festival: Carpaccio de pera"
+          "text": "Tapas Festival: Carpaccio de pera",
+          "text_en": "Tapas Festival: Carpaccio de pera"
         },
         {
           "bild": "/bilder/mieterapero/05.jpg",
-          "text": "Mieterapéro: Hummus, Tartelettes und kleine Häppchen"
+          "text": "Mieterapéro: Hummus, Tartelettes und kleine Häppchen",
+          "text_en": "Tenants' apéro: hummus, tartlets and small bites"
         },
         {
           "bild": "/bilder/mieterapero/04.jpg",
-          "text": "Mieterapéro: Anrichten auf der Baustelle"
+          "text": "Mieterapéro: Anrichten auf der Baustelle",
+          "text_en": "Tenants' apéro: plating on the building site"
         },
         {
           "bild": "/bilder/mieterapero/03.jpg",
-          "text": "Mieterapéro: Vorbereitung"
+          "text": "Mieterapéro: Vorbereitung",
+          "text_en": "Tenants' apéro: preparation"
         }
       ],
       "listen": [
@@ -145,14 +166,18 @@
             {
               "name": "Mieterapéro",
               "rolle": "8. September 2026, mit der Stiftung Edith Maryon",
-              "link": "#mieterapero"
+              "link": "#mieterapero",
+              "name_en": "Tenants' apéro",
+              "rolle_en": "8 September 2026, with the Stiftung Edith Maryon"
             },
             {
               "name": "Tapas Festival",
               "rolle": "16. und 17. Oktober 2026, mit dem Jazzcampus",
-              "link": "#tapas"
+              "link": "#tapas",
+              "rolle_en": "16 and 17 October 2026, with the Jazzcampus"
             }
-          ]
+          ],
+          "titel_en": "So far"
         },
         {
           "titel": "Als Nächstes",
@@ -160,21 +185,28 @@
             {
               "name": "Adväntsgass",
               "rolle": "26. November bis 23. Dezember 2026, als FOODTURE BÄREN",
-              "link": "#advaentsgass"
+              "link": "#advaentsgass",
+              "rolle_en": "26 November to 23 December 2026, as FOODTURE BÄREN"
             }
-          ]
+          ],
+          "titel_en": "Next up"
         },
         {
           "titel": "Fotos",
           "eintraege": [
             {
               "name": "Emilie",
-              "rolle": "Tapas Festival"
+              "rolle": "Tapas Festival",
+              "rolle_en": "Tapas Festival"
             }
-          ]
+          ],
+          "titel_en": "Photos"
         }
       ],
-      "id": "gastronomie"
+      "id": "gastronomie",
+      "titel_en": "First outings in hospitality",
+      "untertitel_en": "What we have cooked and served before opening",
+      "text_en": "Even before the Schwarzer Bär opens, we are out and about every now and then: with an apéro, at a festival, soon with a stall. This is how we learn as a team to cook, pour and welcome guests, and how the neighbourhood gets to know us.\n\n## Tenants' apéro, 8 September 2026\n\nOur first event, right in the middle of the building site at Rheingasse 17. The Stiftung Edith Maryon invited people interested in the rental spaces, and we did the apéro: hummus, focaccia, tartlets and small bites, all brought by bike trailer. [More about the tenants' apéro](#mieterapero)\n\n## Tapas Festival, 16 and 17 October 2026\n\nTogether with the Jazzcampus we spent two evenings at the Jazzcampus club. On Saturday the food came from us for the first time: char on rye crispbread, beetroot with fresh goat's cheese, autumn mushroom cream with chanterelles, pear carpaccio and our Bear vermouth. [More about the Tapas Festival](#tapas)\n\n## Next up\n\nFrom 26 November to 23 December we will be at the Adväntsgass as FOODTURE BÄREN. [More about the Adväntsgass](#advaentsgass)"
     },
     {
       "status": "archiv",
@@ -186,39 +218,48 @@
       "bilder": [
         {
           "bild": "/bilder/tapas/rueckblick-01.jpg",
-          "text": "Konzert im Club des Jazzcampus"
+          "text": "Konzert im Club des Jazzcampus",
+          "text_en": "Concert at the Jazzcampus club"
         },
         {
           "bild": "/bilder/tapas/rueckblick-02.jpg",
-          "text": "Remolacha y queso de cabra – Rande, Ziegenfrischkäse, Apfelsaft-Reduktion, geröstete Haselnüsse"
+          "text": "Remolacha y queso de cabra – Rande, Ziegenfrischkäse, Apfelsaft-Reduktion, geröstete Haselnüsse",
+          "text_en": "Remolacha y queso de cabra – beetroot, fresh goat's cheese, apple juice reduction, roasted hazelnuts"
         },
         {
           "bild": "/bilder/tapas/rueckblick-03.jpg",
-          "text": "Trucha ártica y pan crujiente de centeno – CH-Saibling, Knoblauch-Crème-fraîche, Kohlrabi, Roggen-Knäckebrot & Fichtenöl"
+          "text": "Trucha ártica y pan crujiente de centeno – CH-Saibling, Knoblauch-Crème-fraîche, Kohlrabi, Roggen-Knäckebrot & Fichtenöl",
+          "text_en": "Trucha ártica y pan crujiente de centeno – Swiss char, garlic crème fraîche, kohlrabi, rye crispbread & spruce oil"
         },
         {
           "bild": "/bilder/tapas/rueckblick-04.jpg",
-          "text": "Carpaccio de pera – Herbstbirne, Münsterkäse-Creme, karamellisierte Baumnüsse, geräuchertes Salz"
+          "text": "Carpaccio de pera – Herbstbirne, Münsterkäse-Creme, karamellisierte Baumnüsse, geräuchertes Salz",
+          "text_en": "Carpaccio de pera – autumn pear, Munster cheese cream, caramelised walnuts, smoked salt"
         },
         {
           "bild": "/bilder/tapas/rueckblick-05.jpg",
-          "text": "Bosque otoñal – Herbstpilzcrème, eingelegte Eierschwämme, Crostini, Kürbiskernöl, Kürbiskern-Crunch"
+          "text": "Bosque otoñal – Herbstpilzcrème, eingelegte Eierschwämme, Crostini, Kürbiskernöl, Kürbiskern-Crunch",
+          "text_en": "Bosque otoñal – autumn mushroom cream, pickled chanterelles, crostini, pumpkin seed oil, pumpkin seed crunch"
         },
         {
           "bild": "/bilder/tapas/rueckblick-06.jpg",
-          "text": "An der Bar"
+          "text": "An der Bar",
+          "text_en": "At the bar"
         },
         {
           "bild": "/bilder/tapas/rueckblick-07.jpg",
-          "text": "Die Bühne vor dem Konzert"
+          "text": "Die Bühne vor dem Konzert",
+          "text_en": "The stage before the concert"
         },
         {
           "bild": "/bilder/tapas/rueckblick-08.jpg",
-          "text": "Blick von der Utengasse in den Club"
+          "text": "Blick von der Utengasse in den Club",
+          "text_en": "View from the Utengasse into the club"
         },
         {
           "bild": "bilder/tapas/06.jpg",
-          "text": "Flyer mit dem Plan aller Betriebe, wir waren bei der Nummer 6 im Jazzcampus"
+          "text": "Flyer mit dem Plan aller Betriebe, wir waren bei der Nummer 6 im Jazzcampus",
+          "text_en": "Flyer with the map of all venues, we were number 6 at the Jazzcampus"
         }
       ],
       "listen": [
@@ -228,49 +269,59 @@
             {
               "name": "Jazzcampus",
               "rolle": "Kooperation, wir sind bei ihnen im Club zu Gast",
-              "link": "https://www.jazzcampus.com"
+              "link": "https://www.jazzcampus.com",
+              "rolle_en": "Partner, we were guests in their club"
             },
             {
               "name": "Michael Holdener",
               "rolle": "Küche, Vorbereitung und Zubereitung",
-              "link": ""
+              "link": "",
+              "rolle_en": "Kitchen, preparation and cooking"
             },
             {
               "name": "Stefan Hasler",
               "rolle": "Küche, Vorbereitung und Zubereitung",
-              "link": ""
+              "link": "",
+              "rolle_en": "Kitchen, preparation and cooking"
             },
             {
               "name": "Julia Kasimova Trio",
               "rolle": "Musik am Freitag",
-              "link": "https://juliakasimova.com/"
+              "link": "https://juliakasimova.com/",
+              "rolle_en": "Music on Friday"
             },
             {
               "name": "RRJPA Band",
               "rolle": "Musik am Freitag",
-              "link": ""
+              "link": "",
+              "rolle_en": "Music on Friday"
             },
             {
               "name": "Roberta Diamond",
               "rolle": "an der Bar, vielleicht auch mit Gesang",
-              "link": ""
+              "link": "",
+              "rolle_en": "At the bar, maybe singing too"
             },
             {
               "name": "NK36",
               "rolle": "Musik am Samstag",
-              "link": "https://nk-36.com/"
+              "link": "https://nk-36.com/",
+              "rolle_en": "Music on Saturday"
             },
             {
               "name": "DJ Akay",
               "rolle": "Musik am Samstag, vor und nach dem Konzert",
-              "link": "https://ra.co/dj/akay"
+              "link": "https://ra.co/dj/akay",
+              "rolle_en": "Music on Saturday, before and after the concert"
             },
             {
               "name": "Emilie",
               "rolle": "Fotos",
-              "link": ""
+              "link": "",
+              "rolle_en": "Photos"
             }
-          ]
+          ],
+          "titel_en": "With"
         }
       ],
       "id": "tapas",
@@ -279,17 +330,23 @@
       "medien": [
         {
           "titel": "Julia Kasimova Quartet, «Little Mary’s Waltz» ansehen",
-          "link": "https://www.youtube.com/watch?v=rDIpSyfUoFo"
+          "link": "https://www.youtube.com/watch?v=rDIpSyfUoFo",
+          "titel_en": "Watch Julia Kasimova Quartet, “Little Mary’s Waltz”"
         },
         {
           "titel": "NK36 anhören",
-          "link": "https://open.spotify.com/artist/5jezKQEEhLLjAZGnDnSe5Z"
+          "link": "https://open.spotify.com/artist/5jezKQEEhLLjAZGnDnSe5Z",
+          "titel_en": "Listen to NK36"
         },
         {
           "titel": "NK36, «But not Forgotten» live in Basel ansehen",
-          "link": "https://www.youtube.com/watch?v=8jluTf01FuM"
+          "link": "https://www.youtube.com/watch?v=8jluTf01FuM",
+          "titel_en": "Watch NK36, “But not Forgotten” live in Basel"
         }
-      ]
+      ],
+      "titel_en": "Tapas Festival",
+      "untertitel_en": "Tapas & Jazz · 16 and 17 October 2026, at the Jazzcampus club",
+      "text_en": "On 16 and 17 October we took part in the Tapas Festival together with the Jazzcampus, at the [Jazzcampus club](https://maps.app.goo.gl/4MxkC2avgXFSh7VJ8).\n\n## Looking back\n\nTwo lovely evenings with a great atmosphere and happy guests. On Saturday we were able to show for the first time what ends up on our plates. It feels good that the Schwarzer Bär is slowly getting going and that we already got to introduce ourselves to the neighbourhood.\n\nA big thank you to the festival organisers, Lenard Schroeder and Felix Henschen. And a special thank you to Kim Egi and the whole Jazzcampus team for their wonderful support in running these evenings.\n\n## The festival\n\nRestaurants and bars in Kleinbasel invited people to move from place to place: different tapas everywhere, a glass of wine and perhaps a place you didn't know yet. It was the festival's second edition.\n\n## The food\n\nOn Saturday the food came from us, the Schwarzer Bär team: smoked char on rye crispbread, beetroot with fresh goat's cheese and hazelnuts, autumn mushroom cream with chanterelles and a pear carpaccio with Munster cheese cream. Alongside it we served our Bear vermouth, inspired by the Basler Läckerli. Michael Holdener and Stefan Hasler gave us a big hand with the preparation and cooking. Thank you, thank you, thank you!\n\nOn Friday there were tapas from the Jazzcampus, with grandma's help: sardines with olives, grandma's potato salad and hot dogs, vegetarian too. Part of our team was already behind the bar. On both evenings there was cava, white and red wine.\n\n## Tapas & Jazz\n\nFriday: Julia Kasimova Trio, with groove and neo-soul, and the RRJPA Band with Jordi Roviró (trumpet), Robert Wypasek (tenor saxophone), Antoni Casellas (piano), Ryuji Uchida (bass) and Pau Planas (drums).\n\nSaturday: NK36 around composer Nikolas Katrantzis, with jazz, hip-hop and spoken word. DJ Akay played before and after."
     },
     {
       "status": "aktuell",
@@ -301,15 +358,18 @@
       "bilder": [
         {
           "bild": "/bilder/advaentsgass/01.jpg",
-          "text": "Die Adväntsgass in der Rheingasse, rechts das Schild vom Bären"
+          "text": "Die Adväntsgass in der Rheingasse, rechts das Schild vom Bären",
+          "text_en": "The Adväntsgass in the Rheingasse, the Bear's sign on the right"
         },
         {
           "bild": "/bilder/advaentsgass/03.jpg",
-          "text": "Die Adväntsgass am Abend"
+          "text": "Die Adväntsgass am Abend",
+          "text_en": "The Adväntsgass in the evening"
         },
         {
           "bild": "/bilder/advaentsgass/02.jpg",
-          "text": "FOODTURE, Produktion in der Küche der gaw"
+          "text": "FOODTURE, Produktion in der Küche der gaw",
+          "text_en": "FOODTURE, production in the gaw kitchen"
         }
       ],
       "listen": [
@@ -319,9 +379,11 @@
             {
               "name": "Adväntsgass",
               "rolle": "Weihnachtsmarkt in der Rheingasse",
-              "link": "https://www.advaentsgass.ch"
+              "link": "https://www.advaentsgass.ch",
+              "rolle_en": "Christmas market in the Rheingasse"
             }
-          ]
+          ],
+          "titel_en": "Adväntsgass"
         },
         {
           "titel": "FOODTURE BÄREN, zusammen mit",
@@ -329,47 +391,60 @@
             {
               "name": "Basel Food Factory",
               "rolle": "Projektlead",
-              "link": "https://www.foodfactorybasel.ch"
+              "link": "https://www.foodfactorybasel.ch",
+              "rolle_en": "Project lead"
             },
             {
               "name": "Lebensmittel Netzwerk Basel",
               "rolle": "Netzwerk, Beschaffung",
-              "link": "https://www.lebensmittelnetzwerk.ch"
+              "link": "https://www.lebensmittelnetzwerk.ch",
+              "rolle_en": "Network, sourcing"
             },
             {
               "name": "gaw",
               "rolle": "Produktion",
-              "link": "https://www.gaw.ch"
+              "link": "https://www.gaw.ch",
+              "rolle_en": "Production"
             },
             {
               "name": "Elias Buess",
-              "rolle": "Rezepturen, Verarbeitung, Beratung und Begleitung"
+              "rolle": "Rezepturen, Verarbeitung, Beratung und Begleitung",
+              "rolle_en": "Recipes, processing, advice and support"
             },
             {
               "name": "Deborah Blanke",
-              "rolle": "Rezepturen, Verarbeitung"
+              "rolle": "Rezepturen, Verarbeitung",
+              "rolle_en": "Recipes, processing"
             },
             {
               "name": "Bär im Schafspelz GmbH",
-              "rolle": "Gastronomie, Stand"
+              "rolle": "Gastronomie, Stand",
+              "rolle_en": "Hospitality, stall"
             },
             {
               "name": "Claudia Link",
               "rolle": "Fotografie, Dokumentation",
-              "link": "https://claudialink.ch"
+              "link": "https://claudialink.ch",
+              "rolle_en": "Photography, documentation"
             },
             {
               "name": "BaselCircular",
               "rolle": "Förderung",
-              "link": "https://baselcircular.ch"
+              "link": "https://baselcircular.ch",
+              "rolle_en": "Funding"
             },
             {
-              "name": "... und viele verschiedene Produzent:innen der Region"
+              "name": "... und viele verschiedene Produzent:innen der Region",
+              "name_en": "... and many different producers from the region"
             }
-          ]
+          ],
+          "titel_en": "FOODTURE BÄREN, together with"
         }
       ],
-      "id": "advaentsgass"
+      "id": "advaentsgass",
+      "titel_en": "Adväntsgass",
+      "untertitel_en": "As FOODTURE BÄREN · 26 November to 23 December 2026, in the Rheingasse",
+      "text_en": "For four weeks we'll have a stall at the Adväntsgass, right in front of the future Bear. We'll appear there as FOODTURE BÄREN and experiment with the future for the first time.\n\n## FOODTURE BÄREN\n\nHow do we want to be as the Bear in the future? At the Adväntsgass we try it out very practically – on and beside the plate. We were set in motion for this experiment by the association Basel Food Factory, which has also mobilised a lot of support for the concept and its realisation.\n\nOn the plate, for example, with potatoes from the region that suffered in this dry summer and have already half fallen out of the value chain. Then there are mushrooms from the city, hummus from local chickpeas, meat from Baselbiet dairy cows and plant-based food in all its forms – good food made from what grows, is made and is available here.\n\nBeside the plate we're testing how to work as a network: we want to collaborate instead of doing everything ourselves, involve suppliers and (co-)producers and create value together out of appreciation. And we want to be good neighbours and do our part for a lively Rheingasse.\n\nWe're working on all of this right now. What works? What doesn't? What turns out differently (than expected)? Come by, from 26 November to 23 December 2026 in the Rheingasse."
     },
     {
       "status": "aktuell",
@@ -381,10 +456,14 @@
       "bilder": [
         {
           "bild": "/bilder/clubkarte/01.jpg",
-          "text": "Der Rohling, noch ungestaltet"
+          "text": "Der Rohling, noch ungestaltet",
+          "text_en": "The blank card, not yet designed"
         }
       ],
-      "id": "clubkarte"
+      "id": "clubkarte",
+      "titel_en": "Club card",
+      "untertitel_en": "Load credit, redeem it at the Bear",
+      "text_en": "With the club card you become part of the Schwarzer Bär even before it opens.\n\nYou load credit onto the card and redeem it with us later: coffee in the morning, wine in the evening, a plate from the kitchen. For us this is an important start, because your credit already helps us build the place now.\n\nThe card itself will be designed by an artist or graphic designer. We'll show who it is here soon.\n\nInterested? Write to us."
     },
     {
       "status": "offline",
@@ -442,7 +521,8 @@
       "bilder": [
         {
           "bild": "/bilder/mieterapero/01.jpg",
-          "text": "Anlieferung mit dem Veloanhänger"
+          "text": "Anlieferung mit dem Veloanhänger",
+          "text_en": "Delivery by bike trailer"
         },
         {
           "bild": "/bilder/mieterapero/02.jpg"
@@ -461,14 +541,16 @@
         },
         {
           "bild": "/bilder/mieterapero/07.jpg",
-          "text": "Buffet auf Dämmplatten"
+          "text": "Buffet auf Dämmplatten",
+          "text_en": "Buffet on insulation boards"
         },
         {
           "bild": "/bilder/mieterapero/08.jpg"
         },
         {
           "bild": "/bilder/mieterapero/09.jpg",
-          "text": "Rundgang durchs Haus"
+          "text": "Rundgang durchs Haus",
+          "text_en": "Tour of the building"
         },
         {
           "bild": "/bilder/mieterapero/10.jpg"
@@ -487,20 +569,27 @@
             {
               "name": "Stiftung Edith Maryon",
               "rolle": "Gastgeberin",
-              "link": "https://www.maryon.ch"
+              "link": "https://www.maryon.ch",
+              "rolle_en": "Host"
             },
             {
               "name": "Nora Garberson",
-              "rolle": "Küche"
+              "rolle": "Küche",
+              "rolle_en": "Kitchen"
             },
             {
               "name": "Bär im Schafspelz GmbH",
-              "rolle": "Apéro"
+              "rolle": "Apéro",
+              "rolle_en": "Apéro"
             }
-          ]
+          ],
+          "titel_en": "Together with"
         }
       ],
-      "id": "mieterapero"
+      "id": "mieterapero",
+      "titel_en": "Tenants' apéro",
+      "untertitel_en": "8 September 2026, with the Stiftung Edith Maryon",
+      "text_en": "Our first event, right in the middle of the building site. The Stiftung Edith Maryon had invited people interested in the rental spaces to a viewing of the building, and we got to do the apéro.\n\nThe rooms were raw, the buffet stood on insulation boards, a string of lights served as lighting. Everything came by bike trailer. Nora made sure it still became a small celebration: with hummus, focaccia, tartlets and small bites.\n\nFor us it was the first time the place filled with people. A first feeling for what can one day grow here."
     },
     {
       "status": "offline",

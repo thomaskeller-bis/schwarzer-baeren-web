@@ -8,21 +8,32 @@
       "bis": "2026-10-17",
       "titel": "Tapas Festival",
       "info": "Tapas & Jazz im Club des Jazzcampus, jeweils ab 17 Uhr. Am Freitag spielen das Julia Kasimova Trio und die RRJPA Band, am Samstag NK36 mit DJ Akay, und wir kochen.",
-      "projekt": "tapas"
+      "projekt": "tapas",
+      "wann_en": "16 and 17 October 2026",
+      "titel_en": "Tapas Festival",
+      "info_en": "Tapas & jazz at the Jazzcampus club, from 5 pm each night. On Friday the Julia Kasimova Trio and the RRJPA Band play, on Saturday NK36 with DJ Akay, and we cook."
     },
     {
       "wann": "26. November bis 23. Dezember 2026",
       "bis": "2026-12-23",
       "titel": "Adväntsgass",
       "info": "Als FOODTURE BÄREN in der Rheingasse",
-      "projekt": "advaentsgass"
+      "projekt": "advaentsgass",
+      "wann_en": "26 November to 23 December 2026",
+      "titel_en": "Adväntsgass",
+      "info_en": "As FOODTURE BÄREN in the Rheingasse"
     },
     {
       "wann": "2027",
       "bis": "",
       "titel": "Eröffnung",
       "info": "Rheingasse 17, Datum folgt",
-      "projekt": ""
+      "projekt": "",
+      "wann_en": "2027",
+      "titel_en": "Opening",
+      "info_en": "Rheingasse 17, date to follow"
     }
-  ]
+  ],
+  "titel_en": "Programme",
+  "intro_en": "What's coming up next."
 }
