@@ -235,36 +235,45 @@ function bauBuehne() {
   }).join("");
 }
 
-/* Zufällig verteilen, ohne dass sich Projekte überlappen */
+/* Zufällig verteilen, ohne dass sich Projekte überlappen.
+   Findet sich kein Platz (kleiner Bildschirm, viele Projekte), werden alle Kacheln
+   Schritt für Schritt etwas kleiner, bis alles frei liegt. RAND hält Abstand zu Kopf und Fuss,
+   damit auch beim Schweben nichts über Name, Links oder Fusszeile rutscht. */
+const RAND = 28;
 function platziere() {
   const buehne = $("#buehne");
+  const items = [...buehne.querySelectorAll(".projekt")];
+  items.forEach((el) => { el.style.width = ""; el.style.minWidth = ""; });
   if (!ZUFALL || matchMedia("(max-width: 720px), (max-height: 560px)").matches) return;
 
   const B = buehne.getBoundingClientRect();
-  const items = [...buehne.querySelectorAll(".projekt")];
-  const masse = items.map((el) => el.getBoundingClientRect());
+  const grundbreite = items.map((el) => el.getBoundingClientRect().width);
 
-  for (let runde = 0; runde < 60; runde++) {
-    const gesetzt = [];
-    for (const m of masse) {
-      let platz = null;
-      for (let versuch = 0; versuch < 200 && !platz; versuch++) {
-        const x = m.width / 2 + Math.random() * Math.max(0, B.width - m.width);
-        const y = m.height / 2 + Math.random() * Math.max(0, B.height - m.height);
-        const frei = gesetzt.every((g) =>
-          Math.abs(g.x - x) > (g.w + m.width) / 2 + ABSTAND ||
-          Math.abs(g.y - y) > (g.h + m.height) / 2 + ABSTAND);
-        if (frei) platz = { x, y, w: m.width, h: m.height };
+  for (let faktor = 1; faktor >= 0.45; faktor -= 0.05) {
+    if (faktor < 1) items.forEach((el, i) => { el.style.minWidth = "0"; el.style.width = grundbreite[i] * faktor + "px"; });
+    const masse = items.map((el) => el.getBoundingClientRect());
+    for (let runde = 0; runde < 40; runde++) {
+      const gesetzt = [];
+      for (const m of masse) {
+        let platz = null;
+        for (let versuch = 0; versuch < 200 && !platz; versuch++) {
+          const x = RAND + m.width / 2 + Math.random() * Math.max(0, B.width - m.width - 2 * RAND);
+          const y = RAND + m.height / 2 + Math.random() * Math.max(0, B.height - m.height - 2 * RAND);
+          const frei = gesetzt.every((g) =>
+            Math.abs(g.x - x) > (g.w + m.width) / 2 + ABSTAND ||
+            Math.abs(g.y - y) > (g.h + m.height) / 2 + ABSTAND);
+          if (frei && m.height + 2 * RAND <= B.height) platz = { x, y, w: m.width, h: m.height };
+        }
+        if (!platz) break;
+        gesetzt.push(platz);
       }
-      if (!platz) break;
-      gesetzt.push(platz);
-    }
-    if (gesetzt.length === items.length) {
-      items.forEach((el, i) => {
-        el.style.left = (gesetzt[i].x / B.width) * 100 + "%";
-        el.style.top = (gesetzt[i].y / B.height) * 100 + "%";
-      });
-      return;
+      if (gesetzt.length === items.length) {
+        items.forEach((el, i) => {
+          el.style.left = (gesetzt[i].x / B.width) * 100 + "%";
+          el.style.top = (gesetzt[i].y / B.height) * 100 + "%";
+        });
+        return;
+      }
     }
   }
   /* kein Platz gefunden: feste Positionen bleiben */
