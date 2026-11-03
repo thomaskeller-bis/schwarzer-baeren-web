@@ -594,7 +594,7 @@ body.vorschau::before {
 /* Newsletter als Bären-Sticker (Entwurf, nur ?vorschau) */
 .projekt.sticker-kachel { width: 9vw; min-width: 110px; max-width: 150px; }
 .projekt .bild.sticker { outline: 0; background: none; }
-.sticker-text { font-size: 14px; font-weight: 500; text-align: center; }
+.sticker-text { font-size: 14px; font-weight: 500; text-align: center; transform: rotate(5deg); }   /* parallel zur Unterkante des Bären */
 @media (max-width: 720px), (max-height: 560px) {
   .buehne .projekt.sticker-kachel { width: 110px; min-width: 0; order: -1; align-self: flex-end; margin: 0 24px -24px 0; }
 }
