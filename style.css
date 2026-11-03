@@ -592,9 +592,20 @@ body.vorschau::before {
 .film-player { display: block; width: 100%; max-width: 32rem; aspect-ratio: 16 / 9; border: 0; border-radius: 12px; }
 
 /* Newsletter als Bären-Sticker (Entwurf, nur ?vorschau) */
-.projekt.sticker-kachel { width: 9vw; min-width: 110px; max-width: 150px; }
+.projekt.sticker-kachel { width: 11vw; min-width: 130px; max-width: 180px; }
+.projekt.sticker-kachel a {      /* dünner Kreis um Bär und Schrift */
+  aspect-ratio: 1;
+  border: 1px solid var(--tinte);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  box-sizing: border-box;
+}
+.projekt.sticker-kachel .bild.sticker { width: 58%; height: auto; margin-top: 6%; }
 .projekt .bild.sticker { outline: 0; background: none; }
 .sticker-text { font-size: 14px; font-weight: 500; text-align: center; transform: rotate(5deg); }   /* parallel zur Unterkante des Bären */
 @media (max-width: 720px), (max-height: 560px) {
-  .buehne .projekt.sticker-kachel { width: 110px; min-width: 0; order: -1; align-self: flex-end; margin: 0 24px -24px 0; }
+  .buehne .projekt.sticker-kachel { width: 140px; min-width: 0; order: -1; align-self: flex-end; margin: 0 24px -24px 0; }
 }
