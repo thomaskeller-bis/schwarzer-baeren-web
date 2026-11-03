@@ -205,6 +205,11 @@ function newsletterKachel() {
   const K = KONTAKT;
   if (!(K.newsletter || VORSCHAU || ANSICHT)) return null;
   if (!(K.newsletter_kachel || VORSCHAU || ANSICHT)) return null;
+  /* Entwurf (nur ?vorschau): Bären-Sticker mit «Newsletter» darunter statt Punkt */
+  if (VORSCHAU) return {
+    id: "newsletter", titel: "", rechts: "", klasse: "sticker-kachel", unter: K.newsletter_uebertitel || "Newsletter",
+    bild: `<img class="bild sticker" src="bilder/newsletter/baer-sticker.png" alt="" width="613" height="583">`
+  };
   const bild = K.newsletter_bild
     ? `<img class="bild" src="${esc(pfad(K.newsletter_bild))}" alt="${esc(K.newsletter_titel || "Newsletter")}">`
     : `<div class="bild platzhalter brief"><span class="gross">${esc(K.newsletter_uebertitel || "Newsletter")}</span></div>`;
@@ -229,6 +234,7 @@ function bauBuehne() {
       style="left:${pos.x}%;top:${pos.y}%;--breite:${w.breite};--dx:${strecke(w.dx)};--dy:${strecke(w.dy)};--dr:${weiter(w.dr)};--dauer:${zeit(w.dauer)};--start:-${i * 3}s">
       <a href="#${esc(k.id)}">
         ${k.bild}
+        ${k.unter ? `<span class="sticker-text">${esc(k.unter)}</span>` : ""}
         ${k.titel ? `<span class="titel"><span>${esc(k.titel)}</span><span class="mono">${esc(k.rechts)}</span></span>` : ""}
       </a>
     </div>`;
