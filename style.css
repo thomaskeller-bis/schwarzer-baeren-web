@@ -595,7 +595,7 @@ body.vorschau::before {
 .projekt.sticker-kachel { width: 11vw; min-width: 130px; max-width: 180px; }
 .projekt.sticker-kachel a {      /* blaue Scheibe mit Bär und weisser Schrift */
   aspect-ratio: 1;
-  background: #6359bd;         /* Scheibe im Blau des Bären, etwas heller */
+  background: #463d9a;         /* Scheibe im Blau des Bären, nur leicht heller */
   color: #fff;
   border-radius: 50%;
   justify-content: center;
