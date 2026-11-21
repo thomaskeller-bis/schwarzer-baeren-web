@@ -547,10 +547,15 @@
       "status": "aktuell",
       "titel": "Clubkarte",
       "nummer": "03",
-      "cover": "/bilder/clubkarte/01.jpg",
+      "cover": "/bilder/clubkarte/02.jpg",
       "untertitel": "Guthaben laden, beim Bären einlösen",
-      "text": "Mit der Clubkarte werdet ihr Teil des Schwarzen Bären, schon bevor er öffnet.\n\nIhr ladet Guthaben auf die Karte und löst es später bei uns ein: Kaffee am Morgen, Wein am Abend, ein Teller aus der Küche. Für uns ist das ein wichtiger Anfang, denn euer Guthaben hilft uns schon jetzt, den Ort aufzubauen.\n\nDie Karte selbst wird von einer Künstlerin oder Grafikerin gestaltet. Wer das ist, zeigen wir bald hier.\n\nInteresse? Schreibt uns.",
+      "text": "Mit der Clubkarte werdet ihr Teil des Schwarzen Bären, schon bevor er öffnet.\n\nIhr ladet Guthaben auf die Karte und löst es später bei uns ein: Kaffee am Morgen, Wein am Abend, ein Teller aus der Küche. Für uns ist das ein wichtiger Anfang, denn euer Guthaben hilft uns schon jetzt, den Ort aufzubauen.\n\nDie Karte ist jetzt in der Produktion und soll vor Weihnachten bereit sein. Wir freuen uns riesig auf den Moment, wenn wir sie in den Händen halten und unter die Leute bringen können.\n\nVielen Dank an Elena, die die Gestaltung umgesetzt hat, und an Gregor Brändli, der uns dabei unterstützt hat. Es hat riesigen Spass gemacht mit euch!\n\nInteresse? Schreibt uns.",
       "bilder": [
+        {
+          "bild": "/bilder/clubkarte/02.jpg",
+          "text": "Die Clubkarte, gestaltet von Elena",
+          "text_en": "The club card, designed by Elena"
+        },
         {
           "bild": "/bilder/clubkarte/01.jpg",
           "text": "Der Rohling, noch ungestaltet",
@@ -560,7 +565,26 @@
       "id": "clubkarte",
       "titel_en": "Club card",
       "untertitel_en": "Load credit, redeem it at the Bear",
-      "text_en": "With the club card you become part of the Schwarzer Bär even before it opens.\n\nYou load credit onto the card and redeem it with us later: coffee in the morning, wine in the evening, a plate from the kitchen. For us this is an important start, because your credit already helps us build the place now.\n\nThe card itself will be designed by an artist or graphic designer. We'll show who it is here soon.\n\nInterested? Write to us."
+      "text_en": "With the club card you become part of the Schwarzer Bär even before it opens.\n\nYou load credit onto the card and redeem it with us later: coffee in the morning, wine in the evening, a plate from the kitchen. For us this is an important start, because your credit already helps us build the place now.\n\nThe card is now in production and should be ready before Christmas. We are really looking forward to holding it in our hands and getting it out to people.\n\nMany thanks to Elena, who carried out the design, and to Gregor Brändli, who supported us along the way. It was great fun working with you!\n\nInterested? Write to us.",
+      "listen": [
+        {
+          "titel": "Gestaltung",
+          "titel_en": "Design",
+          "eintraege": [
+            {
+              "name": "Elena",
+              "rolle": "Gestaltung und Umsetzung",
+              "rolle_en": "Design and execution"
+            },
+            {
+              "name": "Gregor Brändli",
+              "rolle": "Unterstützung",
+              "rolle_en": "Support",
+              "link": "https://www.gregorbraendli.com"
+            }
+          ]
+        }
+      ]
     },
     {
       "status": "offline",
