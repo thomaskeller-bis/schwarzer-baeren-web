@@ -311,6 +311,9 @@ video { width: 100%; background: var(--leer); }
   gap: 16px;
   color: var(--grau);
 }
+/* Legende nie breiter als das Bild: lange Texte brechen auf mehrere Zeilen um */
+.detail-bilder figcaption { width: 0; min-width: max(100%, 12rem); box-sizing: border-box; }
+.detail-bilder figcaption span:first-child { flex: none; }
 
 /* ---------- Archiv ---------- */
 
