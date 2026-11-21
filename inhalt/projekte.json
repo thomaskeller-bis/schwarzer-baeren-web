@@ -225,7 +225,8 @@
       "id": "prozess",
       "titel_en": "Process",
       "untertitel_en": "Shot on film with a Rollei 35 AF",
-      "text_en": "We are not building the Schwarzer Bär to completion. We are letting it grow. We start from a basis on which everything else may grow and change. And with gaps that leave the space it needs.\n\n## What we have in mind\n\nA place on the Rheingasse that will one day be open all day: coffee in the morning, something small at lunchtime, wine and a few plates in the evening. With products from people we know and whose work we value.\n\nWe try things out, invite others to join and see what comes of it: pop-ups, guest chefs, music, collaborations. Some things stay, some don't.\n\n## On film\n\nWe capture this journey on analogue film. The pictures are not perfect, and that is a good thing. They show how things are right now.\n\nAnd they suit us. Because a photo on film isn't visible straight away either. It first has to be developed and becomes visible over time.\n\nIf you'd like to start something with us: write to us."
+      "text_en": "We are not building the Schwarzer Bär to completion. We are letting it grow. We start from a basis on which everything else may grow and change. And with gaps that leave the space it needs.\n\n## What we have in mind\n\nA place on the Rheingasse that will one day be open all day: coffee in the morning, something small at lunchtime, wine and a few plates in the evening. With products from people we know and whose work we value.\n\nWe try things out, invite others to join and see what comes of it: pop-ups, guest chefs, music, collaborations. Some things stay, some don't.\n\n## On film\n\nWe capture this journey on analogue film. The pictures are not perfect, and that is a good thing. They show how things are right now.\n\nAnd they suit us. Because a photo on film isn't visible straight away either. It first has to be developed and becomes visible over time.\n\nIf you'd like to start something with us: write to us.",
+      "kachel": 0.85
     },
     {
       "status": "aktuell",
@@ -579,7 +580,8 @@
             }
           ]
         }
-      ]
+      ],
+      "kachel": 0.65
     },
     {
       "status": "offline",

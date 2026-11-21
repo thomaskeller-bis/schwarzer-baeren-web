@@ -44,6 +44,9 @@ content:
           - name: nummer
             label: Nummer (fortlaufend, bleibt auch im Archiv – leer = nächste freie Nummer)
             type: string
+          - name: kachel
+            label: Grösse der Kachel auf der Startseite (1 = normal, 0.7 = kleiner, 1.2 = grösser)
+            type: number
           - name: cover
             label: Titelbild auf der Startseite (leer = «Fotos folgen»)
             type: image

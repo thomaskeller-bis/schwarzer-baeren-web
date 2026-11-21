@@ -215,7 +215,7 @@ function newsletterKachel() {
 function bauBuehne() {
   const kacheln = sichtbare.map((p) => {
     const nr = nummer(p);
-    return { id: p.id, bild: cover(p), titel: p.titel, rechts: entwurf(p) ? tx("entwurf") + (nr ? " · " + nr : "") : nr };
+    return { id: p.id, bild: cover(p), titel: p.titel, rechts: entwurf(p) ? tx("entwurf") + (nr ? " · " + nr : "") : nr, kachel: p.kachel };
   });
   const nl = newsletterKachel();
   if (nl) kacheln.push(nl);
@@ -227,7 +227,7 @@ function bauBuehne() {
     const strecke = (v) => parseFloat(weiter(v)) * f + (v.endsWith("deg") ? "deg" : "px");
     const zeit = (v) => (parseFloat(schneller(v)) / f).toFixed(1) + "s";
     return `<div class="projekt ${i % 2 ? "rechts" : "links"} ${k.klasse || ""}"
-      style="left:${pos.x}%;top:${pos.y}%;--breite:${w.breite};--dx:${strecke(w.dx)};--dy:${strecke(w.dy)};--dr:${weiter(w.dr)};--dauer:${zeit(w.dauer)};--start:-${i * 3}s">
+      style="left:${pos.x}%;top:${pos.y}%;--breite:${w.breite};--kachel:${Number(k.kachel) > 0 ? Number(k.kachel) : 1};--dx:${strecke(w.dx)};--dy:${strecke(w.dy)};--dr:${weiter(w.dr)};--dauer:${zeit(w.dauer)};--start:-${i * 3}s">
       <a href="#${esc(k.id)}">
         ${k.bild}
         ${k.unter ? `<span class="sticker-text">${esc(k.unter)}</span>` : ""}

@@ -130,9 +130,9 @@ video { width: 100%; background: var(--leer); }
 /* ein Projekt auf der Startseite */
 .projekt {
   position: absolute;
-  width: var(--breite, 17vw);
-  min-width: 140px;
-  max-width: 280px;
+  width: calc(var(--breite, 17vw) * var(--kachel, 1));      /* --kachel: Grösse pro Projekt (Feld «kachel») */
+  min-width: calc(140px * var(--kachel, 1));
+  max-width: calc(280px * var(--kachel, 1));
   transform: translate(-50%, -50%);
   z-index: 2;
 }
