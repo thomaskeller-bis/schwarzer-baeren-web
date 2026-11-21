@@ -505,6 +505,78 @@
       "text_en": "For four weeks we'll have a stall at the Adväntsgass, right in front of the future Bear. We'll appear there as FOODTURE BÄREN and experiment with the future for the first time.\n\n## FOODTURE BÄREN\n\nHow do we want to be as the Bear in the future? At the Adväntsgass we try it out very practically – on and beside the plate. We were set in motion for this experiment by the association Basel Food Factory, which has also mobilised a lot of support for the concept and its realisation.\n\nOn the plate, for example, with potatoes from the region that suffered in this dry summer and have already half fallen out of the value chain. Then there are mushrooms from the city, hummus from local chickpeas, meat from Baselbiet dairy cows and plant-based food in all its forms – good food made from what grows, is made and is available here.\n\nBeside the plate we're testing how to work as a network: we want to collaborate instead of doing everything ourselves, involve suppliers and (co-)producers and create value together out of appreciation. And we want to be good neighbours and do our part for a lively Rheingasse.\n\nWe're working on all of this right now. What works? What doesn't? What turns out differently (than expected)? Come by, from 26 November to 23 December 2026 in the Rheingasse."
     },
     {
+      "status": "offline",
+      "titel": "Kleisteraktion",
+      "nummer": "",
+      "cover": "/bilder/kleisteraktion/01.jpg",
+      "untertitel": "Plakate für unsere Hütte an der Adväntsgass · mit Luca von Rio Basel",
+      "text": "Für die Adväntsgass steht vor dem künftigen Bären eine Hütte. Statt sie fertig zu gestalten, haben wir sie zum Arbeitsplatz gemacht: An einem Freitagnachmittag im November haben wir mit Luca von Rio Basel direkt an der Rheingasse ein kleines Büro aufgestellt. Dort haben wir entworfen, gedruckt und gleich gekleistert.\n\nAuf die Plakate kommt, was uns gerade beschäftigt: was es bei uns zu essen und zu trinken gibt, mit wem wir zusammenarbeiten, was wir mit dem Bären vorhaben. Manches ist fertig, vieles nicht. Die Hütte darf wachsen – bis zum 23. Dezember können noch Plakate dazukommen.\n\nWie der Bär einmal aussehen und klingen wird, wissen wir noch nicht. Das wollen wir nicht am Schreibtisch festlegen, sondern zusammen herausfinden – mit Menschen, die wir kennen, und gerade auch mit solchen, die wir noch nicht kennen. Die Kleisteraktion ist ein Teil davon.\n\nNach Weihnachten wird die Hütte abgebaut. Ihr Holz wird zu Tischen und einer Bank im Bären. Vielleicht bleibt die eine oder andere Spur vom Kleister.",
+      "bilder": [
+        {
+          "bild": "/bilder/kleisteraktion/01.jpg",
+          "text": "Die ersten Plakate an der Hütte",
+          "text_en": "The first posters on the hut"
+        },
+        {
+          "bild": "/bilder/kleisteraktion/02.jpg",
+          "text": "Die Hütte vorher, noch leer",
+          "text_en": "The hut before, still empty"
+        },
+        {
+          "bild": "/bilder/kleisteraktion/03.jpg",
+          "text": "Unser Büro für einen Nachmittag: entwerfen und drucken",
+          "text_en": "Our office for an afternoon: designing and printing"
+        },
+        {
+          "bild": "/bilder/kleisteraktion/04.jpg",
+          "text": "Plakat: Prozess",
+          "text_en": "Poster: process"
+        },
+        {
+          "bild": "/bilder/kleisteraktion/05.jpg",
+          "text": "Plakat: Food Mood",
+          "text_en": "Poster: food mood"
+        },
+        {
+          "bild": "/bilder/kleisteraktion/06.jpg",
+          "text": "Plakat: Bär",
+          "text_en": "Poster: bear"
+        },
+        {
+          "bild": "/bilder/kleisteraktion/07.jpg",
+          "text": "Plakat: Bärensessel",
+          "text_en": "Poster: bear armchair"
+        }
+      ],
+      "listen": [
+        {
+          "titel": "Mitwirkende",
+          "titel_en": "Contributors",
+          "eintraege": [
+            {
+              "name": "Luca, Rio Basel",
+              "rolle": "Gestaltung, Druck, Kleister",
+              "rolle_en": "Design, printing, pasting"
+            },
+            {
+              "name": "Elena",
+              "rolle": "Bär",
+              "rolle_en": "Bear"
+            },
+            {
+              "name": "Thomas Keller",
+              "rolle": "Hütte, Gestaltung, Fotografie (analog)",
+              "rolle_en": "Hut, design, photography (analogue)"
+            }
+          ]
+        }
+      ],
+      "id": "kleisteraktion",
+      "titel_en": "Paste-up",
+      "untertitel_en": "Posters for our hut at the Adväntsgass · with Luca from Rio Basel",
+      "text_en": "For the Adväntsgass, a hut stands in front of the future Bear. Instead of finishing its design, we turned it into a workplace: on a Friday afternoon in November we set up a small office right on the Rheingasse with Luca from Rio Basel. There we designed, printed and pasted straight away.\n\nThe posters show what is on our minds right now: what there is to eat and drink with us, who we work with, what we have in mind for the Bear. Some of it is finished, much of it isn't. The hut is allowed to grow – more posters can be added until 23 December.\n\nWe don't know yet what the Bear will one day look and sound like. We don't want to decide that at a desk, but find it out together – with people we know, and especially with people we don't know yet. The paste-up is part of that.\n\nAfter Christmas the hut will be taken down. Its wood will become tables and a bench in the Bear. Perhaps a trace or two of the paste will remain."
+    },
+    {
       "status": "aktuell",
       "titel": "Clubkarte",
       "nummer": "03",
