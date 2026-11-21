@@ -2,6 +2,158 @@
   "projekte": [
     {
       "status": "aktuell",
+      "titel": "Adväntsgass",
+      "nummer": "02",
+      "cover": "/bilder/advaentsgass/15.jpg",
+      "untertitel": "Als FOODTURE BÄREN · 26. November bis 23. Dezember 2026, in der Rheingasse",
+      "text": "Vier Wochen lang sind wir mit einem Stand an der Adväntsgass, direkt vor dem künftigen Bären. Wir treten dort als FOODTURE BÄREN auf und experimentieren ein erstes Mal mit der Zukunft.\n\n## FOODTURE BÄREN\n\nWie wollen wir als Bären in Zukunft sein? An der Adväntsgass probieren wir es ganz praktisch aus – auf und neben dem Teller. Aktiviert für dieses Experiment hat uns der Verein Basel Food Factory, der auch viel Unterstützung für die Konzeption und Umsetzung mobilisiert hat.\n\nAuf dem Teller zum Beispiel mit Kartoffeln aus der Region, die diesen trockenen Sommer gelitten haben und mit einem Bein schon aus der Wertschöpfung gefallen sind. Dazu kommen Pilze aus der Stadt, Hummus aus hiesigen Kichererbsen, Fleisch von Baselbieter Milchkühen und Pflanzenbasiertes in allen Formen – gutes Essen aus dem, was hier wächst, entsteht und vorhanden ist.\n\nNeben dem Teller testen wir die Arbeit im Netzwerk: Wir wollen kollaborieren, statt alles selber zu machen, Lieferant:innen und (Co-)Produzent:innen einbeziehen und gemeinsam Wertschöpfung aus Wertschätzung schaffen. Und wir wollen gute Nachbarn sein und unseren Teil zu einer lebendigen Rheingasse beitragen.\n\nDerzeit arbeiten wir an all dem. Was klappt alles? Was nicht? Was kommt anders (und zweitens: als gedacht)? Schaut vorbei, vom 26. November bis 23. Dezember 2026 in der Rheingasse.\n\n## Kleisteraktion\n\nFür die Adväntsgass steht vor dem künftigen Bären eine Hütte. Am Freitag vor der Eröffnung haben wir mit Luca von Rio Basel in der 8Bar an der Rheingasse ein kleines Büro eingerichtet. Dort haben wir entworfen, gedruckt und gleich an der Hütte getestet.\n\nAuf die Plakate kommt, was uns gerade beschäftigt: was es bei uns zu essen und zu trinken gibt, mit wem wir zusammenarbeiten, was wir mit dem Bären vorhaben.\n\nNach Weihnachten wird die Hütte abgebaut. Ihr Holz wird zu Tischen und Bänken im Bären. Vielleicht bleibt die eine oder andere Spur vom Kleister.",
+      "bilder": [
+        {
+          "bild": "/bilder/advaentsgass/15.jpg",
+          "text": "Elias und Deborah beim Testen der Waffeln",
+          "text_en": "Elias and Deborah testing the waffles"
+        },
+        {
+          "bild": "/bilder/advaentsgass/13.jpg",
+          "text": "Testen: Waffel mit Siedfleisch, Vinaigrette und Meerrettich",
+          "text_en": "Testing: waffle with boiled beef, vinaigrette and horseradish"
+        },
+        {
+          "bild": "/bilder/advaentsgass/05.jpg",
+          "text": "Werkstatt und Lager",
+          "text_en": "Workshop and storage"
+        },
+        {
+          "bild": "/bilder/advaentsgass/12.jpg",
+          "text": "Gestaltungskonzept: welche Plakate wohin an die Hütte kommen",
+          "text_en": "Design concept: which posters go where on the hut"
+        },
+        {
+          "bild": "/bilder/advaentsgass/07.jpg",
+          "text": "Unser Büro für einen Tag: entwerfen und drucken",
+          "text_en": "Our office for a day: designing and printing"
+        },
+        {
+          "bild": "/bilder/advaentsgass/08.jpg",
+          "text": "Kartoffelfeld im trockenen Sommer",
+          "text_en": "Potato field in the dry summer"
+        },
+        {
+          "bild": "/bilder/advaentsgass/09.jpg",
+          "text": "Zwiebeln aus der Region",
+          "text_en": "Onions from the region"
+        },
+        {
+          "bild": "/bilder/advaentsgass/10.jpg",
+          "text": "Plakat an der Hütte: Bär",
+          "text_en": "Poster on the hut: bear"
+        }
+      ],
+      "listen": [
+        {
+          "titel": "Adväntsgass",
+          "eintraege": [
+            {
+              "name": "Adväntsgass",
+              "rolle": "Weihnachtsmarkt in der Rheingasse",
+              "link": "https://www.advaentsgass.ch",
+              "rolle_en": "Christmas market in the Rheingasse"
+            }
+          ],
+          "titel_en": "Adväntsgass"
+        },
+        {
+          "titel": "FOODTURE BÄREN, zusammen mit",
+          "eintraege": [
+            {
+              "name": "Basel Food Factory",
+              "rolle": "Hat FOODTURE geleitet und alle Beteiligten an einen Tisch gebracht",
+              "rolle_en": "Led FOODTURE and brought everyone involved to one table",
+              "link": "https://www.foodfactorybasel.ch"
+            },
+            {
+              "name": "Claudia Link",
+              "rolle": "Begleitet FOODTURE als Fotografin",
+              "rolle_en": "Accompanies FOODTURE as photographer",
+              "link": "https://claudialink.ch"
+            },
+            {
+              "name": "Elias Buess, Deborah Blanke",
+              "rolle": "Haben die Waffel und die Gerichte entwickelt, Elias als Co-Projektleiter, Deborah als Köchin",
+              "rolle_en": "Developed the waffle and the dishes, Elias as co-project lead, Deborah as cook"
+            },
+            {
+              "name": "Fathy Stohler",
+              "rolle": "Hat die Hütte gebaut",
+              "rolle_en": "Built the hut"
+            },
+            {
+              "name": "gaw",
+              "rolle": "Hat in ihrem Betrieb Frank & Alma alle Food-Komponenten vorproduziert und die Waffeln vorgebacken",
+              "rolle_en": "Pre-produced all food components and pre-baked the waffles at their business Frank & Alma",
+              "link": "https://www.gaw.ch"
+            },
+            {
+              "name": "Getränkekollektiv",
+              "rolle": "Liefert Bier und das Tonic für den Bärmut-Tonic und ist am 5./6.12. bei uns zu Gast",
+              "rolle_en": "Supplies beer and the tonic for the Bärmut tonic, and is our guest on 5/6 December"
+            },
+            {
+              "name": "Lebensmittel Netzwerk Basel",
+              "rolle": "Hat unsere Zutaten bei Höfen und Manufakturen der Region beschafft und gebündelt",
+              "rolle_en": "Sourced and pooled our ingredients from farms and small producers in the region",
+              "link": "https://www.lebensmittelnetzwerk.ch"
+            },
+            {
+              "name": "8Bar / Zum Schmalen Wurf",
+              "rolle": "Unser Nachbar mit der zweiten Hütte, teilt Lager, Abwasch und Teller mit uns, mit Lenny",
+              "rolle_en": "Our neighbour with the second hut, shares storage, dishwashing and plates with us, with Lenny",
+              "link": "https://8-bar.eu"
+            },
+            {
+              "name": "Lichterloh",
+              "rolle": "Hat das Licht in die Hütte gebracht",
+              "rolle_en": "Brought the light into the hut"
+            },
+            {
+              "name": "Markthalle Basel",
+              "rolle": "Hat uns ihr Netzwerk geöffnet und Gläser und Lieferwagen geliehen",
+              "rolle_en": "Opened up its network to us and lent us glasses and a delivery van",
+              "link": "https://www.markthallebasel.ch"
+            },
+            {
+              "name": "Mettler Gastrotechnik",
+              "rolle": "Hat uns die Küchengeräte für die Hütte geliehen",
+              "rolle_en": "Lent us the kitchen equipment for the hut",
+              "link": "https://mettler-chuchi.ch"
+            },
+            {
+              "name": "Rio Basel",
+              "rolle": "Hat mit uns die Plakate gestaltet, gedruckt und an die Hütte gekleistert, mit Luca",
+              "rolle_en": "Designed, printed and pasted the posters on the hut with us, with Luca",
+              "link": "https://riobasel.ch"
+            },
+            {
+              "name": "BaselCircular",
+              "rolle": "Fördert FOODTURE als Experiment für eine kreislauffähige Gastronomie",
+              "rolle_en": "Funds FOODTURE as an experiment for circular hospitality",
+              "link": "https://baselcircular.ch"
+            },
+            {
+              "name": "... und viele verschiedene Produzent:innen der Region",
+              "name_en": "... and many different producers from the region"
+            }
+          ],
+          "titel_en": "FOODTURE BÄREN, together with"
+        }
+      ],
+      "id": "advaentsgass",
+      "titel_en": "Adväntsgass",
+      "untertitel_en": "As FOODTURE BÄREN · 26 November to 23 December 2026, in the Rheingasse",
+      "text_en": "For four weeks we'll have a stall at the Adväntsgass, right in front of the future Bear. We'll appear there as FOODTURE BÄREN and experiment with the future for the first time.\n\n## FOODTURE BÄREN\n\nHow do we want to be as the Bear in the future? At the Adväntsgass we try it out very practically – on and beside the plate. We were set in motion for this experiment by the association Basel Food Factory, which has also mobilised a lot of support for the concept and its realisation.\n\nOn the plate, for example, with potatoes from the region that suffered in this dry summer and have already half fallen out of the value chain. Then there are mushrooms from the city, hummus from local chickpeas, meat from Baselbiet dairy cows and plant-based food in all its forms – good food made from what grows, is made and is available here.\n\nBeside the plate we're testing how to work as a network: we want to collaborate instead of doing everything ourselves, involve suppliers and (co-)producers and create value together out of appreciation. And we want to be good neighbours and do our part for a lively Rheingasse.\n\nWe're working on all of this right now. What works? What doesn't? What turns out differently (than expected)? Come by, from 26 November to 23 December 2026 in the Rheingasse.\n\n## Paste-up\n\nFor the Adväntsgass, a hut stands in front of the future Bear. On the Friday before the opening we set up a small office with Luca from Rio Basel in the 8Bar on the Rheingasse. There we designed, printed and tried the posters out on the hut straight away.\n\nThe posters show what is on our minds right now: what there is to eat and drink with us, who we work with, what we have in mind for the Bear.\n\nAfter Christmas the hut will be taken down. Its wood will become tables and benches in the Bear. Perhaps a trace or two of the paste will remain."
+    },
+    {
+      "status": "aktuell",
       "titel": "Prozess",
       "nummer": "07",
       "cover": "/bilder/prozess/04.jpg",
@@ -365,158 +517,6 @@
       "titel_en": "Tapas Festival",
       "untertitel_en": "Tapas & Jazz · 16 and 17 October 2026, at the Jazzcampus club",
       "text_en": "On 16 and 17 October we took part in the Tapas Festival together with the Jazzcampus, at the [Jazzcampus club](https://maps.app.goo.gl/4MxkC2avgXFSh7VJ8).\n\n## Looking back\n\nTwo lovely evenings with a great atmosphere and happy guests. On Saturday we were able to show for the first time what ends up on our plates. It feels good that the Schwarzer Bär is slowly getting going and that we already got to introduce ourselves to the neighbourhood.\n\nA big thank you to the festival organisers, Lenard Schroeder and Felix Henschen. And a special thank you to Kim Egi and the whole Jazzcampus team for their wonderful support in running these evenings.\n\n## The festival\n\nRestaurants and bars in Kleinbasel invited people to move from place to place: different tapas everywhere, a glass of wine and perhaps a place you didn't know yet. It was the festival's second edition.\n\n## The food\n\nOn Saturday the food came from us, the Schwarzer Bär team: smoked char on rye crispbread, beetroot with fresh goat's cheese and hazelnuts, autumn mushroom cream with chanterelles and a pear carpaccio with Munster cheese cream. Alongside it we served our Bear vermouth, inspired by the Basler Läckerli. Michael Holdener and Stefan Hasler gave us a big hand with the preparation and cooking. Thank you, thank you, thank you!\n\nOn Friday there were tapas from the Jazzcampus, with grandma's help: sardines with olives, grandma's potato salad and hot dogs, vegetarian too. Part of our team was already behind the bar. On both evenings there was cava, white and red wine.\n\n## Tapas & Jazz\n\nFriday: Julia Kasimova Trio, with groove and neo-soul, and the RRJPA Band with Jordi Roviró (trumpet), Robert Wypasek (tenor saxophone), Antoni Casellas (piano), Ryuji Uchida (bass) and Pau Planas (drums).\n\nSaturday: NK36 around composer Nikolas Katrantzis, with jazz, hip-hop and spoken word. DJ Akay played before and after."
-    },
-    {
-      "status": "aktuell",
-      "titel": "Adväntsgass",
-      "nummer": "02",
-      "cover": "/bilder/advaentsgass/15.jpg",
-      "untertitel": "Als FOODTURE BÄREN · 26. November bis 23. Dezember 2026, in der Rheingasse",
-      "text": "Vier Wochen lang sind wir mit einem Stand an der Adväntsgass, direkt vor dem künftigen Bären. Wir treten dort als FOODTURE BÄREN auf und experimentieren ein erstes Mal mit der Zukunft.\n\n## FOODTURE BÄREN\n\nWie wollen wir als Bären in Zukunft sein? An der Adväntsgass probieren wir es ganz praktisch aus – auf und neben dem Teller. Aktiviert für dieses Experiment hat uns der Verein Basel Food Factory, der auch viel Unterstützung für die Konzeption und Umsetzung mobilisiert hat.\n\nAuf dem Teller zum Beispiel mit Kartoffeln aus der Region, die diesen trockenen Sommer gelitten haben und mit einem Bein schon aus der Wertschöpfung gefallen sind. Dazu kommen Pilze aus der Stadt, Hummus aus hiesigen Kichererbsen, Fleisch von Baselbieter Milchkühen und Pflanzenbasiertes in allen Formen – gutes Essen aus dem, was hier wächst, entsteht und vorhanden ist.\n\nNeben dem Teller testen wir die Arbeit im Netzwerk: Wir wollen kollaborieren, statt alles selber zu machen, Lieferant:innen und (Co-)Produzent:innen einbeziehen und gemeinsam Wertschöpfung aus Wertschätzung schaffen. Und wir wollen gute Nachbarn sein und unseren Teil zu einer lebendigen Rheingasse beitragen.\n\nDerzeit arbeiten wir an all dem. Was klappt alles? Was nicht? Was kommt anders (und zweitens: als gedacht)? Schaut vorbei, vom 26. November bis 23. Dezember 2026 in der Rheingasse.\n\n## Kleisteraktion\n\nFür die Adväntsgass steht vor dem künftigen Bären eine Hütte. Am Freitag vor der Eröffnung haben wir mit Luca von Rio Basel in der 8Bar an der Rheingasse ein kleines Büro eingerichtet. Dort haben wir entworfen, gedruckt und gleich an der Hütte getestet.\n\nAuf die Plakate kommt, was uns gerade beschäftigt: was es bei uns zu essen und zu trinken gibt, mit wem wir zusammenarbeiten, was wir mit dem Bären vorhaben.\n\nNach Weihnachten wird die Hütte abgebaut. Ihr Holz wird zu Tischen und Bänken im Bären. Vielleicht bleibt die eine oder andere Spur vom Kleister.",
-      "bilder": [
-        {
-          "bild": "/bilder/advaentsgass/15.jpg",
-          "text": "Elias und Deborah beim Testen der Waffeln",
-          "text_en": "Elias and Deborah testing the waffles"
-        },
-        {
-          "bild": "/bilder/advaentsgass/13.jpg",
-          "text": "Testen: Waffel mit Siedfleisch, Vinaigrette und Meerrettich",
-          "text_en": "Testing: waffle with boiled beef, vinaigrette and horseradish"
-        },
-        {
-          "bild": "/bilder/advaentsgass/05.jpg",
-          "text": "Werkstatt und Lager",
-          "text_en": "Workshop and storage"
-        },
-        {
-          "bild": "/bilder/advaentsgass/12.jpg",
-          "text": "Gestaltungskonzept: welche Plakate wohin an die Hütte kommen",
-          "text_en": "Design concept: which posters go where on the hut"
-        },
-        {
-          "bild": "/bilder/advaentsgass/07.jpg",
-          "text": "Unser Büro für einen Tag: entwerfen und drucken",
-          "text_en": "Our office for a day: designing and printing"
-        },
-        {
-          "bild": "/bilder/advaentsgass/08.jpg",
-          "text": "Kartoffelfeld im trockenen Sommer",
-          "text_en": "Potato field in the dry summer"
-        },
-        {
-          "bild": "/bilder/advaentsgass/09.jpg",
-          "text": "Zwiebeln aus der Region",
-          "text_en": "Onions from the region"
-        },
-        {
-          "bild": "/bilder/advaentsgass/10.jpg",
-          "text": "Plakat an der Hütte: Bär",
-          "text_en": "Poster on the hut: bear"
-        }
-      ],
-      "listen": [
-        {
-          "titel": "Adväntsgass",
-          "eintraege": [
-            {
-              "name": "Adväntsgass",
-              "rolle": "Weihnachtsmarkt in der Rheingasse",
-              "link": "https://www.advaentsgass.ch",
-              "rolle_en": "Christmas market in the Rheingasse"
-            }
-          ],
-          "titel_en": "Adväntsgass"
-        },
-        {
-          "titel": "FOODTURE BÄREN, zusammen mit",
-          "eintraege": [
-            {
-              "name": "Basel Food Factory",
-              "rolle": "Hat FOODTURE geleitet und alle Beteiligten an einen Tisch gebracht",
-              "rolle_en": "Led FOODTURE and brought everyone involved to one table",
-              "link": "https://www.foodfactorybasel.ch"
-            },
-            {
-              "name": "Claudia Link",
-              "rolle": "Begleitet FOODTURE als Fotografin",
-              "rolle_en": "Accompanies FOODTURE as photographer",
-              "link": "https://claudialink.ch"
-            },
-            {
-              "name": "Elias Buess, Deborah Blanke",
-              "rolle": "Haben die Waffel und die Gerichte entwickelt, Elias als Co-Projektleiter, Deborah als Köchin",
-              "rolle_en": "Developed the waffle and the dishes, Elias as co-project lead, Deborah as cook"
-            },
-            {
-              "name": "Fathy Stohler",
-              "rolle": "Hat die Hütte gebaut",
-              "rolle_en": "Built the hut"
-            },
-            {
-              "name": "gaw",
-              "rolle": "Hat in ihrem Betrieb Frank & Alma alle Food-Komponenten vorproduziert und die Waffeln vorgebacken",
-              "rolle_en": "Pre-produced all food components and pre-baked the waffles at their business Frank & Alma",
-              "link": "https://www.gaw.ch"
-            },
-            {
-              "name": "Getränkekollektiv",
-              "rolle": "Liefert Bier und das Tonic für den Bärmut-Tonic und ist am 5./6.12. bei uns zu Gast",
-              "rolle_en": "Supplies beer and the tonic for the Bärmut tonic, and is our guest on 5/6 December"
-            },
-            {
-              "name": "Lebensmittel Netzwerk Basel",
-              "rolle": "Hat unsere Zutaten bei Höfen und Manufakturen der Region beschafft und gebündelt",
-              "rolle_en": "Sourced and pooled our ingredients from farms and small producers in the region",
-              "link": "https://www.lebensmittelnetzwerk.ch"
-            },
-            {
-              "name": "8Bar / Zum Schmalen Wurf",
-              "rolle": "Unser Nachbar mit der zweiten Hütte, teilt Lager, Abwasch und Teller mit uns, mit Lenny",
-              "rolle_en": "Our neighbour with the second hut, shares storage, dishwashing and plates with us, with Lenny",
-              "link": "https://8-bar.eu"
-            },
-            {
-              "name": "Lichterloh",
-              "rolle": "Hat das Licht in die Hütte gebracht",
-              "rolle_en": "Brought the light into the hut"
-            },
-            {
-              "name": "Markthalle Basel",
-              "rolle": "Hat uns ihr Netzwerk geöffnet und Gläser und Lieferwagen geliehen",
-              "rolle_en": "Opened up its network to us and lent us glasses and a delivery van",
-              "link": "https://www.markthallebasel.ch"
-            },
-            {
-              "name": "Mettler Gastrotechnik",
-              "rolle": "Hat uns die Küchengeräte für die Hütte geliehen",
-              "rolle_en": "Lent us the kitchen equipment for the hut",
-              "link": "https://mettler-chuchi.ch"
-            },
-            {
-              "name": "Rio Basel",
-              "rolle": "Hat mit uns die Plakate gestaltet, gedruckt und an die Hütte gekleistert, mit Luca",
-              "rolle_en": "Designed, printed and pasted the posters on the hut with us, with Luca",
-              "link": "https://riobasel.ch"
-            },
-            {
-              "name": "BaselCircular",
-              "rolle": "Fördert FOODTURE als Experiment für eine kreislauffähige Gastronomie",
-              "rolle_en": "Funds FOODTURE as an experiment for circular hospitality",
-              "link": "https://baselcircular.ch"
-            },
-            {
-              "name": "... und viele verschiedene Produzent:innen der Region",
-              "name_en": "... and many different producers from the region"
-            }
-          ],
-          "titel_en": "FOODTURE BÄREN, together with"
-        }
-      ],
-      "id": "advaentsgass",
-      "titel_en": "Adväntsgass",
-      "untertitel_en": "As FOODTURE BÄREN · 26 November to 23 December 2026, in the Rheingasse",
-      "text_en": "For four weeks we'll have a stall at the Adväntsgass, right in front of the future Bear. We'll appear there as FOODTURE BÄREN and experiment with the future for the first time.\n\n## FOODTURE BÄREN\n\nHow do we want to be as the Bear in the future? At the Adväntsgass we try it out very practically – on and beside the plate. We were set in motion for this experiment by the association Basel Food Factory, which has also mobilised a lot of support for the concept and its realisation.\n\nOn the plate, for example, with potatoes from the region that suffered in this dry summer and have already half fallen out of the value chain. Then there are mushrooms from the city, hummus from local chickpeas, meat from Baselbiet dairy cows and plant-based food in all its forms – good food made from what grows, is made and is available here.\n\nBeside the plate we're testing how to work as a network: we want to collaborate instead of doing everything ourselves, involve suppliers and (co-)producers and create value together out of appreciation. And we want to be good neighbours and do our part for a lively Rheingasse.\n\nWe're working on all of this right now. What works? What doesn't? What turns out differently (than expected)? Come by, from 26 November to 23 December 2026 in the Rheingasse.\n\n## Paste-up\n\nFor the Adväntsgass, a hut stands in front of the future Bear. On the Friday before the opening we set up a small office with Luca from Rio Basel in the 8Bar on the Rheingasse. There we designed, printed and tried the posters out on the hut straight away.\n\nThe posters show what is on our minds right now: what there is to eat and drink with us, who we work with, what we have in mind for the Bear.\n\nAfter Christmas the hut will be taken down. Its wood will become tables and benches in the Bear. Perhaps a trace or two of the paste will remain."
     },
     {
       "status": "aktuell",
