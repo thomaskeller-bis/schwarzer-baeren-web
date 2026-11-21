@@ -438,48 +438,77 @@
           "eintraege": [
             {
               "name": "Basel Food Factory",
-              "rolle": "Projektlead",
-              "link": "https://www.foodfactorybasel.ch",
-              "rolle_en": "Project lead"
-            },
-            {
-              "name": "Lebensmittel Netzwerk Basel",
-              "rolle": "Netzwerk, Beschaffung",
-              "link": "https://www.lebensmittelnetzwerk.ch",
-              "rolle_en": "Network, sourcing"
-            },
-            {
-              "name": "gaw",
-              "rolle": "Produktion",
-              "link": "https://www.gaw.ch",
-              "rolle_en": "Production"
-            },
-            {
-              "name": "Elias Buess",
-              "rolle": "Rezepturen, Verarbeitung, Beratung und Begleitung",
-              "rolle_en": "Recipes, processing, advice and support"
-            },
-            {
-              "name": "Deborah Blanke",
-              "rolle": "Rezepturen, Verarbeitung",
-              "rolle_en": "Recipes, processing"
-            },
-            {
-              "name": "Bär im Schafspelz GmbH",
-              "rolle": "Gastronomie, Stand",
-              "rolle_en": "Hospitality, stall"
+              "rolle": "Hat FOODTURE geleitet und alle Beteiligten an einen Tisch gebracht",
+              "rolle_en": "Led FOODTURE and brought everyone involved to one table",
+              "link": "https://www.foodfactorybasel.ch"
             },
             {
               "name": "Claudia Link",
-              "rolle": "Fotografie, Dokumentation",
-              "link": "https://claudialink.ch",
-              "rolle_en": "Photography, documentation"
+              "rolle": "Begleitet FOODTURE als Fotografin",
+              "rolle_en": "Accompanies FOODTURE as photographer",
+              "link": "https://claudialink.ch"
+            },
+            {
+              "name": "Elias Buess, Deborah Blanke",
+              "rolle": "Haben die Waffel und die Gerichte entwickelt, Elias als Co-Projektleiter, Deborah als Köchin",
+              "rolle_en": "Developed the waffle and the dishes, Elias as co-project lead, Deborah as cook"
+            },
+            {
+              "name": "Fathy Stohler",
+              "rolle": "Hat die Hütte gebaut",
+              "rolle_en": "Built the hut"
+            },
+            {
+              "name": "gaw",
+              "rolle": "Hat in ihrem Betrieb Frank & Alma alle Food-Komponenten vorproduziert und die Waffeln vorgebacken",
+              "rolle_en": "Pre-produced all food components and pre-baked the waffles at their business Frank & Alma",
+              "link": "https://www.gaw.ch"
+            },
+            {
+              "name": "Getränkekollektiv",
+              "rolle": "Liefert Bier und das Tonic für den Bärmut-Tonic und ist am 5./6.12. bei uns zu Gast",
+              "rolle_en": "Supplies beer and the tonic for the Bärmut tonic, and is our guest on 5/6 December"
+            },
+            {
+              "name": "Lebensmittel Netzwerk Basel",
+              "rolle": "Hat unsere Zutaten bei Höfen und Manufakturen der Region beschafft und gebündelt",
+              "rolle_en": "Sourced and pooled our ingredients from farms and small producers in the region",
+              "link": "https://www.lebensmittelnetzwerk.ch"
+            },
+            {
+              "name": "8Bar / Zum Schmalen Wurf",
+              "rolle": "Unser Nachbar mit der zweiten Hütte, teilt Lager, Abwasch und Teller mit uns, mit Lenny",
+              "rolle_en": "Our neighbour with the second hut, shares storage, dishwashing and plates with us, with Lenny",
+              "link": "https://8-bar.eu"
+            },
+            {
+              "name": "Lichterloh",
+              "rolle": "Hat das Licht in die Hütte gebracht",
+              "rolle_en": "Brought the light into the hut"
+            },
+            {
+              "name": "Markthalle Basel",
+              "rolle": "Hat uns ihr Netzwerk geöffnet und Gläser und Lieferwagen geliehen",
+              "rolle_en": "Opened up its network to us and lent us glasses and a delivery van",
+              "link": "https://www.markthallebasel.ch"
+            },
+            {
+              "name": "Mettler Gastrotechnik",
+              "rolle": "Hat uns die Küchengeräte für die Hütte geliehen",
+              "rolle_en": "Lent us the kitchen equipment for the hut",
+              "link": "https://mettler-chuchi.ch"
+            },
+            {
+              "name": "Rio Basel",
+              "rolle": "Hat mit uns die Plakate gestaltet, gedruckt und an die Hütte gekleistert, mit Luca",
+              "rolle_en": "Designed, printed and pasted the posters on the hut with us, with Luca",
+              "link": "https://riobasel.ch"
             },
             {
               "name": "BaselCircular",
-              "rolle": "Förderung",
-              "link": "https://baselcircular.ch",
-              "rolle_en": "Funding"
+              "rolle": "Fördert FOODTURE als Experiment für eine kreislauffähige Gastronomie",
+              "rolle_en": "Funds FOODTURE as an experiment for circular hospitality",
+              "link": "https://baselcircular.ch"
             },
             {
               "name": "... und viele verschiedene Produzent:innen der Region",
@@ -487,17 +516,6 @@
             }
           ],
           "titel_en": "FOODTURE BÄREN, together with"
-        },
-        {
-          "titel": "Kleisteraktion",
-          "titel_en": "Paste-up",
-          "eintraege": [
-            {
-              "name": "Luca, Rio Basel",
-              "rolle": "Gestaltung, Druck, Kleister",
-              "rolle_en": "Design, printing, pasting"
-            }
-          ]
         }
       ],
       "id": "advaentsgass",
