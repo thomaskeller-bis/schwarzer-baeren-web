@@ -281,7 +281,7 @@ content:
             label: ↳ English (leer = deutscher Text)
             type: string
           - name: wo
-            label: Ort (z.B. Stand Adväntsgass · Schwarzer Bären, Sääli · Schwarzer Bären, Restaurant & Bar)
+            label: Ort (z.B. Stand Adväntsgass, Rheingasse · Zum Schwarzen Bären, Gaststube · Zum Schwarzen Bären, Sääli)
             type: string
           - name: wo_en
             label: ↳ English (leer = deutscher Text)
