@@ -11,7 +11,9 @@
       "projekt": "tapas",
       "wann_en": "16 and 17 October 2026",
       "titel_en": "Tapas Festival",
-      "info_en": "Tapas & jazz at the Jazzcampus club, from 5 pm each night. On Friday the Julia Kasimova Trio and the RRJPA Band play, on Saturday NK36 with DJ Akay, and we cook."
+      "info_en": "Tapas & jazz at the Jazzcampus club, from 5 pm each night. On Friday the Julia Kasimova Trio and the RRJPA Band play, on Saturday NK36 with DJ Akay, and we cook.",
+      "wo": "Club des Jazzcampus, Utengasse 15",
+      "wo_en": "Jazzcampus club, Utengasse 15"
     },
     {
       "wann": "26. November bis 23. Dezember 2026",
@@ -21,67 +23,81 @@
       "projekt": "advaentsgass",
       "wann_en": "26 November to 23 December 2026",
       "titel_en": "Adväntsgass",
-      "info_en": "As FOODTURE BÄREN in the Rheingasse"
+      "info_en": "As FOODTURE BÄREN in the Rheingasse",
+      "wo": "Stand Adväntsgass, Rheingasse",
+      "wo_en": "Adväntsgass stall, Rheingasse"
     },
     {
       "wann": "Do 26.11. 2026",
       "bis": "2026-11-26",
       "titel": "Opening Night",
-      "info": "An der Adväntsgass, Rheingasse",
+      "info": "",
       "projekt": "advaentsgass",
       "wann_en": "Thu 26 Nov 2026",
       "titel_en": "Opening Night",
-      "info_en": "At the Adväntsgass, Rheingasse"
+      "info_en": "",
+      "wo": "Stand Adväntsgass, Rheingasse",
+      "wo_en": "Adväntsgass stall, Rheingasse"
     },
     {
       "wann": "Fr 4.12. 2026",
       "bis": "2026-12-04",
       "titel": "Lion's Mane mit Tasting",
-      "info": "An der Adväntsgass, Rheingasse",
+      "info": "",
       "projekt": "advaentsgass",
       "wann_en": "Fri 4 Dec 2026",
       "titel_en": "Lion's mane with tasting",
-      "info_en": "At the Adväntsgass, Rheingasse"
+      "info_en": "",
+      "wo": "Stand Adväntsgass, Rheingasse",
+      "wo_en": "Adväntsgass stall, Rheingasse"
     },
     {
       "wann": "Sa/So 5.–6.12. 2026",
       "bis": "2026-12-06",
       "titel": "Getränkekollektiv zu Gast",
-      "info": "An der Adväntsgass, Rheingasse",
+      "info": "",
       "projekt": "advaentsgass",
       "wann_en": "Sat/Sun 5–6 Dec 2026",
       "titel_en": "Getränkekollektiv as our guest",
-      "info_en": "At the Adväntsgass, Rheingasse"
+      "info_en": "",
+      "wo": "Stand Adväntsgass, Rheingasse",
+      "wo_en": "Adväntsgass stall, Rheingasse"
     },
     {
       "wann": "Fr–So 18.–20.12. 2026",
       "bis": "2026-12-20",
       "titel": "Bubble Trouble",
-      "info": "An der Adväntsgass, Rheingasse",
+      "info": "",
       "projekt": "advaentsgass",
       "wann_en": "Fri–Sun 18–20 Dec 2026",
       "titel_en": "Bubble Trouble",
-      "info_en": "At the Adväntsgass, Rheingasse"
+      "info_en": "",
+      "wo": "Stand Adväntsgass, Rheingasse",
+      "wo_en": "Adväntsgass stall, Rheingasse"
     },
     {
       "wann": "Di 22.12. 2026",
       "bis": "2026-12-22",
       "titel": "Kein Weihnachtsgeschenk? Make your own Bärmut",
-      "info": "An der Adväntsgass, Rheingasse",
+      "info": "",
       "projekt": "advaentsgass",
       "wann_en": "Tue 22 Dec 2026",
       "titel_en": "No Christmas present? Make your own Bärmut",
-      "info_en": "At the Adväntsgass, Rheingasse"
+      "info_en": "",
+      "wo": "Stand Adväntsgass, Rheingasse",
+      "wo_en": "Adväntsgass stall, Rheingasse"
     },
     {
       "wann": "2027",
       "bis": "",
       "titel": "Eröffnung",
-      "info": "Rheingasse 17, Datum folgt",
+      "info": "Datum folgt",
       "projekt": "",
       "wann_en": "2027",
       "titel_en": "Opening",
-      "info_en": "Rheingasse 17, date to follow"
+      "info_en": "Date to follow",
+      "wo": "Zum Schwarzen Bären, Rheingasse 17",
+      "wo_en": "Zum Schwarzen Bären, Rheingasse 17"
     }
   ],
   "titel_en": "Programme",

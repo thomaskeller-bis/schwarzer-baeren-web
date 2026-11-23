@@ -339,7 +339,7 @@ function oeffneProgramm() {
     const p = t.projekt && [...sichtbare, ...archiv].find((x) => x.id === t.projekt);
     const inhalt = `
       <span class="programm-wann">${esc(t.wann || "")}</span>
-      <span class="archiv-titel">${esc(t.titel)}</span>
+      <span class="archiv-titel">${esc(t.titel)}${t.wo ? `<span class="programm-wo">${esc(t.wo)}</span>` : ""}</span>
       <span class="archiv-unter">${esc(t.info || "")}</span>`;
     return p
       ? `<a class="programm-zeile" href="#${esc(p.id)}">${inhalt}</a>`

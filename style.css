@@ -625,3 +625,4 @@ body.vorschau::before {
 /* Programm: vergangene Termine */
 .programm-vorbei-titel { margin: 40px 0 12px; font-weight: 500; }
 .programm-vorbei .archiv-titel, .programm-vorbei .programm-wann { color: var(--grau); }
+.programm-wo { display: block; color: var(--grau); font-weight: 400; }
