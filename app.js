@@ -334,11 +334,16 @@ function programmVorbei() {
 }
 const programmSichtbar = () => (programmTermine().length + programmVorbei().length) > 0 && (PROGRAMM.zeigen || VORSCHAU || ANSICHT);
 
+/* «Fr 4.12.» → Wochentag und Datum auf zwei Zeilen (besser lesbar) */
+function programmWann(w) {
+  const m = String(w || "").match(/^((?:Mo|Di|Mi|Do|Fr|Sa|So|Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:[\/–-](?:Mo|Di|Mi|Do|Fr|Sa|So|Mon|Tue|Wed|Thu|Fri|Sat|Sun))?)\s+(.+)$/);
+  return m ? `<span class="programm-tag">${esc(m[1])}</span><span class="programm-datum">${esc(m[2])}</span>` : esc(w || "");
+}
 function oeffneProgramm() {
   const zeile = (t) => {
     const p = t.projekt && [...sichtbare, ...archiv].find((x) => x.id === t.projekt);
     const inhalt = `
-      <span class="programm-wann">${esc(t.wann || "")}</span>
+      <span class="programm-wann">${programmWann(t.wann)}</span>
       <span class="archiv-titel">${esc(t.titel)}${t.wo ? `<span class="programm-wo">${esc(t.wo)}</span>` : ""}</span>
       <span class="archiv-unter">${esc(t.info || "")}</span>`;
     return p

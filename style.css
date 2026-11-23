@@ -626,3 +626,9 @@ body.vorschau::before {
 .programm-vorbei-titel { margin: 40px 0 12px; font-weight: 500; }
 .programm-vorbei .archiv-titel, .programm-vorbei .programm-wann { color: var(--grau); }
 .programm-wo { display: block; color: var(--grau); font-weight: 400; }
+.programm-tag { display: block; color: var(--tinte); font-weight: 500; }
+.programm-datum { display: block; }
+@media (max-width: 720px) {
+  .programm-tag, .programm-datum { display: inline; }
+  .programm-tag { margin-right: 6px; }
+}
