@@ -108,7 +108,7 @@
               "rolle_en": "Built the hut and is always on hand when something still needs building"
             },
             {
-              "name": "gaw",
+              "name": "Gesellschaft für Arbeit und Wohnen",
               "rolle": "Hat in ihrem Betrieb Frank & Alma alle Food-Komponenten vorproduziert und die Waffeln vorgebacken",
               "rolle_en": "Pre-produced all food components and pre-baked the waffles at their business Frank & Alma",
               "link": "https://www.gaw.ch"
@@ -154,7 +154,7 @@
             },
             {
               "name": "PomPom Basel",
-              "rolle": "Hat seine allererste Lion's-Mane-Ernte für uns produziert",
+              "rolle": "Hat ihre allererste Lion's-Mane-Ernte für uns produziert",
               "rolle_en": "Grew its very first lion's mane harvest for us"
             },
             {
@@ -165,8 +165,8 @@
             },
             {
               "name": "BaselCircular",
-              "rolle": "Fördert FOODTURE als Experiment für eine kreislauffähige Gastronomie",
-              "rolle_en": "Funds FOODTURE as an experiment for circular hospitality",
+              "rolle": "Unterstützt FOODTURE als Experiment für eine kreislauffähige Gastronomie",
+              "rolle_en": "Supports FOODTURE as an experiment for circular hospitality",
               "link": "https://baselcircular.ch"
             },
             {
