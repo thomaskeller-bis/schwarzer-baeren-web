@@ -101,7 +101,7 @@ const TEXTE = {
   player: ["Beim Klick lädt der Player von", "Clicking loads the player from"],
   programm: ["Programm", "Programme"],
   presse: ["Presse", "Press"],
-  danke: ["Danke", "Thanks"],
+  danke: ["Netzwerk", "Network"],
   zurueck: ["Zurück zur Übersicht", "Back to overview"],
   impressum: ["Impressum", "Imprint"],
   nlTitel: ["Post vom Bären", "Post from the Bear"],

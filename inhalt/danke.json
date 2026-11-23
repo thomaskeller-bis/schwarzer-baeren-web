@@ -1,5 +1,5 @@
 {
-  "titel": "Danke",
+  "titel": "Netzwerk",
   "intro": "Ohne diese Menschen, Vereine und Firmen wäre das alles viel schwieriger. Sie helfen, denken und gestalten mit. Danke!",
   "gruppen": [
     {
@@ -111,7 +111,7 @@
       "titel_en": "Friends in hospitality"
     },
     {
-      "titel": "Netzwerk",
+      "titel": "Essen & Produktion",
       "eintraege": [
         {
           "name": "Lebensmittel Netzwerk Basel",
@@ -138,7 +138,7 @@
           "rolle_en": "FOODTURE, recipes, advice and support"
         }
       ],
-      "titel_en": "Network"
+      "titel_en": "Food & production"
     },
     {
       "titel": "Kommunikation & Grafik",
@@ -189,6 +189,6 @@
       "titel_en": "And also"
     }
   ],
-  "titel_en": "Thanks",
+  "titel_en": "Network",
   "intro_en": "Without these people, associations and companies, all of this would be much harder. They help, think and shape along with us. Thank you!"
 }
