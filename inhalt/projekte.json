@@ -77,32 +77,62 @@
             {
               "name": "Do 26.11.",
               "name_en": "Thu 26 Nov",
-              "rolle": "Opening Night",
-              "rolle_en": "Opening Night"
+              "rolle": "Opening Night: The party has arrived",
+              "rolle_en": "Opening Night: The party has arrived"
             },
             {
               "name": "Fr 4.12.",
               "name_en": "Fri 4 Dec",
-              "rolle": "Lion's Mane mit Tasting",
-              "rolle_en": "Lion's mane with tasting"
+              "rolle": "Lion's Mane mit PomPom Basel – Pilz-Degustation",
+              "rolle_en": "Lion's mane with PomPom Basel – Mushroom tasting"
             },
             {
               "name": "Sa/So 5.–6.12.",
               "name_en": "Sat/Sun 5–6 Dec",
-              "rolle": "Getränkekollektiv zu Gast",
-              "rolle_en": "Getränkekollektiv as our guest"
+              "rolle": "Getränkekollektiv in Action",
+              "rolle_en": "Getränkekollektiv in action"
+            },
+            {
+              "name": "Di 8.12.",
+              "name_en": "Tue 8 Dec",
+              "rolle": "Stephan Schmidlin zu Gast – Unser Kartoffelbauer aus dem Baselbiet",
+              "rolle_en": "Stephan Schmidlin as our guest – Our potato farmer from Baselbiet"
+            },
+            {
+              "name": "Do 10.12.",
+              "name_en": "Thu 10 Dec",
+              "rolle": "Team Arbovitis – Degustation von Hochstammbaum-Spezialitäten aus dem Fricktal",
+              "rolle_en": "Team Arbovitis – Tasting of standard orchard specialities from the Fricktal"
+            },
+            {
+              "name": "Fr 11.12.",
+              "name_en": "Fri 11 Dec",
+              "rolle": "Einsiedler Weihnachtsbock – 20 Liter, s'het so lang's het. Dazu gibt es Schafbock, ein kleines Gebäck.",
+              "rolle_en": "Einsiedler Christmas bock – 20 litres, while it lasts. With Schafbock, a small pastry."
+            },
+            {
+              "name": "Sa 12.12.",
+              "name_en": "Sat 12 Dec",
+              "rolle": "Max Lüdi Cider Tasting – Ab Nachmittag",
+              "rolle_en": "Max Lüdi cider tasting – From the afternoon"
             },
             {
               "name": "Fr–So 18.–20.12.",
               "name_en": "Fri–Sun 18–20 Dec",
-              "rolle": "Bubble Trouble",
-              "rolle_en": "Bubble Trouble"
+              "rolle": "Bubble Trouble & Verein S.P.A. – Degustation",
+              "rolle_en": "Bubble Trouble & Verein S.P.A. – Tasting"
             },
             {
               "name": "Di 22.12.",
               "name_en": "Tue 22 Dec",
-              "rolle": "Kein Weihnachtsgeschenk? Make your own Bärmut",
-              "rolle_en": "No Christmas present? Make your own Bärmut"
+              "rolle": "Kein Weihnachtsgeschenk? Make your own Bärmut or buy a bottle",
+              "rolle_en": "No Christmas present? Make your own Bärmut or buy a bottle"
+            },
+            {
+              "name": "Mi 23.12.",
+              "name_en": "Wed 23 Dec",
+              "rolle": "Closing Night: Ho ho holy night",
+              "rolle_en": "Closing Night: Ho ho holy night"
             }
           ]
         },
