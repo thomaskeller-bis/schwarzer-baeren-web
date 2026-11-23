@@ -103,6 +103,7 @@ const TEXTE = {
   presse: ["Presse", "Press"],
   danke: ["Netzwerk", "Network"],
   mitgewirkt: ["Mitgewirkt bei", "Involved in"],
+  vorbei: ["Vorbei", "Past"],
   zurueck: ["Zurück zur Übersicht", "Back to overview"],
   impressum: ["Impressum", "Imprint"],
   nlTitel: ["Post vom Bären", "Post from the Bear"],
@@ -325,10 +326,16 @@ function programmTermine() {
   const heute = new Date().toISOString().slice(0, 10);
   return (PROGRAMM.termine || []).filter((t) => t.titel && (!t.bis || String(t.bis).slice(0, 10) >= heute));
 }
-const programmSichtbar = () => programmTermine().length > 0 && (PROGRAMM.zeigen || VORSCHAU || ANSICHT);
+/* Vergangene Termine erscheinen darunter unter «Vorbei», neueste zuerst */
+function programmVorbei() {
+  const heute = new Date().toISOString().slice(0, 10);
+  return (PROGRAMM.termine || []).filter((t) => t.titel && t.bis && String(t.bis).slice(0, 10) < heute)
+    .sort((a, b) => String(b.bis).localeCompare(String(a.bis)));
+}
+const programmSichtbar = () => (programmTermine().length + programmVorbei().length) > 0 && (PROGRAMM.zeigen || VORSCHAU || ANSICHT);
 
 function oeffneProgramm() {
-  const zeilen = programmTermine().map((t) => {
+  const zeile = (t) => {
     const p = t.projekt && [...sichtbare, ...archiv].find((x) => x.id === t.projekt);
     const inhalt = `
       <span class="programm-wann">${esc(t.wann || "")}</span>
@@ -337,12 +344,15 @@ function oeffneProgramm() {
     return p
       ? `<a class="programm-zeile" href="#${esc(p.id)}">${inhalt}</a>`
       : `<div class="programm-zeile">${inhalt}</div>`;
-  }).join("");
+  };
+  const zeilen = programmTermine().map(zeile).join("");
+  const vorbei = programmVorbei().map(zeile).join("");
   zeigeDetail(`
     <div class="archiv programm">
       <h1>${esc(PROGRAMM.titel || tx("programm"))}</h1>
       <p class="unter">${esc(PROGRAMM.intro || "")}</p>
-      <div class="archiv-liste">${zeilen}</div>
+      ${zeilen ? `<div class="archiv-liste">${zeilen}</div>` : ""}
+      ${vorbei ? `<h2 class="mono programm-vorbei-titel">${tx("vorbei")}</h2><div class="archiv-liste programm-vorbei">${vorbei}</div>` : ""}
     </div>`, PROGRAMM.titel || tx("programm"));
 }
 

@@ -71,6 +71,42 @@
       ],
       "listen": [
         {
+          "titel": "Adventskalender",
+          "titel_en": "Advent calendar",
+          "eintraege": [
+            {
+              "name": "Do 26.11.",
+              "name_en": "Thu 26 Nov",
+              "rolle": "Opening Night",
+              "rolle_en": "Opening Night"
+            },
+            {
+              "name": "Fr 4.12.",
+              "name_en": "Fri 4 Dec",
+              "rolle": "Lion's Mane mit Tasting",
+              "rolle_en": "Lion's mane with tasting"
+            },
+            {
+              "name": "Sa/So 5.–6.12.",
+              "name_en": "Sat/Sun 5–6 Dec",
+              "rolle": "Getränkekollektiv zu Gast",
+              "rolle_en": "Getränkekollektiv as our guest"
+            },
+            {
+              "name": "Fr–So 18.–20.12.",
+              "name_en": "Fri–Sun 18–20 Dec",
+              "rolle": "Bubble Trouble",
+              "rolle_en": "Bubble Trouble"
+            },
+            {
+              "name": "Di 22.12.",
+              "name_en": "Tue 22 Dec",
+              "rolle": "Kein Weihnachtsgeschenk? Make your own Bärmut",
+              "rolle_en": "No Christmas present? Make your own Bärmut"
+            }
+          ]
+        },
+        {
           "titel": "Adväntsgass",
           "eintraege": [
             {

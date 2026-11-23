@@ -621,3 +621,7 @@ body.vorschau::before {
 .netz-zurueck a:hover, .netz-web a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .netz-web { margin: -16px 0 28px; }
 .netz-titel { margin: 8px 0 12px; font-weight: 500; }
+
+/* Programm: vergangene Termine */
+.programm-vorbei-titel { margin: 40px 0 12px; font-weight: 500; }
+.programm-vorbei .archiv-titel, .programm-vorbei .programm-wann { color: var(--grau); }

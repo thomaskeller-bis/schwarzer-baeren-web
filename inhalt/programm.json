@@ -1,6 +1,6 @@
 {
   "titel": "Programm",
-  "intro": "Was als Nächstes ansteht.",
+  "intro": "Was ansteht und was schon war.",
   "zeigen": true,
   "termine": [
     {
@@ -24,6 +24,56 @@
       "info_en": "As FOODTURE BÄREN in the Rheingasse"
     },
     {
+      "wann": "Do 26.11. 2026",
+      "bis": "2026-11-26",
+      "titel": "Opening Night",
+      "info": "An der Adväntsgass, Rheingasse",
+      "projekt": "advaentsgass",
+      "wann_en": "Thu 26 Nov 2026",
+      "titel_en": "Opening Night",
+      "info_en": "At the Adväntsgass, Rheingasse"
+    },
+    {
+      "wann": "Fr 4.12. 2026",
+      "bis": "2026-12-04",
+      "titel": "Lion's Mane mit Tasting",
+      "info": "An der Adväntsgass, Rheingasse",
+      "projekt": "advaentsgass",
+      "wann_en": "Fri 4 Dec 2026",
+      "titel_en": "Lion's mane with tasting",
+      "info_en": "At the Adväntsgass, Rheingasse"
+    },
+    {
+      "wann": "Sa/So 5.–6.12. 2026",
+      "bis": "2026-12-06",
+      "titel": "Getränkekollektiv zu Gast",
+      "info": "An der Adväntsgass, Rheingasse",
+      "projekt": "advaentsgass",
+      "wann_en": "Sat/Sun 5–6 Dec 2026",
+      "titel_en": "Getränkekollektiv as our guest",
+      "info_en": "At the Adväntsgass, Rheingasse"
+    },
+    {
+      "wann": "Fr–So 18.–20.12. 2026",
+      "bis": "2026-12-20",
+      "titel": "Bubble Trouble",
+      "info": "An der Adväntsgass, Rheingasse",
+      "projekt": "advaentsgass",
+      "wann_en": "Fri–Sun 18–20 Dec 2026",
+      "titel_en": "Bubble Trouble",
+      "info_en": "At the Adväntsgass, Rheingasse"
+    },
+    {
+      "wann": "Di 22.12. 2026",
+      "bis": "2026-12-22",
+      "titel": "Kein Weihnachtsgeschenk? Make your own Bärmut",
+      "info": "An der Adväntsgass, Rheingasse",
+      "projekt": "advaentsgass",
+      "wann_en": "Tue 22 Dec 2026",
+      "titel_en": "No Christmas present? Make your own Bärmut",
+      "info_en": "At the Adväntsgass, Rheingasse"
+    },
+    {
       "wann": "2027",
       "bis": "",
       "titel": "Eröffnung",
@@ -35,5 +85,5 @@
     }
   ],
   "titel_en": "Programme",
-  "intro_en": "What's coming up next."
+  "intro_en": "What's coming up and what has been."
 }
