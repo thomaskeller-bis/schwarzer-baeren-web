@@ -142,6 +142,11 @@
           "rolle": "FOODTURE, Rezepturen, Beratung und Begleitung",
           "link": "",
           "rolle_en": "FOODTURE, recipes, advice and support"
+        },
+        {
+          "name": "Getränkekollektiv",
+          "rolle": "Getränke, Zapfhahn und Kühlschrank für die Hütte an der Adväntsgass",
+          "rolle_en": "Drinks, tap and fridge for the hut at the Adväntsgass"
         }
       ],
       "titel_en": "Food & production"
