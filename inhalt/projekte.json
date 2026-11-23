@@ -144,7 +144,8 @@
             {
               "name": "Lichterloh",
               "rolle": "Hat das Licht in die Hütte gebracht",
-              "rolle_en": "Brought the light into the hut"
+              "rolle_en": "Brought the light into the hut",
+              "link": "https://lichterloh.swiss"
             },
             {
               "name": "Markthalle Basel",
