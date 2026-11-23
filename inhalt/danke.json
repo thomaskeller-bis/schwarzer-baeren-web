@@ -185,6 +185,11 @@
       "titel": "Und ausserdem",
       "eintraege": [
         {
+          "name": "Kim Egi",
+          "rolle": "Host am Tapas Festival, Aufbau der Adventshütten",
+          "rolle_en": "Host at the Tapas Festival, building the Advent huts"
+        },
+        {
           "name": "Ines",
           "rolle": "Planung",
           "link": "",
