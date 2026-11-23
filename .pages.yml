@@ -359,6 +359,9 @@ content:
       - name: intro_en
         label: ↳ English (leer = deutscher Text)
         type: text
+      - name: seiten_zeigen
+        label: Namen öffnen eine eigene Seite mit den Projekten (aus = Namen verlinken direkt auf die Webseite; in der Vorschau immer an)
+        type: boolean
       - name: gruppen
         label: Gruppen
         type: object
@@ -393,3 +396,7 @@ content:
               - name: link
                 label: Webseite (optional, mit https://)
                 type: string
+              - name: projekte
+                label: Weitere Projekte (IDs, z.B. tapas), falls sie nicht automatisch über Name oder Webseite gefunden werden
+                type: string
+                list: true

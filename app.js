@@ -102,6 +102,7 @@ const TEXTE = {
   programm: ["Programm", "Programme"],
   presse: ["Presse", "Press"],
   danke: ["Netzwerk", "Network"],
+  mitgewirkt: ["Mitgewirkt bei", "Involved in"],
   zurueck: ["Zurück zur Übersicht", "Back to overview"],
   impressum: ["Impressum", "Imprint"],
   nlTitel: ["Post vom Bären", "Post from the Bear"],
@@ -371,12 +372,78 @@ function oeffnePresse() {
 }
 
 function oeffneDanke() {
+  /* mit eigenen Seiten: Namen führen auf #netzwerk/<name> statt direkt auf die Webseite */
+  const gruppen = netzwerkSeiten()
+    ? (DANKE.gruppen || []).map((g) => ({ ...g, eintraege: (g.eintraege || []).map((e) => ({ ...e, link: "#netzwerk/" + netzSlug(e.name) })) }))
+    : DANKE.gruppen;
   zeigeDetail(`
     <div class="archiv danke">
       <h1>${esc(DANKE.titel || tx("danke"))}</h1>
       <p class="unter">${esc(DANKE.intro || "")}</p>
-      <div class="danke-gruppen">${listenHtml(DANKE.gruppen)}</div>
+      <div class="danke-gruppen">${listenHtml(gruppen)}</div>
     </div>`, DANKE.titel || tx("danke"));
+}
+
+/* ---------- Netzwerk: eigene Seite pro Name (#netzwerk/<name>) ----------
+   Zeigt Rolle, Webseite und bei welchen Projekten jemand mitgewirkt hat.
+   Gefunden wird automatisch über den Namen oder die gleiche Webseite in den Listen der Projekte;
+   zusätzlich kann im Admin pro Eintrag «projekte» (IDs) gesetzt werden.
+   Öffentlich erst mit «seiten_zeigen: true» in danke.json (in ?vorschau/?ansicht immer). */
+function netzwerkSeiten() { return !!(DANKE.seiten_zeigen || VORSCHAU || ANSICHT); }
+function netzNorm(s) {
+  return String(s || "").toLowerCase().replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, "");
+}
+function netzSlug(s) {
+  return String(s || "").toLowerCase().replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+function netzHost(link) {
+  try { return /^https?:/.test(link || "") ? new URL(link).hostname.replace(/^www\./, "") : ""; } catch (e) { return ""; }
+}
+function netzPasst(netz, eintrag) {
+  const h1 = netzHost(netz.link), h2 = netzHost(eintrag.link);
+  if (h1 && h1 === h2) return true;
+  const a = netzNorm(netz.name), b = netzNorm(eintrag.name);
+  if (!a || !b) return false;
+  if (a === b) return true;
+  return (a.length >= 5 && b.includes(a)) || (b.length >= 5 && a.includes(b));
+}
+function netzEintrag(slug) {
+  for (const g of DANKE.gruppen || []) for (const e of g.eintraege || []) if (netzSlug(e.name) === slug) return e;
+  return null;
+}
+function netzProjekte(e) {
+  const fest = [].concat(e.projekte || []).map(String);
+  const treffer = [];
+  [...sichtbare, ...archiv].forEach((p) => {
+    let rolle = null;
+    (p.listen || []).forEach((l) => (l.eintraege || []).forEach((x) => {
+      if (rolle === null && netzPasst(e, x)) rolle = x.rolle || "";
+    }));
+    if (rolle === null && fest.includes(p.id)) rolle = "";
+    if (rolle !== null) treffer.push({ p, rolle });
+  });
+  return treffer;
+}
+function oeffneNetzwerkEintrag(e) {
+  const treffer = netzProjekte(e);
+  const zeilen = treffer.map(({ p, rolle }) => `
+    <a class="archiv-zeile" href="#${esc(p.id)}">
+      ${p.cover ? `<img src="${esc(pfad(p.cover))}" alt="">` : `<span class="archiv-leer"></span>`}
+      <span class="archiv-titel">${nummer(p) ? `<span class="mono archiv-nr">${esc(nummer(p))}</span>` : ""}${esc(p.titel)}</span>
+      <span class="archiv-unter">${esc(rolle || p.untertitel || "")}</span>
+    </a>`).join("");
+  const web = e.link && !String(e.link).startsWith("#")
+    ? `<p class="netz-web"><a href="${esc(e.link)}" target="_blank" rel="noopener">${esc(netzHost(e.link) || e.link)} ↗</a></p>` : "";
+  zeigeDetail(`
+    <div class="archiv netz">
+      <p class="netz-zurueck"><a href="#danke">← ${esc(DANKE.titel || tx("danke"))}</a></p>
+      <h1>${esc(e.name)}</h1>
+      ${e.rolle ? `<p class="unter">${esc(e.rolle)}</p>` : ""}
+      ${web}
+      ${zeilen ? `<h2 class="mono netz-titel">${tx("mitgewirkt")}</h2><div class="archiv-liste">${zeilen}</div>` : ""}
+    </div>`, e.name);
 }
 
 /* Impressum & Datenschutz (Angaben aus dem Handelsregister Basel-Stadt) */
@@ -645,6 +712,10 @@ function route() {
   if (id === "programm" && programmSichtbar()) { oeffneProgramm(); return adresse("#programm"); }
   if (id === "presse" && presseSichtbar()) { oeffnePresse(); return adresse("#presse"); }
   if (id === "danke" && DANKE.gruppen && DANKE.gruppen.length) { oeffneDanke(); return adresse("#danke"); }
+  if (id.startsWith("netzwerk/") && netzwerkSeiten()) {
+    const e = netzEintrag(id.slice(9));
+    if (e) { oeffneNetzwerkEintrag(e); return adresse("#" + id); }
+  }
   const p = [...sichtbare, ...archiv].find((x) => x.id === id);
   if (p) { oeffne(p); return adresse("/" + encodeURIComponent(p.id)); }
   schliesse();

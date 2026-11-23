@@ -614,3 +614,10 @@ body.vorschau::before {
   .buehne .projekt.sticker-kachel { width: 140px; min-width: 0; order: -1; align-self: flex-end; margin: 0 24px -24px 0; }
 }
 .nacht .projekt.sticker-kachel a { background: #4a4a4a; }   /* nachts schwarz-weiss */
+
+/* Netzwerk: eigene Seite pro Name */
+.netz-zurueck { margin: 0 0 18px; }
+.netz-zurueck a, .netz-web a { color: inherit; text-decoration: none; }
+.netz-zurueck a:hover, .netz-web a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.netz-web { margin: -16px 0 28px; }
+.netz-titel { margin: 8px 0 12px; font-weight: 500; }
