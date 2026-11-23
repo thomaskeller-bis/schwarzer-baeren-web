@@ -52,6 +52,11 @@
           "rolle": "Bierlieferant, Unterstützung bei der Einrichtung",
           "link": "https://einsiedlerbier.ch",
           "rolle_en": "Beer supplier, support with the furnishing"
+        },
+        {
+          "name": "Lichterloh",
+          "rolle": "Licht, für die Hütte an der Adväntsgass",
+          "rolle_en": "Lighting, for the hut at the Adväntsgass"
         }
       ],
       "titel_en": "Fit-out & furnishing"
