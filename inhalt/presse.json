@@ -1,8 +1,16 @@
 {
   "titel": "Presse",
   "intro": "Was andere über uns und die Rheingasse 17 schreiben.",
-  "zeigen": false,
+  "zeigen": true,
   "berichte": [
+    {
+      "datum": "2026-11-27",
+      "medium": "Basler Zeitung",
+      "titel": "Zum Schwarzen Bären experimentiert in der Adväntsgass für die grosse Eröffnung",
+      "text": "Über unsere Waffeln und FOODTURE BÄREN an der Adväntsgass (mit Abo lesbar)",
+      "text_en": "On our waffles and FOODTURE BÄREN at the Adväntsgass (in German, subscription required)",
+      "link": "https://www.bazonline.ch/advaentsgass-basel-zum-schwarzen-baeren-testet-waffeln-162223829524"
+    },
     {
       "datum": "2026-10-15",
       "medium": "Bajour",
