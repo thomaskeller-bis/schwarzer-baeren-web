@@ -232,6 +232,16 @@
           ]
         },
         {
+          "bild": "/bilder/advaentsgass/cl-28.jpg",
+          "text": "Die Bar in der Hütte",
+          "text_en": "The bar in the hut",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Stand",
+            "Trinken"
+          ]
+        },
+        {
           "bild": "/bilder/advaentsgass/cl-26.jpg",
           "text": "Bärmut-Tonic",
           "text_en": "Bärmut tonic",
