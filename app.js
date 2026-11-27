@@ -150,6 +150,7 @@ function esc(s) {
 function links(s) {
   return s
     .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+    .replace(/\[([^\]]+)\]\((mailto:[^\s)]+)\)/g, '<a href="$2">$1</a>')
     .replace(/\[([^\]]+)\]\((#[a-z0-9-]+)\)/g, '<a href="$2">$1</a>');   /* Link auf ein anderes Projekt, z.B. (#tapas) */
 }
 
