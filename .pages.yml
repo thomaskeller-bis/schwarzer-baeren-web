@@ -142,6 +142,10 @@ content:
               - name: text_en
                 label: ↳ English (leer = deutscher Text)
                 type: string
+          - name: stichworte
+            label: Reihenfolge der Stichwort-Filter (das Wichtigste zuerst, z.B. Gerichte)
+            type: string
+            list: true
           - name: kapitel_zeigen
             label: Kapitel und Filter öffentlich zeigen (in der Vorschau immer)
             type: boolean

@@ -468,7 +468,16 @@
           "text_en": "To follow."
         }
       ],
-      "kapitel_zeigen": true
+      "kapitel_zeigen": true,
+      "stichworte": [
+        "Gerichte",
+        "Zubereitung",
+        "Trinken",
+        "Stand",
+        "Einrichten",
+        "Gestalten",
+        "Zusammen"
+      ]
     },
     {
       "status": "aktuell",

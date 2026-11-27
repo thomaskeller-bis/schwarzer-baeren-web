@@ -715,6 +715,10 @@ function kapitelHtml(p, fotos, figur) {
   const ohne = fotos.filter((b) => !kap.some((k) => k.id === b.kapitel));
   const stichworte = [];
   fotos.forEach((b) => (b.stichworte || []).forEach((s) => { if (s && !stichworte.includes(s)) stichworte.push(s); }));
+  /* Reihenfolge der Stichwort-Knöpfe: zuerst wie im Projekt-Feld «stichworte», danach der Rest */
+  const reihe = (p.stichworte || []).map(String);
+  const rang = (s) => (reihe.indexOf(s) < 0 ? 999 : reihe.indexOf(s));
+  stichworte.sort((x, y) => rang(x) - rang(y));
   const knopf = (typ, wert, text, aktiv) =>
     `<button type="button" class="filter-knopf${aktiv ? " aktiv" : ""}" data-typ="${typ}" data-wert="${esc(wert)}">${esc(text)}</button>`;
   const filter = `
