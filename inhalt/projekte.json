@@ -11,67 +11,271 @@
         {
           "bild": "/bilder/advaentsgass/cl-13.jpg",
           "text": "Die gekleisterte Hütte an der Adväntsgass",
-          "text_en": "The pasted-up hut at the Adväntsgass"
+          "text_en": "The pasted-up hut at the Adväntsgass",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Stand",
+            "Gestalten"
+          ]
         },
         {
           "bild": "/bilder/advaentsgass/cl-01.jpg",
           "text": "Die Hütte vor dem Kleistern",
-          "text_en": "The hut before the paste-up"
+          "text_en": "The hut before the paste-up",
+          "kapitel": "gestalten",
+          "stichworte": [
+            "Stand"
+          ]
         },
         {
           "bild": "/bilder/advaentsgass/cl-02.jpg",
           "text": "Blick in die Hütte",
-          "text_en": "Inside the hut"
+          "text_en": "Inside the hut",
+          "kapitel": "gestalten",
+          "stichworte": [
+            "Stand"
+          ]
         },
         {
           "bild": "/bilder/advaentsgass/cl-03.jpg",
           "text": "Baustelle in der Rheingasse",
-          "text_en": "Building site in the Rheingasse"
+          "text_en": "Building site in the Rheingasse",
+          "kapitel": "gestalten",
+          "stichworte": [
+            "Stand"
+          ]
         },
         {
           "bild": "/bilder/advaentsgass/cl-04.jpg",
           "text": "Unser Büro für einen Tag in der 8Bar",
-          "text_en": "Our office for a day in the 8Bar"
+          "text_en": "Our office for a day in the 8Bar",
+          "kapitel": "gestalten",
+          "stichworte": [
+            "Gestalten"
+          ]
         },
         {
           "bild": "/bilder/advaentsgass/cl-05.jpg",
           "text": "Drucken",
-          "text_en": "Printing"
+          "text_en": "Printing",
+          "kapitel": "gestalten",
+          "stichworte": [
+            "Gestalten"
+          ]
         },
         {
           "bild": "/bilder/advaentsgass/cl-06.jpg",
           "text": "Entwerfen",
-          "text_en": "Designing"
+          "text_en": "Designing",
+          "kapitel": "gestalten",
+          "stichworte": [
+            "Gestalten"
+          ]
         },
         {
           "bild": "/bilder/advaentsgass/cl-07.jpg",
           "text": "Testen an der Hütte",
-          "text_en": "Testing on the hut"
+          "text_en": "Testing on the hut",
+          "kapitel": "gestalten",
+          "stichworte": [
+            "Gestalten",
+            "Stand"
+          ]
         },
         {
           "bild": "/bilder/advaentsgass/cl-08.jpg",
           "text": "Der Bär kommt an die Hütte",
-          "text_en": "The bear goes up on the hut"
+          "text_en": "The bear goes up on the hut",
+          "kapitel": "gestalten",
+          "stichworte": [
+            "Gestalten",
+            "Stand"
+          ]
         },
         {
           "bild": "/bilder/advaentsgass/cl-09.jpg",
           "text": "Plakate ausprobieren",
-          "text_en": "Trying out posters"
+          "text_en": "Trying out posters",
+          "kapitel": "gestalten",
+          "stichworte": [
+            "Gestalten",
+            "Stand"
+          ]
         },
         {
           "bild": "/bilder/advaentsgass/cl-10.jpg",
           "text": "Mittagessen zwischendurch in der 8Bar",
-          "text_en": "Lunch in between in the 8Bar"
+          "text_en": "Lunch in between in the 8Bar",
+          "kapitel": "gestalten",
+          "stichworte": [
+            "Essen",
+            "Zusammen"
+          ]
         },
         {
           "bild": "/bilder/advaentsgass/cl-11.jpg",
           "text": "Pause in der 8Bar",
-          "text_en": "Break in the 8Bar"
+          "text_en": "Break in the 8Bar",
+          "kapitel": "gestalten",
+          "stichworte": [
+            "Zusammen"
+          ]
         },
         {
           "bild": "/bilder/advaentsgass/cl-12.jpg",
           "text": "Das Büro am Abend in der 8Bar",
-          "text_en": "The office in the evening in the 8Bar"
+          "text_en": "The office in the evening in the 8Bar",
+          "kapitel": "gestalten",
+          "stichworte": [
+            "Gestalten"
+          ]
+        },
+        {
+          "bild": "/bilder/advaentsgass/cl-14.jpg",
+          "text": "Die Hütte steht, nebenan wird am Haus gebaut",
+          "text_en": "The hut is up, next door the building works go on",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Stand"
+          ],
+          "entwurf": true
+        },
+        {
+          "bild": "/bilder/advaentsgass/cl-15.jpg",
+          "text": "Licht aufhängen",
+          "text_en": "Hanging the lights",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Stand",
+            "Einrichten"
+          ],
+          "entwurf": true
+        },
+        {
+          "bild": "/bilder/advaentsgass/cl-16.jpg",
+          "text": "Erstes Testen in der Hütte",
+          "text_en": "First test run in the hut",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Stand",
+            "Zusammen"
+          ],
+          "entwurf": true
+        },
+        {
+          "bild": "/bilder/advaentsgass/cl-17.jpg",
+          "text": "Die ersten Gäste an der Theke",
+          "text_en": "The first guests at the counter",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Stand",
+            "Zusammen"
+          ],
+          "entwurf": true
+        },
+        {
+          "bild": "/bilder/advaentsgass/cl-18.jpg",
+          "text": "Die Karte an der Hütte",
+          "text_en": "The menu on the hut",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Gestalten",
+            "Essen"
+          ],
+          "entwurf": true
+        },
+        {
+          "bild": "/bilder/advaentsgass/cl-19.jpg",
+          "text": "Waffeln aus dem Eisen",
+          "text_en": "Waffles from the iron",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Essen",
+            "Küche"
+          ],
+          "entwurf": true
+        },
+        {
+          "bild": "/bilder/advaentsgass/cl-20.jpg",
+          "text": "Zwiebeln auf die Waffel",
+          "text_en": "Onions on the waffle",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Essen",
+            "Küche"
+          ],
+          "entwurf": true
+        },
+        {
+          "bild": "/bilder/advaentsgass/cl-21.jpg",
+          "text": "Anrichten",
+          "text_en": "Plating",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Essen",
+            "Küche"
+          ],
+          "entwurf": true
+        },
+        {
+          "bild": "/bilder/advaentsgass/cl-22.jpg",
+          "text": "Waffel mit Zwiebeln und Bergkäse",
+          "text_en": "Waffle with onions and mountain cheese",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Essen"
+          ],
+          "entwurf": true
+        },
+        {
+          "bild": "/bilder/advaentsgass/cl-23.jpg",
+          "text": "Waffel mit Siedfleisch, Vinaigrette und Meerrettich",
+          "text_en": "Waffle with boiled beef, vinaigrette and horseradish",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Essen"
+          ],
+          "entwurf": true
+        },
+        {
+          "bild": "/bilder/advaentsgass/cl-24.jpg",
+          "text": "Waffel mit Pilz, Tofu und Senfkaviar",
+          "text_en": "Waffle with mushroom, tofu and mustard caviar",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Essen"
+          ],
+          "entwurf": true
+        },
+        {
+          "bild": "/bilder/advaentsgass/cl-25.jpg",
+          "text": "Waffel mit Läckerli, Apfel und Crème fraîche",
+          "text_en": "Waffle with Läckerli, apple and crème fraîche",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Essen"
+          ],
+          "entwurf": true
+        },
+        {
+          "bild": "/bilder/advaentsgass/cl-26.jpg",
+          "text": "Bärmut-Tonic",
+          "text_en": "Bärmut tonic",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Trinken"
+          ],
+          "entwurf": true
+        },
+        {
+          "bild": "/bilder/advaentsgass/cl-27.jpg",
+          "text": "Der Bärmut reift",
+          "text_en": "The Bärmut maturing",
+          "kapitel": "einrichten",
+          "stichworte": [
+            "Trinken"
+          ],
+          "entwurf": true
         }
       ],
       "listen": [
@@ -258,7 +462,30 @@
       "id": "advaentsgass",
       "titel_en": "Adväntsgass",
       "untertitel_en": "As FOODTURE BÄREN · 26 November to 23 December 2026, in the Rheingasse",
-      "text_en": "For four weeks we'll have a stall at the Adväntsgass, right in front of the future Bear. We'll appear there as FOODTURE BÄREN and experiment with the future for the first time.\n\n## FOODTURE BÄREN\n\nHow do we want to be as the Bear in the future? At the Adväntsgass we try it out very practically – on and beside the plate. We were set in motion for this experiment by the association Basel Food Factory, which has also mobilised a lot of support for the concept and its realisation.\n\nOn the plate, for example, with potatoes from the region that suffered in this dry summer and have already half fallen out of the value chain. Then there is lion's mane and other mushrooms from the city, meat from an old Baselbiet dairy cow, vegetables in many forms and Läckerli offcuts for the sweet waffle – good food made from what grows, is made and is available here. In the glass: mulled wine and punch from Fricktal standard orchard trees and our own Bärmut.\n\nBeside the plate we're testing how to work as a network: we want to collaborate instead of doing everything ourselves, involve suppliers and (co-)producers and create value together out of appreciation. And we want to be good neighbours and do our part for a lively Rheingasse.\n\nWe're working on all of this right now. What works? What doesn't? What turns out differently (than expected)? Come by, from 26 November to 23 December 2026 in the Rheingasse.\n\n## Paste-up\n\nFor the Adväntsgass, a hut stands in front of the future Bear. On the Friday before the opening we set up a small office with Luca from Rio Basel in the 8Bar on the Rheingasse. There we designed, printed and tried the posters out on the hut straight away.\n\nThe posters show what is on our minds right now: what there is to eat and drink with us, who we work with, what we have in mind for the Bear.\n\nAfter Christmas the hut will be taken down. Its wood will become tables and benches in the Bear. Perhaps a trace or two of the paste will remain.\n\n## Thank you, Lenard and Claudia\n\nA big thank you to Lenard for always welcoming us so warmly: whether over a cappuccino in the morning while we build the huts, at lunch in the [Schmale Wurf](https://8-bar.eu) or in the 8Bar, which serves as our meeting room and workspace. It's simply fantastic at your place, Lenard. Thank you so, so much!\n\nAnd thank you to [Claudia Link](https://claudialink.ch) for the photos on this page. She accompanies and documents FOODTURE."
+      "text_en": "For four weeks we'll have a stall at the Adväntsgass, right in front of the future Bear. We'll appear there as FOODTURE BÄREN and experiment with the future for the first time.\n\n## FOODTURE BÄREN\n\nHow do we want to be as the Bear in the future? At the Adväntsgass we try it out very practically – on and beside the plate. We were set in motion for this experiment by the association Basel Food Factory, which has also mobilised a lot of support for the concept and its realisation.\n\nOn the plate, for example, with potatoes from the region that suffered in this dry summer and have already half fallen out of the value chain. Then there is lion's mane and other mushrooms from the city, meat from an old Baselbiet dairy cow, vegetables in many forms and Läckerli offcuts for the sweet waffle – good food made from what grows, is made and is available here. In the glass: mulled wine and punch from Fricktal standard orchard trees and our own Bärmut.\n\nBeside the plate we're testing how to work as a network: we want to collaborate instead of doing everything ourselves, involve suppliers and (co-)producers and create value together out of appreciation. And we want to be good neighbours and do our part for a lively Rheingasse.\n\nWe're working on all of this right now. What works? What doesn't? What turns out differently (than expected)? Come by, from 26 November to 23 December 2026 in the Rheingasse.\n\n## Paste-up\n\nFor the Adväntsgass, a hut stands in front of the future Bear. On the Friday before the opening we set up a small office with Luca from Rio Basel in the 8Bar on the Rheingasse. There we designed, printed and tried the posters out on the hut straight away.\n\nThe posters show what is on our minds right now: what there is to eat and drink with us, who we work with, what we have in mind for the Bear.\n\nAfter Christmas the hut will be taken down. Its wood will become tables and benches in the Bear. Perhaps a trace or two of the paste will remain.\n\n## Thank you, Lenard and Claudia\n\nA big thank you to Lenard for always welcoming us so warmly: whether over a cappuccino in the morning while we build the huts, at lunch in the [Schmale Wurf](https://8-bar.eu) or in the 8Bar, which serves as our meeting room and workspace. It's simply fantastic at your place, Lenard. Thank you so, so much!\n\nAnd thank you to [Claudia Link](https://claudialink.ch) for the photos on this page. She accompanies and documents FOODTURE.",
+      "kapitel": [
+        {
+          "id": "gestalten",
+          "titel": "Gestalten mit Rio Basel",
+          "titel_en": "Designing with Rio Basel",
+          "text": "Ein Tag in der 8Bar: entwerfen, drucken, an der Hütte testen und gleich vor Ort entscheiden. Mittendrin das gemeinsame Mittagessen.",
+          "text_en": "A day in the 8Bar: designing, printing, testing on the hut and deciding right there. In the middle of it, lunch together."
+        },
+        {
+          "id": "einrichten",
+          "titel": "Einrichten und erstes Testen",
+          "titel_en": "Setting up and first test run",
+          "text": "Die Hütte steht. Licht, Plakate und die ersten Waffeln und Drinks vor Ort, noch vor der Eröffnung.",
+          "text_en": "The hut is up. Lights, posters and the first waffles and drinks on site, still before the opening."
+        },
+        {
+          "id": "betrieb",
+          "titel": "Betrieb",
+          "titel_en": "Open",
+          "text": "Folgt.",
+          "text_en": "To follow."
+        }
+      ]
     },
     {
       "status": "aktuell",

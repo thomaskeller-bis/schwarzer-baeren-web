@@ -632,3 +632,26 @@ body.vorschau::before {
   .programm-tag, .programm-datum { display: inline; }
   .programm-tag { margin-right: 6px; }
 }
+
+/* ---------- Kapitel und Stichworte bei den Fotos ---------- */
+.bilder-filter { align-self: stretch; display: flex; flex-direction: column; gap: 8px; }
+.filter-zeile { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.filter-stichworte { gap: 6px 8px; }
+.filter-knopf {
+  font: inherit; font-size: 14px; color: var(--grau); background: none; border: 0; padding: 0; cursor: pointer;
+}
+.filter-knopf:hover { color: var(--tinte); }
+.filter-knopf.aktiv { color: var(--tinte); text-decoration: underline; text-underline-offset: 4px; }
+.filter-stichworte .filter-knopf { border: 1px solid var(--linie); border-radius: 999px; padding: 2px 10px; font-size: 13px; }
+.filter-stichworte .filter-knopf.aktiv { border-color: var(--tinte); text-decoration: none; }
+.kapitel-kopf { align-self: stretch; border-top: 1px solid var(--tinte); padding-top: 10px; margin-bottom: calc(-1 * clamp(14px, 2vw, 28px)); }
+.kapitel-kopf h2 { font-size: 15px; font-weight: 500; margin: 0 0 4px; }
+.kapitel-kopf p { margin: 0; color: var(--grau); max-width: 36rem; }
+.detail-bilder [hidden] { display: none !important; }
+@media (max-width: 720px) {
+  .filter-zeile { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+  .filter-zeile::-webkit-scrollbar { display: none; }
+  .filter-knopf { white-space: nowrap; }
+}
+.bilder-filter, .filter-zeile, .kapitel-kopf { min-width: 0; max-width: 100%; box-sizing: border-box; }
+.detail-bilder { min-width: 0; }

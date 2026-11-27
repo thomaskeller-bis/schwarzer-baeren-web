@@ -25,7 +25,7 @@ Inhalte werden auch über Pages CMS (app.pagescms.org) vom Team bearbeitet.
 `status` (aktuell | archiv | offline = Entwurf, nur sichtbar unter `/?vorschau`), `titel`, `nummer` (fest, bleibt auch im Archiv; leer = nächste freie),
 `kachel` (Grösse der Kachel auf der Startseite, Faktor, leer = 1), `cover`, `video` (optional MP4, ersetzt das Titelbild, läuft stumm in Schleife; cover = Vorschaubild; vorher mit ffmpeg auf ca. 720 px verkleinern), `untertitel`, `text` (Leerzeile = Absatz, «## » = Zwischentitel, `[Text](https://…)` = Link, `[Text](mailto:…)` = Mail-Link, `[Text](#projekt-id)` = Link auf ein anderes Projekt), `instagram`,
 `medien` [{titel, link}] (Spotify- oder YouTube-Links, Player laden erst nach Klick auf den Play-Knopf; Hinweis steht im Datenschutz),
-`bilder` [{bild, text}], `listen` [{titel, eintraege: [{name, rolle, link}]}], `id` (Adresse #id).
+`bilder` [{bild, text, kapitel, stichworte, entwurf}] (entwurf = Foto nur in ?vorschau), `kapitel` [{id, titel, text}] + `kapitel_zeigen` (Fotos nach Kapiteln mit Zwischentitel, darüber Filter «Alle · Kapitel» und Stichwort-Knöpfe; öffentlich erst mit kapitel_zeigen, in ?vorschau immer; app.js `kapitelHtml`/`filterAnbinden`), `listen` [{titel, eintraege: [{name, rolle, link}]}], `id` (Adresse #id).
 
 ## Arbeitsweise
 - Immer zuerst `git pull`, weil das Team parallel im CMS speichert.

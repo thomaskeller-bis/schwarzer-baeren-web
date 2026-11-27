@@ -104,6 +104,7 @@ const TEXTE = {
   danke: ["Netzwerk", "Network"],
   mitgewirkt: ["Mitgewirkt bei", "Involved in"],
   vorbei: ["Vorbei", "Past"],
+  alle: ["Alle", "All"],
   zurueck: ["Zurück zur Übersicht", "Back to overview"],
   impressum: ["Impressum", "Imprint"],
   nlTitel: ["Post vom Bären", "Post from the Bear"],
@@ -673,13 +674,14 @@ function oeffne(p) {
     : "";
 
   const film = p.video ? `<figure>${videoHtml(p.video, p.cover, "")}</figure>` : "";
-  const bilder = film + (p.bilder && p.bilder.length
-    ? p.bilder
-        .map((b, i) => `<figure>
+  const fotos = (p.bilder || []).filter((b) => b.bild && (!b.entwurf || VORSCHAU));
+  const figur = (b, i) => `<figure data-kapitel="${esc(b.kapitel || "")}" data-stichworte="${esc((b.stichworte || []).join("|"))}">
           <img src="${esc(pfad(b.bild))}" alt="${esc(b.text || p.titel + " " + (i + 1))}" loading="lazy">
           <figcaption class="mono"><span>${nr ? nr + "–" : ""}${String(i + 1).padStart(2, "0")}</span>${b.text ? `<span>${esc(b.text)}</span>` : ""}</figcaption>
-        </figure>`)
-        .join("")
+        </figure>`;
+  const mitKapitel = kapitelAktiv(p, fotos);
+  const bilder = film + (fotos.length
+    ? (mitKapitel ? kapitelHtml(p, fotos, figur) : fotos.map(figur).join(""))
     : (film ? "" : `<figure>${cover({ ...p, cover: "" })}</figure>`));
 
   zeigeDetail(`
@@ -696,6 +698,52 @@ function oeffne(p) {
       ${liste}
     </div>
     <div class="detail-bilder">${bilder}</div>`, p.titel);
+  if (mitKapitel) filterAnbinden();
+}
+
+/* ---------- Kapitel und Stichworte bei den Fotos ----------
+   Projekt-Feld «kapitel» [{id, titel, text}], pro Foto «kapitel» (id), «stichworte» (Liste), «entwurf» (nur in ?vorschau).
+   Oben eine Filterzeile: Alle · Kapitel … und darunter die Stichworte. Die Nummern der Fotos bleiben gleich.
+   Öffentlich erst mit «kapitel_zeigen: true» im Projekt (in ?vorschau/?ansicht immer). */
+function kapitelAktiv(p, fotos) {
+  return (p.kapitel || []).length > 0 && fotos.some((b) => b.kapitel || (b.stichworte || []).length)
+    && !!(p.kapitel_zeigen || VORSCHAU || ANSICHT);
+}
+function kapitelHtml(p, fotos, figur) {
+  const nummern = new Map(fotos.map((b, i) => [b, i]));
+  const kap = (p.kapitel || []).filter((k) => fotos.some((b) => b.kapitel === k.id));
+  const ohne = fotos.filter((b) => !kap.some((k) => k.id === b.kapitel));
+  const stichworte = [];
+  fotos.forEach((b) => (b.stichworte || []).forEach((s) => { if (s && !stichworte.includes(s)) stichworte.push(s); }));
+  const knopf = (typ, wert, text, aktiv) =>
+    `<button type="button" class="filter-knopf${aktiv ? " aktiv" : ""}" data-typ="${typ}" data-wert="${esc(wert)}">${esc(text)}</button>`;
+  const filter = `
+    <div class="bilder-filter" role="group" aria-label="Fotos filtern">
+      <div class="filter-zeile">${knopf("alle", "", tx("alle"), true)}${kap.map((k) => knopf("kapitel", k.id, k.titel)).join("")}</div>
+      ${stichworte.length ? `<div class="filter-zeile filter-stichworte">${stichworte.map((s) => knopf("stichwort", s, s)).join("")}</div>` : ""}
+    </div>`;
+  const teile = kap.map((k) => `
+    <div class="kapitel-kopf" data-kapitel="${esc(k.id)}">
+      <h2>${esc(k.titel)}</h2>${k.text ? `<p>${esc(k.text)}</p>` : ""}
+    </div>${fotos.filter((b) => b.kapitel === k.id).map((b) => figur(b, nummern.get(b))).join("")}`).join("");
+  return filter + teile + ohne.map((b) => figur(b, nummern.get(b))).join("");
+}
+function filterAnbinden() {
+  const box = $("#detail-inhalt .detail-bilder");
+  if (!box) return;
+  box.querySelectorAll(".filter-knopf").forEach((k) => k.addEventListener("click", () => {
+    box.querySelectorAll(".filter-knopf").forEach((x) => x.classList.toggle("aktiv", x === k));
+    const typ = k.dataset.typ, wert = k.dataset.wert;
+    box.querySelectorAll("figure").forEach((f) => {
+      const zeigen = typ === "alle"
+        || (typ === "kapitel" && f.dataset.kapitel === wert)
+        || (typ === "stichwort" && (f.dataset.stichworte || "").split("|").includes(wert));
+      f.hidden = !zeigen;
+    });
+    box.querySelectorAll(".kapitel-kopf").forEach((h) => {
+      h.hidden = typ === "stichwort" || ![...box.querySelectorAll(`figure[data-kapitel="${h.dataset.kapitel}"]`)].some((f) => !f.hidden);
+    });
+  }));
 }
 
 function schliesse() {

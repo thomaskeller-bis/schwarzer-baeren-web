@@ -109,6 +109,42 @@ content:
               - name: text_en
                 label: ↳ English (leer = deutscher Text)
                 type: string
+              - name: kapitel
+                label: Kapitel (ID aus der Liste «Kapitel» des Projekts, z.B. gestalten)
+                type: string
+              - name: stichworte
+                label: Stichworte für den Filter (z.B. Essen, Trinken, Stand, Gestalten, Zusammen)
+                type: string
+                list: true
+              - name: entwurf
+                label: Nur in der Vorschau zeigen
+                type: boolean
+          - name: kapitel
+            label: Kapitel der Fotos (optional, mit Filter über den Bildern)
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{titel}"
+            fields:
+              - name: id
+                label: ID (kurz, klein, ohne Leerzeichen, z.B. gestalten)
+                type: string
+              - name: titel
+                label: Titel
+                type: string
+              - name: titel_en
+                label: ↳ English (leer = deutscher Text)
+                type: string
+              - name: text
+                label: Ein Satz dazu (optional)
+                type: string
+              - name: text_en
+                label: ↳ English (leer = deutscher Text)
+                type: string
+          - name: kapitel_zeigen
+            label: Kapitel und Filter öffentlich zeigen (in der Vorschau immer)
+            type: boolean
           - name: listen
             label: Listen (z.B. Team, Partner, Angebot)
             type: object
